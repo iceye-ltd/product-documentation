@@ -1,5 +1,12 @@
 site_name: ICEYE Product Documentation
-site_url: https://example.com/
+site_description: Documentation related to ICEYE Products
+
+# Repository
+repo_name: iceye-ltd/product-documentation
+repo_url: https://github.com/iceye-ltd/product-documentation
+edit_uri: edit/main/docs/
+site_url: https://iceye-ltd.github.io/product-documentation/
+
 nav:
     - Welcome to ICEYE: index.md
     - The ICEYE Fleet: productguide/fleet.md
