@@ -1,0 +1,48 @@
+site_name: ICEYE Product Documentation
+site_url: https://example.com/
+nav:
+    - Welcome to ICEYE: index.md
+    - The ICEYE Fleet: productguide/fleet.md
+    - ICEYE Products: productguide/products.md
+    - Data Formats: productguide/dataformats.md
+    - Ordering data: productguide/ordering.md
+    - Support: productguide/support.md
+    - Reference Material :
+        - Collection Characteristics : productguide/collectioncharacteristics.md
+        - An Overview of SAR Imaging : productguide/SAR-overview.md
+        - Image Metadata : productguide/metadata.md
+    - About: about.md
+theme:
+    name: material
+    palette:
+        primary: black
+        accent: green
+    logo: assets/svg-iceye-icon-white.svg
+    favicon: assets/favicon.png
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: "refs.bib"
+      cite_style: "pandoc"
+
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
