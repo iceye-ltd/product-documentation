@@ -1,0 +1,3 @@
+# The ICEYE Innovation
+In this overview of SAR, we have discussed several remarkable capabilities beyond its famous ability to penetrate clouds. These include image resolution independent of distance, electronic beam control to vary resolution and coverage, pristine geolocation, and the natural ability to measure phase to within a small fraction of a wavelength. We’ve seen that SAR pixels have both amplitude and phase, and from these we can produce many useful products.
+At ICEYE, we have developed an innovative way to incorporate all of these aspects of SAR in our small and adaptable systems. We are launching a full constellation of small SARs, and we’ll upgrade them routinely to better image this ocean planet.

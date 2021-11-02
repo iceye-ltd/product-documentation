@@ -14,10 +14,16 @@ nav:
     - Data Formats: productguide/dataformats.md
     - Ordering data: productguide/ordering.md
     - Support: productguide/support.md
+    - An Overview of SAR Imaging : 
+        - The Value Of SAR Imaging : productguide/OverviewOfSAR/overviewOfSAR.md
+        - A Simple Form Of RADAR Imaging : productguide/OverviewOfSAR/simpleFormOfImaging.md
+        - The Remarkable Story Of SAR : productguide/OverviewOfSAR/remarkableStory.md
+        - Range Resolution : productguide/OverviewOfSAR/rangeResolution.md
+        - The Beautiful Equations : productguide/OverviewOfSAR/beautifulEquations.md
+        - SAR Processing Overview : productguide/OverviewOfSAR/sarProcessing.md
+        - Separating Signals From Noise : productguide/OverviewOfSAR/noise.md
+        - The Innovation : productguide/OverviewOfSAR/theInnovation.md
     - Collection Characteristics : productguide/collectioncharacteristics.md
-    - An Overview of SAR Imaging : productguide/overviewofSAR.md
-    - Reference Material :
-        - Image Metadata : productguide/metadata.md
     - About: about.md
 theme:
     name: material
