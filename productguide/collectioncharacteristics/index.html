@@ -628,6 +628,7 @@
 <th>Parameter</th>
 <th>Strip</th>
 <th>Spot</th>
+<th><span style="color:red">Spot <em>Extended Area</em></span></th>
 <th>Scan</th>
 <th>Comments</th>
 </tr>
@@ -637,6 +638,7 @@
 <td>Product Short Name</td>
 <td>'SM'</td>
 <td>'SLH'</td>
+<td><span style="color:red">'SLEA'</span></td>
 <td>'SC'</td>
 <td><a href="#notes-and-explanations">Note 1</a></td>
 </tr>
@@ -644,6 +646,7 @@
 <td>Radar Beams Used</td>
 <td>1</td>
 <td>1</td>
+<td><span style="color:red">1</span></td>
 <td>4</td>
 <td><a href="#notes-and-explanations">Note 2</a></td>
 </tr>
@@ -651,6 +654,7 @@
 <td>Nominal swath width [km]</td>
 <td>30</td>
 <td>5</td>
+<td><span style="color:red">15</span></td>
 <td>100</td>
 <td><a href="#notes-and-explanations">Note 3</a></td>
 </tr>
@@ -658,6 +662,7 @@
 <td>Nominal product length (Azimuth Direction) [km]</td>
 <td>50</td>
 <td>5</td>
+<td><span style="color:red">15</span></td>
 <td>100</td>
 <td><a href="#notes-and-explanations">Note 4</a></td>
 </tr>
@@ -665,6 +670,7 @@
 <td>Nominal collection duration [sec]</td>
 <td>10</td>
 <td>10</td>
+<td><span style="color:red">20</span></td>
 <td>15</td>
 <td></td>
 </tr>
@@ -672,6 +678,7 @@
 <td>Maximum collection duration [sec]</td>
 <td>35-72</td>
 <td>N/A</td>
+<td><span style="color:red">N/A</span></td>
 <td>15</td>
 <td><a href="#notes-and-explanations">Note 5</a></td>
 </tr>
@@ -679,27 +686,31 @@
 <td>Maximum Scene Length [km]</td>
 <td>240-500</td>
 <td>5</td>
-<td>100</td>
+<td><span style="color:red">15</span></td>
+<td><span style="color:red">300</span></td>
 <td><a href="#notes-and-explanations">Note 5</a></td>
 </tr>
 <tr>
 <td>Noise Equivalent Sigma-Zero [ dBm<sup>2</sup>/m<sup>2</sup> ]</td>
 <td>-21.5 to -20</td>
 <td>-18 to -15</td>
+<td><span style="color:red">-18 to -15</span></td>
 <td>-22.2 to -21.5</td>
 <td><a href="#notes-and-explanations">Note 6</a></td>
 </tr>
 <tr>
 <td>Azimuth Ambiguity Ratio [dB]</td>
-<td>-15</td>
-<td>-15</td>
-<td>-15</td>
+<td>-17</td>
+<td>-17</td>
+<td><span style="color:red">-17</span></td>
+<td>-17</td>
 <td></td>
 </tr>
 <tr>
 <td>Range Ambiguity Ratio [dB]</td>
 <td>-20</td>
 <td>-20</td>
+<td><span style="color:red">-20</span></td>
 <td>-20</td>
 <td></td>
 </tr>
@@ -707,12 +718,14 @@
 <td>Geospatial Accuracy [m CEP90]</td>
 <td>9</td>
 <td>9</td>
+<td><span style="color:red">9</span></td>
 <td>15</td>
 <td></td>
 </tr>
 <tr>
 <td>ESA Copernicus Contributing Mission (CCM) Class<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>VHR2</td>
+<td>VHR1</td>
 <td>VHR1</td>
 <td>HR1</td>
 <td></td>
@@ -721,6 +734,7 @@
 <td>Polarization</td>
 <td>VV</td>
 <td>VV</td>
+<td><span style="color:red">VV</span></td>
 <td>VV</td>
 <td></td>
 </tr>
@@ -728,6 +742,7 @@
 <td>RNIIRS</td>
 <td>3.6</td>
 <td>5.5</td>
+<td><span style="color:red">5.5</span></td>
 <td>2.1</td>
 <td><a href="#notes-and-explanations">Note 8</a></td>
 </tr>
@@ -735,6 +750,7 @@
 <td>RGIQE [bits/m2]</td>
 <td>0.8</td>
 <td>22</td>
+<td><span style="color:red">?</span></td>
 <td>0.1</td>
 <td><a href="#notes-and-explanations">Note 9</a></td>
 </tr>
@@ -742,6 +758,7 @@
 <td>Performant Incidence Range [deg]</td>
 <td>15-30</td>
 <td>20-35</td>
+<td><span style="color:red">20-35</span></td>
 <td>21-29</td>
 <td><a href="#notes-and-explanations">Note 12</a></td>
 </tr>
@@ -749,6 +766,7 @@
 <td>Time Dominant Incidence Range [deg]</td>
 <td>11-56</td>
 <td>11-56</td>
+<td><span style="color:red">11-56</span></td>
 <td>N/A</td>
 <td><a href="#notes-and-explanations">Note 13</a></td>
 </tr>
@@ -813,7 +831,7 @@
 <tr>
 <td>SLC Product Size [GB]</td>
 <td>3.4 to 2.9</td>
-<td>0.6 to 0.8</td>
+<td>0.6 to <span style="color:red">7.2</span></td>
 <td></td>
 </tr>
 <tr>
@@ -900,7 +918,7 @@
 <tr>
 <td>GRD Product Size [MB]</td>
 <td>700</td>
-<td>250</td>
+<td>250, <span style="color:red">2250</span></td>
 <td>800</td>
 <td></td>
 </tr>
