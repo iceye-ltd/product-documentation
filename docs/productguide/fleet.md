@@ -36,7 +36,7 @@ Each satellite is in a sun-synchronous orbit with 15 revolutions per day. Their 
 |-----------|-------|
 | Nominal Altitude| 560 to 580 km|
 | Orbit Parameters | Value |
-| Inclination| 97.7\degree (sun-synchronous)|
+| Inclination| 97.7° (sun-synchronous)|
 | Orbits / Day| 15|
 |Ground track repeat  | 1 - 22 days|
 | Constellation mean revisit at equator| 20 hours|
