@@ -7,25 +7,25 @@ The following provides additional technical information on the performance of th
 ## Technical Overview
 
 <figure markdown>
-| Parameter      | Strip        |  Spot   | <span style="color:red">Spot *Extended Area*</span> | Scan          | Comments                            |
+| Parameter      | Strip        |  Spot   | Spot *Extended Area* | Scan          | Comments                            |
 |----------------|--------------|---------|--------------------|---------------|-------------------------------------|
-| Product Short Name            | 'SM'         | 'SLH'     | <span style="color:red">'SLEA'</span> | 'SC'    | [Note 1](#notes-and-explanations)    |
-| Radar Beams Used              |  1           | 1         | <span style="color:red">1</span>      | 4       | [Note 2](#notes-and-explanations)    |
-| Nominal swath width [km]      | 30           | 5         | <span style="color:red">15</span>     | 100     | [Note 3](#notes-and-explanations)    |
-| Nominal product length (Azimuth Direction) [km] | 50 | 5 | <span style="color:red">15</span>     | 100     | [Note 4](#notes-and-explanations)    |
-| Nominal collection duration [sec] | 10       | 10        | <span style="color:red">20</span>     | 15      |                                      |
-| Maximum collection duration [sec] | 35-72    | N/A       | <span style="color:red">N/A</span>    | 15      | [Note 5](#notes-and-explanations)    |
-| Maximum Scene Length [km]         | 240-500  | 5         | <span style="color:red">15</span>     | <span style="color:red">300</span> | [Note 5](#notes-and-explanations)    |
-| Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ]  | -21.5 to -20 | -18 to -15 | <span style="color:red">-18 to -15</span> | -22.2 to -21.5 | [Note 6](#notes-and-explanations)    |
-| Azimuth Ambiguity Ratio [dB]  | -17          | -17       | <span style="color:red">-17</span>    | -17     |                                      |
-| Range Ambiguity Ratio [dB]    | -20          | -20       | <span style="color:red">-20</span>    | -20     |                                      |
-| Geospatial Accuracy [m CEP90] | 9            | 9         | <span style="color:red">9</span>      | 15      |                                      |
+| Product Short Name            | 'SM'         | 'SLH'     | 'SLEA' | 'SC'    | [Note 1](#notes-and-explanations)    |
+| Radar Beams Used              |  1           | 1         | 1     | 4       | [Note 2](#notes-and-explanations)    |
+| Nominal swath width [km]      | 30           | 5         | 15    | 100     | [Note 3](#notes-and-explanations)    |
+| Nominal product length (Azimuth Direction) [km] | 50 | 5 | 15    | 100     | [Note 4](#notes-and-explanations)    |
+| Nominal collection duration [sec] | 10       | 10        | 20     | 15      |                                      |
+| Maximum collection duration [sec] | 35-72    | N/A       | N/A   | 15      | [Note 5](#notes-and-explanations)    |
+| Maximum Scene Length [km]         | 240-500  | 5         | 15     | 300 | [Note 5](#notes-and-explanations)    |
+| Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ]  | -21.5 to -20 | -18 to -15 | -18 to -15 | -22.2 to -21.5 | [Note 6](#notes-and-explanations)    |
+| Azimuth Ambiguity Ratio [dB]  | -17          | -17       | -17    | -17     |                                      |
+| Range Ambiguity Ratio [dB]    | -20          | -20       | -20    | -20     |                                      |
+| Geospatial Accuracy [m CEP90] | 9            | 9         | 9      | 15      |                                      |
 | ESA Copernicus Contributing Mission (CCM) Class[@copernicusClass] | VHR2 | VHR1 | VHR1 | HR1 |                     |
-| Polarization                  | VV           | VV        | <span style="color:red">VV</span>     | VV      |                                      |
-| RNIIRS                        | 3.6          | 5.5       | <span style="color:red">5.5</span>    | 2.1     | [Note 8](#notes-and-explanations)    |
-| RGIQE [bits/m2]               | 0.8          | 22        |  <span style="color:red">?</span>     | 0.1     | [Note 9](#notes-and-explanations)    |
-| Performant Incidence Range [deg]  | 15-30    | 20-35     | <span style="color:red">20-35</span>  | 21-29   | [Note 12](#notes-and-explanations)   |
-| Time Dominant Incidence Range [deg] | <span style="color:red">11-43</span>  | 11-56     | <span style="color:red">11-56</span> | N/A      | [Note 13](#notes-and-explanations)   |
+| Polarization                  | VV           | VV        | VV     | VV      |                                      |
+| RNIIRS                        | 3.6          | 5.5       | 5.5    | 2.1     | [Note 8](#notes-and-explanations)    |
+| RGIQE [bits/m2]               | 0.8          | 22        |  8.4     | 0.1     | [Note 9](#notes-and-explanations)    |
+| Performant Incidence Range [deg]  | 15-30    | 20-35     | 20-35  | 21-29   | [Note 12](#notes-and-explanations)   |
+| Time Dominant Incidence Range [deg] | 11-43  | 11-56     | 11-56 | N/A      | [Note 13](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 1 : ICEYE Collections Technical Summary</em></figcaption>
 </figure>
 
@@ -33,14 +33,14 @@ The following provides additional technical information on the performance of th
 <figure markdown>
 | Parameter | Strip | Spot | Comments |
 |-----------|-------|------|----------|
-| Focusing plane |  Slant Plane  |
+| Focusing plane |  Slant Plane  | Slant Plane  |
 | Slant range resolution [m] | 0.5 to 2.5 | 0.5 | [Note 7](#notes-and-explanations) |
 | Slant azimuth resolution [m] | 3 | 0.25 |   
 | Impulse response weighing function (peak side level) | Uniform (-13.3dB) |Uniform (-13.3dB)| |
 | Slant Range Sample Spacing [m] | 0.4 to 2.4 | 0.4 | [Note 7](#notes-and-explanations)  | 
 | Slant Azimuth Sample Spacing [m] | 1.6 | 0.2 |  
 | Slant range product format | HDF5 + XML | HDF5 + XML | |   
-| SLC Product Size [GB] | 3.4 to 2.9 | 0.6 to <span style="color:red">7.2</span> |   |
+| SLC Product Size [GB] | 3.4 to 2.9 | 0.6 to 7.2 |   |
 | Dynamic Range (bits per pixel) | 32 | 32 | [Note 10](#notes-and-explanations) |  
 
 <figcaption align = "center"><em>Table 2 : Parameters for ICEYE Complex Images</em></figcaption>
@@ -58,7 +58,7 @@ The following provides additional technical information on the performance of th
 | Range Looks  | 1  | 1 to 2  | 1  |   |
 | Azimuth Looks  | 1 to 2  | 1 to 4  | 1  |   |
 | Product format  | Geotiff + XML | Geotiff + XML | Geotiff + XML  |   |
-| GRD Product Size [MB]  | 700  | 250, <span style="color:red">2250</span>  | 800  |   |
+| GRD Product Size [MB]  | 700  | 250, 2250  | 800  |   |
 | Dynamic Range (bits per pixel)  | 16 | 16 | 16 | [Note 11](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 3 : Parameters for ICEYE Amplitude Images</em></figcaption>
 </figure>    
