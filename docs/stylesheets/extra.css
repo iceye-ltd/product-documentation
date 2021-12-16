@@ -7,6 +7,9 @@
 .facebook {
     color: #4267B2;
 }
+.youtube {
+    color: #FF0000;
+}
 @keyframes heart {
     0%, 40%, 80%, 100% {
     transform: scale(1);
@@ -16,5 +19,6 @@
     }
 }
 .heart {
+    color: #FF0000;
     animation: heart 1000ms infinite;
 }
