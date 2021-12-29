@@ -22,7 +22,6 @@ nav:
         - Foundations : 
             - Geospatial Accuracy : productFormats/geospatialAccuracy.md
             - Radiometric Accuracy : productFormats/radiometric.md
-            - Calibration : productFormats/calibration.md
             - Slant to Ground Conversion : productFormats/slantToGround.md
         - Components :
             - Single Look Complex Image : productFormats/slc.md
@@ -44,8 +43,16 @@ nav:
 theme:
     name: material
     palette:
-        primary: black
-        accent: green
+    - scheme: iceye
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to light mode
+    primary: blue
+    accent: green
     logo: assets/svg-iceye-icon-white.svg
     favicon: assets/favicon.ico
     custom_dir: overrides
@@ -84,6 +91,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.arithmatex:
         generic: true
   - pymdownx.emoji:
