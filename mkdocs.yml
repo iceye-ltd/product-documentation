@@ -23,7 +23,7 @@ nav:
             - Geospatial Accuracy : productFormats/geospatialAccuracy.md
             - Radiometric Accuracy : productFormats/radiometric.md
             - Slant to Ground Conversion : productFormats/slantToGround.md
-        - Components :
+        - Image Products :
             - Single Look Complex Image : productFormats/slc.md
             - Amplitude Image : productFormats/grd.md
         - Metadata : productFormats/metadata.md

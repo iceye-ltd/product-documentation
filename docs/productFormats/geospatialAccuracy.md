@@ -51,6 +51,8 @@ The most significant source of geospatial error in ICEYE SAR imagery comes, not 
 <figcaption align = "center"><em>Figure 2: The geospatial accuracy of a SAR image is a function of the accuracy of the terrain model used.</em></figcaption>
 </figure>
 
+It is important to realize that the link between terrain height and geospatial accuracy applies to all oblique imaging system's including optical sensors. Furthermore the geospatial accuracy of optical imaging systems rely on the precise angular measurement of the pointing of the optical imaging system's focal plane. RADAR systems measure the **range** to each point on the ground rather than the **angle**, which is easier to perform precisely (a SAR sensor measures range to a fraction of a wavelength). This means that all things being equal, a SAR satellite's geospatial accuracy is **far more accurate** than an optical imaging satellite.
+
 ## Geospatial Metadata
 It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images *off-nadir*. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have approximate terrain models built in and can reduce the location errors using parameters embedded in the metadata of each image. Two common approaches are  *Doppler Centroid Polynomials* and *Rapid Polynomial Coefficients*.
 
