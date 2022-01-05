@@ -140,5 +140,16 @@ Where coefficients $C_1…C_{20}$ represent the vector coefficients provided in 
 <figcaption align = "center"><em>Table 3 : RPC metadata parameters in ICEYE Products</em></figcaption>
 </figure>
 
+## Geometric Calibration Process 
+Because of the errors induced by terrain, ICEYE satellites use a range of calibration sites around the world. Each site uses calibration point targets (such as [trihedral corner reflectors](https://www.radartutorial.eu/17.bauteile/bt47.en.html)). The position, orentation and size of these is carefully measured and maintained (and often provided as a free service to the geospatial community As the precise three-dimensional position of each calibration target is known this allows ICEYE engineers to compare the predicted target location and determine how far away the measured location is from the 'ground truth'. There are still many variables at play though such as atmospheric propagation, orbit knowledge and temperature of the satellite so the process is statistical in nature. By performing the calibration measurements many times, a probable circular error (called [CE90](https://en.wikipedia.org/wiki/Circular_error_probable)) can be determined. 
+
+<figure>
+<img src="../img/rosmond2.4m.png" style="width:100%">
+<figcaption align = "center"><em>Figure 3: a 2.4m trihedral at the NASA JPL Rosamond Calibration Array[@rosamond].</em></figcaption>
+</figure>
+
+Currently the ICEYE fleet is achieving a worst-case CE90 of 6m.
+
+
 ## References
 \bibliography

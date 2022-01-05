@@ -1,4 +1,4 @@
-# Glossary, Acronyms and Symbols
+# Terminology, Acronyms and Symbols
 
 
 ## SAR Glossary 
@@ -14,3 +14,6 @@
 |**Range**	            |Direction orthogonal to the satellite velocity. |
 |**Slant range vector**	|Line-Of-Sight distance between the antenna and the target on ground.|
 |**Slant range plane**	|Plane containing the relative sensor velocity vector and the slant range vector for a given target.|
+|**Geocoded**           | |
+|**Georeference**       | |
+|**Orthorectification** | |

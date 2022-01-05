@@ -20,15 +20,15 @@ nav:
         - SAR Data Formatting Options : productFormats/introduction.md
         - Data Levels : productFormats/levels.md
         - Foundations : 
-            - Geospatial Accuracy : productFormats/geospatialAccuracy.md
-            - Radiometric Accuracy : productFormats/radiometric.md
+            - Geospatial Considerations : productFormats/geospatialAccuracy.md
+            - Radiometric Considerations : productFormats/radiometric.md
             - Slant to Ground Conversion : productFormats/slantToGround.md
         - Image Products :
             - Single Look Complex Image : productFormats/slc.md
             - Amplitude Image : productFormats/grd.md
         - Metadata : productFormats/metadata.md
         # - from the product guide :  productguide/dataformats.md
-    - How SAR Works : 
+    - What is SAR : 
         - The Value Of SAR Imaging : OverviewOfSAR/overviewOfSAR.md
         - A Simple Form Of RADAR Imaging : OverviewOfSAR/simpleFormOfImaging.md
         - The Remarkable Story Of SAR : OverviewOfSAR/remarkableStory.md
@@ -37,7 +37,7 @@ nav:
         - SAR Processing Overview : OverviewOfSAR/sarProcessing.md
         - Separating Signals From Noise : OverviewOfSAR/noise.md
         - The Innovation : OverviewOfSAR/theInnovation.md
-    - Glossary : glossary.md
+        - Terminology : glossary.md
     - Coming Soon : comingsoon.md
     - About: about.md
 theme:
