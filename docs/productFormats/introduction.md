@@ -5,6 +5,10 @@
 After an imaging operation has taken place, the recorded radar echo return data is downloaded to one of the terminals in the ICEYE ground station network. From here the process of image formation is performed. The focussing algorithm used depends on the acquisition type. The data is then stored and represented as binary data in a container file format ready for exploitation. 
 
 During the development of the final exploitable product several decisions have to be made about the data representation. At ICEYE we realise that not every format is suitable for every customer or use case so starting in 2022 we will be increasing the range of processing options available. To start with a discussion on the possibilities is warrented so that later we can refer to our current formats in context of the larger landscape. 
+<figure markdown>
+![placeholder](img/port.gif){width="600"}
+<figcaption align = "center"><em>Figure 8: The Port of Rotterdam on three consecutive days.</em></figcaption>
+</figure> 
 
 ## The Tree of Processing Options
 There are many steps that have to be considered when converting RADAR pulse data into an exploitable image. Here we will talk about each in turn.

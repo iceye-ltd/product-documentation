@@ -1,6 +1,11 @@
 # THE ICEYE FLEET
 
-The ICEYE global imaging service uses an innovative satellite and sensor design based on advancements in small satellite technologies and an adaptable New Space approach. The ICEYE constellation is constantly evolving. We began 2021 with seven operating satellites and we’ll finish the year with thirteen systems. There will be more than ten more units added in 2022. The ICEYE constellation is optimized for persistent monitoring: rapidly repeatable access of any location on Earth, with flexible tasking for very high resolution spots as well as wide area scans.
+The ICEYE global imaging service uses an innovative satellite and sensor design based on advancements in small satellite technologies and an adaptable New Space approach. The ICEYE constellation is constantly evolving, being optimized for persistent monitoring: rapidly repeatable access of any location on Earth, with flexible tasking for very high resolution spots as well as wide area scans. 
+
+At the end of 2021 there are 11 operating satellites with 6 satellites constantly supporting imaging operations. (The other 5 are either going through commissioning, orbit refinement or have been retired from imaging operations.)
+As we go into 2022 there are another 10 satellites on the launch roster to be inserted into low earth orbit by the end of the year.
+
+Our goal is to have global access from a fleet of satellites, each in a coherent daily ground track repeat orbit (*CD-GTR*). This means that any location can be imaged and then imaged again from precisely the same imaging geometry no later than 24 hours after the first image. During the coming year we will start to see our global coherent imaging plan start to fall into place as we move more satellites into their allocated repeatind ground tracks.
 
 <figure>
 <img src="../img/iceye-gen2-satellite.png" style="width:100%">
@@ -32,6 +37,7 @@ The ICEYE sensors are X-band radars, each with an active phased array antenna an
 At present, the LTANs of the ICEYE constellation are not uniformly spaced. This means that the time to revisit a location on the equator varies over a period of days. The mean revisit rate at the equator is 20 hours and the mean time to access a location on the equator is 12 hours. At higher and lower latitudes, the rates are more frequent. Table 2 lists the orbital parameters of the current SAR instruments.
 Each satellite is in a sun-synchronous orbit with 15 revolutions per day. Their ground track repeat cycles vary between 1 and 22 days, depending on the satellite. Each orbital plane is phased around the Earth with a different local time of the ascending node (LTAN). This means that the overall constellation can observe a location at different times of the day. This has an advantage over dawn-dusk sun-synchronous orbits, in which the local time of collection is always close to sunrise or sunset.
 
+<figure markdown>
 | Orbit Parameters ||
 |-----------|-------|
 | Nominal Altitude| 560 to 580 km|
@@ -41,15 +47,38 @@ Each satellite is in a sun-synchronous orbit with 15 revolutions per day. Their 
 |Ground track repeat  | 1 - 22 days|
 | Constellation mean revisit at equator| 20 hours|
 | Constellation mean time to access at equator| 12 hours|
-| Nodal crossing (LTAN)| 22:30, 15:05, 14:04, 21:36|
-| Satellite Catalog Numbers|43800,44390,46497,46496,47510,47506 |
 | Orbit maintenance |Ion Propulsion |
+<figcaption align = "center"><em>Table 2: Constellation Parameters</em></figcaption>
+</figure>
 
-<center>*Table 2: Constellation Parameters*</center> 
+<figure markdown>
+|  Satellite Name    |  Launch Date  |  NORAD ID  |  LTAN      | Status |
+|--------------------|---------------|------------|------------|--------|
+|  [ICEYE-X1](https://www.n2yo.com/?s=43114)  |  2018-01-12   |  43114     |  22:22:05  |<span style="color:red">Out of operations |
+|  [ICEYE-X2](https://www.n2yo.com/?s=43800)  |  2018-12-03   |  43800     |  22:05:36  |<span style="color:green">Operational|
+|  [ICEYE-X4](https://www.n2yo.com/?s=44390)  |  2019-07-05   |  44390     |  15:17:33  |<span style="color:orange">Maintenance |
+|  [ICEYE-X5](https://www.n2yo.com/?s=44389)  |  2019-07-05   |  44389     |  15:18:45  |<span style="color:red">Out of operations  |
+|  [ICEYE-X6](https://www.n2yo.com/?s=46497)  |  2020-09-28   |  46497     |  13:23:08  |<span style="color:green">Operational|
+|  [ICEYE-X7](https://www.n2yo.com/?s=46496)  |  2020-09-28   |  46496     |  13:20:12  |<span style="color:green">Operational|
+|  [ICEYE-X8](https://www.n2yo.com/?s=47510)  |  2021-01-24   |  47510     |  21:29:19  |<span style="color:green">Operational|
+|  [ICEYE-X9](https://www.n2yo.com/?s=47506)  |  2021-01-24   |  47506     |  21:30:06  |<span style="color:green">Operational|
+|  [ICEYE-X11](https://www.n2yo.com/?s=48918) |  2021-06-30   |  48918     |  02:07:01  |<span style="color:green">Operational|
+|  [ICEYE-X12](https://www.n2yo.com/?s=48914) |  2021-06-30   |  48914     |  02:06:42  |<span style="color:orange">Maintenance|
+|  [ICEYE-X13](https://www.n2yo.com/?s=48916) |  2021-06-30   |  48916     |  02:06:41  |<span style="color:orange">Maintenance|
+|  [ICEYE-X15](https://www.n2yo.com/?s=48917) |  2021-06-30   |  48917     |  02:07:07  |<span style="color:orange">Maintenance|
+<figcaption align = "center"><em>Table 3: ICEYE satellites status and LTANs </em></figcaption>
+</figure>
 
 Each satellite has the ability to slowly adjust their orbits throughout their operating life. Adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. Over the next 12 months, the fleet will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine data collections of the same area whilst maintaining rapid access times.
 
-The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 2 and one of the excellent online orbital elements tools  such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/?s=43800\%7C44390\%7C44389\%7C46497\%7C46496\%7C47510\%7C47506)[@n2yo], which provides a live view of the current ICEYE constellation.  
+<figure markdown>
+![placeholder](img/muldrow.gif){width="600"}
+<figcaption align = "center"><em>Figure 2: Coherent Daily Ground Track Repeat imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
+</figure> 
+
+The orbital agility is provided via a set of Ion Thrusters positioned around the satellite. As well as providing a near limitless supply of manoevring thrust, it also means that the costellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events,
+
+The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 3 and one of the excellent online orbital elements tools  such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/?s=43800\%7C44390\%7C44389\%7C46497\%7C46496\%7C47510\%7C47506)[@n2yo], which provides a live view of the current ICEYE constellation.  
 
 ## References
 \bibliography

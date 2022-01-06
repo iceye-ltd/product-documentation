@@ -25,7 +25,7 @@ Standard orders are submitted via email. To order, please fill out the Standard 
     The order form will be provided by COSP. If you need a new one please email [customer@iceye.com](mailto:customer@iceye.com) 
 
 <figure markdown>
-![placeholder](img/standard_order_process.png){width="600"}
+![placeholder](img/standardOrders2.png){width="600"}
 <figcaption align = "center"><em>Figure 6: Standard ICEYE Tasking order flow</em></figcaption>
 </figure>
 
@@ -96,7 +96,6 @@ Our tasking experts will be happy to try to accommodate any special tasking requ
 <figcaption align = "center"><em>Figure 8: Custom ICEYE Tasking order flow.</em></figcaption>
 </figure>
 
-
 ## Quality Control and Image Delivery
 
 The processed data will be assessed during the Quality Control process. An ICEYE image analyst will verify that the frame contains the customer’s target location, that it complies to the product specifications and that it does not contain any disqualifying ambiguities.
@@ -105,7 +104,7 @@ The frames are delivered to customers via a SFTP server within 8 hours of the da
 
 !!! info
     Images are stored in your SFTP account for a period of 30 days.
-
+    
 ## Unforeseen Circumstances
 In very rare situations, it might not be possible to acquire an image within the agreed time window. In this case, the Customer Operations and Satellite Planning team will immediately inform the customer and will propose an extended acquisition time window size or allow the customer to cancel the collection.
 

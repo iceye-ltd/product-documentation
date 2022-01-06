@@ -8,20 +8,19 @@ edit_uri: edit/main/docs/
 site_url: https://iceye-ltd.github.io/product-documentation/
 
 nav:
-    - Welcome to ICEYE: index.md
+    - ICEYE SAR Procucts: index.md
     - The ICEYE Fleet: productguide/fleet.md
     - ICEYE Products: 
         - Product Types : productguide/products.md
         - Collection Characteristics : productguide/collectioncharacteristics.md
         - Ordering data: productguide/ordering.md
         - Support: productguide/support.md
-        - Quality Assurance: productguide/quality.md
     - Data Format Specification : 
         - SAR Data Formatting Options : productFormats/introduction.md
         - Data Levels : productFormats/levels.md
         - Foundations : 
             - Geospatial Considerations : productFormats/geospatialAccuracy.md
-            - Radiometric Considerations : productFormats/radiometric.md
+            - Radiometric Considerations : productFormats/radiometric.md 
             - Slant to Ground Conversion : productFormats/slantToGround.md
         - Image Products :
             - Single Look Complex Image : productFormats/slc.md
