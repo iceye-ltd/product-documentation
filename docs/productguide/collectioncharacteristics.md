@@ -42,9 +42,9 @@ The following provides additional technical information on the performance of th
 | Slant range product format | HDF5 + XML | HDF5 + XML | |   
 | SLC Product Size [GB] | 3.4 to 2.9 | 0.6 to 7.2 |   |
 | Dynamic Range (bits per pixel) | 16(uint) 32(Float) | 16(uint) 32(Float) | [Note 10](#notes-and-explanations) |  
-
 <figcaption align = "center"><em>Table 2 : Parameters for ICEYE Complex Images</em></figcaption>
-</figure>    
+</figure>
+
 
 ## Amplitude Image Parameters
 <figure markdown>
@@ -61,7 +61,7 @@ The following provides additional technical information on the performance of th
 | GRD Product Size [MB]  | 700  | 250, 2250  | 800  |   |
 | Dynamic Range (bits per pixel)  | 16(uint) 32(Float) | 16(uint) 32(Float) | 16(uint) 32(Float) | [Note 12](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 3 : Parameters for ICEYE Amplitude Images</em></figcaption>
-</figure>    
+</figure>
 
 
 ## Notes and Explanations

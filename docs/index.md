@@ -12,13 +12,11 @@
 -----
 ## How To Read This Document
 
-Welcome to the latest ICEYE experiment ! This one involves you more directly 😯 . 
-
-Previously if you wanted to find out about ICEYE satellites or our data we asked you to check out our **Product Guide** in pdf format. [This is still available](https://www.iceye.com/downloads/product-documents) but we thought that it wasn't as easy to read or use as a more interactive web-based set of documents. Thats what this site is (and hopefully a bit more).
+Previously if you wanted to find out about ICEYE satellites or our data we asked you to check out our **Product Guide** in pdf format. [This is still available](https://www.iceye.com/downloads/product-documents) for download but we thought that it wasn't as easy to read or use as a more interactive web-based set of documents. Thats what this site is (and hopefully a bit more).
 
 If you want to learn more about ICEYE the company, its initiatives and projects then we would encourage you to visit the <a href="http://iceye.com" target=”_blank”>ICEYE website</a>. It has many examples and stories about the company, what it has done and where it wants to go.
 
-The list of contents on the left should guide you through the information you need in a sensible order. 
+The list of contents on the left should guide you through the information you need from this site in a sensible order. 
 
  * Up first is a description of the current [**ICEYE Fleet**](productguide/fleet) of satellites with some useful information on where each satellite is right now.
  * This is followed by a section on [**ICEYE data products**](productguide/products). This is where you can find out about the different types of SAR images you can buy and contains a useful summary of what performance parameters you can expect when you receive your imagery.

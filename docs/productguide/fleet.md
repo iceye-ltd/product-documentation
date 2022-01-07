@@ -5,7 +5,7 @@ The ICEYE global imaging service uses an innovative satellite and sensor design 
 At the end of 2021 there are 11 operating satellites with 6 satellites constantly supporting imaging operations. (The other 5 are either going through commissioning, orbit refinement or have been retired from imaging operations.)
 As we go into 2022 there are another 10 satellites on the launch roster to be inserted into low earth orbit by the end of the year.
 
-Our goal is to have global access from a fleet of satellites, each in a coherent daily ground track repeat orbit (*CD-GTR*). This means that any location can be imaged and then imaged again from precisely the same imaging geometry no later than 24 hours after the first image. During the coming year we will start to see our global coherent imaging plan start to fall into place as we move more satellites into their allocated repeatind ground tracks.
+Our goal is to have global access from a fleet of satellites, each in a coherent daily ground track repeat orbit (*CD-GTR*). This means that any location can be imaged and then imaged again from precisely the same imaging geometry no later than 24 hours after the first image. During the coming year we will start to see our global coherent imaging plan start to fall into place as we move more satellites into their allocated repeating ground tracks.
 
 <figure>
 <img src="../img/iceye-gen2-satellite.png" style="width:100%">

@@ -5,7 +5,7 @@
 <figcaption align = "center"><em>Its on the backlog.....</em></figcaption>
 </figure>
  
-## A Bag of Ideas
+## The Advantage Of Experimentation
 Having a flexible constellation of SAR satellites provides a rich source of experimental data. Here we present some of the ideas that we feel confident enough to share. Not everything here will make it into the wild but if you like some of these, or even have your own ideas, then we would love to hear from you.
 
 ### SAR Video

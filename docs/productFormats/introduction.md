@@ -12,6 +12,10 @@ During the development of the final exploitable product several decisions have t
 
 ## The Tree of Processing Options
 There are many steps that have to be considered when converting RADAR pulse data into an exploitable image. Here we will talk about each in turn.
+<figure>
+<img src="../img/image-product-tree-all.png" style="width:100%">
+<figcaption align = "center"><em>Figure 1: The SAR Image Tree of Processing Options</em></figcaption>
+</figure>
 
 ### Sample Arrangement
 This is the way the image pixels are aligned as a '*raster*' in the container file. Most GIS viewers will convert the projection for you on your screen. Map-oriented images are larger than range-azimuth images as the rotation to make the image 'north-up' in the container file requires the addition of blank pixels to make the image rectangular. Despite this some users prefer to view the map-oriented product as its map representation with north up and east right makes it easier to use with with paper-based maps.
@@ -36,26 +40,3 @@ The number of shades of grey that a pixel in a SAR image can have is determined 
 
 ### Container Format
 The container and file format defines how the data and associated metadata is stored on disk. It also defines which image viewers know how to read the data. 
-
-
-<figure>
-<img src="../img/image-product-tree-all.png" style="width:100%">
-<figcaption align = "center"><em>Figure 1: The SAR Image Tree of Processing Options</em></figcaption>
-</figure>
-
-
-
-
-<!-- ## Structure
-
-* Where are all the 'levels' ?
-* Foundations :
-    * How is SAR Data formed?
-    * Important stuff :
-        * Radiometric Accuracy and Calibration
-        * Spatial Accuracy
-            * Resolution
-            * Geolocation
-                * Doppler Centroid Parameters
-                * Rational Polynomial Coefficients
-        * Slant to Ground conversion -->
