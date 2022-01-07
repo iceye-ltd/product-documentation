@@ -1,10 +1,30 @@
-# Levels of SAR Data
-## UNDER CONSTRUCTION
+# SAR Data Package
 
-<figure>
-<img src="../img/underconstruction.png" style="width:100%">
-<figcaption align = "center"><em>Its on the backlog.....</em></figcaption>
-</figure>
+## File Naming
+Product file naming is designed to facilitate understanding of the product processing level and key properties at an early stage, without the need to analyze product metadata. The product filename components are shown in Figure 1.  
+In Figure 1 the Product ID is shown as a unique identifier of the acquired scene and is assigned during scene ordering and acquisition. 
+
+<figure markdown>
+![placeholder](img/FileNamingConvention.png){width="600"}
+<figcaption align = "center"><em>Figure 1: Data product filename components</em></figcaption>
+</figure> 
+A description of the  constituent elements are explained in more detail in  Table 1
+
+<figure markdown>
+| Constituent |	Name	|Value	|Notes|
+|-------------|---------|-------|-----|
+|ICEYE_	      | constellation |	ICEYE_	|fixed|
+|XN_	|sensor	|X2/X4/X5	|specific sensor that has acquired the scene|
+|PPL_	|product processing level	|SLC/GRD	|variant of processing level|
+|IM_	|imaging mode	|SM/SMH/SL/SLH	|stripmap, stripmap-high, spotlight, spotlight-high|
+|PRID_	|product id	|eg. 6403	|data take ID|
+|YYYYMMDD	|UTC start date	|eg. 20190211	|YYYYMMDD format|
+|Thhmmss	|UTC start time	|eg. T131415	|Thhmmss format|
+
+<figcaption align = "center"><em>Table 1: Product filename components. Example : ICEYE_X6_GRD_SM_153426_20211026T060946</em></figcaption>
+</figure> 
+
+## SAR Processing Levels
 Earth Observation Products are available in varying processing levels. The levels are defined by the Committee for Earth Observation Satellites[@ceoslevels] as :
 
 * RAW Data - Data in their original packets, as received from a satellite. 

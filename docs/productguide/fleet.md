@@ -54,20 +54,22 @@ Each satellite is in a sun-synchronous orbit with 15 revolutions per day. Their 
 <figure markdown>
 |  Satellite Name    |  Launch Date  |  NORAD ID  |  LTAN      | Status |
 |--------------------|---------------|------------|------------|--------|
-|  [ICEYE-X1](https://www.n2yo.com/?s=43114)  |  2018-01-12   |  43114     |  22:22:05  |<span style="color:red">Out of operations |
-|  [ICEYE-X2](https://www.n2yo.com/?s=43800)  |  2018-12-03   |  43800     |  22:05:36  |<span style="color:green">Operational|
-|  [ICEYE-X4](https://www.n2yo.com/?s=44390)  |  2019-07-05   |  44390     |  15:17:33  |<span style="color:orange">Maintenance |
-|  [ICEYE-X5](https://www.n2yo.com/?s=44389)  |  2019-07-05   |  44389     |  15:18:45  |<span style="color:red">Out of operations  |
-|  [ICEYE-X6](https://www.n2yo.com/?s=46497)  |  2020-09-28   |  46497     |  13:23:08  |<span style="color:green">Operational|
-|  [ICEYE-X7](https://www.n2yo.com/?s=46496)  |  2020-09-28   |  46496     |  13:20:12  |<span style="color:green">Operational|
-|  [ICEYE-X8](https://www.n2yo.com/?s=47510)  |  2021-01-24   |  47510     |  21:29:19  |<span style="color:green">Operational|
-|  [ICEYE-X9](https://www.n2yo.com/?s=47506)  |  2021-01-24   |  47506     |  21:30:06  |<span style="color:green">Operational|
-|  [ICEYE-X11](https://www.n2yo.com/?s=48918) |  2021-06-30   |  48918     |  02:07:01  |<span style="color:green">Operational|
-|  [ICEYE-X12](https://www.n2yo.com/?s=48914) |  2021-06-30   |  48914     |  02:06:42  |<span style="color:orange">Maintenance|
-|  [ICEYE-X13](https://www.n2yo.com/?s=48916) |  2021-06-30   |  48916     |  02:06:41  |<span style="color:orange">Maintenance|
-|  [ICEYE-X15](https://www.n2yo.com/?s=48917) |  2021-06-30   |  48917     |  02:07:07  |<span style="color:orange">Maintenance|
-<figcaption align = "center"><em>Table 3: ICEYE satellites status and LTANs </em></figcaption>
+|  <a href="https://www.n2yo.com/?s=43114" target=”_blank”>ICEYE-X1</a> |  2018-01-12   |  43114     |  22:22:05  |<span style="color:red">Out of operations |
+|  <a href="https://www.n2yo.com/?s=43800" target=”_blank”>ICEYE-X2</a> |  2018-12-03   |  43800     |  22:05:36  |<span style="color:green">Operational|
+|  <a href="https://www.n2yo.com/?s=44390" target=”_blank”>ICEYE-X4</a> |  2019-07-05   |  44390     |  15:17:33  |<span style="color:orange">Maintenance |
+|  <a href="https://www.n2yo.com/?s=44389" target=”_blank”>ICEYE-X5</a> |  2019-07-05   |  44389     |  15:18:45  |<span style="color:red">Out of operations  |
+|  <a href="https://www.n2yo.com/?s=46497" target=”_blank”>ICEYE-X6</a> |  2020-09-28   |  46497     |  13:23:08  |<span style="color:green">Operational|
+|  <a href="https://www.n2yo.com/?s=46496" target=”_blank”>ICEYE-X7</a> |  2020-09-28   |  46496     |  13:20:12  |<span style="color:green">Operational|
+|  <a href="https://www.n2yo.com/?s=47510" target=”_blank”>ICEYE-X8</a> |  2021-01-24   |  47510     |  21:29:19  |<span style="color:green">Operational|
+|  <a href="https://www.n2yo.com/?s=47506" target=”_blank”>ICEYE-X9</a> |  2021-01-24   |  47506     |  21:30:06  |<span style="color:green">Operational|
+| <a href="https://www.n2yo.com/?s=48918" target=”_blank”>ICEYE-X11</a> |  2021-06-30   |  48918     |  02:07:01  |<span style="color:green">Operational|
+| <a href="https://www.n2yo.com/?s=48914" target=”_blank”>ICEYE-X12</a> |  2021-06-30   |  48914     |  02:06:42  |<span style="color:orange">Maintenance|
+| <a href="https://www.n2yo.com/?s=48916" target=”_blank”>ICEYE-X13</a> |  2021-06-30   |  48916     |  02:06:41  |<span style="color:orange">Maintenance|
+| <a href="https://www.n2yo.com/?s=48917" target=”_blank”>ICEYE-X15</a> |  2021-06-30   |  48917     |  02:07:07  |<span style="color:orange">Maintenance|
+<figcaption align = "center"><em>Table 3: ICEYE satellites status and LTANs. </em></figcaption>
 </figure>
+!!! info 
+    Click on a satellite name in Table 3 to open a new tab showing where the satellite is now on [n2yo](https://www.n2yo.com/)[@n2yo]
 
 Each satellite has the ability to slowly adjust their orbits throughout their operating life. Adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. Over the next 12 months, the fleet will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine data collections of the same area whilst maintaining rapid access times.
 
@@ -78,7 +80,7 @@ Each satellite has the ability to slowly adjust their orbits throughout their op
 
 The orbital agility is provided via a set of Ion Thrusters positioned around the satellite. As well as providing a near limitless supply of manoevring thrust, it also means that the costellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events,
 
-The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 3 and one of the excellent online orbital elements tools  such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/?s=43800\%7C44390\%7C44389\%7C46497\%7C46496\%7C47510\%7C47506)[@n2yo], which provides a live view of the current ICEYE constellation.  
+The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 3 and one of the excellent online orbital elements tools  such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/)[@n2yo], which provides a live view of the current ICEYE constellation.  
 
 ## References
 \bibliography

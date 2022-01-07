@@ -2,12 +2,12 @@
 # ICEYE PRODUCTS
 
 ## Product Types
-!!! info inline end
-
-    The section "An Overview of SAR Imaging" provides a review of the technologies mentioned here. 
 
 There are two basic forms of ICEYE images: *complex images* in the slant plane and *amplitude images* projected to the ground surface. Details about the formats of these products are provided in ['Product Formats'](#product-formats). 
 
+!!! info
+
+    The section "An Overview of SAR Imaging" provides a review of the technologies mentioned here. 
 ### Complex Images
 
 SAR complex images contain pixels that have both amplitude and phase values. They are produced at full resolution and are projected in the inclined direction of illumination, called the slant plane. Since complex images retain phase information, they can be used to produce numerous SAR products like coherent change detection images and precise surface motion measurements.
