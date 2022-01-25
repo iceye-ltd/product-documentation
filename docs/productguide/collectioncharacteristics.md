@@ -1,6 +1,6 @@
 # IMAGING COLLECTION CHARACTERISTICS
 
-The following provides additional technical information on the performance of the current imaging modes used by the ICEYE fleet. Our satellites are constantly being improved with recent satellites usually having better performance. In order to manage expectations we have decided to provide the *worst case* values across the fleet. Some parameters warrant a more detailed explanation which you can read in the [Notes](#notes-and-explanations) section.
+The following provides additional technical information on the performance of the current ICEYE imaging modes. Our satellites are constantly being improved, but in order to manage expectations, in the tables below we provide the worst-case values across the fleet. Some parameters warrant a more detailed explanation which you can read in the [Notes](#notes-and-explanations) section.
 
  [Table 2](#complex-image-parameters) provides parameters associated with ICEYE complex images and [Table 3](#amplitude-image-parameters) provides the technical parameters associated with ICEYE Amplitude Images.
 
@@ -13,7 +13,7 @@ The following provides additional technical information on the performance of th
 | Radar Beams Used              |  1           | 1         | 1     | 4       | [Note 2](#notes-and-explanations)    |
 | Nominal swath width [km]      | 30           | 5         | 15    | 100     | [Note 3](#notes-and-explanations)    |
 | Nominal product length (Azimuth Direction) [km] | 50 | 5 | 15    | 100     | [Note 4](#notes-and-explanations)    |
-| Nominal collection duration [sec] | 10       | 10        | 20     | 15      |                                      |
+| Nominal collection duration [sec] | 10       | 10        | 10     | 15      |                                      |
 | Maximum collection duration [sec] | 35-75    | N/A       | N/A   | 75      | [Note 5](#notes-and-explanations)    |
 | Maximum Scene Length [km]         | 500  | 5         | 15     | 500 | [Note 5](#notes-and-explanations)    |
 | Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ]  | -21.5 to -20 | -18 to -15 | -18 to -15 | -22.2 to -21.5 | [Note 6](#notes-and-explanations)    |

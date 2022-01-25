@@ -2,11 +2,15 @@
 
 ## Background
 
-A SAR system is able to measure the range to a point on the ground very precisely - to a fraction of a wavelength. The sensor can also measure how the range to a point changes as the satellite moves along its trajectory (by comparing pulses) which provides precise information of the along-track location of a pixel. The distance (and change of distance) to each point provides a record of radar cross section measurements as a function of range and along-track position. 
+The complex image output of the SAR image-formation process is a set of focused pixels with phase and amplitude values. Each pixel pair of the image is referenced to the sensor by its range and azimuth coordinates. That is, each pair has a specific range to a sensor reference location and an azimuth location in the along-track direction. This range-azimuth geometry establishes an arc in space, which is the basis of the geolocation modeling of SAR images. The arc for each pixel is initially fit to the slant plant surface, and for amplitude images it is subsequently projected to a ground surface, such as the ground plane or ellipsoid or topographic surface.
+The geolocation accuracy of an image depends on how well that range-azimuth arc is measured. The relevant parameters for the arc are: the range and azimuth values, the sensor reference location, and the sensor velocity vector. We will consider each of them in turn.
 
-This record is the most accuarate source of SAR data. It is provided as a set of *phase histories* (called *phase history data*). In this form the data is not available to exploit as an image - it is just a record of what the SAR sees as a function of time. To convert the phase history data into an image it is passed through a SAR Image Formation Processor which applies phase corrections to the data to make it look like the ground was observed through a *synthetic* lens or aperture. The output image from the SAR processor is the highest spatial fidelity image *product* available called the single look complex (SLC) image. All other image formats are derived from it. Due to data format conversion and projection mapping, all ground projected (*ground range*) products and derived Level 2 products will always have a lower fidelity. 
+## Range
 
-On this page we discuss the factors that affect the geospatial accuracy of a SAR Image.
+A SAR system is able to measure the range to a point on the ground very precisely. The theoretical precision of range is a fraction of a wavelength. However, as the RADAR pulse propagates through the atmosphere, it undergoes diffraction which curves the path of the pulse. This adds an unintended increase to the range of an object. The amount of increase depends on the look angle, the location of the satellite and scene, and even the time of day. The ICEYE SAR processor applies path length corrections (typically on the order of a couple of metres) using well established models. 
+
+## Azimuth
+The sensor also compares pulses to measure how the range to a point changes as the satellite moves along its trajectory. This provides precise information of the azimuth, or along-track, location of a pixel. Since this record is derived from precise pulse-to-pulse phase changes, it is the most accurate aspect of SAR data. 
 
 <!-- <figure>
 <img src="../img/radarRange_ManimCE_v0.10.0.gif" style="width:100%">
@@ -16,24 +20,22 @@ On this page we discuss the factors that affect the geospatial accuracy of a SAR
 ## On-Board Timing Errors
 A fundamental source of error for all RADAR systems relates to timing. In radar systems, precise electronic clocks are used to record the passage of time. All clocks have some sort of drift in their accuracy which, if not corrected, affects the measured range and focussing of the imagery. ICEYE satellites apply timing corrections to their internal clocks by periodically synchronising with GNSS (Global Navigation Satellite System) satellites.
 
-## Atmospheric Propagation
-As the RADAR pulse propagates through the atmosphere, it undergoes diffraction which curves the path of the pulse adding an unintended increase to the range of an object. The amount of increase depends on the look angle, the location of the satellite and scene and even the time of day. The ICEYE SAR processor attempts to apply path length corrections (typically on the order of a couple of metres) using well established models.
-
 ## Orbit Knowledge
-A potentially large source of errors comes from not knowing precisely where the sensor is when each pulse is transmitted and received. This is determined by the satellite's orbit knowledge. ICEYE satellites constantly record their GNSS location. This information is transmitted to the ground during ground station telemetry downloads that occur usually once per orbit (sometimes more frequently). Additionally the GNSS data is stored with the wideband radar data for rapid downlink and processing.
+A potentially large source of errors comes from not knowing precisely where the sensor is when each pulse is transmitted and received. This is determined by the satellite's orbit knowledge. ICEYE satellites constantly record their GNSS location. This information is transmitted to the ground during ground station telemetry downloads that occur usually once per orbit (sometimes more frequently). Additionally, the GNSS data is stored with the wideband radar data for rapid downlink and processing.
 
-Once on the ground the orbit information is passed to ICEYE's orbit determination servers. These refine the orbit, taking into account the satellite's attitude and motion, the solar radiation pressure and the local gravitational field strength. The refinements are then used to improve the image geospatial accuracy and to provide accurate time/position/velocity estimates for future collections.
+Once on the ground, the orbit information is passed to ICEYE's orbit determination servers. These refine the orbit by taking into account the satellite's attitude and motion, the solar radiation pressure and the local gravitational field strength. The refinements are then used to improve the image geospatial accuracy and to provide accurate time/position/velocity estimates for future collections.
 
 In the future we plan on further refining the orbit fidelity using post-collected GNSS corrections combined with retroreflectors attached to the satellite.
 
 The Following table summarises the different levels of orbit fidelity. This information is stored in each image's metadata.
 
+
 <figure markdown>
 | Orbit Fidelity | Description | Latency |
 |----------------|-------------|---------|
-| Predicted      | Uses current / latest orbit solution to predict where the satellite will be at some point in the future. Used for collection planning and feasibility studies. Not usually used for image formation processing as it has the largest errors. | updated 6 Hours before collection |
-| Rapid | Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not available on all satellites yet. | Immediate. |
-| Precise | This is the default orbit fidelity used for ICEYE satellites. The satellite position/velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. | 10-45 minutes after imaging operation |
+| Predicted      | Uses the latest orbit solution to predict where the satellite will be at some point in the future. It is used for collection planning and feasibility studies.  It is not typically used for image formation processing because it has the largest errors. | updated 6 Hours before collection |
+| Rapid | Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites. | Immediate. |
+| Precise | This is the default orbit fidelity used for ICEYE satellites. The satellite position and velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. The spherical error of the refined data is 1.5m | 10-45 minutes after imaging operation |
 | Scientific | This uses GNSS corrections applied to the samples taken during imaging to significantly reduce the position velocity error. This is not yet available across the ICEYE Fleet. | 2 to 4 days after collection | 
 <figcaption align = "center"><em>Table 1 : Different Levels of Orbit Fidelity in ICEYE SAR Images</em></figcaption>
 </figure>
@@ -42,19 +44,27 @@ The Following table summarises the different levels of orbit fidelity. This info
 
 The location of the satellite during any imaging operation is made available by including the satellite and velocity information in the metadata for each image product. The data can be found under the `orbit_state_vector` metadata element. The accuracy of each element is determined by the orbit fidelity used to create the product which can be found in the `orbit_processing_level` metadata element which corresponds so one of the levels in table 1.
 
-## Terrain Height
+## Determining Ground Locations
+A sensor-orientation SAR amplitude image is a distillation of its richer complex image parent. It is the viewable version of SAR pixels and thus contains only microwave brightness values and no phase data. As with the complex image, its pixels have a range-azimuth structure. The difference is that it is usually projected to a ground surface, not the slant plane.
+It must be emphasized that the SAR image on its own cannot provide accurate ground locations. The chosen ground projection surface is typically an ellipsoid with a height set to the average height of the imaged area. This means that latitude and longitude image corner coordinates are for reference only. They are intended to layout the image footprint, and since they were projected to a single-elevation surface they cannot be used for accurate geolocation.
+SAR geolocation requires the projection of the natural range-azimuth arc of each pixel to an actual terrain height. This means that the image exploitation system must have a ground terrain height model on hand and it must use the coded SAR geometry model equations. This situation is exactly the same for optical images. The imaging conversion of 3D space to any 2D image, optical or SAR, means that proper geolocation requires pixel projections to elevation models on exploitation workstations.
 
-The most significant source of geospatial error in ICEYE SAR imagery comes, not so much from the inherent properties of the RADAR but from the way the data is measured and exploited. The following animation explains why the measured location of a point in a SAR image is dominated by errors in terrain height information.
+
+### Elevation Models
+
+In the case of a calibrated SAR with accurate range-azimuth coordinates and precise orbit data, the most significant source of geospatial error comes from the way the data is measured and exploited on a workstation. The following animation explains why the measured location of a point on an accurate SAR image is dominated by errors in external terrain height information.
 
 <figure>
 <img src="../img/explainingGeoErrors_ManimCE_v0.13.1.gif" style="width:100%">
 <figcaption align = "center"><em>Figure 2: The geospatial accuracy of a SAR image is a function of the accuracy of the terrain model used.</em></figcaption>
 </figure>
 
-It is important to realize that the link between terrain height and geospatial accuracy applies to all oblique imaging system's including optical sensors. Furthermore the geospatial accuracy of optical imaging systems rely on the precise angular measurement of the pointing of the optical imaging system's focal plane. RADAR systems measure the **range** to each point on the ground rather than the **angle**, which is easier to perform precisely (a SAR sensor measures range to a fraction of a wavelength). This means that all things being equal, a SAR satellite's geospatial accuracy is **far more accurate** than an optical imaging satellite.
+### The Geolocation Potential of SAR
+
+It is interesting to consider the pristine potential of SAR geolocation. Both SAR and optical satellite sensors can provide accurate orbit information, but optical sensors also need to physically measure the pointing orientation of the sensor to the ground. These data are derived from on-board gyroscopes and star sensors, and satellite angular errors project along the huge distance to the ground surface. A SAR satellite must also estimate pointing direction in order to illuminate the proper location on the ground. But once the image is formed, the angle to the ground location is determined by the azimuth coordinate, which is itself derived from ultra-precise pulse-to-pulse phase changes. The aspect of optical geolocation which contributes the most uncertainty, pointing direction, is not a significant factor for SAR. A well-calibrated SAR with accurate orbits, in conjunction with precise elevation data, can provide a geolocation accuracy of less than one meter for well-defined points. This is the precision to which ICEYE aspires.
 
 ## Geospatial Metadata
-It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images *off-nadir*. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have approximate terrain models built in and can reduce the location errors using parameters embedded in the metadata of each image. Two common approaches are  *Doppler Centroid Polynomials* and *Rapid Polynomial Coefficients*.
+It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images *off-nadir*. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have terrain models built in and can provide precise location information using parameters embedded in the metadata of each image. Two common approaches are *Doppler Centroid Polynomials* and *Rapid Polynomial Coefficients*.
 
 ### Doppler Centroid Determination
 ICEYE SAR images are *zero-Doppler* based. This means that image pixels are focussed to the zero-Doppler (or *broadside*) position. Because the radar beam covers a range of Doppler frequencies with objects entering the beam having a high Doppler frequency and objects leaving the beam having a low Doppler frequency, the centre point, called the **Doppler Centroid** can be used to find where the radar beam is pointing at any moment. This information together with the orbit state vector information can then be used to determine the precise location in slant range and azimuth of each image sample.
@@ -71,7 +81,7 @@ $$ t_{ref}= (t_{min} +t_{max})/2=t_{min}+n_{rs}/(2f_{sr} )$$
 where $n_{rs}$ is the number of range samples, and $f_{sr}$ is the range sampling rate.
 
 
-### Rapid Positioning Capability (and Rational Poynomial Coefficients)
+### Fast and Simple Geolocation: Rapid Positioning Capability
 
 The concept of rapid determination of image pixel coordinates from oblique imagery (RADAR and optical) was first described openly by the US National Imagery and Mapping Agency (NIMA) in STDI-0002 2.1[@nitf] and specifically sections 8.2.4 (the mathematical description of Rational Polynomial Coefficients) and section 8.3.12 that describes how parameters could be stored electronically (Also known as *RPC00 - Rapid Positioning Capability*). The technique was developed to perform image geolocation calculations quicky on US Imagery Analyst IDEX workstations. The acronym *RPC* can refer to either the standard or the coefficients and is therefore a little confusing. At ICEYE we prefer to use plain language and as not everyone understands whether a coefficient is rational or irrational we prefer to use the *Rapid Positioning Capability* definition. 
 
@@ -141,7 +151,7 @@ Where coefficients $C_1…C_{20}$ represent the vector coefficients provided in 
 </figure>
 
 ## Geometric Calibration Process 
-Because of the errors induced by terrain, ICEYE satellites use a range of calibration sites around the world. Each site uses calibration point targets (such as [trihedral corner reflectors](https://www.radartutorial.eu/17.bauteile/bt47.en.html)). The position, orentation and size of these is carefully measured and maintained (and often provided as a free service to the geospatial community As the precise three-dimensional position of each calibration target is known this allows ICEYE engineers to compare the predicted target location and determine how far away the measured location is from the 'ground truth'. There are still many variables at play though such as atmospheric propagation, orbit knowledge and temperature of the satellite so the process is statistical in nature. By performing the calibration measurements many times, a probable circular error (called [CE90](https://en.wikipedia.org/wiki/Circular_error_probable)) can be determined. 
+Because of the errors induced by terrain, ICEYE satellites use a range of calibration sites around the world. Each site uses calibration point targets (such as [trihedral corner reflectors](https://www.radartutorial.eu/17.bauteile/bt47.en.html)). The position, orientation and size of these is carefully measured and maintained (and often provided as a free service to the geospatial community As the precise three-dimensional position of each calibration target is known this allows ICEYE engineers to compare the predicted target location and determine how far away the measured location is from the 'ground truth'. There are still many variables at play though such as atmospheric propagation, orbit knowledge and temperature of the satellite so the process is statistical in nature. By performing the calibration measurements many times, a probable circular error (called [CE90](https://en.wikipedia.org/wiki/Circular_error_probable)) can be determined. 
 
 <figure>
 <img src="../img/rosmond2.4m.png" style="width:100%">

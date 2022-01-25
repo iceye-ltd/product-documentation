@@ -2,8 +2,8 @@
 ## UNDER CONSTRUCTION
 
 <figure>
-<img src="productFormats/img/underconstruction.png" style="width:100%">
-<figcaption align = "center"><em>Its on the backlog.....</em></figcaption>
+<img src="productFormats/img/underconstruction.png" style="width:40%">
+<figcaption align = "center"><em></em></figcaption>
 </figure>
 <span style="color:red">*Say hello to the new ICEYE product documentation in website form. We are still putting the final touches in place but we wanted to put something out there early to gather as much feedback as possible from people. If you find a problem or something that you disagree with or don't understand then send me a slack message*
 
