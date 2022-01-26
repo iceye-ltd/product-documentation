@@ -1,5 +1,5 @@
 # Ordering ICEYE Products
-ICEYE offers timely and reliable global SAR imaging. This section describes the tasking process for new ICEYE collections and how to order archived imagery from ICEYE’s catalog.
+ICEYE offers timely and reliable global SAR imaging. This section describes the tasking process for new ICEYE collections and how to order archived imagery from ICEYE’s catalog. The type of SAR collections available to order are described in [ICEYE Products](../products/#types-of-sar-collection).
 
 
 ## ICEYE Tasking
@@ -20,9 +20,12 @@ ICEYE Tasking Standard Orders are based on the concept of **acquisition time win
 <figcaption align = "center"><em>Figure 5: Example of an order for a stack of images with a <b>repeat cycle</b> of 20 days and an <b>acquisition time window</b> for each image of 14 days.</em></figcaption>
 </figure>
 
-Standard orders are submitted via email. To order, please fill out the Standard Order Form with your contact information, and be sure to specify all the required tasking options described in the paragraphs below. Once completed, please send your Standard Order Form and the optional AOI file to the email address [customer@iceye.com](mailto:customer@iceye.com).
+For existing customer, standard orders are submitted via email. To order, please fill out the Standard Order Form with your contact information, and be sure to specify all the required tasking options described in the paragraphs below. Once completed, please send your Standard Order Form and the optional AOI file to the COSP email address you were provided with during your account set up.
+
+New customers should complete [this form](https://www.iceye.com/lp/contact-us) on the [ICEYE website](https://www.iceye.com). There may be a slight delay while your account is set up but after that you will be able to order data using the instructions on this page.
+
 !!! info
-    The order form will be provided by COSP. If you need a new one please email [customer@iceye.com](mailto:customer@iceye.com) 
+    The order form will be provided by COSP. If you need a new one please contact the COSP team using the information that you were provided with when your account was set up or contact [the sales team](https://www.iceye.com/lp/contact-us) 
 
 <figure markdown>
 ![placeholder](img/standardOrders2.png){width="600"}
@@ -33,7 +36,7 @@ The named recipients for that order will be notified via email once the order is
 
 Once received, your order will be ingested into the ICEYE's planning system which will determine if the order can be confirmed within the AOI, and time windows that you have requested for the AOI.
 
-* If the order **can be fulfilled**, you will be notified via email that your order has been accepted and the images will be scheduled for acquisition.
+* If the order **can be fulfilled**, you will be notified via email that your order has been accepted and the images will be scheduled for acquisition. Alternatives are provided if available.
 * If the order **cannot be fulfilled** within the time constraints that you specified, you will be notified via email that your order cannot be completed.
 
 Please note that **standard** orders require no final confirmation from you. If your order is accepted, the images will be acquired and delivered to you.
@@ -68,7 +71,7 @@ When placing a Standard Order you will need to specify and/or select from the fo
 
 #### Feasibility Study as Part of a Standard Order
 
-At any time, when considering placing an ICEYE Tasking standard order you can request a feasibility study by emailing [customer@iceye.com](mailto:customer@iceye.com). You will need to provide an AOI, an imaging mode (or resolution), a time period and any possible additional instructions that you may require. The ICEYE Customer Operations and Satellite Planning Team will respond with a list of acquisition opportunities. Please note that *Feasibility Studies* are for informational purposes and do not reserve constellation capacity for the opportunities reported. The required constellation capacity to fulfill an order under the agreed time window is only reserved after ICEYE confirms an *order*. Please also note that feasibility studies are *not required* to place a standard order. You can eliminate the need for a feasibility study by accurately describing the time windows and other acquisition constraints that match your actual needs as part of your standard order.
+ICEYE customers can request a feasibility study at any time when considering placing a standard order request. Simply email the COSP team at the address your were given when your account was set up. You will need to provide an AOI, an imaging mode (or resolution), a time period and any possible additional instructions that you may require. The ICEYE Customer Operations and Satellite Planning Team will respond with a list of acquisition opportunities. Please note that *Feasibility Studies* are for informational purposes and do not reserve constellation capacity for the opportunities reported. The required constellation capacity to fulfill an order under the agreed time window is only reserved after ICEYE confirms an *order*. Please also note that feasibility studies are *not required* to place a standard order. You can eliminate the need for a feasibility study by accurately describing the time windows and other acquisition constraints that match your actual needs as part of your standard order.
 
 <figure markdown>
 ![placeholder](img/optional_feasibility_study.png){width="600"}
@@ -81,7 +84,7 @@ Sometimes you might like to perform your own feasibility studies and we encourag
 ### Custom Orders
 
 Custom Tasking orders offer a higher level of flexibility when specifying tasking requirements you desire. In general, any options that are not available as part of standard order can be requested as part of a custom order. 
-Custom orders are initiated by submitting a Custom Order Form via email to [customer@iceye.com](mailto:customer@iceye.com). Our tasking experts will study the feasibility of your request and will quote an acquisition plan for you to approve.
+Custom orders are initiated by submitting a Custom Order Form to the email address you received when your account was set up. Our tasking experts will study the feasibility of your request and will quote an acquisition plan for you to approve. New customers should contact [the ICEYE sales team](https://www.iceye.com/lp/contact-us).
 
 
 The following are examples of options that are currently available as part of a custom order:
@@ -115,7 +118,7 @@ In addition to the automated quick Quality Control mentioned above, a detailed m
 If the defects are found during the detailed manual Quality Control steps, ICEYE will attempt to correct and redeliver the data to your SFTP folder as soon as possible. The most common type of defects that are detected and corrected in during Quality Control are geolocation inaccuracies. When performing Quality Control, sometimes ICEYE will have access to more refined satellite telemetry and orbit information that allows us to improve the geolocation accuracy. In such cases, the SAR data will reprocessed to improve its geolocation accuracy and will be redelivered to you.
 
 #### Delivery service level
-Automatic delivery, quality control and redelivery (if required) will be completed within 8 hours of the data being acquired.  ICEYE offers faster delivery times for customers that require near-real-time data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your SAR data. You will receive a notification (via email) every time data from a new acquisition has been added to your SFTP account and is ready for you to download.
+Automatic delivery, quality control and redelivery (if required) will be completed within 8 hours of the data being acquired.  ICEYE will soon offer faster delivery times for customers that require near-real-time data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your SAR data. You will receive a notification (via email) every time data from a new acquisition has been added to your SFTP account and is ready for you to download.
 
 !!! info
     Images are stored in your SFTP account for a period of 30 days.
@@ -140,7 +143,7 @@ Archive imagery orders can be submitted via email. To place an order, please fil
 
     ICEYE_ARCHIVE_SM_10306_20190918T125047
 
-Once an order is received, the ICEYE Customer Success team will deliver the requested images to you within 12 hours. Please note that all orders for archive imagery require no final confirmation from you. The images that you request in your order will be delivered to you. 
+Once an order is received, the ICEYE Customer Success team will deliver the requested images to you within 12 hours (assuming a realistic number of archive images. eg. less than 50). Please note that all orders for archive imagery require no final confirmation from you. The images that you request in your order will be delivered to you. 
 
 <figure markdown>
 ![placeholder](img/archive_order_process.png){width="600"}
