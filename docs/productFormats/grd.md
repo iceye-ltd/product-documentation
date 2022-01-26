@@ -1,18 +1,15 @@
 
 ## 'Ground Range Detected' - 😵‍💫?
-Most current SAR providers sell an image that contains the words '*Ground*', '*Range*' and '*Detected*', often abreviated to *GRD*. Over the last two years of trying to make SAR more accessible we have come to the realization that only electronic engineers understand what the combination of these words really mean. The words 'ground-range' suggests that these images are projected onto some representation of the ground. If you didn't realise that SAR images are collected in the 'slant-range' plane then you might think "well yeah - of course". 
- 
-The term '*detected*' though is very strange and might lead some users to think that some sort of target detection or post processing has been applied to the image. The term '*detection*' is an old electronic engineering term used when signal processing was mainly performed on oscilloscopes. From [[@detection]]:
 
-!!! quote 
+After complex images are processed into amplitude images and projected to the ground plane they retain the native range-azimuth sensor orientation. The commonly used terms for these range-azimuth amplitude images include some combination of '*detected*', '*ground range*' and '*multi-look*'. At ICEYE these have been called Ground Range Detected (**GRD**) images. While our term is consistent with industry practice, over time we have come to realise that '*GRD*' does not adequately describe the product. In fact, few users understand what '*detected*' really means. It is actually an old electronic engineering term from the days when signal processing was performed on oscilloscopes. When applied to SAR images, detection is the process of converting in-phase and quadrature complex pixels (equivalent to amplitude and phase) into amplitude-only values. Due to SAR’s electrical engineering heritage, technical jargon like this has become infused into the language of SAR, and this confuses users. In this case, we form a simple amplitude image, and refer to it with an obscure engineering term.
 
-    **detection**, in electronics, the process of rectifying a radio wave and recovering any information superimposed on it; it is essentially the reverse of modulation (q.v.).
- 
- So thats clear 😐.The term *detection* when applied to SAR images is the process of converting the complex numbers that make up the single-look *complex* image into amplitude only values. This is usually performed to reduce the size of the image by throwing away the half of the image that stores phase information because most visual exploiters don't care about this so much.  At ICEYE we like to use 'plain english' so we usually refer to this as the **amplitude** image. We struggle to shake off our legacy though so don't mind if customers prefer GRD and we still keep the acronym in some of our product filenames for compatibility reasons (although this is likely to change in the future).
+Another limitation is that '*ground range*' and '*detected*' do not describe the essential fact that the image is in the  range-azimuth layout. In fact, an alternate form of amplitude images is to interpolate pixels to fit a map projection. While that format is completely different from the native range-azimuth structure, it is also *detected* and it is in the ground range. So, the SAR community’s commonly used terms for range-azimuth amplitude images are based on dated jargon and they fail to state what the structure actually is.
+
+At ICEYE we like to use clear, descriptive english so we prefer to call a GRD image a range-azimuth amplitude image. It might also be called a sensor-orientation amplitude image. It is a struggle, though,  to shake off the SAR community’s legacy language. Many of our customers are used to the term GRD and we are keeping the acronym in some of our product filenames for compatibility reasons. This is likely to change in the future.
+
 
 ## Amplitude Image Description
-
-Amplitude images represent focused SAR data that has been detected and (usually) multi-look processed and projected to the ground plane using an Earth ellipsoid model.  The image coordinates are oriented along the flight direction and ground range (figure 1).  The pixel spacing is equidistant in azimuth and in ground range.  Ground range coordinates are the slant range coordinates projected onto the ellipsoid of the Earth. For this projection the WGS84 reference ellipsoid (table 1) is used and an averaged fixed value of terrain height is used. This makes the ellipsoid surface closer to the true ground surface and reduces (but doesn't eliminate) pixel location errors. The mean ellipsoid height used is annotated in the `avg_scene_height` metadata element.
+Amplitude images represent focused SAR data that has been detected and (usually) multi-look processed and projected to the ground plane using an Earth ellipsoid model. The image coordinates are oriented along the flight direction and ground range (figure 1). The pixel spacing is equidistant in azimuth and in ground range. Ground range coordinates are the slant range coordinates projected onto the ellipsoid of the Earth. For this projection the WGS84 reference ellipsoid (table 1) is used and an averaged fixed value of terrain height is used. This makes the ellipsoid surface closer to the true ground surface. The mean ellipsoid height used is annotated in the `avg_scene_height` metadata element.
 
 !!! Tip
     For an explanation of why see [Terrain Height](../geospatialAccuracy#terrain-height) in the 'Geospatial Accuracy' section under 'Foundations'.
@@ -26,9 +23,9 @@ Amplitude images represent focused SAR data that has been detected and (usually)
 </figure>
 
 
-Pixel values represent a scaled aamplitude. The resulting product has approximately circular spatial resolution and square pixel spacing. Additionally, an incidence angle dependence in range, calculated using the ellipsoidal Earth model has been applied to facilitate the conversion of radar brightness to backscatter intensity. This is explained in more detail in Section ?
+Pixel values represent a scaled amplitude. The resulting product has approximately circular spatial resolution and square pixel spacing. Additionally, an incidence angle dependence in range, calculated using the ellipsoidal Earth model has been applied to enable the conversion of radar brightness to backscatter intensity. This is explained in more detail in the section on [Radiometric Considerations](../radiometric#calibration-correction).
 
-One advantage of this product is that no image rotation to a map coordinate system has been performed and interpolation artefacts are thus avoided. This product is useful for applications that only require amplitude information and if geocoding or orthorectification is to be applied by the user, or for applications where geocoding is not required. 
+The core advantages of range-azimuth amplitude (GRD) images is that they are laid out in the natural SAR orientation, which is required for rigorous geolocation, and their pixels are free of the interpolation artifacts of map projection images.  This product is the form of a SAR amplitude image that retains its SAR heritage. It’s pixels are presented in the natural range-azimuth form best suited for shadows-down interpretation, that is free of map-projection-induced artifacts, that supports manipulation into orthophotos and other forms, and which supports the SAR image geometry model used to calculate ground locations. 
 
 To assist users that require geocoded imagery with minimal interpolation artefacts, ICEYE amplitude image products are tagged with ground control points (GCP) and rapid positioning capability polynomial coefficients (RPC’s). These allow precise geospatial exploitation using freely available tools such as QGIS[@qgis] or GDAL[@gdal].
 
@@ -41,7 +38,7 @@ To assist users that require geocoded imagery with minimal interpolation artefac
 
 The 'digital numbers' in the image data layer $DN_{GRD}$ of amplitude SAR products are stored in a GeoTIFF file format using unsigned 16 bit integer representation along with a combination of commonly used and specifically defined GeoTIFF tags. GeoTiff files are readable with standard image processing and GIS software tools.
 
-Different imaging modes and different incidence angles may have a native sample spacing in the slant range that is not square and so square sample spacing and a circular impulse response function in the ground plane is achieved either by varying the transmitted bandwidth or by applying multi-looking during the slant to ground transformation and detection process. 
+It is common for different imaging modes and different incidence angles to have a native range-azimuth sample spacing in the slant plane that is not square. Square sample spacing and a circular impulse response function in the ground plane is achieved either by varying the transmitted bandwidth or by applying multi-looking during the slant to ground transformation and detection process. 
 
 Typically, the conversion from complex samples to amplitude only samples is performed as
 

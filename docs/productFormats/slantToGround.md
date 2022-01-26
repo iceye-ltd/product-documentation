@@ -14,7 +14,7 @@ Where:
 * $\delta_r$ is the ground range spacing (`range_spacing` in the metadata)
 
 ## Ground Range To Incidence Angle Conversion
-The nominal incidence angle (the incidence angle for a given slant range intersecting the WGS84 ellipsoid. Not to be confused with the *local incidence angle* that takes into account the terrain relief) can be calculated from the ground range using the `Incidence_Angle_Coefficients` in the metadata and:
+The nominal incidence angle is the angle between a given slant range and the WGS84 ellipsoid. This should not be confused with the *local incidence angle*, which  is references to the local terrain. It can be calculated from the ground range using the `Incidence_Angle_Coefficients` in the metadata and:
 
 $$
 \theta(j)=\sum_{k=0}^{p+1} C_k ((j-1)\delta_r)^k,\qquad j=[1...n]

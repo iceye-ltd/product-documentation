@@ -76,7 +76,7 @@ Each satellite has the ability to slowly adjust its orbits throughout its operat
 <figcaption align = "center"><em>Figure 2: Coherent Daily Ground Track Repeat imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
 </figure> 
 
-The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provede a near limitless supply of manoevring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.
+The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provede a near limitless supply of manoeuvring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.
 
 The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 3 and one of the excellent online orbital elements tools such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/)[@n2yo], which provide a live view of the current ICEYE constellation.  
 
