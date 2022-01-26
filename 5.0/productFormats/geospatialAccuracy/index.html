@@ -514,15 +514,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#on-board-timing-errors" class="md-nav__link">
-    On-Board Timing Errors
+  <a href="#range" class="md-nav__link">
+    Range
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atmospheric-propagation" class="md-nav__link">
-    Atmospheric Propagation
+  <a href="#azimuth" class="md-nav__link">
+    Azimuth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-board-timing-errors" class="md-nav__link">
+    On-Board Timing Errors
   </a>
   
 </li>
@@ -548,9 +555,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#terrain-height" class="md-nav__link">
-    Terrain Height
+  <a href="#determining-ground-locations" class="md-nav__link">
+    Determining Ground Locations
   </a>
+  
+    <nav class="md-nav" aria-label="Determining Ground Locations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elevation-models" class="md-nav__link">
+    Elevation Models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-geolocation-potential-of-sar" class="md-nav__link">
+    The Geolocation Potential of SAR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -570,8 +597,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rapid-positioning-capability-and-rational-poynomial-coefficients" class="md-nav__link">
-    Rapid Positioning Capability (and Rational Poynomial Coefficients)
+  <a href="#fast-and-simple-geolocation-rapid-positioning-capability" class="md-nav__link">
+    Fast and Simple Geolocation: Rapid Positioning Capability
   </a>
   
 </li>
@@ -943,15 +970,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#on-board-timing-errors" class="md-nav__link">
-    On-Board Timing Errors
+  <a href="#range" class="md-nav__link">
+    Range
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atmospheric-propagation" class="md-nav__link">
-    Atmospheric Propagation
+  <a href="#azimuth" class="md-nav__link">
+    Azimuth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-board-timing-errors" class="md-nav__link">
+    On-Board Timing Errors
   </a>
   
 </li>
@@ -977,9 +1011,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#terrain-height" class="md-nav__link">
-    Terrain Height
+  <a href="#determining-ground-locations" class="md-nav__link">
+    Determining Ground Locations
   </a>
+  
+    <nav class="md-nav" aria-label="Determining Ground Locations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elevation-models" class="md-nav__link">
+    Elevation Models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-geolocation-potential-of-sar" class="md-nav__link">
+    The Geolocation Potential of SAR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -999,8 +1053,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rapid-positioning-capability-and-rational-poynomial-coefficients" class="md-nav__link">
-    Rapid Positioning Capability (and Rational Poynomial Coefficients)
+  <a href="#fast-and-simple-geolocation-rapid-positioning-capability" class="md-nav__link">
+    Fast and Simple Geolocation: Rapid Positioning Capability
   </a>
   
 </li>
@@ -1043,9 +1097,12 @@
                 
                 <h1 id="geospatial-accuracy">Geospatial Accuracy</h1>
 <h2 id="background">Background</h2>
-<p>A SAR system is able to measure the range to a point on the ground very precisely - to a fraction of a wavelength. The sensor can also measure how the range to a point changes as the satellite moves along its trajectory (by comparing pulses) which provides precise information of the along-track location of a pixel. The distance (and change of distance) to each point provides a record of radar cross section measurements as a function of range and along-track position. </p>
-<p>This record is the most accuarate source of SAR data. It is provided as a set of <em>phase histories</em> (called <em>phase history data</em>). In this form the data is not available to exploit as an image - it is just a record of what the SAR sees as a function of time. To convert the phase history data into an image it is passed through a SAR Image Formation Processor which applies phase corrections to the data to make it look like the ground was observed through a <em>synthetic</em> lens or aperture. The output image from the SAR processor is the highest spatial fidelity image <em>product</em> available called the single look complex (SLC) image. All other image formats are derived from it. Due to data format conversion and projection mapping, all ground projected (<em>ground range</em>) products and derived Level 2 products will always have a lower fidelity. </p>
-<p>On this page we discuss the factors that affect the geospatial accuracy of a SAR Image.</p>
+<p>The complex image output of the SAR image-formation process is a set of focused pixels with phase and amplitude values. Each pixel pair of the image is referenced to the sensor by its range and azimuth coordinates. That is, each pair has a specific range to a sensor reference location and an azimuth location in the along-track direction. This range-azimuth geometry establishes an arc in space, which is the basis of the geolocation modeling of SAR images. The arc for each pixel is initially fit to the slant plant surface, and for amplitude images it is subsequently projected to a ground surface, such as the ground plane or ellipsoid or topographic surface.
+The geolocation accuracy of an image depends on how well that range-azimuth arc is measured. The relevant parameters for the arc are: the range and azimuth values, the sensor reference location, and the sensor velocity vector. We will consider each of them in turn.</p>
+<h2 id="range">Range</h2>
+<p>A SAR system is able to measure the range to a point on the ground very precisely. The theoretical precision of range is a fraction of a wavelength. However, as the RADAR pulse propagates through the atmosphere, it undergoes diffraction which curves the path of the pulse. This adds an unintended increase to the range of an object. The amount of increase depends on the look angle, the location of the satellite and scene, and even the time of day. The ICEYE SAR processor applies path length corrections (typically on the order of a couple of metres) using well established models. </p>
+<h2 id="azimuth">Azimuth</h2>
+<p>The sensor also compares pulses to measure how the range to a point changes as the satellite moves along its trajectory. This provides precise information of the azimuth, or along-track, location of a pixel. Since this record is derived from precise pulse-to-pulse phase changes, it is the most accurate aspect of SAR data. </p>
 <!-- <figure>
 <img src="../img/radarRange_ManimCE_v0.10.0.gif" style="width:100%">
 <figcaption align = "center"><em>Figure 1: Radar systems measure range very accurately using precise timing to measure how long it takes a pulse to reflect off an object.</em></figcaption>
@@ -1053,11 +1110,9 @@
 
 <h2 id="on-board-timing-errors">On-Board Timing Errors</h2>
 <p>A fundamental source of error for all RADAR systems relates to timing. In radar systems, precise electronic clocks are used to record the passage of time. All clocks have some sort of drift in their accuracy which, if not corrected, affects the measured range and focussing of the imagery. ICEYE satellites apply timing corrections to their internal clocks by periodically synchronising with GNSS (Global Navigation Satellite System) satellites.</p>
-<h2 id="atmospheric-propagation">Atmospheric Propagation</h2>
-<p>As the RADAR pulse propagates through the atmosphere, it undergoes diffraction which curves the path of the pulse adding an unintended increase to the range of an object. The amount of increase depends on the look angle, the location of the satellite and scene and even the time of day. The ICEYE SAR processor attempts to apply path length corrections (typically on the order of a couple of metres) using well established models.</p>
 <h2 id="orbit-knowledge">Orbit Knowledge</h2>
-<p>A potentially large source of errors comes from not knowing precisely where the sensor is when each pulse is transmitted and received. This is determined by the satellite's orbit knowledge. ICEYE satellites constantly record their GNSS location. This information is transmitted to the ground during ground station telemetry downloads that occur usually once per orbit (sometimes more frequently). Additionally the GNSS data is stored with the wideband radar data for rapid downlink and processing.</p>
-<p>Once on the ground the orbit information is passed to ICEYE's orbit determination servers. These refine the orbit, taking into account the satellite's attitude and motion, the solar radiation pressure and the local gravitational field strength. The refinements are then used to improve the image geospatial accuracy and to provide accurate time/position/velocity estimates for future collections.</p>
+<p>A potentially large source of errors comes from not knowing precisely where the sensor is when each pulse is transmitted and received. This is determined by the satellite's orbit knowledge. ICEYE satellites constantly record their GNSS location. This information is transmitted to the ground during ground station telemetry downloads that occur usually once per orbit (sometimes more frequently). Additionally, the GNSS data is stored with the wideband radar data for rapid downlink and processing.</p>
+<p>Once on the ground, the orbit information is passed to ICEYE's orbit determination servers. These refine the orbit by taking into account the satellite's attitude and motion, the solar radiation pressure and the local gravitational field strength. The refinements are then used to improve the image geospatial accuracy and to provide accurate time/position/velocity estimates for future collections.</p>
 <p>In the future we plan on further refining the orbit fidelity using post-collected GNSS corrections combined with retroreflectors attached to the satellite.</p>
 <p>The Following table summarises the different levels of orbit fidelity. This information is stored in each image's metadata.</p>
 <figure>
@@ -1072,17 +1127,17 @@
 <tbody>
 <tr>
 <td>Predicted</td>
-<td>Uses current / latest orbit solution to predict where the satellite will be at some point in the future. Used for collection planning and feasibility studies. Not usually used for image formation processing as it has the largest errors.</td>
+<td>Uses the latest orbit solution to predict where the satellite will be at some point in the future. It is used for collection planning and feasibility studies.  It is not typically used for image formation processing because it has the largest errors.</td>
 <td>updated 6 Hours before collection</td>
 </tr>
 <tr>
 <td>Rapid</td>
-<td>Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not available on all satellites yet.</td>
+<td>Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites.</td>
 <td>Immediate.</td>
 </tr>
 <tr>
 <td>Precise</td>
-<td>This is the default orbit fidelity used for ICEYE satellites. The satellite position/velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data.</td>
+<td>This is the default orbit fidelity used for ICEYE satellites. The satellite position and velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. The spherical error of the refined data is 1.5m</td>
 <td>10-45 minutes after imaging operation</td>
 </tr>
 <tr>
@@ -1096,16 +1151,21 @@
 </figure>
 <h3 id="orbit-knowledge-metadata">Orbit Knowledge Metadata</h3>
 <p>The location of the satellite during any imaging operation is made available by including the satellite and velocity information in the metadata for each image product. The data can be found under the <code>orbit_state_vector</code> metadata element. The accuracy of each element is determined by the orbit fidelity used to create the product which can be found in the <code>orbit_processing_level</code> metadata element which corresponds so one of the levels in table 1.</p>
-<h2 id="terrain-height">Terrain Height</h2>
-<p>The most significant source of geospatial error in ICEYE SAR imagery comes, not so much from the inherent properties of the RADAR but from the way the data is measured and exploited. The following animation explains why the measured location of a point in a SAR image is dominated by errors in terrain height information.</p>
+<h2 id="determining-ground-locations">Determining Ground Locations</h2>
+<p>A sensor-orientation SAR amplitude image is a distillation of its richer complex image parent. It is the viewable version of SAR pixels and thus contains only microwave brightness values and no phase data. As with the complex image, its pixels have a range-azimuth structure. The difference is that it is usually projected to a ground surface, not the slant plane.
+It must be emphasized that the SAR image on its own cannot provide accurate ground locations. The chosen ground projection surface is typically an ellipsoid with a height set to the average height of the imaged area. This means that latitude and longitude image corner coordinates are for reference only. They are intended to layout the image footprint, and since they were projected to a single-elevation surface they cannot be used for accurate geolocation.
+SAR geolocation requires the projection of the natural range-azimuth arc of each pixel to an actual terrain height. This means that the image exploitation system must have a ground terrain height model on hand and it must use the coded SAR geometry model equations. This situation is exactly the same for optical images. The imaging conversion of 3D space to any 2D image, optical or SAR, means that proper geolocation requires pixel projections to elevation models on exploitation workstations.</p>
+<h3 id="elevation-models">Elevation Models</h3>
+<p>In the case of a calibrated SAR with accurate range-azimuth coordinates and precise orbit data, the most significant source of geospatial error comes from the way the data is measured and exploited on a workstation. The following animation explains why the measured location of a point on an accurate SAR image is dominated by errors in external terrain height information.</p>
 <figure>
 <img src="../img/explainingGeoErrors_ManimCE_v0.13.1.gif" style="width:100%">
 <figcaption align = "center"><em>Figure 2: The geospatial accuracy of a SAR image is a function of the accuracy of the terrain model used.</em></figcaption>
 </figure>
 
-<p>It is important to realize that the link between terrain height and geospatial accuracy applies to all oblique imaging system's including optical sensors. Furthermore the geospatial accuracy of optical imaging systems rely on the precise angular measurement of the pointing of the optical imaging system's focal plane. RADAR systems measure the <strong>range</strong> to each point on the ground rather than the <strong>angle</strong>, which is easier to perform precisely (a SAR sensor measures range to a fraction of a wavelength). This means that all things being equal, a SAR satellite's geospatial accuracy is <strong>far more accurate</strong> than an optical imaging satellite.</p>
+<h3 id="the-geolocation-potential-of-sar">The Geolocation Potential of SAR</h3>
+<p>It is interesting to consider the pristine potential of SAR geolocation. Both SAR and optical satellite sensors can provide accurate orbit information, but optical sensors also need to physically measure the pointing orientation of the sensor to the ground. These data are derived from on-board gyroscopes and star sensors, and satellite angular errors project along the huge distance to the ground surface. A SAR satellite must also estimate pointing direction in order to illuminate the proper location on the ground. But once the image is formed, the angle to the ground location is determined by the azimuth coordinate, which is itself derived from ultra-precise pulse-to-pulse phase changes. The aspect of optical geolocation which contributes the most uncertainty, pointing direction, is not a significant factor for SAR. A well-calibrated SAR with accurate orbits, in conjunction with precise elevation data, can provide a geolocation accuracy of less than one meter for well-defined points. This is the precision to which ICEYE aspires.</p>
 <h2 id="geospatial-metadata">Geospatial Metadata</h2>
-<p>It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images <em>off-nadir</em>. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have approximate terrain models built in and can reduce the location errors using parameters embedded in the metadata of each image. Two common approaches are  <em>Doppler Centroid Polynomials</em> and <em>Rapid Polynomial Coefficients</em>.</p>
+<p>It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images <em>off-nadir</em>. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have terrain models built in and can provide precise location information using parameters embedded in the metadata of each image. Two common approaches are <em>Doppler Centroid Polynomials</em> and <em>Rapid Polynomial Coefficients</em>.</p>
 <h3 id="doppler-centroid-determination">Doppler Centroid Determination</h3>
 <p>ICEYE SAR images are <em>zero-Doppler</em> based. This means that image pixels are focussed to the zero-Doppler (or <em>broadside</em>) position. Because the radar beam covers a range of Doppler frequencies with objects entering the beam having a high Doppler frequency and objects leaving the beam having a low Doppler frequency, the centre point, called the <strong>Doppler Centroid</strong> can be used to find where the radar beam is pointing at any moment. This information together with the orbit state vector information can then be used to determine the precise location in slant range and azimuth of each image sample.</p>
 <p>Doppler Centroid (DC) coefficient estimates are throughout the image acquisition. For each azimuth location, the DC dependence in range is described using a polynomial function. The polynomial is valid from the near to the far range of the scene.  The DC coefficients can be obtained by fitting the DC dependence in range from time as:</p>
@@ -1114,7 +1174,7 @@
 The mid-range time is calculated as:  </p>
 <div class="arithmatex">\[ t_{ref}= (t_{min} +t_{max})/2=t_{min}+n_{rs}/(2f_{sr} )\]</div>
 <p>where <span class="arithmatex">\(n_{rs}\)</span> is the number of range samples, and <span class="arithmatex">\(f_{sr}\)</span> is the range sampling rate.</p>
-<h3 id="rapid-positioning-capability-and-rational-poynomial-coefficients">Rapid Positioning Capability (and Rational Poynomial Coefficients)</h3>
+<h3 id="fast-and-simple-geolocation-rapid-positioning-capability">Fast and Simple Geolocation: Rapid Positioning Capability</h3>
 <p>The concept of rapid determination of image pixel coordinates from oblique imagery (RADAR and optical) was first described openly by the US National Imagery and Mapping Agency (NIMA) in STDI-0002 2.1<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and specifically sections 8.2.4 (the mathematical description of Rational Polynomial Coefficients) and section 8.3.12 that describes how parameters could be stored electronically (Also known as <em>RPC00 - Rapid Positioning Capability</em>). The technique was developed to perform image geolocation calculations quicky on US Imagery Analyst IDEX workstations. The acronym <em>RPC</em> can refer to either the standard or the coefficients and is therefore a little confusing. At ICEYE we prefer to use plain language and as not everyone understands whether a coefficient is rational or irrational we prefer to use the <em>Rapid Positioning Capability</em> definition. </p>
 <p>To help with the determination of precise pixel locations, a RPC model has been implemented into ICEYE's output product files. The model is described in [ <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> ] which extends the work for the National Imagery Transmission Format (NITF)<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> to GeoTIFFs.  For completeness, the translation of latitude and longitude to image pixel coordinates is described below.
 The geometric sensor model describing the physical relationship between image coordinates and ground coordinates is known as a Rigorous Projection Model. A Rigorous Projection Model expresses the mapping of the image space coordinates of rows and columns (<span class="arithmatex">\(r,c\)</span>) onto the object space reference surface geodetic coordinates ( φ, λ, h ).</p>
@@ -1313,7 +1373,7 @@ c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
 <figcaption align="center"><em>Table 3 : RPC metadata parameters in ICEYE Products</em></figcaption>
 </figure>
 <h2 id="geometric-calibration-process">Geometric Calibration Process</h2>
-<p>Because of the errors induced by terrain, ICEYE satellites use a range of calibration sites around the world. Each site uses calibration point targets (such as <a href="https://www.radartutorial.eu/17.bauteile/bt47.en.html">trihedral corner reflectors</a>). The position, orentation and size of these is carefully measured and maintained (and often provided as a free service to the geospatial community As the precise three-dimensional position of each calibration target is known this allows ICEYE engineers to compare the predicted target location and determine how far away the measured location is from the 'ground truth'. There are still many variables at play though such as atmospheric propagation, orbit knowledge and temperature of the satellite so the process is statistical in nature. By performing the calibration measurements many times, a probable circular error (called <a href="https://en.wikipedia.org/wiki/Circular_error_probable">CE90</a>) can be determined. </p>
+<p>Because of the errors induced by terrain, ICEYE satellites use a range of calibration sites around the world. Each site uses calibration point targets (such as <a href="https://www.radartutorial.eu/17.bauteile/bt47.en.html">trihedral corner reflectors</a>). The position, orientation and size of these is carefully measured and maintained (and often provided as a free service to the geospatial community As the precise three-dimensional position of each calibration target is known this allows ICEYE engineers to compare the predicted target location and determine how far away the measured location is from the 'ground truth'. There are still many variables at play though such as atmospheric propagation, orbit knowledge and temperature of the satellite so the process is statistical in nature. By performing the calibration measurements many times, a probable circular error (called <a href="https://en.wikipedia.org/wiki/Circular_error_probable">CE90</a>) can be determined. </p>
 <figure>
 <img src="../img/rosmond2.4m.png" style="width:100%">
 <figcaption align = "center"><em>Figure 3: a 2.4m trihedral at the NASA JPL Rosamond Calibration Array[^4].</em></figcaption>

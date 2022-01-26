@@ -932,7 +932,7 @@
                 
                 
                 <h1 id="imaging-collection-characteristics">IMAGING COLLECTION CHARACTERISTICS</h1>
-<p>The following provides additional technical information on the performance of the current imaging modes used by the ICEYE fleet. Our satellites are constantly being improved with recent satellites usually having better performance. In order to manage expectations we have decided to provide the <em>worst case</em> values across the fleet. Some parameters warrant a more detailed explanation which you can read in the <a href="#notes-and-explanations">Notes</a> section.</p>
+<p>The following provides additional technical information on the performance of the current ICEYE imaging modes. Our satellites are constantly being improved, but in order to manage expectations, in the tables below we provide the worst-case values across the fleet. Some parameters warrant a more detailed explanation which you can read in the <a href="#notes-and-explanations">Notes</a> section.</p>
 <p><a href="#complex-image-parameters">Table 2</a> provides parameters associated with ICEYE complex images and <a href="#amplitude-image-parameters">Table 3</a> provides the technical parameters associated with ICEYE Amplitude Images.</p>
 <h2 id="technical-overview">Technical Overview</h2>
 <figure>
@@ -984,7 +984,7 @@
 <td>Nominal collection duration [sec]</td>
 <td>10</td>
 <td>10</td>
-<td>20</td>
+<td>10</td>
 <td>15</td>
 <td></td>
 </tr>
@@ -1254,9 +1254,9 @@
 <li><strong>Maximum Collection Duration/Length:</strong> Spot images do not have a maximum collection duration as they image for the required amount of time to obtain a tasked azimuth resolution. For Strip and Scan modes the maximum collection duration (and therefore the maximum image length) is limited by the amount of on-board memory storage or satellite thermal limitations. As different incidence angles have different slant range resolutions in order to provide the same ground range resolution, then the maximum collection duration is also a function of incidence angle. </li>
 <li><strong>NESZ:</strong> The noise equivalent sigma zero values are taken at scene center for near and far range extents.</li>
 <li><strong>Slant Range Resolution:</strong> For Strip mode the transmitted bandwidth is varied to make sure that the resolution on the ground remains the same. For Spot mode the maximum bandwidth is transmitted at all times. This means that the slant resolution for Spot images is constant and the ground resolution changes with indidence angle.</li>
-<li><strong>RNIIRS:</strong> Radar National Imagery Interpretability Rating Scale is a subjective assessment of Radar Image Quality used primarily by military analysts. The scale is from 0 ("<em>interpretability of the imagery is precluded by obscuration, degradation, or very poor resolution</em>") to the highest quality figure of merit, 10 \cite{rniirs}.</li>
+<li><strong>RNIIRS:</strong> Radar National Imagery Interpretability Rating Scale is a subjective assessment of Radar Image Quality used primarily by military analysts. The scale is from 0 ("<em>interpretability of the imagery is precluded by obscuration, degradation, or very poor resolution</em>") to the highest quality figure of merit, 10 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</li>
 <li>
-<p><strong>RGIQE:</strong> This is the Radar General Image Quality Equation. It is an adaptation of the concept of a General Image Quality Equation \cite{leachtenauer1997general} Developed by NGA . Unlike the RNIIRS scale which is a largely subjective assessment of image quality, the RGIQE uses maximum channel capacity (measured in bits of information) as a figure of merit. From the Shannon-Hartley Theorem \cite{shannon1984communication} the maximum information that can be carried in a signal (conventionally called a channel due to the origins in communications) is given by :</p>
+<p><strong>RGIQE:</strong> This is the Radar General Image Quality Equation. It is an adaptation of the concept of a General Image Quality Equation <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> Developed by NGA . Unlike the RNIIRS scale which is a largely subjective assessment of image quality, the RGIQE uses maximum channel capacity (measured in bits of information) as a figure of merit. From the Shannon-Hartley Theorem <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> the maximum information that can be carried in a signal (conventionally called a channel due to the origins in communications) is given by :</p>
 <div class="arithmatex">\[ C = B \log_2\left(1+\frac{S}{N}\right) \]</div>
 <p>Where <span class="arithmatex">\(C\)</span> is measured in bits per second, <span class="arithmatex">\(B\)</span> is the bandwidth of the system and <span class="arithmatex">\(\frac{S}{N}\)</span> is the signal to noise ratio.
 Recognising that a resolution cell in a SAR image is ultimately defined in range by the transmitted bandwidth and in azimuth by the Doppler bandwidth, a measure of the maximum information content of a resolution cell in bits/<span class="arithmatex">\(m^2\)</span> can be formulated :</p>
@@ -1276,6 +1276,15 @@ Recognising that a resolution cell in a SAR image is ultimately defined in range
 <ol>
 <li id="fn:1">
 <p>V. Amans B. Hoersch. <em>Copernicus Space Component Data Access Portfolio: Data Warehouse 2014 - 2020. resolution classes for EO SAR Image products</em>. ESRIN, ESA, Via Galileo Galilei Casella Postale 64 00044 Frascati Italy, March 2015. URL: <a href="https://spacedata.copernicus.eu/documents/20126/0/DAP_Release_Phase_2_1.0_final.pdf">https://spacedata.copernicus.eu/documents/20126/0/DAP_Release_Phase_2_1.0_final.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>National Geospatial-Intelligence Agency <span class="arithmatex">\(NGA\)</span>. National imagery interoperability rating scale standards 2017-03-10 version 1.1.1. December 4 2019. URL: <a href="https://nsgreg.nga.mil/doc/view?i=5104">https://nsgreg.nga.mil/doc/view?i=5104</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Jon C Leachtenauer, William Malila, John Irvine, Linda Colburn, and Nanette Salvaggio. General image-quality equation: giqe. <em>Applied optics</em>, 36<span class="arithmatex">\(32\)</span>:8322–8328, 1997.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Claude E Shannon. Communication in the presence of noise. <em>Proceedings of the IEEE</em>, 72<span class="arithmatex">\(9\)</span>:1192–1201, 1984.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

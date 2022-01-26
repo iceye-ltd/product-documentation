@@ -440,6 +440,40 @@
     Quality Control and Image Delivery
   </a>
   
+    <nav class="md-nav" aria-label="Quality Control and Image Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-delivery" class="md-nav__link">
+    Automatic delivery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-control" class="md-nav__link">
+    Quality Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redelivery-if-required" class="md-nav__link">
+    Redelivery (if required)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-service-level" class="md-nav__link">
+    Delivery service level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -998,6 +1032,40 @@
     Quality Control and Image Delivery
   </a>
   
+    <nav class="md-nav" aria-label="Quality Control and Image Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-delivery" class="md-nav__link">
+    Automatic delivery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-control" class="md-nav__link">
+    Quality Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redelivery-if-required" class="md-nav__link">
+    Redelivery (if required)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-service-level" class="md-nav__link">
+    Delivery service level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1068,9 +1136,9 @@
                 <h1 id="ordering-iceye-products">Ordering ICEYE Products</h1>
 <p>ICEYE offers timely and reliable global SAR imaging. This section describes the tasking process for new ICEYE collections and how to order archived imagery from ICEYE’s catalog.</p>
 <h2 id="iceye-tasking">ICEYE Tasking</h2>
-<p>To make things easier for customers we have a simple tasking process for new images based on standard imaging configurations and simple time windows (<strong>Standard Orders</strong>). This provides the quickest and simplest way to order SAR imagery. More sophisticated requests can be placed using a <strong>Custom Order</strong>. </p>
+<p>To make things easier for our customers we have a simple tasking process for new images based on standard imaging configurations and simple time windows (<strong>Standard Orders</strong>). This provides you with the quickest and simplest way to order SAR imagery. More sophisticated requests can be placed using a <strong>Custom Order</strong>. </p>
 <h3 id="standard-orders">Standard Orders</h3>
-<p>ICEYE Tasking Standard Orders are based on the concept of <strong>acquisition time windows</strong>. When placing an order, the customer specifies a list of timing requirements that define one or more time windows in which the desired images should be acquired.  This allows ICEYE to confirm that the images will be acquired during the specified time windows, <strong>without</strong> the need for the customer to review a preliminary feasibility study with exact acquisition times.</p>
+<p>ICEYE Tasking Standard Orders are based on the concept of <strong>acquisition time windows</strong>. When placing an order, you can specify a list of timing requirements that define one or more time windows in which the desired images should be acquired.  This allows ICEYE to confirm that the images will be acquired during the specified time windows, <strong>without</strong> the need for you to review a preliminary feasibility study with exact acquisition times.</p>
 <figure>
 <p><img alt="placeholder" src="../img/single_time_window.png" width="600" /></p>
 <figcaption align="center"><em>Figure 4: Example of a single image order with an <b>acquisition time window</b> of 2 days. This order specifies that the image should be collected anytime between 4-October-2021 00:00 and 6-October-2021 00:00</em></figcaption>
@@ -1089,27 +1157,18 @@
 <figcaption align="center"><em>Figure 6: Standard ICEYE Tasking order flow</em></figcaption>
 </figure>
 <p>The named recipients for that order will be notified via email once the order is received by the ICEYE Customer Operations and Satellite Planning (COSP) team.</p>
-<p>Once received, your order will be ingested into the ICEYE's planning system which will determine if the order can be confirmed within the AOI, and time windows that you have requested for the AOI. If the order can be fulfilled, you will be notified via email that your order has been accepted and the images will be scheduled for acquisition. If the order cannot be fulfilled in time, you will be notified via email that your order cannot be completed.</p>
+<p>Once received, your order will be ingested into the ICEYE's planning system which will determine if the order can be confirmed within the AOI, and time windows that you have requested for the AOI.</p>
+<ul>
+<li>If the order <strong>can be fulfilled</strong>, you will be notified via email that your order has been accepted and the images will be scheduled for acquisition.</li>
+<li>If the order <strong>cannot be fulfilled</strong> within the time constraints that you specified, you will be notified via email that your order cannot be completed.</li>
+</ul>
 <p>Please note that <strong>standard</strong> orders require no final confirmation from you. If your order is accepted, the images will be acquired and delivered to you.</p>
-<p>After an order is confirmed, ICEYE will make sure that your images are acquired, downlinked, processed, quality controlled and delivered to you. The exact acquisition times are determined by the acquisition time window size that you chose when placing your order. </p>
+<p>After an order is confirmed, ICEYE will make sure that your images are acquired, downlinked, processed, quality controlled and delivered to you. The exact acquisition times are determined by the acquisition time window that you chose when placing your order. </p>
 <h4 id="how-to-fill-in-a-standard-order-form">How to fill in a standard order form</h4>
 <p>When placing a Standard Order you will need to specify and/or select from the following options available in the Imagery Order Form :</p>
 <ol>
 <li>
 <p><strong>AOI</strong>: The Area of Interest in the form of a latitude/longitude pair in the WGS 84 coordinate system.  Alternatively, you can include a KML/KMZ, or geojson file as an attachment to your order.</p>
-</li>
-<li>
-<p><strong>Timing information</strong>:  </p>
-<ul>
-<li><strong>Start and End time for the order</strong>: This is the time range in which the order is valid. </li>
-<li><strong>Acquisition time windows size</strong>: Choose a time window size according to the  precision that you require for each of the images that should be acquired.<ul>
-<li>Basic: Each image is acquired within a 14-day time window from your specified order start time and repeat cycle .This time window size is ideal for non-time-critical monitoring applications that do not require precise acquisition times.</li>
-<li>Pro: Each image is acquired within a 2-day time window from your specified order start time and repeat cycle. This is our base level service, commonly used in applications that do not depend on exact acquisition times or geometries.</li>
-<li>Exact: Each image is acquired within a 2-hour time window from your specified order start time and repeat cycle.  This is our premium service, tailored for time-critical collections that do not depend on the customer requiring a precise imaging geometry. Note that for Exact time window size, you can optionally include an attachment with your desired exact acquisition times. This attachment can be the result of a feasibility study that you had previously requested or it can be generated directly by you using our published satellite ephemerides. Please see the section Optional Feasibility Studies below. </li>
-</ul>
-</li>
-<li><strong>Repeat cycle</strong>: This is the time between the start of consecutive acquisition time windows. This information is only required for orders of image stacks (repeat acquisitions).</li>
-</ul>
 </li>
 <li>
 <p><strong>Acquisition type</strong>: Select whether you want a</p>
@@ -1119,16 +1178,30 @@
 </ul>
 </li>
 <li>
-<p><strong>Imaging Mode</strong>: Refer to Section~\ref{sec:TypesOfCollection} for more information on these imaging modes</p>
+<p><strong>Timing information</strong>:  </p>
+<ul>
+<li><strong>Start and End time for the order</strong>: This is the time range in which the order is valid. </li>
+<li><strong>Acquisition time windows</strong>: Choose a time window according to the  precision that you require for each of the images that should be acquired.<ul>
+<li>Basic: Each image is acquired within a 14-day time window from your specified order start time and repeat cycle. This time window is ideal for non-time-critical monitoring applications that do not require precise acquisition times.</li>
+<li>Pro: Each image is acquired within a 2-day time window from your specified order start time and repeat cycle. This is our base level service, commonly used in applications that do not depend on exact acquisition times or geometries.</li>
+<li>Exact: Each image is acquired within a 2-hour time window from your specified order start time and repeat cycle.  This is our premium service, tailored for time-critical collections that do not require a precise imaging geometry. Note that for Exact time windows, you can optionally include an attachment with your desired exact acquisition times. This attachment can be the result of a feasibility study that you had previously requested or it can be generated directly by you using our published satellite ephemerides. Please see the section Optional Feasibility Studies below. </li>
+</ul>
+</li>
+<li><strong>Repeat cycle</strong>: This is the time between the start of consecutive acquisition time windows. This information is only required for orders of image stacks (repeat acquisitions).</li>
+</ul>
+</li>
+<li>
+<p><strong>Imaging Mode</strong>: Refer to Section <a href="/product-documentation/productguide/products/#types-of-sar-collection">Types of SAR Collection</a> for more information on these imaging modes</p>
 <ul>
 <li>Strip</li>
 <li>Spot</li>
+<li>Spot Extended Area</li>
 <li>Scan </li>
 </ul>
 </li>
 </ol>
 <h4 id="feasibility-study-as-part-of-a-standard-order">Feasibility Study as Part of a Standard Order</h4>
-<p>At any time, when considering placing an ICEYE Tasking standard order you can request a feasibility study by emailing <a href="mailto:customer@iceye.com">customer@iceye.com</a>. You will need to provide an AOI, an imaging mode (or resolution), a time period and any possible additional instructions that you may require. The ICEYE Customer Operations and Satellite Planning Team will respond with a list of acquisition opportunities. Please note that <em>Feasibility Studies</em> are for informational purposes and do not reserve constellation capacity for the opportunities reported. The required constellation capacity to fulfill an order under the agreed time window size is only reserved after ICEYE confirms an <em>order</em>. Please also note that feasibility studies are <em>not required</em> to place a standard order. You can eliminate the need for a feasibility study by accurately describing the time windows and other acquisition constraints that match your actual needs as part of your standard order.</p>
+<p>At any time, when considering placing an ICEYE Tasking standard order you can request a feasibility study by emailing <a href="mailto:customer@iceye.com">customer@iceye.com</a>. You will need to provide an AOI, an imaging mode (or resolution), a time period and any possible additional instructions that you may require. The ICEYE Customer Operations and Satellite Planning Team will respond with a list of acquisition opportunities. Please note that <em>Feasibility Studies</em> are for informational purposes and do not reserve constellation capacity for the opportunities reported. The required constellation capacity to fulfill an order under the agreed time window is only reserved after ICEYE confirms an <em>order</em>. Please also note that feasibility studies are <em>not required</em> to place a standard order. You can eliminate the need for a feasibility study by accurately describing the time windows and other acquisition constraints that match your actual needs as part of your standard order.</p>
 <figure>
 <p><img alt="placeholder" src="../img/optional_feasibility_study.png" width="600" /></p>
 <figcaption align="center"><em>Figure 7: Feasibility studies can be requested before placing a standard order.</em></figcaption>
@@ -1152,14 +1225,20 @@ Custom orders are initiated by submitting a Custom Order Form via email to <a hr
 <figcaption align="center"><em>Figure 8: Custom ICEYE Tasking order flow.</em></figcaption>
 </figure>
 <h2 id="quality-control-and-image-delivery">Quality Control and Image Delivery</h2>
-<p>The processed data will be assessed during the Quality Control process. An ICEYE image analyst will verify that the frame contains the customer’s target location, that it complies to the product specifications and that it does not contain any disqualifying ambiguities.</p>
-<p>The frames are delivered to customers via a SFTP server within 8 hours of the data being acquired.  ICEYE offers faster delivery times for customers that require near-realtime data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your frames. You will receive a notification (via email) every time a new frame has been added to your SFTP account and is ready for you to download.</p>
+<h4 id="automatic-delivery">Automatic delivery</h4>
+<p>All acquisition SAR data initially goes though an automated quick Quality Control process and is automatically delivered as soon as possible to your folder in the ICEYE SFTP server. This gives you access to the SAR data without delay.  </p>
+<h4 id="quality-control">Quality Control</h4>
+<p>In addition to the automated quick Quality Control mentioned above, a detailed manual Quality Control is performed on all acquisition data. An ICEYE analyst will verify that the acquired SAR Data covers the target location, that it complies to the product specifications and that it does not contain any disqualifying ambiguities.</p>
+<h4 id="redelivery-if-required">Redelivery (if required)</h4>
+<p>If the defects are found during the detailed manual Quality Control steps, ICEYE will attempt to correct and redeliver the data to your SFTP folder as soon as possible. The most common type of defects that are detected and corrected in during Quality Control are geolocation inaccuracies. When performing Quality Control, sometimes ICEYE will have access to more refined satellite telemetry and orbit information that allows us to improve the geolocation accuracy. In such cases, the SAR data will reprocessed to improve its geolocation accuracy and will be redelivered to you.</p>
+<h4 id="delivery-service-level">Delivery service level</h4>
+<p>Automatic delivery, quality control and redelivery (if required) will be completed within 8 hours of the data being acquired.  ICEYE offers faster delivery times for customers that require near-real-time data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your SAR data. You will receive a notification (via email) every time data from a new acquisition has been added to your SFTP account and is ready for you to download.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Images are stored in your SFTP account for a period of 30 days.</p>
 </div>
 <h2 id="unforeseen-circumstances">Unforeseen Circumstances</h2>
-<p>In very rare situations, it might not be possible to acquire an image within the agreed time window. In this case, the Customer Operations and Satellite Planning team will immediately inform the customer and will propose an extended acquisition time window size or allow the customer to cancel the collection.</p>
+<p>In very rare situations, it might not be possible to acquire an image within the agreed time window. In this case, the Customer Operations and Satellite Planning team will immediately inform you and will propose an extended acquisition time window or allow you to cancel the collection.</p>
 <h2 id="iceye-archive-imagery">ICEYE Archive Imagery</h2>
 <p>As an ICEYE customer, you have access to a complete catalog of archive imagery that is available for ordering. This catalog is updated on a regular basis on your SFTP account. The catalog is available in kmz and geojson formats and it includes low resolution image thumbnails so you can get a feel for the content of the image. The archive catalog can be viewed in Google Earth, QGIS or your favorite GIS where you can browse image locations, filter by time or different image metadata and perform advanced searches. Please note that imagery is included in the ICEYE Archive Catalog at least seven days after its acquisition time.</p>
 <figure>
@@ -1225,15 +1304,14 @@ Custom orders are initiated by submitting a Custom Order Form via email to <a hr
 <figcaption align="center"><em>Table 2: Cancellation Requests.</em></figcaption>
 </figure>
 <h2 id="return-policy">Return Policy</h2>
-<p>If you are not satisfied with your purchase, please contact our Customer Operations and Satellite Planning team at <a href="mailto:customer@iceye.com">customer@iceye.com</a> within 30 days of receiving your order. Your satisfaction is our priority, so we will work quickly to resolve your concerns. 
-œ</p>
+<p>If you are not satisfied with your purchase, please contact our Customer Operations and Satellite Planning team at <a href="mailto:customer@iceye.com">customer@iceye.com</a> within 30 days of receiving your order. Your satisfaction is our priority, so we will work quickly to resolve your concerns. </p>
 <h2 id="invoicing">Invoicing</h2>
 <p>ICEYE users can pay for imaging in a range of different ways in order to be as flexible as possible:</p>
 <ul>
 <li><strong>Prepayment</strong> : In this option a number of images can be paid for up-front. When the prepayment has been paid, you can place orders and receive the amount of data up to your prepaid quota. This is designed for customers that know that they would like to purchase a number of images and offers imagery at a reduced rate.</li>
 <li><strong>Net 30</strong> : This is designed for larger or industrial customers wishing to purchase imagery in volume. In this case we will discuss your needs and enter into a contract with you. Images can then be tasked as and when you see fit and we will invoice you monthly. Payment then has to be made within 30 days of sending you the invoice.</li>
 </ul>
-<p>ICEYE Finance will send invoices during the first week of the month for all the products delivered to the Customer within the previous month. The monthly invoice will not include the products that have been ordered but have not yet been delivered to the Customer. If no products have been shipped to the Customer during the previous month, invoice will not be extended.</p>
+<p>ICEYE Finance will send invoices during the first week of the month for all the products delivered to you within the previous month. The monthly invoice will not include the products that have been ordered but have not yet been delivered to you. If no products have been shipped to you during the previous month, invoice will not be extended.</p>
                 
               
               
