@@ -107,18 +107,18 @@ Our tasking experts will be happy to try to accommodate any special tasking requ
 
 #### Automatic delivery
 
-All acquisition SAR data initially goes though an automated quick Quality Control process and is automatically delivered as soon as possible to your folder in the ICEYE SFTP server. This gives you access to the SAR data without delay.  
+All acquisition SAR data initially goes though an automated quick Quality Control process in which we ensure that it covers the intended target location. The data is then automatically and immediately delivered to your folder in the ICEYE SFTP server. This gives you access to the SAR data without delay.  
 
 #### Quality Control 
 
-In addition to the automated quick Quality Control mentioned above, a detailed manual Quality Control is performed on all acquisition data. An ICEYE analyst will verify that the acquired SAR Data covers the target location, that it complies to the product specifications and that it does not contain any disqualifying ambiguities.
+In addition to the automated quick Quality Control mentioned above, a detailed manual Quality Control is performed on all acquisition data. An ICEYE analyst will verify the acquired SAR Data conforms to the product specifications and that it does not contain any disqualifying ambiguities.
 
 #### Redelivery (if required)
 
-If the defects are found during the detailed manual Quality Control steps, ICEYE will attempt to correct and redeliver the data to your SFTP folder as soon as possible. The most common type of defects that are detected and corrected in during Quality Control are geolocation inaccuracies. When performing Quality Control, sometimes ICEYE will have access to more refined satellite telemetry and orbit information that allows us to improve the geolocation accuracy. In such cases, the SAR data will reprocessed to improve its geolocation accuracy and will be redelivered to you.
+If defects are found during the detailed manual Quality Control steps, ICEYE will attempt to correct and redeliver the data to your SFTP folder as soon as possible. The most common type of defects that are detected and corrected in during Quality Control are geolocation inaccuracies. When performing Quality Control, sometimes ICEYE will have access to more refined satellite telemetry and orbit information that allows us to improve the geolocation accuracy. In such cases, the SAR data will reprocessed to improve its geolocation accuracy and will be redelivered to you.
 
 #### Delivery service level
-Automatic delivery, quality control and redelivery (if required) will be completed within 8 hours of the data being acquired.  ICEYE will soon offer faster delivery times for customers that require near-real-time data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your SAR data. You will receive a notification (via email) every time data from a new acquisition has been added to your SFTP account and is ready for you to download.
+Automatic delivery, quality control and redelivery (if required) will be completed within 8 hours of the data being acquired.  ICEYE will soon offer faster delivery times for customers that require near-real-time data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your SAR data. You will receive a notification (via email) every time a new acquisition has passed our detailed Quality Control process and the final version of the data is ready for you to download using your SFTP account.
 
 !!! info
     Images are stored in your SFTP account for a period of 30 days.
