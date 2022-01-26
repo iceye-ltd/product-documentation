@@ -62,8 +62,8 @@ At present,  ICEYE satellites are all in sun-synchronous orbits with 15 orbits p
 | <a href="https://www.n2yo.com/?s=48914" target=”_blank”>ICEYE-X12</a> |  2021-06-30   |  48914     |  02:06:42  |<span style="color:orange">Maintenance|
 | <a href="https://www.n2yo.com/?s=48916" target=”_blank”>ICEYE-X13</a> |  2021-06-30   |  48916     |  02:06:41  |<span style="color:orange">Maintenance|
 | <a href="https://www.n2yo.com/?s=48917" target=”_blank”>ICEYE-X15</a> |  2021-06-30   |  48917     |  02:07:07  |<span style="color:orange">Maintenance|
-| <a href="https://www.n2yo.com/?s=99014" target=”_blank”>ICEYE-X14</a> |  2021-06-30   |  48917     |  02:07:07  |[ICEYE US Owned]|
-| <a href="https://www.n2yo.com/?s=99020" target=”_blank”>ICEYE-X16</a> |  2021-06-30   |  48917     |  02:07:07  |<span style="color:orange">Maintenance|
+| <a href="https://www.n2yo.com/?s=51070" target=”_blank”>ICEYE-X14</a> |  2021-06-30   |  51070     |  02:07:07  |[ICEYE US]|
+| <a href="https://www.n2yo.com/?s=51008" target=”_blank”>ICEYE-X16</a> |  2021-06-30   |  51008     |  02:07:07  |<span style="color:orange">Maintenance|
 <figcaption align = "center"><em>Table 3: ICEYE satellites status and LTANs. </em></figcaption>
 </figure>
 !!! info 
