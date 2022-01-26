@@ -30,3 +30,10 @@
     --md-primary-fg-color--light: #1CB5DF;
     --md-primary-fg-color--dark:  #471D6F;
   }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

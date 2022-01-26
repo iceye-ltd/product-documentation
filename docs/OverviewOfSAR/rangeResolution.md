@@ -9,14 +9,14 @@ where $\delta_{ra}$ is the slant range resolution.
 Thus far, we have described our radar pulses as if they have a fixed frequency, like X-band pulses of 10 GHz frequency and a 3 cm wavelength. But most radars actually transmit *chirped* pulses in which the frequency changes (Figure 11). Notice how the wavelength of the green pulse is manipulated and varies from long to short
 
 <figure>
-<img src="../img/chirped.png" style="width:100%">
+<img src="../img/chirped.png" style="width:50%" class="center">
 <figcaption align = "center"><em>Figure 11: Chirped Pulse</em></figcaption>
 </figure>
 
 When we state the frequency or wavelength of a SAR sensor, those values typically apply at the mid-way time of the pulse. This is known as the radar center frequency or wavelength. The actual transmitted wavelengths are varied quite a bit on either side to form chirped pulses (Figure 12).
 
 <figure>
-<img src="../img/centreFreq.png" style="width:100%">
+<img src="../img/centreFreq.png" style="width:50%" class="center">
 <figcaption align = "center"><em>Figure 12: Centre Frequency</em></figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ There are many different pulse modulation techniques, but the chirp with a smoot
 A chirped pulse enables high range resolution because its form is exactly specified and its echo is a reversed and weakened copy. The reflection has the same shape as the emitted signal, it’s just flipped and has a much smaller amplitude. The two are compared in what is called a matched filter process. The known structure of the emitted pulse is compared to the echo at various locations. A calculation is performed, and if they are misaligned the result of this calculation is zero. At the exact location where they match there is a strong signal that indicates the match. A synthetic pulse that is narrow in range replaces the spread-out pulse (Figure 13).
 
 <figure>
-<img src="../img/RangeCompression.png" style="width:100%">
+<img src="../img/RangeCompression.png" style="width:50%" class="center">
 <figcaption align = "center"><em>Figure 13: Range Compression</em></figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ Plans for the next generation of ICEYE satellites include pulse bandwidths of 60
 The slant range is the distance between the antenna and the target, and that is the direction where range resolution is measured. To produce images along the ground surface, the pixels have to be projected to the “ground range” from their original slant range orientation (Figure 14). This has the effect of elongating the pixels in range.
 
 <figure>
-<img src="../img/groundRangeRes.png" style="width:100%">
+<img src="../img/groundRangeRes.png" style="width:50%" class="center">
 <figcaption align = "center"><em>Figure 14: Ground Range Resolution</em></figcaption>
 </figure>
 

@@ -31,7 +31,7 @@ V | 0.40 to 0.75 | 75 to 40 | V for 'very' high frequency - not to be confused w
 W | 0.27 to 0.40 | 110 to 75 | W follows V in the alphabet 
 mm | 0.10 to 0.27 | 300 to 110 | millimeter wave 
 <figcaption align = "center"><em>Table 1 : Radar Bands</em></figcaption>
-</figure>    
+</figure>
 
 ## References
 \bibliography
