@@ -2,7 +2,7 @@
 
 The ICEYE global imaging service uses an innovative satellite and sensor design based on advancements in small satellite technologies and an adaptable New Space approach. The ICEYE constellation is constantly evolving and it is optimized for persistent monitoring with fast and repeatable access to any location on Earth. Our flexible collection supports high resolution imaging over small areas as well as reduced resolution scans of wide areas. 
 
-As of early 2022 there are 12 operating satellites with 6 satellites constantly supporting imaging operations. (The other 6 are either going through commissioning, orbit refinement or have been retired from imaging operations.)An additional 8 satellites are on the 2022 launch roster.
+As of early 2022 there are 12 operating satellites with 6 satellites constantly supporting imaging operations. (The other 6 are either going through commissioning, orbit refinement or have been retired from imaging operations.) An additional 8 satellites are on the 2022 launch roster.
 
 Our goal is to provide global access from a fleet of satellites, each in a coherent daily ground track repeat orbit (*CD-GTR*). This means that any location can be imaged multiple times from nearly the same orbital location using the same imaging geometry. The repeat cycle for these coherent collections is 24 hours or less. During the coming year our global coherent imaging plan will be implemented as we move more satellites into their allocated repeating ground tracks.
 
@@ -76,7 +76,7 @@ Each satellite has the ability to slowly adjust its orbits throughout its operat
 <figcaption align = "center"><em>Figure 2: Coherent Daily Ground Track Repeat imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
 </figure> 
 
-The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provede a near limitless supply of manoeuvring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.
+The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provide a near limitless supply of manoeuvring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.
 
 The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 3 and one of the excellent online orbital elements tools such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/)[@n2yo], which provide a live view of the current ICEYE constellation.  
 
