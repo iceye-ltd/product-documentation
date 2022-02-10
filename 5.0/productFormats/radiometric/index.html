@@ -538,6 +538,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#doppler-centroid-determination" class="md-nav__link">
+    Doppler Centroid Determination
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -889,6 +896,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#doppler-centroid-determination" class="md-nav__link">
+    Doppler Centroid Determination
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -954,6 +968,14 @@
 <p>If the processing of <span class="arithmatex">\(\beta_0\)</span> is required from the amplitude image for further orthorectification to <span class="arithmatex">\(\sigma_0\)</span> or <span class="arithmatex">\(\gamma_0\)</span> values using a local DEM, then the conversion to radar brightness can be performed using the incidence angle information annotated in the metadata (see <a href="../slantToGround#ground-range-to-incidence-angle-conversion">Ground Range To Incidence Angle Conversion</a>). </p>
 <p>(<span class="arithmatex">\(\gamma_0\)</span>) values can be obtained using the <span class="arithmatex">\(\beta_0\)</span> values and a local digital elevation model.<br />
 To assist in viewing analysis and projection, all amplitude products are projected onto the WGS84 Reference Ellipsoid.</p>
+<h3 id="doppler-centroid-determination">Doppler Centroid Determination</h3>
+<p>ICEYE SAR images are <em>zero-Doppler</em> based. This means that image pixels are focussed to the zero-Doppler (or <em>broadside</em>) position. The  radar beam covers a range of Doppler frequencies. Objects entering the beam have a high Doppler frequency and objects leaving the beam have a low Doppler frequency. This means that the centre point, called the <strong>Doppler Centroid</strong> (DC), can be used to find where the radar beam is pointing at any moment. The Doppler Centroid and the orbit state vector information are used to determine the precise azimuth location that the radar beam is pointing to.</p>
+<p>A set of DC coefficients are provided in the image metadata. For each azimuth location, the DC dependence in range is described using a polynomial function. The polynomial is valid from the near to the far range of the scene. The DC coefficients can be obtained by fitting the DC dependence in range from time as:</p>
+<div class="arithmatex">\[ DC(t)=C_0\left(t-t_{ref}\right)^0+C_1 \left(t-t_{ref}\right)^1+C_2 \left(t-t_{ref}\right)^2+C_3 \left(t-t_{ref}\right)^3\]</div>
+<p>where the reference point in time <span class="arithmatex">\(t_{ref}\)</span> corresponds to the mid-range time, and time varies between <span class="arithmatex">\(t_{min}\)</span> and <span class="arithmatex">\(t_{max}\)</span> corresponding to near range (first pixel time) and far range, respectively. 
+The mid-range time is calculated as:  </p>
+<div class="arithmatex">\[ t_{ref}= (t_{min} +t_{max})/2=t_{min}+n_{rs}/(2f_{sr} )\]</div>
+<p>where <span class="arithmatex">\(n_{rs}\)</span> is the number of range samples, and <span class="arithmatex">\(f_{sr}\)</span> is the range sampling rate.</p>
                 
               
               

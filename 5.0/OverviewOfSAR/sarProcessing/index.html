@@ -782,8 +782,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#amplitude-and-coherent-change-detection" class="md-nav__link">
-    Amplitude and Coherent Change Detection
+  <a href="#amplitude-and-coherent-change-images" class="md-nav__link">
+    Amplitude and Coherent Change Images
   </a>
   
 </li>
@@ -962,8 +962,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#amplitude-and-coherent-change-detection" class="md-nav__link">
-    Amplitude and Coherent Change Detection
+  <a href="#amplitude-and-coherent-change-images" class="md-nav__link">
+    Amplitude and Coherent Change Images
   </a>
   
 </li>
@@ -1034,8 +1034,8 @@
 <p>This is done by manipulating the synthetic aperture into smaller sub-apertures and then combining them. The sub-apertures are called “looks” and they each produce an image with lower azimuth resolution. This may sound disappointing, but when these individual sub-aperture images are combined, they form a multi-look image in which the noisy effect of speckle is reduced.  Complex images are stored at full-resolution and are called single-look complex (SLC) images. Amplitude images are typically multi-looked in azimuth using two to 12 sub-apertures. If range resolution exceeds azimuth resolution a similar multi-look process can be applied in the range dimension.</p>
 <h3 id="sub-aperture-stack-or-video-image">Sub-aperture Stack or Video Image</h3>
 <p>Suppose we take the aperture splitting further and create six or seven segments to produce multiple sub-aperture images. One advantage of this sub-aperture stack is that it can indicate glints that are bright in only a portion of the full aperture. This signature might be washed out on the full-resolution image by the bulk of the aperture in which there was no glinting, but it can be very noticeable in one of the low-resolution sub-apertures. Glints tend to be important signatures because they are usually caused by human-made features. We could even loop the stack like a short movie, or SAR video image, to look for such glints and moving objects. This product works best for long spotlight exposures of ten seconds or more.</p>
-<h3 id="amplitude-and-coherent-change-detection">Amplitude and Coherent Change Detection</h3>
-<p>Perhaps the most useful SAR products are the amplitude and coherent change detection images (ACD, CCD). Two or more images of the same site are collected at different times to detect scene changes. For ACD only the brightness values are compared, while CCD uses phase data.</p>
+<h3 id="amplitude-and-coherent-change-images">Amplitude and Coherent Change Images</h3>
+<p>Perhaps the most useful SAR products are the amplitude and coherent change images (ACI, CCI). Two or more images of the same site are collected at different times to detect scene changes. For ACD only the brightness values are compared, while CCD uses phase data.</p>
 <p>In order for change detection to work, the images have to be collected from nearly the same location in space with similar illumination geometries. For ACD the two images can be overlaid in the complementary colors (eg red and cyan). In this way, features with similar backscatters will be gray, but features with backscatters that changed during the imaging period will appear in one of the two colors. It is conventional for the first image to be displayed in red and the second in cyan. If something on the ground changes between the two collections you will see whichever color signature is dominant.</p>
 <p>A mnemonic is used to help interpret ACD products: “Red is fled. Blue is new”. That is, a red signature indicates a feature that was present on the first image but left the scene prior to the second image, and a blue signature indicates a feature that appears only on the second image. This mnemonic is an easy way to help remember the order of the images, but appreciate that the second image is actually cyan, not blue. The intentional sloppiness of the mnemonic is acceptable here because verbal precision would ruin the rhyme.</p>
 <p>In contrast to amplitude change detection, CCD compares the phase values of two nearly identical images taken at different times. CCD is far more sensitive to changes because it is based on phase differences rather than pixel brightness differences and, as we know, phase is measured to within a small fraction of a wavelength. The collection constraints to ensure image-to-image coherence are tighter for CCD than ACD.</p>

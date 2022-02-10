@@ -590,13 +590,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#doppler-centroid-determination" class="md-nav__link">
-    Doppler Centroid Determination
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#fast-and-simple-geolocation-rapid-positioning-capability" class="md-nav__link">
     Fast and Simple Geolocation: Rapid Positioning Capability
   </a>
@@ -1046,13 +1039,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#doppler-centroid-determination" class="md-nav__link">
-    Doppler Centroid Determination
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#fast-and-simple-geolocation-rapid-positioning-capability" class="md-nav__link">
     Fast and Simple Geolocation: Rapid Positioning Capability
   </a>
@@ -1128,12 +1114,12 @@ The geolocation accuracy of an image depends on how well that range-azimuth arc 
 <tr>
 <td>Predicted</td>
 <td>Uses the latest orbit solution to predict where the satellite will be at some point in the future. It is used for collection planning and feasibility studies.  It is not typically used for image formation processing because it has the largest errors.</td>
-<td>updated 6 Hours before collection</td>
+<td>updated 6 hours before collection</td>
 </tr>
 <tr>
 <td>Rapid</td>
-<td>Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites.</td>
-<td>Immediate.</td>
+<td>Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3 m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites.</td>
+<td>Immediate</td>
 </tr>
 <tr>
 <td>Precise</td>
@@ -1156,7 +1142,7 @@ The geolocation accuracy of an image depends on how well that range-azimuth arc 
 It must be emphasized that the SAR image on its own cannot provide accurate ground locations. The chosen ground projection surface is typically an ellipsoid with a height set to the average height of the imaged area. This means that latitude and longitude image corner coordinates are for reference only. They are intended to layout the image footprint, and since they were projected to a single-elevation surface they cannot be used for accurate geolocation.
 SAR geolocation requires the projection of the natural range-azimuth arc of each pixel to an actual terrain height. This means that the image exploitation system must have a ground terrain height model on hand and it must use the coded SAR geometry model equations. This situation is exactly the same for optical images. The imaging conversion of 3D space to any 2D image, optical or SAR, means that proper geolocation requires pixel projections to elevation models on exploitation workstations.</p>
 <h3 id="elevation-models">Elevation Models</h3>
-<p>In the case of a calibrated SAR with accurate range-azimuth coordinates and precise orbit data, the most significant source of geospatial error comes from the way the data is measured and exploited on a workstation. The following animation explains why the measured location of a point on an accurate SAR image is dominated by errors in external terrain height information.</p>
+<p>In the case of a calibrated SAR with accurate range-azimuth coordinates and precise orbit data, the most significant source of geospatial error comes from the way the data is measured and exploited on a workstation. The following animation explains why the measured location of a point on an accurate SAR image is dominated by errors in external terrain height information. </p>
 <figure>
 <img src="../img/explainingGeoErrors_ManimCE_v0.13.1.gif" style="width:100%">
 <figcaption align = "center"><em>Figure 2: The geospatial accuracy of a SAR image is a function of the accuracy of the terrain model used.</em></figcaption>
@@ -1166,20 +1152,11 @@ SAR geolocation requires the projection of the natural range-azimuth arc of each
 <p>It is interesting to consider the pristine potential of SAR geolocation. Both SAR and optical satellite sensors can provide accurate orbit information, but optical sensors also need to physically measure the pointing orientation of the sensor to the ground. These data are derived from on-board gyroscopes and star sensors, and errors in the estimates of the sensor pointing direction project along the huge distance to the ground surface. A SAR satellite must also estimate pointing direction in order to illuminate the proper location on the ground. But once the image is formed, the angle to the ground location is determined by the azimuth coordinate, which is itself derived from ultra-precise pulse-to-pulse phase changes. The aspect of optical geolocation which contributes the most uncertainty, pointing direction, is not a significant factor for SAR geolocation. A well-calibrated SAR with accurate orbits, in conjunction with precise elevation data, can provide a geolocation accuracy of less than one meter for well-defined points. This is the precision to which ICEYE aspires.</p>
 <h2 id="geospatial-metadata">Geospatial Metadata</h2>
 <p>It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images <em>off-nadir</em>. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have terrain models built in and can provide precise location information using parameters embedded in the metadata of each image. Two common approaches are <em>Doppler Centroid Polynomials</em> and <em>Rapid Polynomial Coefficients</em>.</p>
-<h3 id="doppler-centroid-determination">Doppler Centroid Determination</h3>
-<p>ICEYE SAR images are <em>zero-Doppler</em> based. This means that image pixels are focussed to the zero-Doppler (or <em>broadside</em>) position. The  radar beam covers a range of Doppler frequencies. Objects entering the beam have a high Doppler frequency and objects leaving the beam have a low Doppler frequency. This means that the centre point, called the <strong>Doppler Centroid</strong> (DC), can be used to find where the radar beam is pointing at any moment. The Doppler Centroid and  the orbit state vector information are used to determine the precise azimuth location in the slant plane of each image sample.</p>
-<p>A set of DC coefficients are provided in the image metadata. For each azimuth location, the DC dependence in range is described using a polynomial function. The polynomial is valid from the near to the far range of the scene. The DC coefficients can be obtained by fitting the DC dependence in range from time as:</p>
-<div class="arithmatex">\[ DC(t)=C_0\left(t-t_{ref}\right)^0+C_1 \left(t-t_{ref}\right)^1+C_2 \left(t-t_{ref}\right)^2+C_3 \left(t-t_{ref}\right)^3\]</div>
-<p>where the reference point in time <span class="arithmatex">\(t_{ref}\)</span> corresponds to the mid-range time, and time varies between <span class="arithmatex">\(t_{min}\)</span> and <span class="arithmatex">\(t_{max}\)</span> corresponding to near range (first pixel time) and far range, respectively. 
-The mid-range time is calculated as:  </p>
-<div class="arithmatex">\[ t_{ref}= (t_{min} +t_{max})/2=t_{min}+n_{rs}/(2f_{sr} )\]</div>
-<p>where <span class="arithmatex">\(n_{rs}\)</span> is the number of range samples, and <span class="arithmatex">\(f_{sr}\)</span> is the range sampling rate.</p>
 <h3 id="fast-and-simple-geolocation-rapid-positioning-capability">Fast and Simple Geolocation: Rapid Positioning Capability</h3>
-<p>The concept of rapid determination of image pixel coordinates from oblique imagery (RADAR and optical) was first described openly by the US National Imagery and Mapping Agency (NIMA) in STDI-0002 2.1<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and specifically sections 8.2.4 (the mathematical description of Rational Polynomial Coefficients) and section 8.3.12 that describes how parameters could be stored electronically (Also known as <em>RPC00 - Rapid Positioning Capability</em>). The technique was developed to perform image geolocation calculations quicky on US Imagery Analyst IDEX workstations. The acronym <em>RPC</em> can refer to either the standard or the coefficients and is therefore a little confusing. At ICEYE we prefer to use plain language and as not everyone understands whether a coefficient is rational or irrational we prefer to use the <em>Rapid Positioning Capability</em> definition. </p>
-<p>To help with the determination of precise pixel locations, a RPC model has been implemented into ICEYE's output product files. The model is described in [ <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> ] which extends the work for the National Imagery Transmission Format (NITF)<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> to GeoTIFFs.  For completeness, the translation of latitude and longitude to image pixel coordinates is described below.
-The geometric sensor model describing the physical relationship between image coordinates and ground coordinates is known as a Rigorous Projection Model. A Rigorous Projection Model expresses the mapping of the image space coordinates of rows and columns (<span class="arithmatex">\(r,c\)</span>) onto the object space reference surface geodetic coordinates ( φ, λ, h ).</p>
-<p>The approximation used in ICEYE products is a set of rational polynomials that describe the normalized row and column values, (<span class="arithmatex">\(rn\)</span> , <span class="arithmatex">\(cn\)</span>), as a function of normalized geodetic latitude, longitude, and height, (<span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(L\)</span>, <span class="arithmatex">\(H\)</span>), given a set of normalized polynomial coefficients (<code>LINE_NUM_COEF_n</code>, <code>LINE_DEN_COEF_n</code>, <code>SAMP_NUM_COEF_n</code>, <code>SAMP_DEN_COEF_n</code>). Normalized values, rather than actual values are used in order to minimize the introduction of errors during the calculations. The transformation between row and column values (<span class="arithmatex">\(r\)</span>,<span class="arithmatex">\(c\)</span>), and normalized row and column values (<span class="arithmatex">\(r_n\)</span>, <span class="arithmatex">\(c_n\)</span>), and between the geodetic latitude, longitude, and height ( φ, λ, h ), and normalized geodetic latitude, longitude, and height (P, L, H), is defined by a set of normalizing translations (offsets) and scales that ensure all values are contained within the range -1 to +1. The normalization of these parameters is given in Table 2.</p>
-<p>If you load ICEYE's images into some GIS Viewers (eg QGIS<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>), then it will automatically perform conversion from image row, column to lat, long, WGS84 altitude.</p>
+<p>The range-azimuth arc and its associated geometry model equations form the rigorous, physics-based foundation of SAR geolocation. However, the actual implementation of this model is quite detailed and can include ponderous and slow iterative solutions. An engineering replacement to optical and SAR physics-based geometry models is commonly used to speed and simplify the calculation of ground locations. This replacement model takes the form of a ratio of polynomials that link a ground location (in latitude, longitude and height) to its associated image location. The replacement engineering model has been called Rational Polynomial Coefficients (RPC), but at ICEYE we prefer to call it Rapid Positioning Capability. The latter term instantly indicates its purpose and value, rather than referencing its mathematical structure. Because it is merely a polynomial replacement, the RPC data structure provided for ICEYE SAR images is exactly the same as the RPC model for all optical images. RPC is not only fast and simple; it is also sensor- and phenomenology-independent.</p>
+<p>It should be noted that RPC data are derived from an image’s geometric metadata and the physics-based geometry model for that sensor. They are usually calculated during image formation and included in the output image file. RPC coefficients are provided for ICEYE’s amplitude images in the GRD format. The model is described in [ <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> ] which extends the work for the National Imagery Transmission Format (NITF)<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> to GeoTIFFs. The translation of latitude, longitude and height to image pixel coordinates is described below.</p>
+<p>The approximation used in ICEYE products is a set of rational polynomials that describe the normalized row and column values (<span class="arithmatex">\(rn\)</span> , <span class="arithmatex">\(cn\)</span>) as a function of normalized geodetic latitude, longitude, and height. The link between the two is the (<span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(L\)</span>, <span class="arithmatex">\(H\)</span>) set of normalized polynomial coefficients (<code>LINE_NUM_COEF_n</code>, <code>LINE_DEN_COEF_n</code>, <code>SAMP_NUM_COEF_n</code>, <code>SAMP_DEN_COEF_n</code>) as applied in the RPC polynomial format. Normalized values, rather than actual values are used in order to minimize the introduction of errors during the calculations. The transformation between row and column values (<span class="arithmatex">\(r\)</span>,<span class="arithmatex">\(c\)</span>) and normalized row and column values (<span class="arithmatex">\(r_n\)</span>, <span class="arithmatex">\(c_n\)</span>), and between the geodetic latitude, longitude, and height ( φ, λ, h ), and normalized geodetic latitude, longitude, and height (P, L, H) is defined by a set of normalizing translations (offsets) and scales that ensure all values are contained within the range -1 to +1. The normalization of these parameters is given in Table 2.</p>
+<p>If you load ICEYE's images into RPC-compliant GIS Viewers (eg QGIS<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>), with access to a ground elevation model, the Viewer will automatically perform conversion from image row, column to lat, long, height (WGS84 geoid).</p>
 <figure>
 <table>
 <thead>
@@ -1384,10 +1361,10 @@ c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
 <hr />
 <ol>
 <li id="fn:1">
-<p>National Imagery and Mapping Agency. <em>The Compendium of Controlled Extensions <span class="arithmatex">\(CE\)</span> for the National Imagery Transmission Format <span class="arithmatex">\(NITF\)</span> Version 2.1</em>. November 2000. URL: <a href="http://geotiff.maptools.org/STDI-0002_v2.1.pdf">http://geotiff.maptools.org/STDI-0002_v2.1.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>OSGeo. <em>RPCs in GeoTIFF</em>. URL: <a href="http://geotiff.maptools.org/rpc_prop.html">http://geotiff.maptools.org/rpc_prop.html</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>OSGeo. <em>RPCs in GeoTIFF</em>. URL: <a href="http://geotiff.maptools.org/rpc_prop.html">http://geotiff.maptools.org/rpc_prop.html</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>National Imagery and Mapping Agency. <em>The Compendium of Controlled Extensions <span class="arithmatex">\(CE\)</span> for the National Imagery Transmission Format <span class="arithmatex">\(NITF\)</span> Version 2.1</em>. November 2000. URL: <a href="http://geotiff.maptools.org/STDI-0002_v2.1.pdf">http://geotiff.maptools.org/STDI-0002_v2.1.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>QGIS - A Free and Open Geographic Information System. Accessed 2020 Dec 17. URL: <a href="https://qgis.org/en/site/">https://qgis.org/en/site/</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
