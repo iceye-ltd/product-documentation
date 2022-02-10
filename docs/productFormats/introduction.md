@@ -18,7 +18,7 @@ There are many steps that have to be considered when converting RADAR pulse data
 </figure>
 
 ### Sample Arrangement
-This is the way the image pixels are aligned as a *raster* in the container file. Most GIS viewers will convert the projection for you on your screen. Map-oriented images are larger than range-azimuth images as the rotation to make the image 'north-up' in the container file requires the addition of blank pixels to make the image rectangular. Map projection layouts are often projected to a single elevation surface; thus, they lack the geometric fidelity of range-azimuth images. They also can impart flipped terrain-perception effects in which mountains appear to be valleys and valleys appear elevated. Despite this, some users prefer the map-oriented product because its map representation with north up can be directly used with paper-based maps without any rotations.
+This is the way the image pixels are aligned as a *raster* in the container file. Most Geospatial Information System (GIS) viewers will convert the projection for you on your screen. Map-oriented images are larger than range-azimuth images as the rotation to make the image 'north-up' in the container file requires the addition of blank pixels to make the image rectangular. Map projection layouts are often projected to a single elevation surface; thus, they lack the geometric fidelity of range-azimuth images. They also can impart flipped terrain-perception effects in which mountains appear to be valleys and valleys appear elevated. Despite this, some users prefer the map-oriented product because its map representation with north up can be directly used with paper-based maps without any rotations.
 
 
 ### Axis Alignment

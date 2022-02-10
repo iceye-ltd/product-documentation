@@ -9,7 +9,7 @@ Synthetic aperture radar is well known as the imaging technique that can see thr
 * *High Resolution Independent of Distance*: One of the outstanding characteristics of SAR is that it is capable of detailed resolution regardless of how far away the sensor is from the ground. SAR sensors can provide very high resolution, even from space.
 * *Variable Resolution and Coverage*: SAR illumination is controlled electronically, and it can be manipulated to vary resolution and coverage. Images can be collected over small areas at fine resolution, over medium-sized areas at medium resolution or over large areas at coarse resolution.
 * *Precision Geolocation*: SAR measurements are inherently precise. Properly calibrated images can have geolocation accuracy less than the scale of a single pixel for well-defined features.
-* *Coherent Illumination and Many Products*: The controlled nature of SAR imaging enables the formation of images and many other products. These include sub-aperture image stacks that highlight glinting features and motion, dense elevation models, precise measurements of surface motion, and amplitude and coherent change detection pairs or series.
+* *Coherent Illumination and Many Products*: The controlled nature of SAR imaging enables the formation of images and many other products. These include sub-aperture image stacks that highlight glinting features and motion, dense elevation models, precise measurements of surface motion, and amplitude and coherent change images or series.
 
 ## Radar Bands
 There are several radar bands ranging from wavelengths at the millimeter level to a full meter (Table 1). X-Band has the best combination of cloud-penetration and resolution for spaceborne sensors. 

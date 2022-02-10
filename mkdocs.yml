@@ -38,6 +38,10 @@ nav:
         - Separating Signals From Noise : OverviewOfSAR/noise.md
         - The Innovation : OverviewOfSAR/theInnovation.md
         - Terminology : glossary.md
+    # - Exploiting SAR Products :
+    #     - The Basics : 
+    #     - Advanced Tips and Tricks :
+    #     - Snippets for Code Ninjas :
     - Coming Soon : comingsoon.md
     - About: about.md
 theme:

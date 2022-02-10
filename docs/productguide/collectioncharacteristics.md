@@ -19,7 +19,7 @@ The following provides additional technical information on the performance of th
 | Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ]  | -21.5 to -20 | -18 to -15 | -18 to -15 | -22.2 to -21.5 | [Note 6](#notes-and-explanations)    |
 | Azimuth Ambiguity Ratio [dB]  | -17          | -17       | -17    | -17     |                                      |
 | Range Ambiguity Ratio [dB]    | <-20          | <-20       | <-20    | <-20     |                                      |
-| Geospatial Accuracy [m CE90] | 6            | 6         | 6      | 15      |                                      |
+| Geospatial Accuracy [m RMSE] | 6            | 6         | 6      | 15      |                                      |
 | ESA Copernicus Contributing Mission (CCM) Class[@copernicusClass] | VHR2 | VHR1 | VHR1 | HR1 |                     |
 | Polarization                  | VV           | VV        | VV     | VV      |                                      |
 | RNIIRS                        | 3.6          | 5.5       | 5.5    | 2.1     | [Note 8](#notes-and-explanations)    |

@@ -34,7 +34,7 @@ New customers should complete [this form](https://www.iceye.com/lp/contact-us) o
 
 The named recipients for that order will be notified via email once the order is received by the ICEYE Customer Operations and Satellite Planning (COSP) team.
 
-Once received, your order will be ingested into the ICEYE's planning system which will determine if the order can be confirmed within the AOI, and time windows that you have requested for the AOI.
+Once received, your order will be ingested into the ICEYE's planning system which will determine if the order can be confirmed within the area of interest  (AOI), and time windows that you have requested for the AOI.
 
 * If the order **can be fulfilled**, you will be notified via email that your order has been accepted and the images will be scheduled for acquisition. Alternatives are provided if available.
 * If the order **cannot be fulfilled** within the time constraints that you specified, you will be notified via email that your order cannot be completed.
@@ -115,7 +115,7 @@ In addition to the automated quick Quality Control mentioned above, a detailed m
 
 #### Redelivery (if required)
 
-If defects are found during the detailed manual Quality Control steps, ICEYE will attempt to correct and redeliver the data to your SFTP folder as soon as possible. The most common type of defects that are detected and corrected in during Quality Control are geolocation inaccuracies. When performing Quality Control, sometimes ICEYE will have access to more refined satellite telemetry and orbit information that allows us to improve the geolocation accuracy. In such cases, the SAR data will reprocessed to improve its geolocation accuracy and will be redelivered to you.
+If defects are found during the detailed manual Quality Control steps, ICEYE will attempt to correct and redeliver the data to your SFTP folder as soon as possible. The most common type of defects that are detected and corrected in during Quality Control are geolocation inaccuracies. When performing Quality Control, sometimes ICEYE will have access to more refined satellite telemetry and orbit information that allows us to improve the geolocation accuracy. In such cases, the SAR data will be reprocessed to improve its geolocation accuracy and will be redelivered to you.
 
 #### Delivery service level
 Automatic delivery, quality control and redelivery (if required) will be completed within 8 hours of the data being acquired.  ICEYE will soon offer faster delivery times for customers that require near-real-time data.  New customers receive instructions from the Customer Operations and Satellite Planning team on how to access your SFTP account. Through the SFTP server, you will have access to download all of your SAR data. You will receive a notification (via email) every time a new acquisition has passed our detailed Quality Control process and the final version of the data is ready for you to download using your SFTP account.

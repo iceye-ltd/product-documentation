@@ -5,7 +5,7 @@ After complex images are processed into amplitude images and projected to the gr
 
 Another limitation is that '*ground range*' and '*detected*' do not describe the essential fact that the image is in the  range-azimuth layout. In fact, an alternate form of amplitude images is to interpolate pixels to fit a map projection. While that format is completely different from the native range-azimuth structure, it is also *detected* and it is in the ground range. So, the SAR community’s commonly used terms for range-azimuth amplitude images are based on dated jargon and they fail to state what the structure actually is.
 
-At ICEYE we like to use clear, descriptive english so we prefer to call a GRD image a range-azimuth amplitude image. It might also be called a sensor-orientation amplitude image. It is a struggle, though,  to shake off the SAR community’s legacy language. Many of our customers are used to the term GRD and we are keeping the acronym in some of our product filenames for compatibility reasons. This is likely to change in the future.
+At ICEYE we like to use clear, descriptive English so we prefer to call a GRD image a range-azimuth amplitude image. It might also be called a sensor-orientation amplitude image. It is a struggle, though,  to shake off the SAR community’s legacy language. Many of our customers are used to the term GRD and we are keeping the acronym in some of our product filenames for compatibility reasons. This is likely to change in the future.
 
 
 ## Amplitude Image Description

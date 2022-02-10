@@ -9,7 +9,7 @@ Synthetic aperture radar is well known as the imaging technique that can see thr
 * *High Resolution Independent of Distance*: One of the outstanding characteristics of SAR is that it is capable of detailed resolution regardless of how far away the sensor is from the ground. SAR sensors can provide very high resolution, even from space.
 * *Variable Resolution and Coverage*: SAR illumination is controlled electronically, and it can be manipulated to vary resolution and coverage. Images can be collected over small areas at fine resolution, over medium-sized areas at medium resolution or over large areas at coarse resolution.
 * *Precision Geolocation*: SAR measurements are inherently precise. Properly calibrated images can have geolocation accuracy less than the scale of a single pixel for well-defined features.
-* *Coherent Illumination and Many Products*: The controlled nature of SAR imaging enables the formation of images and many other products. These include sub-aperture image stacks that highlight glinting features and motion, dense elevation models, precise measurements of surface motion, and amplitude and coherent change detection pairs or series.
+* *Coherent Illumination and Many Products*: The controlled nature of SAR imaging enables the formation of images and many other products. These include sub-aperture image stacks that highlight glinting features and motion, dense elevation models, precise measurements of surface motion, and amplitude and coherent change images or series.
 
 ## Radar Bands
 There are several radar bands ranging from wavelengths at the millimeter level to a full meter (Table 1). X-Band has the best combination of cloud-penetration and resolution for spaceborne sensors. 
@@ -291,8 +291,8 @@ This is done by manipulating the synthetic aperture into smaller sub-apertures a
 ### Sub-aperture Stack or Video Image
 Suppose we take the aperture splitting further and create six or seven segments to produce multiple sub-aperture images. One advantage of this sub-aperture stack is that it can indicate glints that are bright in only a portion of the full aperture. This signature might be washed out on the full-resolution image by the bulk of the aperture in which there was no glinting, but it can be very noticeable in one of the low-resolution sub-apertures. Glints tend to be important signatures because they are usually caused by human-made features. We could even loop the stack like a short movie, or SAR video image, to look for such glints and moving objects. This product works best for long spotlight exposures of ten seconds or more.
 
-### Amplitude and Coherent Change Detection
-Perhaps the most useful SAR products are the amplitude and coherent change detection images (ACD, CCD). Two or more images of the same site are collected at different times to detect scene changes. For ACD only the brightness values are compared, while CCD uses phase data.
+### Amplitude and Coherent Change Images
+Perhaps the most useful SAR products are the amplitude and coherent change images (ACI, CCI). Two or more images of the same site are collected at different times to detect scene changes. For ACD only the brightness values are compared, while CCD uses phase data.
 
 In order for change detection to work, the images have to be collected from nearly the same location in space with similar illumination geometries. For ACD the two images can be overlaid in the complementary colors (eg red and cyan). In this way, features with similar backscatters will be gray, but features with backscatters that changed during the imaging period will appear in one of the two colors. It is conventional for the first image to be displayed in red and the second in cyan. If something on the ground changes between the two collections you will see whichever color signature is dominant.
 

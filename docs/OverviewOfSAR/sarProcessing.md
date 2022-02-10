@@ -38,8 +38,8 @@ This is done by manipulating the synthetic aperture into smaller sub-apertures a
 ### Sub-aperture Stack or Video Image
 Suppose we take the aperture splitting further and create six or seven segments to produce multiple sub-aperture images. One advantage of this sub-aperture stack is that it can indicate glints that are bright in only a portion of the full aperture. This signature might be washed out on the full-resolution image by the bulk of the aperture in which there was no glinting, but it can be very noticeable in one of the low-resolution sub-apertures. Glints tend to be important signatures because they are usually caused by human-made features. We could even loop the stack like a short movie, or SAR video image, to look for such glints and moving objects. This product works best for long spotlight exposures of ten seconds or more.
 
-### Amplitude and Coherent Change Detection
-Perhaps the most useful SAR products are the amplitude and coherent change detection images (ACD, CCD). Two or more images of the same site are collected at different times to detect scene changes. For ACD only the brightness values are compared, while CCD uses phase data.
+### Amplitude and Coherent Change Images
+Perhaps the most useful SAR products are the amplitude and coherent change images (ACI, CCI). Two or more images of the same site are collected at different times to detect scene changes. For ACD only the brightness values are compared, while CCD uses phase data.
 
 In order for change detection to work, the images have to be collected from nearly the same location in space with similar illumination geometries. For ACD the two images can be overlaid in the complementary colors (eg red and cyan). In this way, features with similar backscatters will be gray, but features with backscatters that changed during the imaging period will appear in one of the two colors. It is conventional for the first image to be displayed in red and the second in cyan. If something on the ground changes between the two collections you will see whichever color signature is dominant.
 

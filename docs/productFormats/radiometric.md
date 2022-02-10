@@ -56,3 +56,16 @@ If the processing of $\beta_0$ is required from the amplitude image for further 
 ($\gamma_0$) values can be obtained using the $\beta_0$ values and a local digital elevation model.  
 To assist in viewing analysis and projection, all amplitude products are projected onto the WGS84 Reference Ellipsoid.
 
+### Doppler Centroid Determination
+ICEYE SAR images are *zero-Doppler* based. This means that image pixels are focussed to the zero-Doppler (or *broadside*) position. The  radar beam covers a range of Doppler frequencies. Objects entering the beam have a high Doppler frequency and objects leaving the beam have a low Doppler frequency. This means that the centre point, called the **Doppler Centroid** (DC), can be used to find where the radar beam is pointing at any moment. The Doppler Centroid and the orbit state vector information are used to determine the precise azimuth location that the radar beam is pointing to.
+
+A set of DC coefficients are provided in the image metadata. For each azimuth location, the DC dependence in range is described using a polynomial function. The polynomial is valid from the near to the far range of the scene. The DC coefficients can be obtained by fitting the DC dependence in range from time as:
+
+$$ DC(t)=C_0\left(t-t_{ref}\right)^0+C_1 \left(t-t_{ref}\right)^1+C_2 \left(t-t_{ref}\right)^2+C_3 \left(t-t_{ref}\right)^3$$
+
+where the reference point in time $t_{ref}$ corresponds to the mid-range time, and time varies between $t_{min}$ and $t_{max}$ corresponding to near range (first pixel time) and far range, respectively. 
+The mid-range time is calculated as:  
+
+$$ t_{ref}= (t_{min} +t_{max})/2=t_{min}+n_{rs}/(2f_{sr} )$$
+
+where $n_{rs}$ is the number of range samples, and $f_{sr}$ is the range sampling rate.

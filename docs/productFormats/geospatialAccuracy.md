@@ -33,8 +33,8 @@ The Following table summarises the different levels of orbit fidelity. This info
 <figure markdown>
 | Orbit Fidelity | Description | Latency |
 |----------------|-------------|---------|
-| Predicted      | Uses the latest orbit solution to predict where the satellite will be at some point in the future. It is used for collection planning and feasibility studies.  It is not typically used for image formation processing because it has the largest errors. | updated 6 Hours before collection |
-| Rapid | Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites. | Immediate. |
+| Predicted      | Uses the latest orbit solution to predict where the satellite will be at some point in the future. It is used for collection planning and feasibility studies.  It is not typically used for image formation processing because it has the largest errors. | updated 6 hours before collection |
+| Rapid | Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3 m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites. | Immediate |
 | Precise | This is the default orbit fidelity used for ICEYE satellites. The satellite position and velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. The spherical error of the refined data is 1.5m | 10-45 minutes after imaging operation |
 | Scientific | This uses GNSS corrections applied to the samples taken during imaging to significantly reduce the position velocity error. This is not yet available across the ICEYE Fleet. | 2 to 4 days after collection | 
 <figcaption align = "center"><em>Table 1 : Different Levels of Orbit Fidelity in ICEYE SAR Images</em></figcaption>
@@ -52,7 +52,7 @@ SAR geolocation requires the projection of the natural range-azimuth arc of each
 
 ### Elevation Models
 
-In the case of a calibrated SAR with accurate range-azimuth coordinates and precise orbit data, the most significant source of geospatial error comes from the way the data is measured and exploited on a workstation. The following animation explains why the measured location of a point on an accurate SAR image is dominated by errors in external terrain height information.
+In the case of a calibrated SAR with accurate range-azimuth coordinates and precise orbit data, the most significant source of geospatial error comes from the way the data is measured and exploited on a workstation. The following animation explains why the measured location of a point on an accurate SAR image is dominated by errors in external terrain height information. 
 
 <figure>
 <img src="../img/explainingGeoErrors_ManimCE_v0.13.1.gif" style="width:100%">
@@ -66,31 +66,16 @@ It is interesting to consider the pristine potential of SAR geolocation. Both SA
 ## Geospatial Metadata
 It is interesting to note that the ground projection issue relates to any oblique looking imaging system (such as optical sensors) that are able to take images *off-nadir*. Fortunately a lot of geospatial viewers and exploitation tools have evolved to help the user deal with such issues. Some viewers have terrain models built in and can provide precise location information using parameters embedded in the metadata of each image. Two common approaches are *Doppler Centroid Polynomials* and *Rapid Polynomial Coefficients*.
 
-### Doppler Centroid Determination
-ICEYE SAR images are *zero-Doppler* based. This means that image pixels are focussed to the zero-Doppler (or *broadside*) position. The  radar beam covers a range of Doppler frequencies. Objects entering the beam have a high Doppler frequency and objects leaving the beam have a low Doppler frequency. This means that the centre point, called the **Doppler Centroid** (DC), can be used to find where the radar beam is pointing at any moment. The Doppler Centroid and  the orbit state vector information are used to determine the precise azimuth location in the slant plane of each image sample.
-
-A set of DC coefficients are provided in the image metadata. For each azimuth location, the DC dependence in range is described using a polynomial function. The polynomial is valid from the near to the far range of the scene. The DC coefficients can be obtained by fitting the DC dependence in range from time as:
-
-$$ DC(t)=C_0\left(t-t_{ref}\right)^0+C_1 \left(t-t_{ref}\right)^1+C_2 \left(t-t_{ref}\right)^2+C_3 \left(t-t_{ref}\right)^3$$
-
-where the reference point in time $t_{ref}$ corresponds to the mid-range time, and time varies between $t_{min}$ and $t_{max}$ corresponding to near range (first pixel time) and far range, respectively. 
-The mid-range time is calculated as:  
-
-$$ t_{ref}= (t_{min} +t_{max})/2=t_{min}+n_{rs}/(2f_{sr} )$$
-
-where $n_{rs}$ is the number of range samples, and $f_{sr}$ is the range sampling rate.
-
 
 ### Fast and Simple Geolocation: Rapid Positioning Capability
 
-The concept of rapid determination of image pixel coordinates from oblique imagery (RADAR and optical) was first described openly by the US National Imagery and Mapping Agency (NIMA) in STDI-0002 2.1[@nitf] and specifically sections 8.2.4 (the mathematical description of Rational Polynomial Coefficients) and section 8.3.12 that describes how parameters could be stored electronically (Also known as *RPC00 - Rapid Positioning Capability*). The technique was developed to perform image geolocation calculations quicky on US Imagery Analyst IDEX workstations. The acronym *RPC* can refer to either the standard or the coefficients and is therefore a little confusing. At ICEYE we prefer to use plain language and as not everyone understands whether a coefficient is rational or irrational we prefer to use the *Rapid Positioning Capability* definition. 
+The range-azimuth arc and its associated geometry model equations form the rigorous, physics-based foundation of SAR geolocation. However, the actual implementation of this model is quite detailed and can include ponderous and slow iterative solutions. An engineering replacement to optical and SAR physics-based geometry models is commonly used to speed and simplify the calculation of ground locations. This replacement model takes the form of a ratio of polynomials that link a ground location (in latitude, longitude and height) to its associated image location. The replacement engineering model has been called Rational Polynomial Coefficients (RPC), but at ICEYE we prefer to call it Rapid Positioning Capability. The latter term instantly indicates its purpose and value, rather than referencing its mathematical structure. Because it is merely a polynomial replacement, the RPC data structure provided for ICEYE SAR images is exactly the same as the RPC model for all optical images. RPC is not only fast and simple; it is also sensor- and phenomenology-independent.
 
-To help with the determination of precise pixel locations, a RPC model has been implemented into ICEYE's output product files. The model is described in [ [@rpcs] ] which extends the work for the National Imagery Transmission Format (NITF)[@nitf] to GeoTIFFs.  For completeness, the translation of latitude and longitude to image pixel coordinates is described below.
-The geometric sensor model describing the physical relationship between image coordinates and ground coordinates is known as a Rigorous Projection Model. A Rigorous Projection Model expresses the mapping of the image space coordinates of rows and columns ($r,c$) onto the object space reference surface geodetic coordinates ( φ, λ, h ).
+It should be noted that RPC data are derived from an image’s geometric metadata and the physics-based geometry model for that sensor. They are usually calculated during image formation and included in the output image file. RPC coefficients are provided for ICEYE’s amplitude images in the GRD format. The model is described in [ [@rpcs] ] which extends the work for the National Imagery Transmission Format (NITF)[@nitf] to GeoTIFFs. The translation of latitude, longitude and height to image pixel coordinates is described below.
 
-The approximation used in ICEYE products is a set of rational polynomials that describe the normalized row and column values, ($rn$ , $cn$), as a function of normalized geodetic latitude, longitude, and height, ($P$, $L$, $H$), given a set of normalized polynomial coefficients (`LINE_NUM_COEF_n`, `LINE_DEN_COEF_n`, `SAMP_NUM_COEF_n`, `SAMP_DEN_COEF_n`). Normalized values, rather than actual values are used in order to minimize the introduction of errors during the calculations. The transformation between row and column values ($r$,$c$), and normalized row and column values ($r_n$, $c_n$), and between the geodetic latitude, longitude, and height ( φ, λ, h ), and normalized geodetic latitude, longitude, and height (P, L, H), is defined by a set of normalizing translations (offsets) and scales that ensure all values are contained within the range -1 to +1. The normalization of these parameters is given in Table 2.
+The approximation used in ICEYE products is a set of rational polynomials that describe the normalized row and column values ($rn$ , $cn$) as a function of normalized geodetic latitude, longitude, and height. The link between the two is the ($P$, $L$, $H$) set of normalized polynomial coefficients (`LINE_NUM_COEF_n`, `LINE_DEN_COEF_n`, `SAMP_NUM_COEF_n`, `SAMP_DEN_COEF_n`) as applied in the RPC polynomial format. Normalized values, rather than actual values are used in order to minimize the introduction of errors during the calculations. The transformation between row and column values ($r$,$c$) and normalized row and column values ($r_n$, $c_n$), and between the geodetic latitude, longitude, and height ( φ, λ, h ), and normalized geodetic latitude, longitude, and height (P, L, H) is defined by a set of normalizing translations (offsets) and scales that ensure all values are contained within the range -1 to +1. The normalization of these parameters is given in Table 2.
 
-If you load ICEYE's images into some GIS Viewers (eg QGIS[@qgis]), then it will automatically perform conversion from image row, column to lat, long, WGS84 altitude.
+If you load ICEYE's images into RPC-compliant GIS Viewers (eg QGIS[@qgis]), with access to a ground elevation model, the Viewer will automatically perform conversion from image row, column to lat, long, height (WGS84 geoid).
 
 <figure markdown>
 | NORMALISED |	DEFINITION |
