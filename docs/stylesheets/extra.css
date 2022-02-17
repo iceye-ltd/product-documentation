@@ -37,3 +37,26 @@
     margin-right: auto;
     width: 50%;
 }
+
+h1 {
+    font-family: rajdhani;
+}
+
+h2 {
+    font-family: rajdhani;
+}
+
+h3 {
+    font-family: rajdhani;
+}
+h4 {
+    font-family: rajdhani;
+}
+
+.md-header__title {
+    font-family: rajdhani;
+}
+
+.md-nav__title{
+    font-family: rajdhani;
+}

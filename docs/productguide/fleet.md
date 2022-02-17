@@ -47,23 +47,26 @@ At present,  ICEYE satellites are all in sun-synchronous orbits with 15 orbits p
 <figcaption align = "center"><em>Table 2: Constellation Parameters</em></figcaption>
 </figure>
 
+Table 3 provides a summary of the current ICEYE Fleet. ICEYE satellites not owned or operated by ICEYE are omitted and for reasons of fairness and propriety, ICEYE cannot comment on their status or activities.
+
+
 <figure markdown>
-|  Satellite Name    |  Launch Date  |  NORAD ID  |  LTAN      | Status |
-|--------------------|---------------|------------|------------|--------|
-|  <a href="https://www.n2yo.com/?s=43114" target=”_blank”>ICEYE-X1</a> |  2018-01-12   |  43114     |  22:22:05  |<span style="color:red">Out of operations |
-|  <a href="https://www.n2yo.com/?s=43800" target=”_blank”>ICEYE-X2</a> |  2018-12-03   |  43800     |  22:05:36  |<span style="color:green">Operational|
-|  <a href="https://www.n2yo.com/?s=44390" target=”_blank”>ICEYE-X4</a> |  2019-07-05   |  44390     |  15:17:33  |<span style="color:orange">Maintenance |
-|  <a href="https://www.n2yo.com/?s=44389" target=”_blank”>ICEYE-X5</a> |  2019-07-05   |  44389     |  15:18:45  |<span style="color:red">Out of operations  |
-|  <a href="https://www.n2yo.com/?s=46497" target=”_blank”>ICEYE-X6</a> |  2020-09-28   |  46497     |  13:23:08  |<span style="color:green">Operational|
-|  <a href="https://www.n2yo.com/?s=46496" target=”_blank”>ICEYE-X7</a> |  2020-09-28   |  46496     |  13:20:12  |<span style="color:green">Operational|
-|  <a href="https://www.n2yo.com/?s=47510" target=”_blank”>ICEYE-X8</a> |  2021-01-24   |  47510     |  21:29:19  |<span style="color:green">Operational|
-|  <a href="https://www.n2yo.com/?s=47506" target=”_blank”>ICEYE-X9</a> |  2021-01-24   |  47506     |  21:30:06  |<span style="color:green">Operational|
-| <a href="https://www.n2yo.com/?s=48918" target=”_blank”>ICEYE-X11</a> |  2021-06-30   |  48918     |  02:07:01  |<span style="color:green">Operational|
-| <a href="https://www.n2yo.com/?s=48914" target=”_blank”>ICEYE-X12</a> |  2021-06-30   |  48914     |  02:06:42  |<span style="color:orange">Maintenance|
-| <a href="https://www.n2yo.com/?s=48916" target=”_blank”>ICEYE-X13</a> |  2021-06-30   |  48916     |  02:06:41  |<span style="color:orange">Maintenance|
-| <a href="https://www.n2yo.com/?s=48917" target=”_blank”>ICEYE-X15</a> |  2021-06-30   |  48917     |  02:07:07  |<span style="color:orange">Maintenance|
-| <a href="https://www.n2yo.com/?s=51070" target=”_blank”>ICEYE-X14</a> |  2021-06-30   |  51070     |  02:07:07  |[ICEYE US]|
-| <a href="https://www.n2yo.com/?s=51008" target=”_blank”>ICEYE-X16</a> |  2021-06-30   |  51008     |  02:07:07  |<span style="color:orange">Maintenance|
+| Country of Registration | Satellite Name    |  Launch Date  |  NORAD ID  |  LTAN      | Status |
+|-:|-------------------|---------------|------------|------------|--------|
+| ![](img/fi.svg){ width="30" } | <a href="https://www.n2yo.com/?s=43114" target=”_blank”>ICEYE-X1</a> |  2018-01-12   |  43114     |  22:22:05   | Retired |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=43800" target=”_blank”>ICEYE-X2</a> |  2018-12-03   |  43800     |  22:05:36  | Commercial Operations |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=44390" target=”_blank”>ICEYE-X4</a> |  2019-07-05   |  44390     |  15:17:33  | Internal Use Only |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=44389" target=”_blank”>ICEYE-X5</a> |  2019-07-05   |  44389     |  15:18:45  | Retired |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=46497" target=”_blank”>ICEYE-X6</a> |  2020-09-28   |  46497     |  13:23:08  | Commercial Operations |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=46496" target=”_blank”>ICEYE-X7</a> |  2020-09-28   |  46496     |  13:20:12  | Commercial Operations |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=47510" target=”_blank”>ICEYE-X8</a> |  2021-01-24   |  47510     |  21:29:19  | Commercial Operations |
+| ![](img/fi.svg){ width="30" } |  <a href="https://www.n2yo.com/?s=47506" target=”_blank”>ICEYE-X9</a> |  2021-01-24   |  47506     |  21:30:06  | Commercial Operations |
+| ![](img/fi.svg){ width="30" } | <a href="https://www.n2yo.com/?s=48918" target=”_blank”>ICEYE-X11</a> |  2021-06-30   |  48918     |  02:07:01  | Commercial Operations |
+| ![](img/fi.svg){ width="30" } | <a href="https://www.n2yo.com/?s=48914" target=”_blank”>ICEYE-X12</a> |  2021-06-30   |  48914     |  02:06:42  | Internal Use Only |
+| ![](img/fi.svg){ width="30" } | <a href="https://www.n2yo.com/?s=48916" target=”_blank”>ICEYE-X13</a> |  2021-06-30   |  48916     |  02:06:41  | Internal Use Only |
+| ![](img/fi.svg){ width="30" } | <a href="https://www.n2yo.com/?s=48917" target=”_blank”>ICEYE-X15</a> |  2021-06-30   |  48917     |  02:07:07  | Internal Use Only |
+| ![](img/us.svg){ width="30" } | <a href="https://www.n2yo.com/?s=51070" target=”_blank”>ICEYE-X14</a> |  2021-06-30   |  51070     |  02:07:07  | Internal Use Only |
+| ![](img/fi.svg){ width="30" } | <a href="https://www.n2yo.com/?s=51008" target=”_blank”>ICEYE-X16</a> |  2021-06-30   |  51008     |  02:07:07  | Internal Use Only |
 <figcaption align = "center"><em>Table 3: ICEYE satellites status and LTANs. </em></figcaption>
 </figure>
 !!! info 
