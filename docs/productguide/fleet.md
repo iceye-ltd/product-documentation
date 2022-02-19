@@ -47,7 +47,7 @@ At present,  ICEYE satellites are all in sun-synchronous orbits with 15 orbits p
 <figcaption align = "center"><em>Table 2: Constellation Parameters</em></figcaption>
 </figure>
 
-Table 3 provides a summary of the current ICEYE Fleet. ICEYE satellites not owned or operated by ICEYE are omitted and for reasons of fairness and propriety, ICEYE cannot comment on their status or activities.
+<!-- Table 3 provides a summary of the current ICEYE Fleet. ICEYE satellites not owned or operated by ICEYE are omitted and for reasons of fairness and propriety, ICEYE cannot comment on their status or activities.
 
 
 <figure markdown>
@@ -70,7 +70,7 @@ Table 3 provides a summary of the current ICEYE Fleet. ICEYE satellites not owne
 <figcaption align = "center"><em>Table 3: ICEYE satellites status and LTANs. </em></figcaption>
 </figure>
 !!! info 
-    Click on a satellite name in Table 3 to open a new tab showing where the satellite is now on [n2yo](https://www.n2yo.com/)[@n2yo]
+    Click on a satellite name in Table 3 to open a new tab showing where the satellite is now on [n2yo](https://www.n2yo.com/)[@n2yo] -->
 
 Each satellite has the ability to slowly adjust its orbits throughout its operating life. The adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. Over the next 12 months, the fleet will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine identical data collections of the same area whilst maintaining rapid access times.
 
@@ -81,7 +81,7 @@ Each satellite has the ability to slowly adjust its orbits throughout its operat
 
 The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provide a near limitless supply of manoeuvring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.
 
-The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using the satellite catalog numbers in Table 3 and one of the excellent online orbital elements tools such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/)[@n2yo], which provide a live view of the current ICEYE constellation.  
+The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using one of the excellent online orbital elements tools such as [celestrak](http://www.celestrak.com)[@celestrak] or [n2yo](https://www.n2yo.com/)[@n2yo], which provide a live view of the current ICEYE constellation.  
 
 ## References
 \bibliography
