@@ -60,3 +60,7 @@ h4 {
 .md-nav__title{
     font-family: rajdhani;
 }
+
+.md-footer{
+    --md-footer-bg-color:  #323132;
+}

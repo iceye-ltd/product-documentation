@@ -2,10 +2,10 @@ site_name: ICEYE Product Documentation
 site_description: Documentation related to ICEYE Products
 
 # Repository
-repo_name: iceye-ltd/product-documentation
-repo_url: https://github.com/iceye-ltd/product-documentation
-edit_uri: edit/main/docs/
-site_url: https://iceye-ltd.github.io/product-documentation/
+repo_name: ""
+repo_url: ""
+edit_uri: ""
+site_url: https://www.iceye.com/
 
 nav:
     - Welcome: index.md
@@ -57,11 +57,13 @@ theme:
         name: Switch to light mode
     primary: blue
     accent: green
-    logo: assets/svg-iceye-icon-white.svg
+    logo: assets/svg-iceye-logo-white.svg
     favicon: assets/favicon.ico
     custom_dir: overrides
     font: 
         text: Neuton
+    features:
+      - navigation.tracking
 
 plugins:
   - search
@@ -79,6 +81,7 @@ plugins:
 extra:
   version:
     provider: mike
+    default: latest
   social:
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/iceyefi
@@ -88,7 +91,7 @@ extra:
       link: https://www.facebook.com/iceye
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/iceye
-    - icon: svg-iceye-icon-blue
+    - icon: svg-iceye-logo-white
       link: http://iceye.com
 
 
