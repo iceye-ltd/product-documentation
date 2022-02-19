@@ -25,7 +25,11 @@
     color: #FF0000;
     animation: heart 1000ms infinite;
 }
-
+[data-md-color-scheme="iceye"] {
+    --md-primary-fg-color:        #000046;
+    --md-primary-fg-color--light: #1CB5DF;
+    --md-primary-fg-color--dark:  #471D6F;
+  }
 
 .center {
     display: block;
