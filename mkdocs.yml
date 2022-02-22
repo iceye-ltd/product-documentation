@@ -93,6 +93,9 @@ extra:
       link: https://www.linkedin.com/company/iceye
     - icon: svg-iceye-logo-white
       link: http://iceye.com
+  analytics:
+    provider: google
+    property: G-G92GBM9X22
 
 
 extra_css:
