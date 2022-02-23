@@ -18,13 +18,13 @@ The ICEYE sensors are X-band radars, each with an active phased array antenna an
 |-----------------------|---------------|
 | Carrier frequency     | 9.65 GHz (X-band) |
 | Antenna size          | 3.2 meters (along-track) x 0.4 meters |
-| PRF                   | 2-6 kHz |
+| PRF                   | 2-10 kHz |
 | Look direction        | both LEFT and RIGHT |
 | Range Bandwidth       | 37.6-299 MHz |
 | Peak Radiated Power   | 3.2 kW |
 | Polarization          | VV |
 | Incidence angle range | 15-35 (mode dependent) |
-| Mass                  | 85 kg |
+| Mass                  | 92 kg |
 | Communication [radar payload data downlink] | X-band 140 Mbits/s|
 
 <center>*Table 1: ICEYE Generation 2 satellite system parameters*</center> 
