@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -891,45 +891,40 @@
                 <h1 id="a-simple-form-of-radar-imaging">A Simple Form of Radar Imaging</h1>
 <p>As seen in Figure 1 the radar antenna emits a series of pulses toward the ground where they are scattered in many directions. The sensor records the “backscatter”, which is the portion reflected toward the antenna. It measures the strength of the echo and the time it took for the pulse to travel to the ground and back.</p>
 <figure>
-<img src="../img/PulseBackscatter.png" style="width:100%">
-<figcaption align = "center"><em>Figure 1: Pulse Transmission and Backscatter</em></figcaption>
+<p><img alt="image title" src="../img/PulseBackscatter.png" width="300" /></p>
+<figcaption><em>Figure 1: Pulse Transmission and Backscatter</em></figcaption>
 </figure>
-
 <p>Signal strength corresponds to pixel brightness and the timing provides range information. The range is one-half the total travel time. In the equation below, <span class="arithmatex">\(\Delta T\)</span> is the travel time and <span class="arithmatex">\(c\)</span> is the speed of light:</p>
 <div class="arithmatex">\[Range = \frac{\Delta T\ c}{2}\]</div>
 <h3 id="side-looking-illumination">Side-Looking Illumination</h3>
 <p>Since the pixels of a radar imaging system are placed on the image based partly on their range, the antenna cannot illuminate the ground in a vertical orientation. If it did, features on the same imaging line at equivalent angles off nadir would have identical ranges, like the two purple diamonds in Figure 2, and they would occupy the same pixel location.</p>
 <figure>
-<img src="../img/verticalIllumination.png" style="width:100%">
-<figcaption align = "center"><em>Figure 2: Vertical Illumination</em></figcaption>
+<p><img alt="image title" src="../img/verticalIllumination.png" width="300" /></p>
+<figcaption><em>Figure 2: Vertical Illumination</em></figcaption>
 </figure>
-
 <p>Radar imaging must be side-looking so that ground points from the near to far range have different range values (Figure 3). The illumination is typically broadside, or perpendicular, to the flight direction. </p>
 <figure>
-<img src="../img/sideIllumination.png" style="width:100%">
-<figcaption align = "center"><em>Figure 3: Side-Looking Illumination</em></figcaption>
+<p><img alt="image title" src="../img/sideIllumination.png" width="300" /></p>
+<figcaption><em>Figure 3: Side-Looking Illumination</em></figcaption>
 </figure>
-
 <h3 id="radar-angles">Radar Angles</h3>
 <p>The angles associated with radar illumination are shown in Figure 4, which is based on a spherical earth surface. Most radar imaging is broadside to the flight direction, but some systems can collect off-broadside in a squinted orientation. The angle down from the local level at the sensor is called the depression angle. The angle between the line-of-sight ray and the local vertical is the incidence angle. The angle between the tangent to the surface and the line of sight is the grazing angle. Note that the incidence and grazing angles are complements in that they form a right angle when combined. This means that a 60° incidence angle is the same as a 30° grazing angle.</p>
 <figure>
-<img src="../img/RadarImagingAngles.png" style="width:100%">
-<figcaption align = "center"><em>Figure 4: Radar Imaging Angles</em></figcaption>
+<p><img alt="image title" src="../img/RadarImagingAngles.png" width="300" /></p>
+<figcaption><em>Figure 4: Radar Imaging Angles</em></figcaption>
 </figure>
-
 <h3 id="side-looking-airborne-radar">Side Looking Airborne Radar</h3>
 <p>The first useful radar imaging technique was a form called Side-Looking Airborne Radar (SLAR) (Figure 5). The image is built up via the forward motion of the antenna, one line at a time. The pulses are emitted at a rate called the pulse repetition frequency (PRF), which can range from a few hundred pulses each second for airborne systems to thousands each second for spacecraft. In the SLAR technique, the individual pulses create each image line.
 The angular width of the pulse on the ground along the direction of flight, or azimuth direction, determines one component of resolution. The range measurements are collected in the “slant range” direction, and range variations to different objects form the second dimension of resolution.</p>
 <figure>
-<img src="../img/sidelookingRadar.png" style="width:100%">
-<figcaption align = "center"><em>Figure 5: Side-Looking Airborne Radar</em></figcaption>
+<p><img alt="image title" src="../img/sidelookingRadar.png" width="300" /></p>
+<figcaption><em>Figure 5: Side-Looking Airborne Radar</em></figcaption>
 </figure>
-
 <p>SLAR was used the early days of radar imaging but it had serious limitations. Range resolution was one-half the length of the pulse in the range direction. Since the pulses are emitted at light speed, even a very brief pulse of one-millionth of a second would be 300 meters long and produce range resolution of 150 meters (Figure 6).</p>
 <p>Azimuth resolution was based on the angular width of the pulse in the azimuth direction (<span class="arithmatex">\(\beta\)</span>). Long antennas create narrow beams, but the beam spreads out from the antenna to the distant ground surface. Antennas cannot be made long enough to produce good azimuth resolution, and SLAR produced images with resolutions in the hundreds of meters, even from aircraft. This is why the brilliant concept of synthesizing a long antenna from the actions of a small one was developed. We call this Synthetic Aperture Radar.</p>
 <figure>
-<img src="../img/SLAR_PulseDimensions.png" style="width:100%">
-<figcaption align = "center"><em>Figure 6: SLAR Pulse Dimensions</em></figcaption>
+<p><img alt="image title" src="../img/SLAR_PulseDimensions.png" width="300" /></p>
+<figcaption><em>Figure 6: SLAR Pulse Dimensions</em></figcaption>
 </figure>
                 
               
@@ -1078,7 +1073,7 @@ The angular width of the pulse on the ground along the direction of flight, or a
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>

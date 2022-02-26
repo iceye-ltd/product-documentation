@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -915,16 +915,14 @@
 <p>There are a few methods to illuminate the ground in SAR imaging. These collection modes trade off resolution and coverage in different ways. To establish how we can simulate long apertures we’ll contrast the two most common forms of SAR imaging: stripmap and spotlight.
 In stripmap mode the pulses are sent out at a constant angle, usually broadside to the flight direction. In this case, the length of this simulated aperture (<span class="arithmatex">\(L\)</span>) is the same as the width of the beam on the ground (Figure 8). Wider beams produced by smaller antennas mean longer apertures and better azimuth resolution. This directly contrasts with the real-aperture radar of SLAR where the beam was kept as narrow as possible to obtain good resolution.</p>
 <figure>
-<img src="../img/stripmapSynAp.png" style="width:100%">
-<figcaption align = "center"><em>Figure 8: Stripmap Synthetic Aperture</em></figcaption>
+<p><img alt="image title" src="../img/stripmapSynAp.png" width="250" /></p>
+<figcaption><em>Figure 8: Stripmap Synthetic Aperture</em></figcaption>
 </figure>
-
 <p>The spotlight form of SAR varies the boresight angle in the azimuth direction to illuminate a fixed ground location (Figure 9). This technique greatly increases the synthetic-aperture length and offers excellent azimuth resolution, at the cost of limited ground coverage. At ICEYE we are capable of illuminating a fixed spot for as long as 30 seconds. Given the velocity of low-earth orbits (7.5 km/sec), this yields a synthetic aperture more than 225 kilometers long !</p>
 <figure>
-<img src="../img/spotlightSynAp.png" style="width:100%">
-<figcaption align = "center"><em>Figure 9: Spotlight Synthetic Aperture</em></figcaption>
+<p><img alt="image title" src="../img/spotlightSynAp.png" width="300" /></p>
+<figcaption><em>Figure 9: Spotlight Synthetic Aperture</em></figcaption>
 </figure>
-
 <h2 id="phase-history-data-and-sar-azimuth-resolution">Phase History Data and SAR Azimuth Resolution</h2>
 <p>We can create long “synthetic” apertures because radar illumination is coherent. That is, the sensor controls the structure of the transmitted pulses and they all have the same form. It emits pulses and measures the details of each echo: time, strength and “phase”. Phase refers to the position of the wave in its cycle, denoting whether it is at its peak, trough or somewhere in between.</p>
 <p>The SAR antenna moves only slightly from pulse to pulse. It turns out that the change in location must be less than one-half the antenna length. But this small change in location causes the successive measurements of the range to some object to change as well. The slight change in position imparts a slight change in range. Since the phase is dependent on the range, the small change in adjacent sensor locations also imparts a slight change in phase. These phase changes form a pattern across the aperture, which changes depending on the azimuth location of a ground feature. The record of all the changing phases for all the scatterers in the scene is called phase history data. For a particular object, this is the “history” of how phase changed from one receive location to the next.</p>
@@ -934,10 +932,9 @@ In stripmap mode the pulses are sent out at a constant angle, usually broadside 
 <p>where <span class="arithmatex">\(\delta_{az}\)</span> is the SAR azimuth resolution.</p>
 <p>This equation is gorgeous. It says that azimuth resolution is based on the wavelength of our radar waves and the change in the integration angle (<span class="arithmatex">\(\Delta \theta\)</span>) while the point was being imaged (Figure 10). Resolution improves when the wavelength is small and the integration angle change is large.</p>
 <figure>
-<img src="../img/spotSAAngle.png" style="width:100%">
-<figcaption align = "center"><em>Figure 10: Spotlight Synthetic Aperture Angle</em></figcaption>
+<p><img alt="image title" src="../img/spotSAAngle.png" width="300" /></p>
+<figcaption><em>Figure 10: Spotlight Synthetic Aperture Angle</em></figcaption>
 </figure>
-
 <p>Now let’s use SAR with an integration angle change of 0.07 radians (4.5°). This is reasonable because the current operational performance of ICEYE's spotlight mode can easily exceed this angle. </p>
 <div class="arithmatex">\[\delta_{az} = \frac{\lambda}{2\Delta \theta} \]</div>
 <div class="arithmatex">\[\delta_{az} = \frac{3 cm}{2 \times 0.07} \]</div>
@@ -1096,7 +1093,7 @@ In stripmap mode the pulses are sent out at a constant angle, usually broadside 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>

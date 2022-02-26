@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -924,12 +924,12 @@
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Strip</th>
-<th>Spot</th>
-<th>Spot <em>Extended Area</em></th>
-<th>Scan</th>
-<th>Comments</th>
+<th>PARAMETER</th>
+<th>STRIP</th>
+<th>SPOT</th>
+<th>SPOT EXTENDED AREA</th>
+<th>SCAN</th>
+<th>COMMENTS</th>
 </tr>
 </thead>
 <tbody>
@@ -1019,7 +1019,7 @@
 <td>6</td>
 <td>6</td>
 <td>15</td>
-<td></td>
+<td><a href="#notes-and-explanations">Note 14</a></td>
 </tr>
 <tr>
 <td>ESA Copernicus Contributing Mission (CCM) Class<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
@@ -1078,10 +1078,10 @@
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Strip</th>
-<th>Spot</th>
-<th>Comments</th>
+<th>PARAMETER</th>
+<th>STRIP</th>
+<th>SPOT</th>
+<th>COMMENTS</th>
 </tr>
 </thead>
 <tbody>
@@ -1148,11 +1148,11 @@
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Strip</th>
-<th>Spot</th>
-<th>Scan</th>
-<th>Comments</th>
+<th>PARAMETER</th>
+<th>STRIP</th>
+<th>SPOT</th>
+<th>SCAN</th>
+<th>COMMENTS</th>
 </tr>
 </thead>
 <tbody>
@@ -1254,6 +1254,7 @@ Recognising that a resolution cell in a SAR image is ultimately defined in range
 <li><strong>Amplitude Dynamic Range:</strong> Stored as an unsigned 16 bit integer. 32 bit float values can be provided by request.</li>
 <li><strong>Performant Incidence Range:</strong> This is the nominal or standard range of incidence angles that the ICEYE Fleet operates over. The parameters in these tables are correct within this range of angles.</li>
 <li><strong>Time  Dominant  Incidence Range:</strong> Being quite small and agile, and having an electronically steered antenna, ICEYE satellites can collect radar imagery from a wide range of angles. Outside of the <em>Performant Incidence Range</em>, SAR image quality may be degraded. However in some situations it may be more important to obtain a SAR image quickly rather than wait for an opportunity to image the location with the performant range of angles. For this reason ICEYE offers time dominant tasking as either a Tactical or a Custom order.</li>
+<li><strong>Geospatial Accuracy:</strong> Each satellite in the ICEYE fleet is periodically evaluated against ground based calibration targets to obtain the geospatial accuracy of the system. This process involves measuring the location of each target in the SAR imagery after the image has been terrain corrected <a href="../../productFormats/geospatialAccuracy/#elevation-models">(see here for why this step is essential)</a> and comparing the location to the known <strong>ground truth</strong>. Each calibration target will have its own slightly different error. The <em>RMSE</em> is the root mean square error of all the measured calibration points from all the satellites.</li>
 </ol>
 <h2 id="references">References</h2>
 <div class="footnote">
@@ -1420,7 +1421,7 @@ Recognising that a resolution cell in a SAR image is ultimately defined in range
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>

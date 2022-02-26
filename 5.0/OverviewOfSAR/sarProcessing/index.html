@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -986,10 +986,9 @@
 <h2 id="the-sar-processing-flow-and-its-products">The SAR Processing Flow and Its Products</h2>
 <p>SAR image generation begins with the emission of thousands of coherent pulses and the decomposition of each echo into raw measurements of time, amplitude and phase. The first part of the processing flow is called Phase History Processing because it accounts for the changes over time of the phase values of each scatterer. Phase history data are focused into the azimuth and range components of each resolution cell to produce an image product called a “complex image” (Figure 15).</p>
 <figure>
-<img src="../img/ProcessingFlow.png" style="width:75%" class="center">
-<figcaption align = "center"><em>Figure 15: The SAR Processing Flow and Its Products</em></figcaption>
+<p><img alt="image title" src="../img/ProcessingFlow.png" width="400" /></p>
+<figcaption><em>Figure 15: The SAR Processing Flow and Its Products</em></figcaption>
 </figure>
-
 <h3 id="the-complex-image">The Complex Image</h3>
 <div class="admonition info inline end">
 <p class="admonition-title">Info</p>
@@ -997,10 +996,9 @@
 </div>
 <p>The left image in Figure 16 is a ICEYE amplitude image of agricultural fields. In this image each pixel has a brightness value assigned to it. This is what many people consider to be the base SAR product, but this is really only half of the full image. The SAR processor calculates the average phase value for each pixel as well. The matching “phase image” of that same scene is on the right in the figure. The combination of these two images is called a complex image, in which every pixel has amplitude and phase values. We use the term “complex” because the pixels are described by a mathematical construct called a complex number, where every number has two components.</p>
 <figure>
-<img src="../img/complexAmpPhase.png" style="width:100%">
-<figcaption align = "center"><em>Figure 16: Amplitude and Phase Structure of a Complex Image</em></figcaption>
+<p><img alt="image title" src="../img/complexAmpPhase.png" width="400" /></p>
+<figcaption><em>Figure 16: Amplitude and Phase Structure of a Complex Image</em></figcaption>
 </figure>
-
 <p>Of course, phase data are not useful for direct human interpretation. And while they may look like random noise, phase pixels are a unique and valuable aspect of SAR imaging. Phase data can be used to manipulate the synthetic aperture in different ways to extract useful information that is not available from amplitude images. Moreover, changes in the phase measurements of the same object on different images can be used to detect small surface structure characteristics. In the next section we’ll discuss how we can use phase data to refine images and create other products.</p>
 <h2 id="sar-products-derived-from-complex-data">SAR Products Derived from Complex Data</h2>
 <h3 id="amplitude-images">Amplitude Images</h3>
@@ -1174,7 +1172,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>

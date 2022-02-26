@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -888,7 +888,8 @@
                 
                 <h1 id="the-iceye-fleet">THE ICEYE FLEET</h1>
 <p>The ICEYE global imaging service uses an innovative satellite and sensor design based on advancements in small satellite technologies and an adaptable New Space approach. The ICEYE constellation is constantly evolving and it is optimized for persistent monitoring with fast and repeatable access to any location on Earth. Our flexible collection supports high resolution imaging over small areas as well as reduced resolution scans of wide areas. </p>
-<p>As of early 2022 there are 12 operating satellites with 6 satellites constantly supporting imaging operations. (The other 6 are either going through commissioning, orbit refinement or have been retired from imaging operations.) An additional 8 satellites are on the 2022 launch roster.</p>
+<!-- As of early 2022 there are 12 operating satellites with 6 satellites constantly supporting imaging operations. (The other 6 are either going through commissioning, orbit refinement or have been retired from imaging operations.) An additional 8 satellites are on the 2022 launch roster. -->
+
 <p>Our goal is to provide global access from a fleet of satellites, each in a coherent daily ground track repeat orbit (<em>CD-GTR</em>). This means that any location can be imaged multiple times from nearly the same orbital location using the same imaging geometry. The repeat cycle for these coherent collections is 24 hours or less. During the coming year our global coherent imaging plan will be implemented as we move more satellites into their allocated repeating ground tracks.</p>
 <figure>
 <img src="../img/iceye-gen2-satellite.png" style="width:100%">
@@ -897,6 +898,7 @@
 
 <h2 id="sar-sensor-parameters">SAR Sensor Parameters</h2>
 <p>The ICEYE sensors are X-band radars, each with an active phased array antenna and electronic beam steering. The innate mechanical agility of these low-mass satellites and their electronic steering enable fast and precise pointing of radar pulses to the ground. The satellites can also image to the right or left side of the satellite track. Technical parameters of the current sensors are listed in Table 1.</p>
+<figure>
 <table>
 <thead>
 <tr>
@@ -915,7 +917,7 @@
 </tr>
 <tr>
 <td>PRF</td>
-<td>2-6 kHz</td>
+<td>2-7 kHz</td>
 </tr>
 <tr>
 <td>Look direction</td>
@@ -939,7 +941,7 @@
 </tr>
 <tr>
 <td>Mass</td>
-<td>85 kg</td>
+<td>92 kg</td>
 </tr>
 <tr>
 <td>Communication [radar payload data downlink]</td>
@@ -947,7 +949,8 @@
 </tr>
 </tbody>
 </table>
-<p><center><em>Table 1: ICEYE Generation 2 satellite system parameters</em></center> </p>
+<figcaption align="center"><em>Table 1: ICEYE Generation 2 satellite system parameters</em></figcaption>
+</figure>
 <h2 id="orbits">Orbits</h2>
 <p>At present,  ICEYE satellites are all in sun-synchronous orbits with 15 orbits per day, but the orbits are not uniformly spaced. This means that the time to revisit a location on the equator varies over a period of days. The mean revisit rate at the equator is 20 hours and the mean time to access a location on the equator is 12 hours. At higher and lower latitudes, the rates are more frequent. Table 2 lists the orbital parameters of the current SAR instruments. Their ground track repeat cycles vary between 1 and 22 days. Each orbital plane is phased around the Earth with a different local time of the ascending node (LTAN) so that the overall constellation can observe a location at different times of the day. This has an advantage over dawn-dusk sun-synchronous orbits, in which the local time of collection is always close to sunrise or sunset.</p>
 <figure>
@@ -1020,10 +1023,10 @@
 !!! info 
     Click on a satellite name in Table 3 to open a new tab showing where the satellite is now on [n2yo](https://www.n2yo.com/)[^1] -->
 
-<p>Each satellite has the ability to slowly adjust its orbits throughout its operating life. The adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. Over the next 12 months, the fleet will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine identical data collections of the same area whilst maintaining rapid access times.</p>
+<p>Each satellite has the ability to slowly adjust its orbits throughout its operating life. The adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. As the fleet grows it will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine identical data collections of the same area whilst maintaining rapid access times.</p>
 <figure>
 <p><img alt="placeholder" src="../img/muldrow.gif" width="600" /></p>
-<figcaption align="center"><em>Figure 2: Coherent Daily Ground Track Repeat imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
+<figcaption align="center"><em>Figure 2: Daily Coherent Ground Track Repeat (GTR) imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
 </figure>
 <p>The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provide a near limitless supply of manoeuvring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.</p>
 <p>The location of each ICEYE satellite is publicly available. The current configuration of the constellation can be found using one of the excellent online orbital elements tools such as <a href="http://www.celestrak.com">celestrak</a><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> or <a href="https://www.n2yo.com/">n2yo</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, which provide a live view of the current ICEYE constellation.  </p>
@@ -1186,7 +1189,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>

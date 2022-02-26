@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -1090,9 +1090,9 @@ The geolocation accuracy of an image depends on how well that range-azimuth arc 
 <table>
 <thead>
 <tr>
-<th>Orbit Fidelity</th>
-<th>Description</th>
-<th>Latency</th>
+<th>ORBIT FIDELITY</th>
+<th>DESCRIPTION</th>
+<th>LATENCY</th>
 </tr>
 </thead>
 <tbody>
@@ -1108,7 +1108,7 @@ The geolocation accuracy of an image depends on how well that range-azimuth arc 
 </tr>
 <tr>
 <td>Precise</td>
-<td>This is the default orbit fidelity used for ICEYE satellites. The satellite position and velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. The spherical error of the refined data is 1.5m</td>
+<td>This is the default orbit fidelity used for ICEYE satellites. The satellite position and velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. The spherical error of the refined data is 1.5 m</td>
 <td>10-45 minutes after imaging operation</td>
 </tr>
 <tr>
@@ -1189,7 +1189,7 @@ c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
 <table>
 <thead>
 <tr>
-<th><span class="arithmatex">\(\sum_{i=1}^{20} C_i ⋅ \rho_i(P,L,H) =\)</span></th>
+<th>RPC CUBIC POLYNOMIAL</th>
 <th></th>
 <th></th>
 <th></th>
@@ -1197,6 +1197,13 @@ c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><span class="arithmatex">\(\sum_{i=1}^{20} C_i ⋅ \rho_i(P,L,H) =\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 <tr>
 <td></td>
 <td><span class="arithmatex">\(C_1\)</span></td>
@@ -1335,7 +1342,7 @@ c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
 <figcaption align="center"><em>Table 3 : RPC metadata parameters in ICEYE Products</em></figcaption>
 </figure>
 <h2 id="geometric-calibration-process">Geometric Calibration Process</h2>
-<p>In order to monitor the geometric integrity of ICEYE images,  the satellites routinely collect images over ground-surveyed calibration sites around the world. Each site consists of a set of calibration point targets such as <a href="https://www.radartutorial.eu/17.bauteile/bt47.en.html">trihedral corner reflectors</a>. The position, orientation and size of these features are carefully measured and maintained, and they are often provided by organizations such as NASA JPL as a free service to the geospatial community. ICEYE engineers compare the target ground coordinates derived from the image coordinates and known elevation to the precisely surveyed ground-truth coordinates. These calibration comparisons provide a statistical measure of the horizontal accuracy of ICEYE images. Horizontal error is typically reported as a so-called “circular error” at the 90% confidence level (<a href="https://en.wikipedia.org/wiki/Circular_error_probable">CE90</a>). Currently the ICEYE fleet is achieving a worst-case CE90 of 6m. In actual practice elevation models used during image exploitation have vertical uncertainties, and feature signatures are not as precise as those of corner reflectors. Together these increase the horizontal error of image-derived ground coordinates.</p>
+<p>In order to monitor the geometric integrity of ICEYE images,  the satellites routinely collect images over ground-surveyed calibration sites around the world. Each site consists of a set of calibration point targets such as <a href="https://www.radartutorial.eu/17.bauteile/bt47.en.html">trihedral corner reflectors</a>. The position, orientation and size of these features are carefully measured and maintained, and they are often provided by organizations such as NASA JPL as a free service to the geospatial community. ICEYE engineers compare the target ground coordinates derived from the image coordinates and known elevation to the precisely surveyed ground-truth coordinates. These calibration comparisons provide a statistical measure of the horizontal accuracy of ICEYE images by comparing calibration point target locations in terrain corrected imagery to <strong>ground truth</strong> measurements of each calibration point target. The root, mean square error (RMSE) is then calculated from all the measured location errors. Currently the ICEYE fleet is achieving a worst-case RMSE of 6 m. In actual practice elevation models used during image exploitation have vertical uncertainties, and feature signatures are not as precise as those of corner reflectors. Together these increase the horizontal error of image-derived ground coordinates.</p>
 <figure>
 <img src="../img/rosmond2.4m.png" style="width:100%">
 <figcaption align = "center"><em>Figure 3: a 2.4m trihedral at the NASA JPL Rosamond Calibration Array[^4].</em></figcaption>
@@ -1506,7 +1513,7 @@ c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>

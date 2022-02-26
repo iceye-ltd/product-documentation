@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -206,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
       
   <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
 
@@ -929,10 +929,9 @@
 <p>The RCS describes the relative reflecting cross-section of an object and its units are <span class="arithmatex">\(m^2\)</span>. RCS values are compared to the reference RCS of a hypothetical, perfectly-reflecting sphere with an area of 1 <span class="arithmatex">\(m^2\)</span> (radius of 0.565 m) . RCS does not indicate the physical size of an object. For example, a metal plate with an area of 1 <span class="arithmatex">\(m^2\)</span> oriented orthogonal to the incoming energy would have an RCS of 14,000 <span class="arithmatex">\(m^2\)</span>, while that of a small boat could be much less than 1 <span class="arithmatex">\(m^2\)</span>.  The symbol for RCS is by convention <span class="arithmatex">\(\sigma\)</span>.</p>
 <p>In the real world, though, there are usually multiple scattering objects within a resolution cell (and we almost never encounter a 1 m metal sphere). Since a pixel in a SAR image contains many hundreds of scattering objects, it has a mean RADAR cross section. To distinguish this from a single-object RCS we use the symbol <span class="arithmatex">\(\sigma_0\)</span>. </p>
 <figure>
-<img src="../img/sigma-beta-gamma-explained.png" style="width:100%">
-<figcaption align = "center"><em>Figure 1: The relationship between β0, γ0 and σ0</em></figcaption>
+<p><img alt="image title" src="../img/sigma-beta-gamma-explained.png" width="500" /></p>
+<figcaption><em>Figure 1: The relationship between β0, γ0 and σ0</em></figcaption>
 </figure>
-
 <p>When illuminating the ground with a SAR sensor, the orientation of the surface compared to the resolution cell in the slant plane has a large impact on the mean RCS. The slant plane area of a pixel is constant, but when projected onto the ground, the pixel’s area is elongated in range, and the mean RCS changes with incidence angle. This leads to a 'brightening effect' at lower incidence angles in the slant plane image as each pixel's ground area increases. This means that the observed mean RCS values in the SLC image represent the <strong>RADAR brightness</strong> rather than the terrain mean RCS <span class="arithmatex">\(\sigma_0\)</span>. The RADAR brightness is denoted by <span class="arithmatex">\(\beta_0\)</span>.</p>
 <p>Another noticeable and sometimes undesirable effect is that of local terrain topography. Terrain slopes that are oriented towards the satellite have a larger radar backscatter towards the RADAR than leeward slopes, which are inclined away from the radar and tend to reflect radar energy away. If the actual reflective properties of the terrain are needed, then this relief effect can be <em>flattened</em> to create a <span class="arithmatex">\(\gamma_0\)</span> image.</p>
 <p>The relationship between these three properties can be seen in Figure 1.</p>
@@ -1108,7 +1107,7 @@ The mid-range time is calculated as:  </p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
