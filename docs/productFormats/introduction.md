@@ -7,14 +7,14 @@ When producing different forms of exploitable products, several decisions have t
 
 <figure markdown>
 ![placeholder](img/port.gif){width="600"}
-<figcaption align = "center"><em>Figure 8: The Port of Rotterdam on three consecutive days.</em></figcaption>
+<figcaption align = "center"><em>Figure 1: The Port of Rotterdam on three consecutive days.</em></figcaption>
 </figure> 
 
 ## The Tree of Processing Options
 There are many steps that have to be considered when converting RADAR pulse data into an exploitable image. Here we will talk about each in turn.
 <figure>
 <img src="../img/product-tree-all.png" style="width:100%">
-<figcaption align = "center"><em>Figure 1: The SAR Image Tree of Processing Options</em></figcaption>
+<figcaption align = "center"><em>Figure 2: The SAR Image Tree of Processing Options</em></figcaption>
 </figure>
 
 ### Sample Arrangement

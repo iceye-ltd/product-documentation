@@ -12,12 +12,12 @@ ICEYE Tasking Standard Orders are based on the concept of **acquisition time win
 
 <figure markdown>
 ![placeholder](img/single_time_window.png){width="600"}
-<figcaption align = "center"><em>Figure 4: Example of a single image order with an <b>acquisition time window</b> of 2 days. This order specifies that the image should be collected anytime between 4-October-2021 00:00 and 6-October-2021 00:00</em></figcaption>
+<figcaption align = "center"><em>Figure 1: Example of a single image order with an <b>acquisition time window</b> of 2 days. This order specifies that the image should be collected anytime between 4-October-2021 00:00 and 6-October-2021 00:00</em></figcaption>
 </figure>
 
 <figure markdown>
 ![placeholder](img/stack_time_window.png){width="600"}
-<figcaption align = "center"><em>Figure 5: Example of an order for a stack of images with a <b>repeat cycle</b> of 20 days and an <b>acquisition time window</b> for each image of 14 days.</em></figcaption>
+<figcaption align = "center"><em>Figure 2: Example of an order for a stack of images with a <b>repeat cycle</b> of 20 days and an <b>acquisition time window</b> for each image of 14 days.</em></figcaption>
 </figure>
 
 For existing customer, standard orders are submitted via email. To order, please fill out the Standard Order Form with your contact information, and be sure to specify all the required tasking options described in the paragraphs below. Once completed, please send your Standard Order Form and the optional AOI file to the COSP email address you were provided with during your account set up.
@@ -29,7 +29,7 @@ New customers should complete [this form](https://www.iceye.com/lp/contact-us) o
 
 <figure markdown>
 ![placeholder](img/standardOrders2.png){width="600"}
-<figcaption align = "center"><em>Figure 6: Standard ICEYE Tasking order flow</em></figcaption>
+<figcaption align = "center"><em>Figure 3: Standard ICEYE Tasking order flow</em></figcaption>
 </figure>
 
 The named recipients for that order will be notified via email once the order is received by the ICEYE Customer Operations and Satellite Planning (COSP) team.
@@ -75,7 +75,7 @@ ICEYE customers can request a feasibility study at any time when considering pla
 
 <figure markdown>
 ![placeholder](img/optional_feasibility_study.png){width="600"}
-<figcaption align = "center"><em>Figure 7: Feasibility studies can be requested before placing a standard order.</em></figcaption>
+<figcaption align = "center"><em>Figure 4: Feasibility studies can be requested before placing a standard order.</em></figcaption>
 </figure>
 
 
@@ -100,7 +100,7 @@ Our tasking experts will be happy to try to accommodate any special tasking requ
 
 <figure markdown>
 ![placeholder](img/custom_order.png){width="600"}
-<figcaption align = "center"><em>Figure 8: Custom ICEYE Tasking order flow.</em></figcaption>
+<figcaption align = "center"><em>Figure 5: Custom ICEYE Tasking order flow.</em></figcaption>
 </figure>
 
 ## Quality Control and Image Delivery
@@ -131,12 +131,12 @@ As an ICEYE customer, you have access to a complete catalog of archive imagery t
 
 <figure markdown>
 ![placeholder](img/kmz_archive.png){width="600"}
-<figcaption align = "center"><em>Figure 9: Browsing the ICEYE Archive catalog in Google Earth (kmz format).</em></figcaption>
+<figcaption align = "center"><em>Figure 6: Browsing the ICEYE Archive catalog in Google Earth (kmz format).</em></figcaption>
 </figure>
 
 <figure markdown>
 ![placeholder](img/geojson_archive.png){width="600"}
-<figcaption align = "center"><em>Figure 10: Browsing the ICEYE Archive catalog in QGIS (geojson format).</em></figcaption>
+<figcaption align = "center"><em>Figure 7: Browsing the ICEYE Archive catalog in QGIS (geojson format).</em></figcaption>
 </figure>
 
 Archive imagery orders can be submitted via email. To place an order, please fill out either the Standard Order Form or the Custom Order Form with your contact information, and include a list of the product names for the scenes that you wish to purchase. An example of a product name that identifies an image scene is :
@@ -147,7 +147,7 @@ Once an order is received, the ICEYE Customer Success team will deliver the requ
 
 <figure markdown>
 ![placeholder](img/archive_order_process.png){width="600"}
-<figcaption align = "center"><em>Figure 11: Archive imagery order flow.</em></figcaption>
+<figcaption align = "center"><em>Figure 8: Archive imagery order flow.</em></figcaption>
 </figure>
 
 Please note that orders for archive imagery do not go through additional quality control. However, if you are not satisfied with the quality of an archive image that you have received, you can make use of our return policy described below.
@@ -160,7 +160,7 @@ In order to support your evolving business requirements, ICEYE supports a user-f
 
 **Standard Tasking** orders confirmed by ICEYE can be cancelled free of charge up to 72 hours prior to the start of the acquisition time window.
 
-**Custom Tasking** orders may be cancelled or rescheduled within twenty four (24) hours after order confirmation at no cost, as long as the order is submitted at least 27 hours before the proposed data collection time. 
+**Custom Tasking** orders may be cancelled or rescheduled within twenty four (24) hours after order confirmation at no cost, as long as the order is submitted at least 72 hours before the proposed data collection time. 
 
 Cancellation policy conditions are presented in the table below. 
 
@@ -172,7 +172,7 @@ Cancellation policy conditions are presented in the table below.
 | 72 - 48h prior to the start of the acquisition time window | N/A | 10% of the image value  |
 | 48 - 24h prior to the start of the acquisition time window | N/A | 20% of the image value  |
 | Less than 24h prior to the start of the acquisition time window | Order submitted >24h before the start of the acquisition time window | 100% of the image value |
-<figcaption align = "center"><em>Table 2: Cancellation Requests.</em></figcaption>
+<figcaption align = "center"><em>Table 1: Cancellation Requests.</em></figcaption>
 </figure>
 
 ## Return Policy

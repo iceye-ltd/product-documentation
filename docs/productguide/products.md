@@ -27,7 +27,7 @@ These are the familiar SAR gray-scale images with amplitude-only pixels. They ar
 ICEYE also produces a basic form of SAR data that contains the raw pulse data before image processing. This data contains phase information as a function of time during the imaging operation and so it is called *phase history data*. This product enables more flexible processing for advanced users who might have their own SAR processor, or who might even prefer to exploit the data before converting it into an image.  -->
 
 ## Types of SAR Collection
-Our first set of satellites operate in one of two primary imaging modes called Strip Mode and Spot Mode. These are available in both right and left-looking configurations. The design flexibility of our satellites allows their imaging modes to be continually evolved. We will be adding more modes, and more flexible illumination patterns, in future versions. A recent addition is Scan Mode, which is a wide-area imaging capability that uses electronic beam steering. A summary of the imaging modes is listed in [An Overview of SAR Imaging](/product-documentation/OverviewOfSAR/remarkableStory/#stripmap-and-spotlight-apertures).
+Our first set of satellites operate in one of two primary imaging modes called Strip Mode and Spot Mode. These are available in both right and left-looking configurations. The design flexibility of our satellites allows their imaging modes to be continually evolved. We will be adding more modes, and more flexible illumination patterns, in future versions. A recent addition is Scan Mode, which is a wide-area imaging capability that uses electronic beam steering. A summary of the imaging modes is listed in [An Overview of SAR Imaging](/product-documentation/5.0/OverviewOfSAR/remarkableStory/#stripmap-and-spotlight-apertures).
 
 
 ### Strip Mode
@@ -38,7 +38,7 @@ In this mode the ground swath is illuminated with a continuous sequence of pulse
 ICEYE standard Strip products have a ground resolution of 3m in range and azimuth and cover an area of 30km (range) by 50km (azimuth). The strip length can be tailored up to a length of 500 km, in increments of 50 km.
 
 !!! info
-    Having a wide area and a moderate resolution, Strip images are useful for 'situational awareness'. They allow a user to quickly asses what is occusing in region. They are particularly useful for tasks such as deforestation monitoring, or iceberg / glacier monitoring. They are also our 'first responder' product in times of natural disaster to assess the impact of a flood, earthquake or volcano.
+    Having a wide area and a moderate resolution, Strip images are useful for 'situational awareness'. They allow a user to quickly asses what is occurring in the region. They are particularly useful for tasks such as deforestation monitoring, or iceberg / glacier monitoring. They are also our 'first responder' product in times of natural disaster to assess the impact of a flood, earthquake or volcano.
 
 ### Spot Mode
 ![placeholder](img/imagemode-graphic-spot.png){width="300" align=left}
@@ -61,7 +61,7 @@ This mode uses the phased array antenna to create multiple beams in the elevatio
 In conventional scan mode, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. We compensate for this in our scan by also steering the radar beam sideways during each burst of radar pulses. This improves image quality. This technique is called Terrain Observation by Progressive Scans (TOPS or TOPSAR[@TOPSAR]). Our Scan product produces imagery that covers an area of 100km x 100km with a resolution better than 15m. The length of a Scan product can be increased to 300km.
 
 !!! note 
-    Having the largest area coverage and a modest resolution, Scan images are highly suited to wide area surveillance and mapping projects. Being able to operate in all weather and lighting conditions, they provide an excellent opportunity to images the oceans and to detect ships and monitor shipping lanes.
+    Having the largest area coverage and a modest resolution, Scan images are highly suited to wide area surveillance and mapping projects. Being able to operate in all weather and lighting conditions, they provide an excellent opportunity to image the oceans and to detect ships and monitor shipping lanes.
 
 <!-- % whilst performing adjacent Strip collections. While this produces much wider swath widths, it also lessens the collection time of ground points and degrades azimuth resolution. To help improve image quality we employ a technique called Terrain Observation by Progressive Scans (TOPS or TOPSAR \cite{TOPSAR}). We have two versions of our SCANSAR product, a four-beam image that covers 100km x 100km with a ground resolution of 12mx12m and a 2 beam product that covers 60km by 100km with a ground resolution of 6mx6m. The length of the image can be extended in azimuth up to 825km. -->
 

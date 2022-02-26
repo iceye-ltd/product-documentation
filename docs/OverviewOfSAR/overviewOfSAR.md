@@ -1,7 +1,7 @@
 # An Overview of SAR Imaging
 
 !!! Note
-    This overview is exercepted with permission from [The Essentials of SAR](https://www.amazon.com/dp/B09CGKTLZV/ref=cm_sw_em_r_mt_dp_H9NDBJSVREXRK5PA4Z58), by Thomas P. Ager[@ageressentials]This comprehensive text was written for SAR users, not electrical engineers. It reviews the many interesting aspects of SAR and its uses that we cannot cover in this short overview.
+    This overview is excerpted with permission from [The Essentials of SAR](https://www.amazon.com/dp/B09CGKTLZV/ref=cm_sw_em_r_mt_dp_H9NDBJSVREXRK5PA4Z58), by Thomas P. Ager[@ageressentials]This comprehensive text was written for SAR users, not electrical engineers. It reviews the many interesting aspects of SAR and its uses that we cannot cover in this short overview.
 
 ## The Value of SAR Imaging
 Synthetic aperture radar is well known as the imaging technique that can see through clouds and darkness. But SAR provides a number of other capabilities that are simply not available from optical sources. These include:
