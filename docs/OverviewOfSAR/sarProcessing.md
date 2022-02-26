@@ -2,9 +2,9 @@
 ## The SAR Processing Flow and Its Products
 SAR image generation begins with the emission of thousands of coherent pulses and the decomposition of each echo into raw measurements of time, amplitude and phase. The first part of the processing flow is called Phase History Processing because it accounts for the changes over time of the phase values of each scatterer. Phase history data are focused into the azimuth and range components of each resolution cell to produce an image product called a “complex image” (Figure 15).
 
-<figure>
-<img src="../img/ProcessingFlow.png" style="width:75%" class="center">
-<figcaption align = "center"><em>Figure 15: The SAR Processing Flow and Its Products</em></figcaption>
+<figure markdown>
+![image title](../img/ProcessingFlow.png){ width="400"}
+<figcaption><em>Figure 15: The SAR Processing Flow and Its Products</em></figcaption>
 </figure>
 
 ### The Complex Image
@@ -13,9 +13,9 @@ SAR image generation begins with the emission of thousands of coherent pulses an
 
 The left image in Figure 16 is a ICEYE amplitude image of agricultural fields. In this image each pixel has a brightness value assigned to it. This is what many people consider to be the base SAR product, but this is really only half of the full image. The SAR processor calculates the average phase value for each pixel as well. The matching “phase image” of that same scene is on the right in the figure. The combination of these two images is called a complex image, in which every pixel has amplitude and phase values. We use the term “complex” because the pixels are described by a mathematical construct called a complex number, where every number has two components.
 
-<figure>
-<img src="../img/complexAmpPhase.png" style="width:100%">
-<figcaption align = "center"><em>Figure 16: Amplitude and Phase Structure of a Complex Image</em></figcaption>
+<figure markdown>
+![image title](../img/complexAmpPhase.png){ width="400"}
+<figcaption><em>Figure 16: Amplitude and Phase Structure of a Complex Image</em></figcaption>
 </figure>
 
 Of course, phase data are not useful for direct human interpretation. And while they may look like random noise, phase pixels are a unique and valuable aspect of SAR imaging. Phase data can be used to manipulate the synthetic aperture in different ways to extract useful information that is not available from amplitude images. Moreover, changes in the phase measurements of the same object on different images can be used to detect small surface structure characteristics. In the next section we’ll discuss how we can use phase data to refine images and create other products.

@@ -79,9 +79,9 @@ plugins:
                                # uses the version specified via `mike deploy`
    
 extra:
-  version:
-    provider: mike
-    default: latest
+  # version:
+  #   provider: mike
+  #   default: latest
   social:
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/iceyefi
@@ -96,6 +96,7 @@ extra:
   analytics:
     provider: google
     property: G-G92GBM9X22
+  homepage: https://www.iceye.com/
 
 
 extra_css:

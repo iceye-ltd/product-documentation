@@ -1,7 +1,7 @@
 # WELCOME
 
 <figure>
-<img src="productguide/img/singapore_1443_wide.png" style="width:100%">
+<img src="productguide/img/front_graphic.jpg" style="width:100%">
 <figcaption align = "center"><em></em></figcaption>
 </figure>
 

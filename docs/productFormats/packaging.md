@@ -10,7 +10,7 @@ Product file naming convention describes the product processing level so that a 
 The constituent elements are explained in more detail in  Table 1
 
 <figure markdown>
-| Constituent |	Name	|Value	|Notes|
+| CONSTITUENT |	NAME	|VALUE	|NOTES|
 |-------------|---------|-------|-----|
 |ICEYE_	      | constellation |	ICEYE_	|fixed|
 |XN_	|sensor	|X2/X4/X5	|specific sensor that has acquired the scene|
@@ -21,7 +21,7 @@ The constituent elements are explained in more detail in  Table 1
 |Thhmmss	|UTC start time	|eg. T131415	|Thhmmss format|
 
 <figcaption align = "center"><em>Table 1: Product filename components. Example : ICEYE_X6_GRD_SM_153426_20211026T060946</em></figcaption>
-</figure> 
+</figure>
 
 ## Package Overview
 <!-- Earth Observation Products are available in varying processing levels. The levels are defined by the Committee for Earth Observation Satellites[@ceoslevels] as :

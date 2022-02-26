@@ -2,7 +2,7 @@
 
 The ICEYE global imaging service uses an innovative satellite and sensor design based on advancements in small satellite technologies and an adaptable New Space approach. The ICEYE constellation is constantly evolving and it is optimized for persistent monitoring with fast and repeatable access to any location on Earth. Our flexible collection supports high resolution imaging over small areas as well as reduced resolution scans of wide areas. 
 
-As of early 2022 there are 12 operating satellites with 6 satellites constantly supporting imaging operations. (The other 6 are either going through commissioning, orbit refinement or have been retired from imaging operations.) An additional 8 satellites are on the 2022 launch roster.
+<!-- As of early 2022 there are 12 operating satellites with 6 satellites constantly supporting imaging operations. (The other 6 are either going through commissioning, orbit refinement or have been retired from imaging operations.) An additional 8 satellites are on the 2022 launch roster. -->
 
 Our goal is to provide global access from a fleet of satellites, each in a coherent daily ground track repeat orbit (*CD-GTR*). This means that any location can be imaged multiple times from nearly the same orbital location using the same imaging geometry. The repeat cycle for these coherent collections is 24 hours or less. During the coming year our global coherent imaging plan will be implemented as we move more satellites into their allocated repeating ground tracks.
 
@@ -14,6 +14,7 @@ Our goal is to provide global access from a fleet of satellites, each in a coher
 ## SAR Sensor Parameters
 The ICEYE sensors are X-band radars, each with an active phased array antenna and electronic beam steering. The innate mechanical agility of these low-mass satellites and their electronic steering enable fast and precise pointing of radar pulses to the ground. The satellites can also image to the right or left side of the satellite track. Technical parameters of the current sensors are listed in Table 1.
 
+<figure markdown>
 | SENSOR PARAMETER      | SPECIFICATION |
 |-----------------------|---------------|
 | Carrier frequency     | 9.65 GHz (X-band) |
@@ -26,8 +27,8 @@ The ICEYE sensors are X-band radars, each with an active phased array antenna an
 | Incidence angle range | 15-35 (mode dependent) |
 | Mass                  | 85 kg |
 | Communication [radar payload data downlink] | X-band 140 Mbits/s|
-
-<center>*Table 1: ICEYE Generation 2 satellite system parameters*</center> 
+<figcaption align = "center"><em>Table 1: ICEYE Generation 2 satellite system parameters</em></figcaption>
+</figure>
 
 ## Orbits
 
@@ -46,6 +47,7 @@ At present,  ICEYE satellites are all in sun-synchronous orbits with 15 orbits p
 | Orbit maintenance |Ion Propulsion |
 <figcaption align = "center"><em>Table 2: Constellation Parameters</em></figcaption>
 </figure>
+
 
 <!-- Table 3 provides a summary of the current ICEYE Fleet. ICEYE satellites not owned or operated by ICEYE are omitted and for reasons of fairness and propriety, ICEYE cannot comment on their status or activities.
 
@@ -72,11 +74,11 @@ At present,  ICEYE satellites are all in sun-synchronous orbits with 15 orbits p
 !!! info 
     Click on a satellite name in Table 3 to open a new tab showing where the satellite is now on [n2yo](https://www.n2yo.com/)[@n2yo] -->
 
-Each satellite has the ability to slowly adjust its orbits throughout its operating life. The adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. Over the next 12 months, the fleet will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine identical data collections of the same area whilst maintaining rapid access times.
+Each satellite has the ability to slowly adjust its orbits throughout its operating life. The adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. As the fleet grows it will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine identical data collections of the same area whilst maintaining rapid access times.
 
 <figure markdown>
 ![placeholder](img/muldrow.gif){width="600"}
-<figcaption align = "center"><em>Figure 2: Coherent Daily Ground Track Repeat imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
+<figcaption align = "center"><em>Figure 2: Daily Coherent Ground Track Repeat (GTR) imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
 </figure> 
 
 The satellite orbital agility is provided via a set of ion thrusters positioned around the satellite. These provide a near limitless supply of manoeuvring thrust, and also ensure that the constellation can be rapidly configured to increase the coverage rate of certain geographic regions in response to world events.

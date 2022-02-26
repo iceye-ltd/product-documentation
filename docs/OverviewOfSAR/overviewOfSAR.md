@@ -16,7 +16,7 @@ There are several radar bands ranging from wavelengths at the millimeter level t
 In addition to atmospheric gases, there are larger atmospheric particles that scatter visible light but which are transparent to microwaves. In addition to penetrating clouds, X-band radar waves travel through smog, volcanic ash, and sandstorms. 
 
 <figure markdown>
-| BAND | WAVELENGTH [cm] | FREQUENCY [GHZ] | Origin |
+| BAND | WAVELENGTH [CM] | FREQUENCY [GHZ] | ORIGIN |
 |------|-----------------|-----------------|--------|
 UHF | 30 to 100 | 1 to 0.3 | Ultra High Frequency 
 P | 60 to 120 | 0.5 to 0.25 | P for "previous", as the British used the band for the earliest radars, but later switched to higher frequencies. 

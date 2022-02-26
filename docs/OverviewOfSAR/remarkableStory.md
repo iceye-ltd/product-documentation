@@ -13,16 +13,16 @@ In the SAR technique all of the measurements are stored and later processed toge
 There are a few methods to illuminate the ground in SAR imaging. These collection modes trade off resolution and coverage in different ways. To establish how we can simulate long apertures we’ll contrast the two most common forms of SAR imaging: stripmap and spotlight.
 In stripmap mode the pulses are sent out at a constant angle, usually broadside to the flight direction. In this case, the length of this simulated aperture ($L$) is the same as the width of the beam on the ground (Figure 8). Wider beams produced by smaller antennas mean longer apertures and better azimuth resolution. This directly contrasts with the real-aperture radar of SLAR where the beam was kept as narrow as possible to obtain good resolution.
 
-<figure>
-<img src="../img/stripmapSynAp.png" style="width:100%">
-<figcaption align = "center"><em>Figure 8: Stripmap Synthetic Aperture</em></figcaption>
+<figure markdown>
+![image title](../img/stripmapSynAp.png){ width="250"}
+<figcaption><em>Figure 8: Stripmap Synthetic Aperture</em></figcaption>
 </figure>
 
 The spotlight form of SAR varies the boresight angle in the azimuth direction to illuminate a fixed ground location (Figure 9). This technique greatly increases the synthetic-aperture length and offers excellent azimuth resolution, at the cost of limited ground coverage. At ICEYE we are capable of illuminating a fixed spot for as long as 30 seconds. Given the velocity of low-earth orbits (7.5 km/sec), this yields a synthetic aperture more than 225 kilometers long !
 
-<figure>
-<img src="../img/spotlightSynAp.png" style="width:100%">
-<figcaption align = "center"><em>Figure 9: Spotlight Synthetic Aperture</em></figcaption>
+<figure markdown>
+![image title](../img/spotlightSynAp.png){ width="300"}
+<figcaption><em>Figure 9: Spotlight Synthetic Aperture</em></figcaption>
 </figure>
 
 ## Phase History Data and SAR Azimuth Resolution
@@ -40,9 +40,9 @@ where $\delta_{az}$ is the SAR azimuth resolution.
 
 This equation is gorgeous. It says that azimuth resolution is based on the wavelength of our radar waves and the change in the integration angle ($\Delta \theta$) while the point was being imaged (Figure 10). Resolution improves when the wavelength is small and the integration angle change is large.
 
-<figure>
-<img src="../img/spotSAAngle.png" style="width:100%">
-<figcaption align = "center"><em>Figure 10: Spotlight Synthetic Aperture Angle</em></figcaption>
+<figure markdown>
+![image title](../img/spotSAAngle.png){ width="300"}
+<figcaption><em>Figure 10: Spotlight Synthetic Aperture Angle</em></figcaption>
 </figure>
 
 Now let’s use SAR with an integration angle change of 0.07 radians (4.5°). This is reasonable because the current operational performance of ICEYE's spotlight mode can easily exceed this angle. 

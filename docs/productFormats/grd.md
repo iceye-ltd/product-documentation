@@ -16,7 +16,7 @@ Amplitude images represent focused SAR data that has been detected and (usually)
 
 
 <figure markdown>
-|Ellipsoid Reference | Semi Major Axis | Semi Minor Axis | Inverse Flattening |
+|ELLIPSOID REFERENCE | SEMI MAJOR AXIS | SEMI MINOR AXIS | INVERSE FLATTENING |
 |--------------------|----------------|------------------|--------------------|
 |WGS84               | 6378137.0 m    | 6356752.314245 m | 298.257 223 563    |
 <figcaption align = "center"><em>Table 1 : WGS84 Reference Ellipsoid used in ICEYE Amplitude images</em></figcaption>

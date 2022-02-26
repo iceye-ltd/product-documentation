@@ -7,7 +7,7 @@ The following provides additional technical information on the performance of th
 ## Technical Overview
 
 <figure markdown>
-| Parameter      | Strip        |  Spot   | Spot *Extended Area* | Scan          | Comments                            |
+| PARAMETER      | STRIP        |  SPOT   | SPOT EXTENDED AREA | SCAN          | COMMENTS                            |
 |----------------|--------------|---------|--------------------|---------------|-------------------------------------|
 | Product Short Name            | 'SM'         | 'SLH'     | 'SLEA' | 'SC'    | [Note 1](#notes-and-explanations)    |
 | Radar Beams Used              |  1           | 1         | 1     | 4       | [Note 2](#notes-and-explanations)    |
@@ -19,7 +19,7 @@ The following provides additional technical information on the performance of th
 | Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ]  | -21.5 to -20 | -18 to -15 | -18 to -15 | -22.2 to -21.5 | [Note 6](#notes-and-explanations)    |
 | Azimuth Ambiguity Ratio [dB]  | -17          | -17       | -17    | -17     |                                      |
 | Range Ambiguity Ratio [dB]    | <-20          | <-20       | <-20    | <-20     |                                      |
-| Geospatial Accuracy [m RMSE] | 6            | 6         | 6      | 15      |                                      |
+| Geospatial Accuracy [m RMSE] | 6            | 6         | 6      | 15      |  [Note 14](#notes-and-explanations) |
 | ESA Copernicus Contributing Mission (CCM) Class[@copernicusClass] | VHR2 | VHR1 | VHR1 | HR1 |                     |
 | Polarization                  | VV           | VV        | VV     | VV      |                                      |
 | RNIIRS                        | 3.6          | 5.5       | 5.5    | 2.1     | [Note 8](#notes-and-explanations)    |
@@ -31,7 +31,7 @@ The following provides additional technical information on the performance of th
 
 ## Complex Image Parameters
 <figure markdown>
-| Parameter | Strip | Spot | Comments |
+| PARAMETER | STRIP | SPOT | COMMENTS |
 |-----------|-------|------|----------|
 | Focusing plane |  Slant Plane  | Slant Plane  |
 | Slant range resolution [m] | 0.5 to 2.5 | 0.5 | [Note 7](#notes-and-explanations) |
@@ -48,7 +48,7 @@ The following provides additional technical information on the performance of th
 
 ## Amplitude Image Parameters
 <figure markdown>
-| Parameter | Strip | Spot | Scan | Comments |
+| PARAMETER | STRIP | SPOT | SCAN | COMMENTS |
 |-----------|-------|------|------|----------|
 | Ground Range Resolution [m]  | 3  | 1.5 to 0.9  | < 15  |  [Note 7](#notes-and-explanations) |
 | Ground Azimuth Resolution [m]  | 3  | 1  | < 15  |   |
@@ -88,6 +88,7 @@ The following provides additional technical information on the performance of th
 11. **Amplitude Dynamic Range:** Stored as an unsigned 16 bit integer. 32 bit float values can be provided by request.
 12. **Performant Incidence Range:** This is the nominal or standard range of incidence angles that the ICEYE Fleet operates over. The parameters in these tables are correct within this range of angles.
 13. **Time  Dominant  Incidence Range:** Being quite small and agile, and having an electronically steered antenna, ICEYE satellites can collect radar imagery from a wide range of angles. Outside of the *Performant Incidence Range*, SAR image quality may be degraded. However in some situations it may be more important to obtain a SAR image quickly rather than wait for an opportunity to image the location with the performant range of angles. For this reason ICEYE offers time dominant tasking as either a Tactical or a Custom order.
+14. **Geospatial Accuracy:** Each satellite in the ICEYE fleet is periodically evaluated against ground based calibration targets to obtain the geospatial accuracy of the system. This process involves measuring the location of each target in the SAR imagery after the image has been terrain corrected [(see here for why this step is essential)](../productFormats/geospatialAccuracy.md#elevation-models) and comparing the location to the known **ground truth**. Each calibration target will have its own slightly different error. The *RMSE* is the root mean square error of all the measured calibration points from all the satellites.
 
 ## References
 \bibliography

@@ -4,7 +4,7 @@ This page captures all the metadata items that are present in ICEYE imagery. You
 
 ## ICEYE Product Metadata (Version 2.6)
 
-| Format Metadata Elements| Description| Type| Unit| Example| HDF5| SLC-XML| GEOTIF| AMP-XML|
+| FORMAT METADATA ELEMENTS| DESCRIPTION| TYPE| UNIT| EXAMPLE| HDF5| SLC-XML| GEOTIF| AMP-XML|
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|
 |`acquisition_end_utc`|UTC time for when the last pulse of the scene was sent|ASCII|UTC time|2019-03-10T18:20:00.307546|<span style="color:green">:material-check:|<span style="color:green">:material-check:|<span style="color:green">:material-check:|<span style="color:green">:material-check:|
 |`acquisition_mode`|Acquisition mode used|ASCII|text|Stripmap, Spotlight|<span style="color:green">:material-check:|<span style="color:green">:material-check:|<span style="color:green">:material-check:|<span style="color:green">:material-check:|

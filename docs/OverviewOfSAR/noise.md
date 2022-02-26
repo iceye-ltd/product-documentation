@@ -2,9 +2,9 @@
 ## The Whisper
 As a radar pulse travels from the antenna to the ground surface its total power remains constant, but as it moves away from the antenna, it spreads out into space and its power density weakens. As shown in Figure 17, it is as if the “skin” of the pulse becomes thinner with distance. This weakening is dramatic; it decreases with the square of the distance from the antenna.
 
-<figure>
-<img src="../img/pulseSurface.png" style="width:75%" class="center">
-<figcaption align = "center"><em>Figure 17: Expanding Surface Area of a Pulse</em></figcaption>
+<figure markdown>
+![image title](../img/pulseSurface.png){ width="300"}
+<figcaption><em>Figure 17: Expanding Surface Area of a Pulse</em></figcaption>
 </figure>
 
 Given that the ground might be 750 km from the antenna, the pulse is quite weak by the time it finally reflects from surface objects. This presents even more of a problem because only a portion of the weakened pulse is reflected toward the receive antenna, and then it has to travel all the way back, weakening again with the square of the distance. By the time the microwaves return to the antenna, they are microscopically faint. The antenna and radar receiver manage to detect, amplify, and record these echoes so that they can be processed into SAR resolution cells that span more than 100,000 brightness values. SAR is amazing.

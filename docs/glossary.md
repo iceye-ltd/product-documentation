@@ -3,7 +3,7 @@
 
 ## SAR Glossary 
 
-| Term | Definition |
+| TERM | DEFINITION |
 |------|------------|
 |**Azimuth**            |	Direction aligned with the relative spaceborne platform velocity vector. |
 |**Detection**	        |Processing step in which the phase information is removed and only the signal amplitude is preserved. Normally the detection uses a magnitude squared method and has units of voltage square per pixel. |
@@ -20,7 +20,7 @@
 |**Orthorectification** |A subtopic of georeferencing— The process of converting images into a form suitable for maps by removing sensor motion and terrain-related geometric distortions from raw imagery. |
 
 ## List of Acronyms
-| Term | Definition |
+| TERM | DEFINITION |
 |------|------------|
 |ASCII|	American Standard Code for Information Interchange|
 |BSD|	Berkeley Software Distribution|    
@@ -36,6 +36,7 @@
 |KML|	Keyhole Markup Language|
 |PNG|	Portal Network Graphics|
 |PRF|	Pulse Repetition Frequency|
+|RMSE|  Root Mean Square Error|
 |RPC|	Rapid Positioning Capability (or Rational Polynomial Coefficient)|
 |SR|	Slant Range|
 |SAR|	Synthetic Aperture Radar|

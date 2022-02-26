@@ -18,9 +18,9 @@ The RCS describes the relative reflecting cross-section of an object and its uni
 
 In the real world, though, there are usually multiple scattering objects within a resolution cell (and we almost never encounter a 1 m metal sphere). Since a pixel in a SAR image contains many hundreds of scattering objects, it has a mean RADAR cross section. To distinguish this from a single-object RCS we use the symbol $\sigma_0$. 
 
-<figure>
-<img src="../img/sigma-beta-gamma-explained.png" style="width:100%">
-<figcaption align = "center"><em>Figure 1: The relationship between β0, γ0 and σ0</em></figcaption>
+<figure markdown>
+![image title](../img/sigma-beta-gamma-explained.png){ width="500"}
+<figcaption><em>Figure 1: The relationship between β0, γ0 and σ0</em></figcaption>
 </figure>
 
 When illuminating the ground with a SAR sensor, the orientation of the surface compared to the resolution cell in the slant plane has a large impact on the mean RCS. The slant plane area of a pixel is constant, but when projected onto the ground, the pixel’s area is elongated in range, and the mean RCS changes with incidence angle. This leads to a 'brightening effect' at lower incidence angles in the slant plane image as each pixel's ground area increases. This means that the observed mean RCS values in the SLC image represent the **RADAR brightness** rather than the terrain mean RCS $\sigma_0$. The RADAR brightness is denoted by $\beta_0$.
