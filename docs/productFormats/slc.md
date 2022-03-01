@@ -42,12 +42,10 @@ Figure 2 provides a useful summary of SLC images in the context of the processin
 
 
 
-<figure>
-<img src="../img/SLC-Image-product-tree.png" style="width:100%">
-<figcaption align = "center"><em>Figure 2: The Processing Steps and Implementation Considerations for ICEYE SLC images</em></figcaption>
+<figure markdown>
+[![](img/SLC-Image-product-tree.png){ width="700"}](img/SLC-Image-product-tree.png)
+<figcaption><em>Figure 2: The Processing Steps and Implementation Considerations for ICEYE SLC images</em></figcaption>
 </figure>
-
-
 
 ## References
 \bibliography

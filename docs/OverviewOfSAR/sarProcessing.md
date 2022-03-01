@@ -3,7 +3,7 @@
 SAR image generation begins with the emission of thousands of coherent pulses and the decomposition of each echo into raw measurements of time, amplitude and phase. The first part of the processing flow is called Phase History Processing because it accounts for the changes over time of the phase values of each scatterer. Phase history data are focused into the azimuth and range components of each resolution cell to produce an image product called a “complex image” (Figure 15).
 
 <figure markdown>
-![image title](../img/ProcessingFlow.png){ width="400"}
+![image title](img/ProcessingFlow.png){ width="400"}
 <figcaption><em>Figure 15: The SAR Processing Flow and Its Products</em></figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ SAR image generation begins with the emission of thousands of coherent pulses an
 The left image in Figure 16 is a ICEYE amplitude image of agricultural fields. In this image each pixel has a brightness value assigned to it. This is what many people consider to be the base SAR product, but this is really only half of the full image. The SAR processor calculates the average phase value for each pixel as well. The matching “phase image” of that same scene is on the right in the figure. The combination of these two images is called a complex image, in which every pixel has amplitude and phase values. We use the term “complex” because the pixels are described by a mathematical construct called a complex number, where every number has two components.
 
 <figure markdown>
-![image title](../img/complexAmpPhase.png){ width="400"}
+![image title](img/complexAmpPhase.png){ width="400"}
 <figcaption><em>Figure 16: Amplitude and Phase Structure of a Complex Image</em></figcaption>
 </figure>
 

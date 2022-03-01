@@ -104,6 +104,7 @@ $$
 
 Where the rational polynomial numerators and denominators are each a 20-point cubic polynomial function of the form:
 
+<figure markdown>
 | RPC CUBIC POLYNOMIAL | | | | |
 |---|---|---|---|---|
 | $\sum_{i=1}^{20} C_i ⋅ \rho_i(P,L,H) =$  | | | | |
@@ -112,6 +113,7 @@ Where the rational polynomial numerators and denominators are each a 20-point cu
 | | $+C_3P$	| $+C_8 L^2$| $+C_{13} LP^2$|	$+C_{18} L^2 H$ |
 | | $+C_4H$	| $+C_9 P^2$| $+C_{14} LH^2$|	$+C_{19} P^2 H$ |
 | | $+C_5LP$| $+C_{10} H^2$| $+C_{15} L^2P$| $+C_{20} H^3$ |
+</figure>
 
 Where coefficients $C_1…C_{20}$ represent the vector coefficients provided in the product metadata : `LINE_NUM_COEF_n`, `LINE_DEN_COEF_n`, `SAMP_NUM_COEF_n`, `SAMP_DEN_COEF_n`. The image coordinates are in units of pixels. The ground coordinates are latitude and longitude in units of decimal degrees and the height above ellipsoid is in units of meters. The ground coordinates are referenced to WGS84. 
 

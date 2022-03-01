@@ -12,9 +12,10 @@ When producing different forms of exploitable products, several decisions have t
 
 ## The Tree of Processing Options
 There are many steps that have to be considered when converting RADAR pulse data into an exploitable image. Here we will talk about each in turn.
-<figure>
-<img src="../img/product-tree-all.png" style="width:100%">
-<figcaption align = "center"><em>Figure 2: The SAR Image Tree of Processing Options</em></figcaption>
+
+<figure markdown>
+[![](img/product-tree-all.png){ width="700"}](img/product-tree-all.png)
+<figcaption><em>Figure 2: The SAR Image Tree of Processing Options</em></figcaption>
 </figure>
 
 ### Sample Arrangement

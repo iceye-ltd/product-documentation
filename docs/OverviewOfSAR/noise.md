@@ -3,7 +3,7 @@
 As a radar pulse travels from the antenna to the ground surface its total power remains constant, but as it moves away from the antenna, it spreads out into space and its power density weakens. As shown in Figure 17, it is as if the “skin” of the pulse becomes thinner with distance. This weakening is dramatic; it decreases with the square of the distance from the antenna.
 
 <figure markdown>
-![image title](../img/pulseSurface.png){ width="300"}
+![image title](img/pulseSurface.png){ width="300"}
 <figcaption><em>Figure 17: Expanding Surface Area of a Pulse</em></figcaption>
 </figure>
 

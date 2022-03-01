@@ -19,7 +19,7 @@ The RCS describes the relative reflecting cross-section of an object and its uni
 In the real world, though, there are usually multiple scattering objects within a resolution cell (and we almost never encounter a 1 m metal sphere). Since a pixel in a SAR image contains many hundreds of scattering objects, it has a mean RADAR cross section. To distinguish this from a single-object RCS we use the symbol $\sigma_0$. 
 
 <figure markdown>
-![image title](../img/sigma-beta-gamma-explained.png){ width="500"}
+![image title](img/sigma-beta-gamma-explained.png){ width="500"}
 <figcaption><em>Figure 1: The relationship between β0, γ0 and σ0</em></figcaption>
 </figure>
 

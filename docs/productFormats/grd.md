@@ -64,9 +64,10 @@ The amplitude image metadata elements can be found in [the metadata section](../
 ## Amplitude Image in Context
 Figure 2 provides a useful summary of Amplitude images in the context of the processing options available with the red line highlighting the decisions made during product production. 
 
-<figure>
-<img src="../img/GRD-Image-product-tree.png" style="width:100%">
-<figcaption align = "center"><em>Figure 2: The Processing Steps and Implementation Considerations for ICEYE amplitude images</em></figcaption>
+
+<figure markdown>
+[![](img/GRD-Image-product-tree.png){ width="700"}](img/GRD-Image-product-tree.png)
+<figcaption><em>Figure 2: The Processing Steps and Implementation Considerations for ICEYE amplitude images</em></figcaption>
 </figure>
 
 ## References

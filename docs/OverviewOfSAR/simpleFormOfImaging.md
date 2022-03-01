@@ -2,7 +2,7 @@
 As seen in Figure 1 the radar antenna emits a series of pulses toward the ground where they are scattered in many directions. The sensor records the “backscatter”, which is the portion reflected toward the antenna. It measures the strength of the echo and the time it took for the pulse to travel to the ground and back.
 
 <figure markdown>
-![image title](../img/PulseBackscatter.png){ width="300"}
+![image title](img/PulseBackscatter.png){ width="300"}
 <figcaption><em>Figure 1: Pulse Transmission and Backscatter</em></figcaption>
 </figure>
 
@@ -14,14 +14,14 @@ $$Range = \frac{\Delta T\ c}{2}$$
 Since the pixels of a radar imaging system are placed on the image based partly on their range, the antenna cannot illuminate the ground in a vertical orientation. If it did, features on the same imaging line at equivalent angles off nadir would have identical ranges, like the two purple diamonds in Figure 2, and they would occupy the same pixel location.
 
 <figure markdown>
-![image title](../img/verticalIllumination.png){ width="300"}
+![image title](img/verticalIllumination.png){ width="300"}
 <figcaption><em>Figure 2: Vertical Illumination</em></figcaption>
 </figure>
 
 Radar imaging must be side-looking so that ground points from the near to far range have different range values (Figure 3). The illumination is typically broadside, or perpendicular, to the flight direction. 
 
 <figure markdown>
-![image title](../img/sideIllumination.png){ width="300"}
+![image title](img/sideIllumination.png){ width="300"}
 <figcaption><em>Figure 3: Side-Looking Illumination</em></figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ Radar imaging must be side-looking so that ground points from the near to far ra
 The angles associated with radar illumination are shown in Figure 4, which is based on a spherical earth surface. Most radar imaging is broadside to the flight direction, but some systems can collect off-broadside in a squinted orientation. The angle down from the local level at the sensor is called the depression angle. The angle between the line-of-sight ray and the local vertical is the incidence angle. The angle between the tangent to the surface and the line of sight is the grazing angle. Note that the incidence and grazing angles are complements in that they form a right angle when combined. This means that a 60° incidence angle is the same as a 30° grazing angle.
 
 <figure markdown>
-![image title](../img/RadarImagingAngles.png){ width="300"}
+![image title](img/RadarImagingAngles.png){ width="300"}
 <figcaption><em>Figure 4: Radar Imaging Angles</em></figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ The first useful radar imaging technique was a form called Side-Looking Airborne
 The angular width of the pulse on the ground along the direction of flight, or azimuth direction, determines one component of resolution. The range measurements are collected in the “slant range” direction, and range variations to different objects form the second dimension of resolution.
 
 <figure markdown>
-![image title](../img/sidelookingRadar.png){ width="300"}
+![image title](img/sidelookingRadar.png){ width="300"}
 <figcaption><em>Figure 5: Side-Looking Airborne Radar</em></figcaption>
 </figure>
 
@@ -48,6 +48,6 @@ SLAR was used the early days of radar imaging but it had serious limitations. Ra
 Azimuth resolution was based on the angular width of the pulse in the azimuth direction ($\beta$). Long antennas create narrow beams, but the beam spreads out from the antenna to the distant ground surface. Antennas cannot be made long enough to produce good azimuth resolution, and SLAR produced images with resolutions in the hundreds of meters, even from aircraft. This is why the brilliant concept of synthesizing a long antenna from the actions of a small one was developed. We call this Synthetic Aperture Radar.
 
 <figure markdown>
-![image title](../img/SLAR_PulseDimensions.png){ width="300"}
+![image title](img/SLAR_PulseDimensions.png){ width="300"}
 <figcaption><em>Figure 6: SLAR Pulse Dimensions</em></figcaption>
 </figure>
