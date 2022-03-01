@@ -29,6 +29,7 @@
     --md-primary-fg-color:        #000046;
     --md-primary-fg-color--light: #1CB5DF;
     --md-primary-fg-color--dark:  #471D6F;
+    --md-accent-fg-color:         #1CB5DF;
   }
 
 .center {
