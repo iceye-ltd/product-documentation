@@ -27,3 +27,13 @@ To get the documentation running on your own local computer :
 3. open `http://127.0.0.1:8000/product-documentation/` using your web browser.
 4. Edit the documentation in the `docs` folder. Everytime you save a file the documentation will be updated and your browser will be refreshed.
 5. When you are happy check your code back in to GitHub and make a pull request.
+
+# How to Make a New Release
+
+1. Make changes and check back in as described above
+2. Deploy the changes to the latest version on the gh-pages branch using `mike`
+
+    `mike deploy 5.0 latest -u`
+
+This command deploys the latest changes on the master branch to the gh-pages under the version 5.0 and updates the 'latest' tag to be this one. 
+

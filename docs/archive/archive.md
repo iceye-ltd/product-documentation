@@ -1,6 +1,6 @@
 # ICEYE ARCHIVES
 
-Things change fast at ICEYE and we are constantly updating our skills and capabilities as well as our satellites. On this page you will find a collection of our external documents.
+Things change fast at ICEYE and we are constantly updating our skills and capabilities as well as our satellites. On this page you will find a collection of our external documents and some links to places that we have found useful when learning about SAR.
 
 ## Previous Product Documentation
 As we evolve our products, we also have to evolve our metadata and documentation. To allow users to search through previous ICEYE documents we provide them as links in the following table.
@@ -26,4 +26,18 @@ Having such a large SAR constellation provides unique opportunities for scientif
 |[Ignatenko, V., Nottingham, M., Radius, A., Lamentowski, L. and Muff, D., 2021, July. ICEYE Microsatellite SAR Constellation Status Update: Long Dwell Spotlight and Wide Swath Imaging Modes. In *2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS* (pp. 1493-1496). IEEE.](IGARSS_2021.pdf) | [:fontawesome-regular-address-card:](IGARSS_2021_cite.txt)
 
 <figcaption align = "center"><em>Table 2: ICEYE Publications</em></figcaption>
+</figure>
+
+## Useful Links and References
+
+<figure markdown>
+| REFERENCE | Comment |
+|----------------------|--|
+| Thomas P. Ager. [The Essentials of SAR: Conceptual View of Synthetic Aperture Radar and Its Remarkable Capabilities.](https://www.amazon.com/dp/B09CGKTLZV/ref=cm_sw_em_r_mt_dp_H9NDBJSVREXRK5PA4Z58): 2021. ISBN-13 ‏ : ‎ 979-8512864487  | Easy to read introduction to SAR for everyone |
+|  Astri Polska, [ESA SNAP workbook](http://www.eo4sd-eastern.eu/sites/default/files/publications/snap_workbook_english.pdf) | PDF with Radar data processing tools described |
+| Thuy Le Toan, [Introduction to SAR Remote Sensing](https://earth.esa.int/landtraining07/D1LA1-LeToan.pdf), lecture D1La1 of *ESA Advanced Training Course on Land Remote Sensing* | Useful PDF for understanding of geometric properties and artifacts of SAR |
+| "[Step by Step: Recommended Practice Flood Mapping](https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-flood-mapping/step-by-step)", Office for Outer Space Affairs. UN-SPIDER Knowledge Portal | Useful step-by-step instructions from the United Nations |
+| [Echoes in space](https://eo-college.org/courses/echoes-in-space/). EO College. | A useful short course on SAR that we recommend to all our new customers. |  
+
+<figcaption align = "center"><em>Table 3: Other useful links</em></figcaption>
 </figure>
