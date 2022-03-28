@@ -8,7 +8,7 @@ addition to ease and speed, RPC coefficients have the further advantage of being
 
 
 ## Single Look Complex (SLC) Product
-These are full-resolution, single-look images of the focused SAR signals. Scenes are stored in the satellite’s native image acquisition geometry, which is the slant-range-by-azimuth imaging plane. As shown in the green surface in Figure ??, the pixels are aligned perpendicular to the sensor flight track (The pixels have zero-Doppler SAR coordinates}). They are spaced equidistant in azimuth and in slant range. Each pixel contains both amplitude and phase information as represented by a complex magnitude value with *in-phase* and *quadrature* components (I & Q).
+These are full-resolution, single-look images of the focused SAR signals. Scenes are stored in the satellite’s native image acquisition geometry, which is the slant-range-by-azimuth imaging plane. As shown in the green surface in Figure 2, the pixels are aligned perpendicular to the sensor flight track (The pixels have zero-Doppler SAR coordinates}). They are spaced equidistant in azimuth and in slant range. Each pixel contains both amplitude and phase information as represented by a complex magnitude value with *in-phase* and *quadrature* components (I & Q).
 
 <figure markdown>
 ![placeholder](img/pixel-representation.png){width="100%"}
