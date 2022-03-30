@@ -8,7 +8,7 @@
 
 ## How To Read This Document
 
-Previously if you wanted to find out about ICEYE satellites or our data we asked you to check out our **Product Guide** in pdf format. [This is still available](https://www.iceye.com/downloads/product-documents) for download but we thought that it wasn't as easy to read or use as a more interactive web-based set of documents. Thats what this site is (and hopefully a bit more).
+Previously if you wanted to find out about ICEYE satellites or our data we asked you to check out our **Product Guide** in pdf format. [This is still available](archive/archive.md) for download but we thought that it wasn't as easy to read or use as a more interactive web-based set of documents. Thats what this site is (and hopefully a bit more).
 
 If you want to learn more about ICEYE the company, its initiatives and projects then we would encourage you to visit the <a href="http://iceye.com" target=”_blank”>ICEYE website</a>. It has many examples and stories about the company, what it has done and where it wants to go.
 
