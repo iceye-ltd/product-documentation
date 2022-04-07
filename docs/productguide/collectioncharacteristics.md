@@ -55,7 +55,7 @@ The following provides additional technical information on the performance of th
 | Impulse response weighing function (peak side level)  |  Taylor Weighting (-20dB) | Taylor Weighting (-20dB) | Taylor Weighting (-20dB)  |   |
 | Ground Range Sample Spacing [m]  | 2.5  | 0.5  | 6  |   |
 | Ground Azimuth Sample Spacing [m]  | 2.5  | 0.5  | 6  |   |
-| Range Looks  | 1  | 1 to 2  | 1  |   |
+| Range Looks  | 1  | 1 | 1  |   |
 | Azimuth Looks  | 1 to 2  | 1 to 4  | 1  |   |
 | Product format  | Geotiff + XML | Geotiff + XML | Geotiff + XML  |   |
 | GRD Product Size [MB]  | 700  | 250, 2250  | 800  |   |
