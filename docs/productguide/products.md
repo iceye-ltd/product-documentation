@@ -17,7 +17,7 @@ SAR complex images contain pixels that have both amplitude and phase values. The
 
 ### Amplitude Images
 
-These are the familiar SAR gray-scale images with amplitude-only pixels. They are “multi-looked” to reduce the grainy effect of speckle, at the cost of slightly lower resolution. Amplitude images are projected to the ground surface and can be oriented with respect to the sensor or produced on an ellipsoid-based map projection. ICEYE produces amplitude images in the natural range-azimuth sensor orientation because they offer the most flexibility in exploitation. To be consistent with conventional terminology, these sensor-oriented images are called Ground Range Detected (GRD). This term may change in the future to be something more meaningful.
+These are the familiar SAR gray-scale images with amplitude-only pixels. They are “multi-looked” to reduce the grainy effect of speckle, at the cost of slightly lower resolution. Amplitude images are projected to the ground surface and can be oriented with respect to the sensor or produced on an ellipsoid-based map projection. ICEYE produces amplitude images in the natural range-azimuth sensor orientation because they offer the most flexibility in exploitation. To be consistent with conventional terminology, these sensor-oriented images are called Ground Range Detected (GRD). This term may change in the future to be something more meaningful. We also can provide terrain projected amplitude images also called orthorectified images (ORTHO).
 
 !!! info
     Amplitude images are most useful for rapid observation of a location regardless of lighting or weather conditions.
