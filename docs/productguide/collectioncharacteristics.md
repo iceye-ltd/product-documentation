@@ -25,7 +25,7 @@ The following provides additional technical information on the performance of th
 | RNIIRS                        | 3.6          | 5.5       | 5.5    | 2.1     | [Note 8](#notes-and-explanations)    |
 | RGIQE [bits/$m^2$]               | 0.8          | 22        |  8.4     | 0.1     | [Note 9](#notes-and-explanations)    |
 | Performant Incidence Range [deg]  | 15-30    | 20-35     | 20-35  | 21-29   | [Note 12](#notes-and-explanations)   |
-| Time Dominant Incidence Range [deg] | 11-43  | 11-56     | 11-56 | N/A      | [Note 13](#notes-and-explanations)   |
+| Time Dominant Incidence Range [deg] | 11-44  | 11-44     | 11-44 | N/A      | [Note 13](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 1 : ICEYE Collections Technical Summary</em></figcaption>
 </figure>
 
