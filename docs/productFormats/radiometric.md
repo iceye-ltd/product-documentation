@@ -3,6 +3,9 @@
 
 The grey-scale values of SAR pixels do not directly correspond to a scientific measurement of the radar cross section of the associated ground area. In most cases this does not matter as users just want to view the spatial distribution of scattering objects and perhaps their relative radar reflectivity. However, SAR is a scientific instrument and some applications benefit from additional information about the ground's reflecting properties. These applications require the pixel’s mean radar cross section, which is a true measure of the radar reflectivity. To access this information, a **calibration factor** needs to be applied to the pixel data. This next section provides information on how this is done. First, however, we need to have a short discussion about mean radar cross section.
 
+!!! Caution
+    Scan mode products are not currently calibrated. Whilst imagery is visually and spatially exploitable, there may be slight errors when converting image sample values to a mean RADAR cross section number.
+
 ### Different Types of Mean Radar Cross Section
 
 An object's ability to scatter energy back towards the radar is called its *radar cross section* (RCS). It is not a fixed property and its value can change under different situations:

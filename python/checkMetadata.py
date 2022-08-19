@@ -23,6 +23,7 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SORTWARE.
+from copy import deepcopy
 from typing import ValuesView
 import pandas as pd
 import xmltodict
@@ -31,7 +32,7 @@ from osgeo import gdal
 import h5py
 import argparse
 import sys
-
+from openpyxl import load_workbook
 
 class bcolors:
     HEADER = '\033[95m'
@@ -46,23 +47,39 @@ class bcolors:
 
 metadataMaster = 'metadataMaster/ICEYE_Product_Metadata.xlsx'
 
+def IsSpecSupported(specVersion):
+    global metadataMaster
+
+    sheetName = 'Version '+specVersion
+    wb = load_workbook(metadataMaster, read_only=True)   # open an Excel file and return a workbook
+    if sheetName not in wb.sheetnames:
+        return False
+    
+    return True
+
 def checkAmplitudeXML(fileName,verbose=False):
     global metadataMaster
     
     if not (os.path.isfile(metadataMaster) and os.access(metadataMaster, os.R_OK)):
         print(f'File {metadataMaster} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     if not (os.path.isfile(fileName) and os.access(fileName, os.R_OK)):
         print(f'File {fileName} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     ampxml = open(fileName, 'r').read()  # Read data
     xmlDict = xmltodict.parse(ampxml)    # Parse XML
     xmlDict = dict((k.lower(), v) for k,v in xmlDict['Metadata'].items())
+    residuals = deepcopy(xmlDict)         # dict that we remove found items from to find whats left
 
     specVersion = xmlDict['spec_version']
     sheetName = 'Version '+specVersion
+
+    if not IsSpecSupported(specVersion):
+        print(f'Amplitude xml file is version {bcolors.FAIL}{specVersion}{bcolors.ENDC} which does not exist in metatdata master file')
+        return False, [], {}
+
     df = pd.read_excel(metadataMaster, sheet_name=sheetName)
 
     if verbose :
@@ -89,33 +106,40 @@ def checkAmplitudeXML(fileName,verbose=False):
             if dowefind :
                 if tag.lower() not in xmlDict :
                     missingEntries.append(tag)
+                else:
+                    residuals.pop(tag.lower())
 
     if len(missingEntries) != 0 :
         if verbose :
             print('The following metadata elements are missing from',fileName)
             for e in missingEntries:
                 print(e)
-        return False, missingEntries
+        return False, missingEntries, residuals
     else :
-        return True, []
+        return True, [], residuals
 
 def checkSLCXML(fileName,verbose=False):
     global metadataMaster
 
     if not (os.path.isfile(metadataMaster) and os.access(metadataMaster, os.R_OK)):
         print(f'File {metadataMaster} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     if not (os.path.isfile(fileName) and os.access(fileName, os.R_OK)):
         print(f'File {fileName} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     slcxml = open(fileName, 'r').read()  # Read data
     xmlDict = xmltodict.parse(slcxml)  # Parse XML
     xmlDict = dict((k.lower(), v) for k,v in xmlDict['Metadata'].items())
+    residuals = deepcopy(xmlDict)         # dict that we remove found items from to find whats left
 
     specVersion = xmlDict['spec_version']
     sheetName = 'Version '+specVersion
+    if not IsSpecSupported(specVersion):
+        print(f'SLC xml file is version {bcolors.FAIL}{specVersion}{bcolors.ENDC} which does not exist in metatdata master file')
+        return False, [], {}
+
     df = pd.read_excel(metadataMaster, sheet_name=sheetName)
 
     if verbose :
@@ -142,32 +166,39 @@ def checkSLCXML(fileName,verbose=False):
             if dowefind :
                 if tag.lower() not in xmlDict :
                     missingEntries.append(tag)
+                else:
+                    residuals.pop(tag.lower())
 
     if len(missingEntries) != 0 :
         if verbose :
             print('The following metadata elements are missing from',fileName)
             for e in missingEntries:
                 print(e)
-        return False, missingEntries
+        return False, missingEntries, residuals
     else :
-        return True, []
+        return True, [], residuals
 
 def checkAmpGeotif(fileName,verbose=False):
     global metadataMaster
 
     if not (os.path.isfile(metadataMaster) and os.access(metadataMaster, os.R_OK)):
         print(f'File {metadataMaster} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     if not (os.path.isfile(fileName) and os.access(fileName, os.R_OK)):
         print(f'File {fileName} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     f=gdal.Open(fileName)
     gtifdict=f.GetMetadata()
-   
+    residuals = deepcopy(gtifdict)         # dict that we remove found items from to find whats left
+
     specVersion = gtifdict['SPEC_VERSION']
     sheetName = 'Version '+specVersion
+    if not IsSpecSupported(specVersion):
+        print(f'Amplitude geotif file is version {bcolors.FAIL}{specVersion}{bcolors.ENDC} which does not exist in metatdata master file')
+        return False, [], {}
+
     df = pd.read_excel(metadataMaster, sheet_name=sheetName)
 
     if verbose :
@@ -201,15 +232,17 @@ def checkAmpGeotif(fileName,verbose=False):
             if dowefind :
                 if tag.upper()  not in gtifdict:
                     missingEntries.append(tag)
+                else:
+                    residuals.pop(tag.upper())
 
     if len(missingEntries) != 0 :
         if verbose :
             print('The following metadNata elements are missing from',fileName)
             for e in missingEntries:
                 print(e)
-        return False, missingEntries
+        return False, missingEntries, residuals
     else :
-        return True, []
+        return True, [], residuals
 
 
 def checkSlcHdf(fileName,verbose=False):
@@ -217,17 +250,24 @@ def checkSlcHdf(fileName,verbose=False):
 
     if not (os.path.isfile(metadataMaster) and os.access(metadataMaster, os.R_OK)):
         print(f'File {metadataMaster} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     if not (os.path.isfile(fileName) and os.access(fileName, os.R_OK)):
         print(f'File {fileName} is not readable or does not exist')
-        return False, []
+        return False, [], {}
 
     f=h5py.File(fileName)
     slcdict=f.keys()
- 
+    residuals = []
+    for k in slcdict :
+        residuals.append(k)
+
     specVersion = str(f['spec_version'][()])
     sheetName = 'Version '+specVersion
+    if not IsSpecSupported(specVersion):
+        print(f'SLC hdf file is version {bcolors.FAIL}{specVersion}{bcolors.ENDC} which does not exist in metatdata master file')
+        return False, [], {}
+
     df = pd.read_excel(metadataMaster, sheet_name=sheetName)
 
     if verbose :
@@ -255,15 +295,17 @@ def checkSlcHdf(fileName,verbose=False):
             if dowefind :
                 if tag not in slcdict:
                     missingEntries.append(tag)
+                else:
+                    residuals.remove(tag)
 
     if len(missingEntries) != 0 :
         if verbose :
             print('The following metadNata elements are missing from',fileName)
             for e in missingEntries:
                 print(e)
-        return False, missingEntries
+        return False, missingEntries, residuals
     else :
-        return True, []
+        return True, [], residuals
 
 
 def dumpMDTables(version=2.3):
@@ -276,16 +318,16 @@ def dumpMDTables(version=2.3):
     specVersion = str(version)
     sheetName = 'Version '+specVersion
     df = pd.read_excel(metadataMaster, sheet_name=sheetName)
-    for c in df.columns[:-2] :
+    for c in df.columns :
         print(f'| {c}',end='')
     print('|')
-    for c in df.columns[:-2] :
+    for c in df.columns :
         print(f'|-----',end='')
     print('|')
 
     for tag in df['Format Metadata Elements'] :
         row = df[df['Format Metadata Elements'] == tag].index[0]
-        for c in df.columns[:-2] :
+        for c in df.columns :
             txt = str(df[c][row]).replace('\n', ' ')
             txt = txt.replace('nan',' ')
             if c == 'HDF5' or c == 'SLC-XML' or c=='GEOTIF' or c == 'AMP-XML' :
@@ -313,11 +355,12 @@ if __name__ == "__main__":
     verb = False
 
     parser = argparse.ArgumentParser(description='Check ICEYE Product Metadata')
-    parser.add_argument('files',type=str,nargs='+')
+    parser.add_argument('-f','--files',type=str,nargs='+')
     parser.add_argument('-v','--verbose', help='print useful output wile running',action='store_true')
-    parser.add_argument('-d','--dump',help='dump metadata as a markdown table',action='store_true')
+    parser.add_argument('-d','--dump',help='dump metadata as a markdown table for version number',type=float)
     parser.add_argument('-m','--master',help='set path to metadata master document')
     parser.add_argument('-i','--ignore',help='ignore files than do not have known ICEYE metadata',action='store_true')
+    parser.add_argument('-x','--extra',help='print out any extra metadata elements not found in the specification',action='store_true')
 
     args=parser.parse_args()
 
@@ -330,7 +373,10 @@ if __name__ == "__main__":
             sys.exit(f'File {metadataMaster} is not readable or does not exist')
 
     if args.dump :
-        dumpMDTables()
+        if args.dump != 2.4 and args.dump != 2.3 :
+            print(f'Available metadata versions are 2.3 and 2.4')
+            exit(1)
+        dumpMDTables(version=args.dump)
 
     else:
         for file in args.files :
@@ -339,19 +385,27 @@ if __name__ == "__main__":
                 prodtype = (fname.split("_")[2]).upper()
                 if prodtype == 'GRD' :
                     ampxmlfile = file
-                    status, missing = checkAmplitudeXML(ampxmlfile,verbose=verb)
+                    status, missing, residuals = checkAmplitudeXML(ampxmlfile,verbose=verb)
                     if not status :
                         print(f'{ampxmlfile}  \t: {bcolors.FAIL}Failed{bcolors.ENDC}')
                     else :
                         print(f'{ampxmlfile}  \t: {bcolors.OKGREEN}OK{bcolors.ENDC}')
+                    if args.extra and len(residuals) > 0 :
+                        print(f'Extra metadata elements in {ampxmlfile}')
+                        for k in residuals : 
+                            print(f'    {k}')
 
                 elif prodtype == 'SLC' :
                     slcxmlfile = file
-                    status, missing = checkSLCXML(slcxmlfile,verbose=verb)
+                    status, missin, residuals = checkSLCXML(slcxmlfile,verbose=verb)
                     if not status :
                         print(f'{slcxmlfile}  \t: {bcolors.FAIL}Failed{bcolors.ENDC}')
                     else :
                         print(f'{slcxmlfile}  \t: {bcolors.OKGREEN}OK{bcolors.ENDC}')
+                    if args.extra and len(residuals) > 0:
+                        print(f'Extra metadata elements in {slcxmlfile}')
+                        for k in residuals : 
+                            print(f'    {k}')
 
                 else:
                     if verb :
@@ -359,19 +413,27 @@ if __name__ == "__main__":
             
             elif extension == '.tif' :
                 ampgeotiffile = file 
-                status, missing = checkAmpGeotif(ampgeotiffile,verbose=verb)
+                status, missing, residuals = checkAmpGeotif(ampgeotiffile,verbose=verb)
                 if not status :
                     print(f'{ampgeotiffile}  \t: {bcolors.FAIL}Failed{bcolors.ENDC}')
                 else :
                     print(f'{ampgeotiffile}  \t: {bcolors.OKGREEN}OK{bcolors.ENDC}')
+                if args.extra and len(residuals) > 0:
+                    print(f'Extra metadata elements in {ampgeotiffile}')
+                    for k in residuals : 
+                        print(f'    {k}')
 
             elif extension == '.h5' :
                 slchdffile = file
-                status, missing = checkSlcHdf(slchdffile,verbose=verb)
+                status, missing, residuals = checkSlcHdf(slchdffile,verbose=verb)
                 if not status :
                     print(f'{slchdffile} \t: {bcolors.FAIL}Failed{bcolors.ENDC}')
                 else :
                     print(f'{slchdffile} \t: {bcolors.OKGREEN}OK{bcolors.ENDC}')
+                if args.extra and len(residuals) > 0:
+                    print(f'Extra metadata elements in {slchdffile}')
+                    for k in residuals : 
+                        print(f'    {k}')
 
             else :
                 if not args.ignore :
