@@ -33,7 +33,7 @@ To get the documentation running on your own local computer :
 1. Make changes and check back in as described above
 2. Deploy the changes to the latest version on the gh-pages branch using `mike`
 
-    `mike deploy 5.0 latest -u`
+    `mike deploy <version> latest -u`
 
 This command deploys the latest changes on the master branch to the gh-pages under the version 5.0 and updates the 'latest' tag to be this one. 
 

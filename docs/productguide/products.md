@@ -64,7 +64,7 @@ In conventional scan mode, ground points are illuminated by different parts of t
     Having the largest area coverage and a modest resolution, Scan images are highly suited to wide area surveillance and mapping projects. Being able to operate in all weather and lighting conditions, they provide an excellent opportunity to image the oceans and to detect ships and monitor shipping lanes.
 
 !!! Caution
-    Scan mode products are not currently calibrated. Whilst imagery is visually and spatially exploitable, there may be slight errors when converting image sample values so a mean RADAR cross section number.
+    Scan mode products are not currently calibrated. Whilst imagery is visually and spatially exploitable, there may be slight errors when converting image sample values to a mean RADAR cross section number.
 
 <!-- % whilst performing adjacent Strip collections. While this produces much wider swath widths, it also lessens the collection time of ground points and degrades azimuth resolution. To help improve image quality we employ a technique called Terrain Observation by Progressive Scans (TOPS or TOPSAR \cite{TOPSAR}). We have two versions of our SCANSAR product, a four-beam image that covers 100km x 100km with a ground resolution of 12mx12m and a 2 beam product that covers 60km by 100km with a ground resolution of 6mx6m. The length of the image can be extended in azimuth up to 825km. -->
 

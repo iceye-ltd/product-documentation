@@ -80,9 +80,9 @@ plugins:
                                # uses the version specified via `mike deploy`
    
 extra:
-  # version:
-  #   provider: mike
-  #   default: latest
+  version:
+    provider: mike
+    default: latest
   social:
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/iceyefi
