@@ -70,13 +70,5 @@ Figure 2 provides a useful summary of Amplitude images in the context of the pro
 <figcaption><em>Figure 2: The Processing Steps and Implementation Considerations for ICEYE amplitude images</em></figcaption>
 </figure>
 
-## GRD's illegitimate child: the Orthorectified GRD 
-This is a tricky one for ICEYE. We hate the way that orthorectified imagery warps and distorts our beautiful imagery and as SAR professionals we prefer to use GIS tools to correct for SAR layover and geometric distortions. But we have come to realise that there are still a lot of people out there that just want to buy a map-like product. Currently we can provide orthorectified imagery from the following Digital Elevation models:
- * Copernicus DEM GLO-30 
- * Copernicus DEM GLO-90 
- * NASA DEM version 1
- * ASTER GDEM version 3
-Terrain prokjection is performed with one the chosen DEM using GDAL gdalwarp tool. The new image is stored as a Geotif just like GRD product. We produce a new XML file from the GRD one with extra field describing the DEM used for orthorectification. 
-
 ## References
 \bibliography
