@@ -16,7 +16,7 @@ ICEYE Tasking Standard Orders are based on the concept of **acquisition time win
 </figure>
 
 <figure markdown>
-![placeholder](img/stack_time_window.png){width="600"}
+![placeholder](img/stack_time_window2.png){width="600"}
 <figcaption align = "center"><em>Figure 2: Example of an order for a stack of images with a <b>repeat cycle</b> of 20 days and an <b>acquisition time window</b> for each image of 14 days.</em></figcaption>
 </figure>
 

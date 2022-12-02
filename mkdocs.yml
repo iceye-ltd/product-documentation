@@ -9,6 +9,7 @@ site_url: https://iceye-ltd.github.io/product-documentation
 
 nav:
     - Welcome: index.md
+    - Change Log: changes.md
     - The ICEYE Fleet: productguide/fleet.md
     - ICEYE Products: 
         - Product Types : productguide/products.md
@@ -19,25 +20,25 @@ nav:
     - Data Format Specification : 
         - SAR Data Formatting Options : productFormats/introduction.md
         - Packaging : productFormats/packaging.md
-        - Foundations : 
-            - Geospatial Considerations : productFormats/geospatialAccuracy.md
-            - Radiometric Considerations : productFormats/radiometric.md 
-            - Slant to Ground Conversion : productFormats/slantToGround.md
         - Image Products :
             - Single Look Complex Image : productFormats/slc.md
             - Amplitude Image : productFormats/grd.md
         - Metadata : productFormats/metadata.md
-        # - from the product guide :  productguide/dataformats.md
-    - What is SAR ? : 
-        - The Value Of SAR Imaging : OverviewOfSAR/overviewOfSAR.md
-        - A Simple Form Of RADAR Imaging : OverviewOfSAR/simpleFormOfImaging.md
-        - The Remarkable Story Of SAR : OverviewOfSAR/remarkableStory.md
-        - Range Resolution : OverviewOfSAR/rangeResolution.md
-        - The Beautiful Equations : OverviewOfSAR/beautifulEquations.md
-        - SAR Processing Overview : OverviewOfSAR/sarProcessing.md
-        - Separating Signals From Noise : OverviewOfSAR/noise.md
-        - The Innovation : OverviewOfSAR/theInnovation.md
-        - Terminology : glossary.md
+    - Foundations : 
+      - What is SAR ? : 
+          - The Value Of SAR Imaging : foundations/OverviewOfSAR/overviewOfSAR.md
+          - A Simple Form Of RADAR Imaging : foundations/OverviewOfSAR/simpleFormOfImaging.md
+          - The Remarkable Story Of SAR : foundations/OverviewOfSAR/remarkableStory.md
+          - Range Resolution : foundations/OverviewOfSAR/rangeResolution.md
+          - The Beautiful Equations : foundations/OverviewOfSAR/beautifulEquations.md
+          - SAR Processing Overview : foundations/OverviewOfSAR/sarProcessing.md
+          - Separating Signals From Noise : foundations/OverviewOfSAR/noise.md
+          - The Innovation : foundations/OverviewOfSAR/theInnovation.md
+          - Terminology : glossary.md
+      - Geospatial Considerations : foundations/geospatialAccuracy.md
+      - Radiometric Considerations : foundations/radiometric.md 
+      - Slant to Ground Conversion : foundations/slantToGround.md
+      - Validation : foundations/validation/geospatialValidation.md
     # - Exploiting SAR Products :
     #     - The Basics : 
     #     - Advanced Tips and Tricks :
