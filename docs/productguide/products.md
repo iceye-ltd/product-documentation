@@ -7,7 +7,7 @@ There are two basic forms of ICEYE images: *complex images* in the slant plane a
 
 !!! info
 
-    The section ["What is SAR?"](../OverviewOfSAR/overviewOfSAR.md) provides a review of the technologies mentioned here. 
+    The section ["What is SAR?"](../foundations/OverviewOfSAR/overviewOfSAR.md) provides a review of the technologies mentioned here. 
 ### Complex Images
 
 SAR complex images contain pixels that have both amplitude and phase values. They are produced at full resolution and are projected in the inclined direction of illumination, called the slant plane. Since complex images retain phase information, they can be used to produce numerous SAR products like coherent change images and precise surface motion measurements.
@@ -27,8 +27,7 @@ These are the familiar SAR gray-scale images with amplitude-only pixels. They ar
 ICEYE also produces a basic form of SAR data that contains the raw pulse data before image processing. This data contains phase information as a function of time during the imaging operation and so it is called *phase history data*. This product enables more flexible processing for advanced users who might have their own SAR processor, or who might even prefer to exploit the data before converting it into an image.  -->
 
 ## Types of SAR Collection
-Our first set of satellites operate in one of two primary imaging modes called Strip Mode and Spot Mode. These are available in both right and left-looking configurations. The design flexibility of our satellites allows their imaging modes to be continually evolved. We will be adding more modes, and more flexible illumination patterns, in future versions. A recent addition is Scan Mode, which is a wide-area imaging capability that uses electronic beam steering. A summary of the imaging modes is listed in [An Overview of SAR Imaging](/product-documentation/5.0/OverviewOfSAR/remarkableStory/#stripmap-and-spotlight-apertures).
-
+Our first set of satellites operate in one of two primary imaging modes called Strip Mode and Spot Mode. These are available in both right and left-looking configurations. The design flexibility of our satellites allows their imaging modes to be continually evolved. We will be adding more modes, and more flexible illumination patterns, in future versions. A recent addition is Scan Mode, which is a wide-area imaging capability that uses electronic beam steering. A summary of the imaging modes is listed in [An Overview of SAR Imaging](../foundations/OverviewOfSAR/remarkableStory.md#stripmap-and-spotlight-apertures).
 
 ### Strip Mode
 
@@ -42,7 +41,7 @@ ICEYE standard Strip products have a ground resolution of 3m in range and azimut
 
 ### Spot Mode
 ![placeholder](img/imagemode-graphic-spot.png){width="300" align=left}
-In Spot mode the radar beam is steered to illuminate a fixed point. This increases the illumination time and therefore increases the length of the synthetic aperture and improves azimuth resolution. ICEYE Generation2 satellites have a maximum 300 MHz pulse bandwidth in Spot Mode to achieve a 0.5m slant range resolution ([here](/product-documentation/productguide/OverviewOfSAR/rangeResolution/#slant-range-resolution-examples) is an explanation of where this comes from.). This will improve to 600 MHz for our Generation3 version. 
+In Spot mode the radar beam is steered to illuminate a fixed point. This increases the illumination time and therefore increases the length of the synthetic aperture and improves azimuth resolution. ICEYE Generation2 satellites have a maximum 300 MHz pulse bandwidth in Spot Mode to achieve a 0.5m slant range resolution ([here](../foundations/OverviewOfSAR/rangeResolution/#slant-range-resolution-examples) is an explanation of where this comes from.). This will improve to 600 MHz for our Generation3 version. 
 
 
 ICEYE's standard Spot collection covers an area of 5km x 5km with a 1 m ground resolution for multi-looked amplitude images. These are formed from 4 independent looks to suppress speckle and increase image quality.
