@@ -1,2 +1,4 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
+docs/foundations/img/explainingGeoErrors_ManimCE_v0.13.1.gif filter=lfs diff=lfs merge=lfs -text
+docs/foundations/OverviewOfSAR/img/front_graphic.jpg filter=lfs diff=lfs merge=lfs -text

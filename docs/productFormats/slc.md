@@ -12,7 +12,7 @@ As the name suggests, SLC images have only a single look. This means they retain
 
 ## Binary Representation
 
-SLC images are stored as binary matrices in an HDF5 file container[@hdf]. Real and imaginary components  are stored separately, using either signed 16 bit integers or IEEE-754 single precision 32-bit floating point format (the version used is annotated in the `sample_precision` metadata element).  It is assumed that all pixels are valid, unless marked with a NaN (Not a Number) value.  
+SLC images are stored as binary matrices in an HDF5 file container[@hdf]. Real and imaginary components  are stored separately, using either signed 16 bit integers or IEEE-754 single precision 32-bit floating point format (the version used is annotated in the `sample_precision` metadata element).  
 
 The structure of the binary data is shown in Figure 1. Each row of the matrix is a single range line (often called a *range profile* by RADAR engineers) of the image with increasing range preceding from lower indices to higher indices (left to right in Figure 1). Early row indices in the matrix correspond to early pulses and later rows correspond to later pulses (top to bottom in Figure 1). It is important to recognise that image viewing software needs to take into account the matrix configuration as viewing the matrix as it is stored may result in the image being reflected in either dimension depending on right/left looking and ascending/descending.
 
