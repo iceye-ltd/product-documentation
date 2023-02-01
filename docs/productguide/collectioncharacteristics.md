@@ -13,8 +13,8 @@ The following provides additional technical information on the performance of th
 | Radar Beams Used              |  1           | 1         | 1     | 1       | 4       | [Note 2](#notes-and-explanations)    |
 | Nominal swath width [km]      | 30           | 5         | 15    | 5       | 100     | [Note 3](#notes-and-explanations)    |
 | Nominal product length (Azimuth Direction) [km] | 50 | 5 | 15    | 5       | 100     | [Note 4](#notes-and-explanations)    |
-| Nominal collection duration [sec] | 10       | 10        | 10     | 10     | 15      |                                      |
-| Maximum collection duration [sec] | 35-75    | N/A       | N/A   | 75      | N/A     | [Note 5](#notes-and-explanations)    |
+| Nominal collection duration [sec] | 10       | 10        | 10     | 25     | 15      |                                      |
+| Maximum collection duration [sec] | 35-75    | N/A       | N/A   | 25      | 75     | [Note 5](#notes-and-explanations)    |
 | Maximum Scene Length [km]         | 500  | 5         | 15     | 5         | 500      | [Note 5](#notes-and-explanations)    |
 | Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ]  | -21.5 to -20 | -18 to -15 | -18 to -15 | -18 to -15 | -22.2 to -21.5 | [Note 6](#notes-and-explanations)    |
 | Azimuth Ambiguity Ratio [dB]  | -17          | -17       | -17    | -17       | -17     |                                      |
@@ -22,8 +22,8 @@ The following provides additional technical information on the performance of th
 | Geospatial Accuracy [m RMSE] | 6            | 6         | 6      | 6         | 15      |  [Note 14](#notes-and-explanations) |
 | ESA Copernicus Contributing Mission (CCM) Class[@copernicusClass] | VHR2 | VHR1 | VHR1 | VHR1 | HR1 |                     |
 | Polarization                  | VV           | VV        | VV     | VV        | VV      |                                      |
-| RNIIRS                        | 3.6          | 5.5       | 5.5    | 5.5       | 2.1     | [Note 8](#notes-and-explanations)    |
-| RGIQE [bits/$m^2$]               | 0.8          | 22        |  8.4     | 22        | 0.1     | [Note 9](#notes-and-explanations)    |
+| RNIIRS                        | 3.6          | 5.5       | 5.5    | 6.5       | 2.1     | [Note 8](#notes-and-explanations)    |
+| RGIQE [bits/$m^2$]               | 0.8          | 22        |  8.4     | 125        | 0.1     | [Note 9](#notes-and-explanations)    |
 | Performant Incidence Range [deg]  | 15-30    | 20-35     | 20-35  | 20-35     | 21-29   | [Note 12](#notes-and-explanations)   |
 | Time Dominant Incidence Range [deg] | 11-44  | 11-44     | 11-44 | 11-44     | N/A      | [Note 13](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 1 : ICEYE Collections Technical Summary</em></figcaption>
