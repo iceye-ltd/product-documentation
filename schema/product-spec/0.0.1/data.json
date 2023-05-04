@@ -1,0 +1,597 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sar.iceye.com/schema/product-spec/0.0.1/data.json",
+  "title": "Metadata for SAR data",
+  "description": "Auxiliary metadata for Synthetic Aperture Radar data products",
+  "type": "object",
+  "required": [
+    "looks",
+    "resolution",
+    "scene",
+    "type",
+    "orientation",
+    "file",
+    "sample",
+    "processing"
+  ],
+  "properties": {
+    "looks": {
+      "description": "Looks in range and azimuth",
+      "type": "object",
+      "required": [
+        "rg",
+        "az"
+      ],
+      "properties": {
+        "rg": {
+          "$ref": "#/$defs/look"
+        },
+        "az": {
+          "$ref": "#/$defs/look"
+        }
+      }
+    },
+    "resolution": {
+      "description": "Spatial resolution in range and azimuth relative to scene projection plane",
+      "$ref": "common.json#/$defs/range-azimuth",
+      "examples": [
+        {
+          "rg": 1,
+          "az": 0.25
+        }
+      ]
+    },
+    "scene": {
+      "description": "Image scene description",
+      "type": "object",
+      "required": [
+        "extent",
+        "projection",
+        "coordinate_system",
+        "incidence_angle",
+        "grazing_angle",
+        "squint_angle",
+        "azimuth_angle",
+        "layover_angle",
+        "shadow_angle"
+      ],
+      "properties": {
+        "extent": {
+          "description": "Data extent in range and azimuth (meters)",
+          "$ref": "common.json#/$defs/range-azimuth",
+          "examples": [
+            {
+              "rg": 5000,
+              "az": 5000
+            }
+          ]
+        },
+        "projection": {
+          "description": "Geometric projection",
+          "type": "object",
+          "required": [
+            "plane"
+          ],
+          "properties": {
+            "plane": {
+              "description": "Geometric range projection",
+              "enum": [
+                "slant",
+                "ground"
+              ],
+              "examples": [
+                "ground"
+              ]
+            },
+            "grsr": {
+              "description": "Ground range to slant range polynomial coefficients",
+              "$comment": "Only for ground projected products",
+              "$ref": "common.json#/$defs/poly-coeffs",
+              "examples": [
+                [
+                  682672.2183705687,
+                  0.6701996261152757,
+                  5.617751918321936e-07,
+                  -4.561005202702666e-13,
+                  2.90272459249768e-19
+                ]
+              ]
+            },
+            "slant_range_to_first_pixel": {
+              "deprecated": true
+            }
+          }
+        },
+        "coordinate_system": {
+          "description": "Coordinate reference system",
+          "type": "object",
+          "required": [
+            "datum",
+            "rpc"
+          ],
+          "properties": {
+            "datum": {
+              "description": "Geodetic datums for both horizontal and vertical planes",
+              "$comment": "GeoJSON defaults to WGS84 ellipsoid (EPSG:4326)",
+              "type": "object",
+              "required": [
+                "horizontal",
+                "vertical"
+              ],
+              "properties": {
+                "horizontal": {
+                  "description": "Horizontal coordinate reference system",
+                  "default": "EPSG:4326",
+                  "pattern": "EPSG:[0-9]+$",
+                  "examples": [
+                    "EPSG:4326"
+                  ]
+                },
+                "vertical": {
+                  "description": "Vertical datum that describes reference elevation",
+                  "default": "EPSG:7030",
+                  "pattern": "EPSG:[0-9]+$",
+                  "examples": [
+                    "EPSG:7030"
+                  ]
+                }
+              }
+            },
+            "rpc": {
+              "description": "Rational Polynomial Coeffiecients (RPC) http://geotiff.maptools.org/rpc_prop.html",
+              "type": "object",
+              "required": [
+                "line_off",
+                "samp_off",
+                "lat_off",
+                "long_off",
+                "height_off",
+                "line_scale",
+                "samp_scale",
+                "lat_scale",
+                "long_scale",
+                "height_scale",
+                "line_num_coeff",
+                "line_den_coeff",
+                "samp_num_coeff",
+                "samp_den_coeff"
+              ],
+              "properties": {
+                "line_off": {
+                  "type": "number",
+                  "examples": [
+                    11832.539232097815
+                  ]
+                },
+                "samp_off": {
+                  "type": "number",
+                  "examples": [
+                    11153.95480455941
+                  ]
+                },
+                "lat_off": {
+                  "$ref": "common.json#/$defs/lat"
+                },
+                "long_off": {
+                  "description": "Geodetic longitude scale",
+                  "$ref": "common.json#/$defs/lon"
+                },
+                "height_off": {
+                  "type": "number",
+                  "examples": [
+                    108.49307
+                  ]
+                },
+                "line_scale": {
+                  "description": "Line scale",
+                  "type": "number",
+                  "examples": [
+                    93160.20649621893
+                  ]
+                },
+                "samp_scale": {
+                  "description": "Sample scale",
+                  "type": "number",
+                  "examples": [
+                    60709.54295358568
+                  ]
+                },
+                "lat_scale": {
+                  "description": "Geodetic latitude scale",
+                  "type": "number",
+                  "examples": [
+                    0.19166665752733536
+                  ]
+                },
+                "long_scale": {
+                  "description": "Geodetic longitude scale",
+                  "type": "number",
+                  "examples": [
+                    0.2291666557391956
+                  ]
+                },
+                "height_scale": {
+                  "description": "Geodetic height scale",
+                  "type": "number",
+                  "examples": [
+                    325.50693
+                  ]
+                },
+                "line_num_coeff": {
+                  "description": "Line numerator coefficients",
+                  "$ref": "#/$defs/rpc-coeffs"
+                },
+                "line_den_coeff": {
+                  "description": "Line denominator coefficients",
+                  "$ref": "#/$defs/rpc-coeffs"
+                },
+                "samp_num_coeff": {
+                  "description": "Sample numerator coefficients",
+                  "$ref": "#/$defs/rpc-coeffs"
+                },
+                "samp_den_coeff": {
+                  "description": "Sample denominator coefficients",
+                  "$ref": "#/$defs/rpc-coeffs"
+                }
+              }
+            }
+          }
+        },
+        "incidence_angle": {
+          "description": "Incidence angles across the swath",
+          "type": "object",
+          "required": [
+            "near",
+            "centre",
+            "far",
+            "coefficients"
+          ],
+          "properties": {
+            "near": {
+              "description": "Near range incidence angle relative to the datum",
+              "$ref": "common.json#/$defs/degrees-acute",
+              "examples": [
+                42.083
+              ]
+            },
+            "centre": {
+              "description": "Centre range incidence angle relative to the datum",
+              "$ref": "common.json#/$defs/degrees-acute",
+              "examples": [
+                42.278
+              ]
+            },
+            "far": {
+              "description": "Far range incidence angle relative to the datum",
+              "$ref": "common.json#/$defs/degrees-acute",
+              "examples": [
+                42.472
+              ]
+            },
+            "coefficients": {
+              "description": "Coefficients to calculate incidence angles across the range",
+              "$ref": "common.json#/$defs/poly-coeffs",
+              "examples": [
+                [
+                  42.08247391070369,
+                  7.129736164399163e-05,
+                  -6.557348465842905e-11,
+                  3.4260649397821784e-17,
+                  2.445222651932152e-23
+                ]
+              ]
+            }
+          }
+        },
+        "grazing_angle": {
+          "description": "Grazing angles across the swath",
+          "type": "object",
+          "required": [
+            "near",
+            "centre",
+            "far"
+          ],
+          "properties": {
+            "near": {
+              "description": "Near range grazing angle relative to the datum",
+              "$ref": "common.json#/$defs/degrees-acute",
+              "examples": [
+                47.917
+              ]
+            },
+            "centre": {
+              "description": "Centre range grazing angle relative to the datum",
+              "$ref": "common.json#/$defs/degrees-acute",
+              "examples": [
+                47.722
+              ]
+            },
+            "far": {
+              "description": "Far range grazing angle relative to the datum",
+              "$ref": "common.json#/$defs/degrees-acute",
+              "examples": [
+                47.528
+              ]
+            }
+          }
+        },
+        "squint_angle": {
+          "description": "Squint angle at centre of swath",
+          "$ref": "common.json#/$defs/degrees-straight-signed",
+          "examples": [
+            15.528,
+            -10.32
+          ]
+        },
+        "azimuth_angle": {
+          "description": "Azimuth angle at centre of swath",
+          "$ref": "common.json#/$defs/degrees-unsigned",
+          "examples": [
+            15.528,
+            310.32
+          ]
+        },
+        "layover_angle": {
+          "description": "Layover angle at centre of swath",
+          "$ref": "common.json#/$defs/degrees-acute",
+          "examples": [
+            15.528
+          ]
+        },
+        "shadow_angle": {
+          "description": "Shadow angle at centre of swath",
+          "$ref": "common.json#/$defs/degrees-unsigned",
+          "examples": [
+            195.528,
+            130.32
+          ]
+        }
+      }
+    },
+    "orientation": {
+      "description": "Range-azimuth data can be aligned shadows-down or azimuth-down orientation. Shadows-down means increasing rows are increasing range and columns represent slow-time direction. Azimuth down is the opposite",
+      "enum": [
+        "shadows-down",
+        "azimuth-down",
+        "north-up"
+      ],
+      "examples": [
+        "shadows-down"
+      ]
+    },
+    "type": {
+      "description": "Product type",
+      "enum": [
+        "complex",
+        "amplitude"
+      ],
+      "examples": [
+        "amplitude"
+      ]
+    },
+    "file": {
+      "description": "Binary data file",
+      "type": "string",
+      "examples": [
+        "ICEYE_U4PRUY_20230324T021753_X20_SLF_AML.tif"
+      ]
+    },
+    "avg_scene_height": {
+      "deprecated": true
+    },
+    "azimuth_time_interval": {
+      "deprecated": true
+    },
+    "first_pixel_time": {
+      "deprecated": true
+    },
+    "geo_ref_system": {
+      "deprecated": true,
+      "$comment": "See datum field"
+    },
+    "sample": {
+      "description": "Sample metadata",
+      "type": "object",
+      "required": [
+        "size",
+        "spacing",
+        "precision"
+      ],
+      "properties": {
+        "size": {
+          "description": "Number of range and azimuth samples in binary data",
+          "$ref": "common.json#/$defs/range-azimuth",
+          "examples": [
+            {
+              "rg": 21976,
+              "az": 21019
+            }
+          ]
+        },
+        "spacing": {
+          "description": "Sample spacing in meters for range and azimuth dimensions",
+          "$ref": "common.json#/$defs/range-azimuth",
+          "examples": [
+            {
+              "rg": 0.25,
+              "az": 0.25
+            }
+          ]
+        },
+        "precision": {
+          "description": "Sample precision",
+          "enum": [
+            "u16",
+            "u32",
+            "u64",
+            "i16",
+            "i32",
+            "i64",
+            "f16",
+            "f32",
+            "f64",
+            "c32",
+            "c64",
+            "c128"
+          ],
+          "examples": [
+            "u16",
+            "u32",
+            "c64"
+          ]
+        }
+      }
+    },
+    "processing": {
+      "description": "Image formation related metadata",
+      "type": "object",
+      "required": [
+        "prf",
+        "bandwidth",
+        "window_function",
+        "start",
+        "end",
+        "version"
+      ],
+      "properties": {
+        "level": {
+          "description": "Processing level",
+          "$comment": "Replaced by data.type field",
+          "deprecated": true
+        },
+        "name": {
+          "description": "Product name",
+          "$comment": "Can be derived from file field",
+          "deprecated": true
+        },
+        "product_type": {
+          "$comment": "Can be derived from collection mode",
+          "deprecated": true
+        },
+        "prf": {
+          "description": "Pulse Repetition Frequency used for the processing (Hz), defines azimuth sample spacing in time (can be higher than acquisition in cases where the Doppler frequency needs to be unfolded due to high variation of Doppler centroid with range)",
+          "type": "number",
+          "minimum": 0,
+          "examples": [
+            71500.05
+          ]
+        },
+        "bandwidth": {
+          "description": "Chirp and doppler bandwidth used during processing (Hz)",
+          "$ref": "common.json#/$defs/range-azimuth",
+          "examples": [
+            {
+              "rg": 600000000,
+              "az": 61883.065
+            }
+          ]
+        },
+        "range_spread_comp_flag": {
+          "deprecated": true
+        },
+        "window_function": {
+          "description": "Windowing function used over frequencies",
+          "$ref": "common.json#/$defs/range-azimuth",
+          "examples": [
+            {
+              "rg": "TAYLOR_20_4",
+              "az": "TAYLOR_20_4"
+            }
+          ]
+        },
+        "start": {
+          "description": "Start date and time of image formation processor",
+          "$ref": "common.json#/$defs/date-time-utc",
+          "examples": [
+            "2023-03-24T08:32:48Z"
+          ]
+        },
+        "end": {
+          "description": "End date and time of image formation processor",
+          "$ref": "common.json#/$defs/date-time-utc",
+          "examples": [
+            "2023-03-24T08:33:48Z"
+          ]
+        },
+        "version": {
+          "description": "Version number of the processor used to generate the product",
+          "$ref": "common.json#/$defs/semver",
+          "examples": [
+            "1.8.5",
+            "1.8.5+b"
+          ]
+        }
+      }
+    },
+    "gcp": {
+      "deprecated": true
+    }
+  },
+  "$defs": {
+    "look": {
+      "description": "Multilooking metadata",
+      "type": "object",
+      "properties": {
+        "count": {
+          "description": "Number of looks",
+          "type": "number",
+          "examples": [
+            1,
+            4,
+            2.667
+          ]
+        },
+        "bandwidth": {
+          "description": "Bandwidth of each look",
+          "type": "number",
+          "examples": [
+            600000000,
+            600000000,
+            16798.205
+          ]
+        },
+        "overlap": {
+          "description": "Overlap of adjacent looks",
+          "type": "number",
+          "examples": [
+            1834.741
+          ]
+        }
+      }
+    },
+    "rpc-coeffs": {
+      "description": "Rational Polynomial Coefficients (polynomial degree is 19)",
+      "allOf": [
+        {
+          "$ref": "common.json#/$defs/poly-coeffs"
+        }
+      ],
+      "minItems": 20,
+      "maxItems": 20,
+      "examples": [
+        [
+          -0.544257009,
+          -154.314649,
+          1516.32691,
+          0.373946729,
+          -76.8021373,
+          92.2965612,
+          -907.348076,
+          -6.63225144,
+          1545.09956,
+          -0.0289343137,
+          -1.00721756,
+          0.103252082,
+          6.00954852,
+          -0.00502841043,
+          0.796555412,
+          -6.48772675,
+          0.0497007718,
+          -0.819520795,
+          0.0224104884,
+          -3.2028171e-05
+        ]
+      ]
+    }
+  }
+}
