@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sar.iceye.com/schema/product-spec/0.0.1/collection.json",
+  "title": "collect",
+  "description": "Collect",
+  "type": "object",
+  "$defs": {
+    "poly-coeffs": {
+      "description": "Polynomial coefficients (polynomial degree is N-1)",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 1
+    },
+    "number-array": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "number-matrix": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/number-array"
+      }
+    },
+    "3d-vector": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/number-array"
+        }
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "metres": {
+      "type": "number"
+    },
+    "metres-per-seconds": {
+      "type": "number"
+    },
+    "degrees": {
+      "description": "Full angle regardless of sign ranging from -360 to 360 degrees",
+      "type": "number",
+      "minimum": -360,
+      "maximum": 360,
+      "examples": [
+        220.2529,
+        -350.1699
+      ]
+    },
+    "degrees-signed": {
+      "description": "Full angle from -180 to 180 degrees",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees"
+        }
+      ],
+      "minimum": -180,
+      "maximum": 180,
+      "examples": [
+        120.2529,
+        -140.3207
+      ]
+    },
+    "degrees-unsigned": {
+      "description": "Full angle from 0 to 360 degrees",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees"
+        }
+      ],
+      "minimum": 0,
+      "maximum": 360,
+      "examples": [
+        20.2529,
+        350.1699
+      ]
+    },
+    "degrees-acute": {
+      "description": "Acute angle from 0 to 90 degrees",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees-unsigned"
+        }
+      ],
+      "minimum": 0,
+      "maximum": 90,
+      "examples": [
+        20.2458,
+        80.1699
+      ]
+    },
+    "degrees-straight": {
+      "description": "Straight angle from 0 to 180 degrees",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees-unsigned"
+        }
+      ],
+      "minimum": 0,
+      "maximum": 180,
+      "examples": [
+        20.2458,
+        160.1699
+      ]
+    },
+    "degrees-straight-signed": {
+      "description": "Straight angle from -90 to 90 degrees",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees-signed"
+        }
+      ],
+      "minimum": -90,
+      "maximum": 90,
+      "examples": [
+        -80.2458,
+        60.1699
+      ]
+    },
+    "lat": {
+      "description": "Latitude as decimal degree",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees-straight-signed"
+        }
+      ]
+    },
+    "lon": {
+      "description": "Longitude as decimal degree",
+      "allOf": [
+        {
+          "$ref": "#/$defs/degrees-signed"
+        }
+      ],
+      "examples": [
+        -124.9384,
+        161.7221
+      ]
+    },
+    "range-azimuth": {
+      "type": "object",
+      "required": [
+        "az",
+        "rg"
+      ],
+      "properties": {
+        "az": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "rg": {
+          "type": [
+            "number",
+            "string"
+          ]
+        }
+      }
+    },
+    "semver": {
+      "type": "string",
+      "pattern": "^(?P<major>0|[1-9]\\d*)\\.(?P<minor>0|[1-9]\\d*)\\.(?P<patch>0|[1-9]\\d*)(?:-(?P<prerelease>(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
+    },
+    "seconds": {
+      "type": "number"
+    },
+    "hertz": {
+      "type": "number",
+      "minimum": 0
+    },
+    "date-time-utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(\\+00:00|Z)$"
+    }
+  }
+}
