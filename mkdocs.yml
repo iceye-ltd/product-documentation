@@ -11,9 +11,9 @@ nav:
     - Welcome: index.md
     - Change Log: changes.md
     - The ICEYE Fleet: productguide/fleet.md
-    - ICEYE Products: 
-        - Product Types : productguide/products.md
-        - Collection Characteristics : productguide/collectioncharacteristics.md
+    - ICEYE SAR Imagery: 
+        - Types of SAR Collection : productguide/typesofsarcollection.md
+        - Types of SAR Data Products : productguide/sardataproducts.md
     - Ordering SAR imagery :
         - Ordering data: productguide/ordering.md
         - Support: productguide/support.md
