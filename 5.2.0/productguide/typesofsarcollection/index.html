@@ -1,0 +1,1742 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation related to ICEYE Products">
+      
+      
+      
+      
+        <link rel="canonical" href="https://iceye-ltd.github.io/product-documentation/5.2.0/productguide/typesofsarcollection/">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>Types of SAR Collection - ICEYE Product Documentation</title>
+      
+    
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Neuton";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-G92GBM9X22"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-G92GBM9X22",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G92GBM9X22"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="iceye" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#types-of-sar-collection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-header__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+      
+  <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ICEYE Product Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Types of SAR Collection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="iceye" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.iceye.com/" title="ICEYE Product Documentation" class="md-nav__button md-logo" aria-label="ICEYE Product Documentation" data-md-component="logo">
+      
+  <img src="../../assets/svg-iceye-logo-white.svg" alt="logo">
+
+    </a>
+    <!-- ICEYE Product Documentation -->
+    Table of Contents
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fleet/" class="md-nav__link">
+        The ICEYE Fleet
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          ICEYE SAR Imagery
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ICEYE SAR Imagery" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          ICEYE SAR Imagery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Types of SAR Collection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Types of SAR Collection
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="On This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#strip-imaging" class="md-nav__link">
+    Strip Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-imaging" class="md-nav__link">
+    Scan Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spotlight-modes" class="md-nav__link">
+    Spotlight Modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Spotlight Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spot-imaging" class="md-nav__link">
+    Spot Imaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spot-fine" class="md-nav__link">
+    Spot Fine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spot-extended-area" class="md-nav__link">
+    Spot Extended Area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dwell-imaging" class="md-nav__link">
+    Dwell Imaging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-explanations" class="md-nav__link">
+    Notes and Explanations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sardataproducts/" class="md-nav__link">
+        Types of SAR Data Products
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ordering SAR imagery
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ordering SAR imagery" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ordering SAR imagery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ordering/" class="md-nav__link">
+        Ordering data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Data Format Specification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Format Specification" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Data Format Specification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../productFormats/introduction/" class="md-nav__link">
+        SAR Data Formatting Options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../productFormats/packaging/" class="md-nav__link">
+        Packaging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Image Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Image Products" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Image Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../productFormats/slc/" class="md-nav__link">
+        Single Look Complex Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../productFormats/grd/" class="md-nav__link">
+        Amplitude Image
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../productFormats/metadata/" class="md-nav__link">
+        Metadata
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Foundations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Foundations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Foundations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          What is SAR ?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="What is SAR ?" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          What is SAR ?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/overviewOfSAR/" class="md-nav__link">
+        The Value Of SAR Imaging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/simpleFormOfImaging/" class="md-nav__link">
+        A Simple Form Of RADAR Imaging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/remarkableStory/" class="md-nav__link">
+        The Remarkable Story Of SAR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/rangeResolution/" class="md-nav__link">
+        Range Resolution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/beautifulEquations/" class="md-nav__link">
+        The Beautiful Equations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/sarProcessing/" class="md-nav__link">
+        SAR Processing Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/noise/" class="md-nav__link">
+        Separating Signals From Noise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/OverviewOfSAR/theInnovation/" class="md-nav__link">
+        The Innovation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/geospatialAccuracy/" class="md-nav__link">
+        Geospatial Considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/radiometric/" class="md-nav__link">
+        Radiometric Considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/slantToGround/" class="md-nav__link">
+        Slant to Ground Conversion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/validation/geospatialValidation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/archive/" class="md-nav__link">
+        ICEYE Archives
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comingsoon/" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="On This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#strip-imaging" class="md-nav__link">
+    Strip Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-imaging" class="md-nav__link">
+    Scan Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spotlight-modes" class="md-nav__link">
+    Spotlight Modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Spotlight Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spot-imaging" class="md-nav__link">
+    Spot Imaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spot-fine" class="md-nav__link">
+    Spot Fine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spot-extended-area" class="md-nav__link">
+    Spot Extended Area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dwell-imaging" class="md-nav__link">
+    Dwell Imaging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-explanations" class="md-nav__link">
+    Notes and Explanations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="types-of-sar-collection">TYPES OF SAR COLLECTION</h1>
+<p>ICEYE satellites operate in one of three primary imaging modes called Strip Mode, Spot Mode and Scan Mode. These are available in both right and left-looking configurations. The design flexibility of our satellites allows their imaging modes to be continually evolved. We will be adding more modes, and more flexible illumination patterns, in future versions. A recent addition is an augmentation to our spotlight collections that we are calling <strong>Dwell</strong> imaging. </p>
+<p>On this page we provide an overview of each of the imaging modes. How the collection modes are packaged and delivered is covered in the secion on SAR data products. Technical details on the content of the data products and how to exploit them is covered in the Technical information section. An explanation of SAR and how the imaging modes are collected can be found in <a href="../../foundations/OverviewOfSAR/remarkableStory/#stripmap-and-spotlight-apertures">An Overview of SAR Imaging</a>.</p>
+<h3 id="strip-imaging">Strip Imaging</h3>
+<p><img align="right" alt="placeholder" src="../img/imagemode-graphic-strip.png" width="300" />
+In this mode the ground swath is illuminated with a continuous sequence of pulses while the antenna beam is fixed in its orientation. The beam is pointed off to the side of the satellite at an angle broadside to the satellite flight path. This results in a long image strip parallel to the flight direction.</p>
+<p>ICEYE standard Strip products have a ground resolution of 3m in range and azimuth and cover an area of 30km (range) by 50km (azimuth). The strip length can be tailored up to a length of 840 km, in increments of 50 km.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Having a wide area and a moderate resolution, Strip images are useful for 'situational awareness'. They allow a user to quickly asses what is occurring in the region. They are particularly useful for tasks such as deforestation monitoring, or iceberg / glacier monitoring. They are also our 'first responder' product in times of natural disaster to assess the impact of a flood, earthquake or volcano.</p>
+</div>
+<h3 id="scan-imaging">Scan Imaging</h3>
+<p><img align="left" alt="placeholder" src="../img/imagemode-graphic-scan.png" width="300" />
+This mode uses each satellite's phased array antenna to create multiple beams in the elevation direction. This beam steering illuminates a wide area via multiple adjacent strips, but it means that points on the ground are not illuminated for as long as conventional Strip Mode. This reduces the resolution of a Scan product.</p>
+<p>In conventional scan mode, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. We compensate for this in our scan by also steering the radar beam sideways during each burst of radar pulses. This improves image quality. This technique is called Terrain Observation by Progressive Scans (TOPS or TOPSAR<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>). Our Scan product produces imagery that covers an area of 100km x 100km with a resolution better than 15m. The length of a Scan product can be increased to 840km.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Having the largest area coverage and a modest resolution, Scan images are highly suited to wide area surveillance and mapping projects. Being able to operate in all weather and lighting conditions, they provide an excellent opportunity to image the oceans and to detect ships and monitor shipping lanes.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Scan mode products are not radiometrically calibrated. Whilst imagery is visually and spatially exploitable, there may be slight errors when converting image sample values to a mean RADAR cross section number.</p>
+</div>
+<figure>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>STRIP</th>
+<th>SCAN</th>
+<th>COMMENTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Short Name</td>
+<td>'SM'</td>
+<td>'SC'</td>
+<td><a href="#notes-and-explanations">Note 1</a></td>
+</tr>
+<tr>
+<td>Nominal final product ground resolution [m]</td>
+<td>3</td>
+<td>15</td>
+<td></td>
+</tr>
+<tr>
+<td>Radar Beams Used</td>
+<td>1</td>
+<td>4</td>
+<td><a href="#notes-and-explanations">Note 2</a></td>
+</tr>
+<tr>
+<td>Nominal swath width [km]</td>
+<td>30</td>
+<td>100</td>
+<td><a href="#notes-and-explanations">Note 3</a></td>
+</tr>
+<tr>
+<td>Nominal product length (Azimuth Direction) [km]</td>
+<td>50</td>
+<td>100</td>
+<td><a href="#notes-and-explanations">Note 4</a></td>
+</tr>
+<tr>
+<td>Nominal collection duration [sec]</td>
+<td>10</td>
+<td>15</td>
+<td></td>
+</tr>
+<tr>
+<td>Maximum collection duration [sec]</td>
+<td>120</td>
+<td>120</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Maximum Scene Length [km]</td>
+<td>840</td>
+<td>840</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Noise Equivalent Sigma-Zero [ dBm<sup>2</sup>/m<sup>2</sup> ]</td>
+<td>-21.5 to -20</td>
+<td>-22.2 to -21.5</td>
+<td><a href="#notes-and-explanations">Note 6</a></td>
+</tr>
+<tr>
+<td>Azimuth Ambiguity Ratio [dB]</td>
+<td>-17</td>
+<td>-17</td>
+<td></td>
+</tr>
+<tr>
+<td>Range Ambiguity Ratio [dB]</td>
+<td>&lt;-20</td>
+<td>&lt;-20</td>
+<td></td>
+</tr>
+<tr>
+<td>Geospatial Accuracy [m RMSE]</td>
+<td>6</td>
+<td>15</td>
+<td><a href="#notes-and-explanations">Note 14</a></td>
+</tr>
+<tr>
+<td>ESA Copernicus Contributing Mission (CCM) Class[<sup>2][</sup>3][<sup>4][</sup>5]</td>
+<td>VHR2</td>
+<td>VHR2</td>
+<td></td>
+</tr>
+<tr>
+<td>Polarization</td>
+<td>VV</td>
+<td>VV</td>
+<td></td>
+</tr>
+<tr>
+<td>RNIIRS</td>
+<td>3.6</td>
+<td>2.1</td>
+<td><a href="#notes-and-explanations">Note 8</a></td>
+</tr>
+<tr>
+<td>RGIQE [bits/<span class="arithmatex">\(m^2\)</span>]</td>
+<td>0.8</td>
+<td>0.1</td>
+<td><a href="#notes-and-explanations">Note 9</a></td>
+</tr>
+<tr>
+<td>Performant Incidence Range [deg]</td>
+<td>15-35</td>
+<td>21-29</td>
+<td><a href="#notes-and-explanations">Note 12</a></td>
+</tr>
+<tr>
+<td>Time Dominant Incidence Range [deg]</td>
+<td>5-45</td>
+<td>N/A</td>
+<td><a href="#notes-and-explanations">Note 13</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption align="center"><em>Table 1 : ICEYE Strip and Scan Imaging Summary</em></figcaption>
+</figure>
+<h2 id="spotlight-modes">Spotlight Modes</h2>
+<h3 id="spot-imaging">Spot Imaging</h3>
+<p><img align="right" alt="placeholder" src="../img/imagemode-graphic-spot.png" width="300" />
+In Spot mode the radar beam is steered to illuminate a fixed point. This increases the illumination time and therefore increases the length of the synthetic aperture and improves azimuth resolution. ICEYE satellites have a maximum 600 MHz pulse bandwidth which can achieve a 0.25m slant range resolution (<a href="../foundations/OverviewOfSAR/rangeResolution/#slant-range-resolution-examples">here</a> is an explanation of where this comes from.). </p>
+<p>ICEYE's standard Spot collection  uses a 300 MHz transmit bandwidth and covers an area of 5km x 5km. This produces an image with a 1 m ground resolution for multi-looked amplitude images. These are formed from 4 independent looks to suppress speckle and increase image quality.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Spot images are useful for more detailed investigation of an area. They are used primarily to <strong>discriminate</strong> between different types of object such as boats or ships, different aircraft, or different types of building or infrastructure. The additional resolution also helps with coherence analysis techniques such as INSAR.</p>
+</div>
+<h3 id="spot-fine">Spot Fine</h3>
+<!---
+<span style="color:darkred">[TODO] add spot fine imaging graphic here </span>.
+-->
+
+<p><em>Spot Fine</em> is the constellation's finest resolution imaging mode using a 600 MHz transmit bandwith (0.25 m slant range resolution). It operates the same way as Spot mode, by pointing the RADAR beam at a single location for an extended amount of time. Each Spot Fine collection has 5 indepent azimith looks and takes around 15 seconds to collect. </p>
+<figure>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>SPOT</th>
+<th>SPOT FINE</th>
+<th>COMMENTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Short Name</td>
+<td>'SLH'</td>
+<td>'SLF'</td>
+<td><a href="#notes-and-explanations">Note 1</a></td>
+</tr>
+<tr>
+<td>Nominal final product ground resolution [m]</td>
+<td>1</td>
+<td>0.5</td>
+<td></td>
+</tr>
+<tr>
+<td>Radar Beams Used</td>
+<td>1</td>
+<td>1</td>
+<td><a href="#notes-and-explanations">Note 2</a></td>
+</tr>
+<tr>
+<td>Nominal swath width [km]</td>
+<td>5</td>
+<td>5</td>
+<td><a href="#notes-and-explanations">Note 3</a></td>
+</tr>
+<tr>
+<td>Nominal product length (Azimuth Direction) [km]</td>
+<td>5</td>
+<td>5</td>
+<td><a href="#notes-and-explanations">Note 4</a></td>
+</tr>
+<tr>
+<td>Nominal collection duration [sec]</td>
+<td>10</td>
+<td>15</td>
+<td></td>
+</tr>
+<tr>
+<td>Maximum collection duration [sec]</td>
+<td>N/A</td>
+<td>N/A</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Maximum Scene Length [km]</td>
+<td>5</td>
+<td>5</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Noise Equivalent Sigma-Zero [ dBm<sup>2</sup>/m<sup>2</sup> ]</td>
+<td>-18 to -15</td>
+<td>-15 to -11</td>
+<td><a href="#notes-and-explanations">Note 6</a></td>
+</tr>
+<tr>
+<td>Azimuth Ambiguity Ratio [dB]</td>
+<td>-17</td>
+<td>-17</td>
+<td></td>
+</tr>
+<tr>
+<td>Range Ambiguity Ratio [dB]</td>
+<td>&lt;-20</td>
+<td>&lt;-20</td>
+<td></td>
+</tr>
+<tr>
+<td>Geospatial Accuracy [m RMSE]</td>
+<td>6</td>
+<td>6</td>
+<td><a href="#notes-and-explanations">Note 14</a></td>
+</tr>
+<tr>
+<td>ESA Copernicus Contributing Mission (CCM) Class[<sup>2][</sup>3][<sup>4][</sup>5]</td>
+<td>VHR1</td>
+<td>VHR1</td>
+<td></td>
+</tr>
+<tr>
+<td>Polarization</td>
+<td>VV</td>
+<td>VV</td>
+<td></td>
+</tr>
+<tr>
+<td>RNIIRS</td>
+<td>5.5</td>
+<td>6.3</td>
+<td><a href="#notes-and-explanations">Note 8</a></td>
+</tr>
+<tr>
+<td>RGIQE [bits/<span class="arithmatex">\(m^2\)</span>]</td>
+<td>22</td>
+<td>83</td>
+<td><a href="#notes-and-explanations">Note 9</a></td>
+</tr>
+<tr>
+<td>Performant Incidence Range [deg]</td>
+<td>20-35</td>
+<td>20-35</td>
+<td><a href="#notes-and-explanations">Note 12</a></td>
+</tr>
+<tr>
+<td>Time Dominant Incidence Range [deg]</td>
+<td>11-44</td>
+<td>11-44</td>
+<td><a href="#notes-and-explanations">Note 13</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption align="center"><em>Table 2 : ICEYE Spot and Spot Fine Summary</em></figcaption>
+</figure>
+<h3 id="spot-extended-area">Spot Extended Area</h3>
+<!---
+<span style="color:darkred">[TODO] add spot extended area imaging graphic here </span>.
+-->
+
+<p>In Spotlight Extended Area (SLEA) mode we take a spotlight image by pointing the satellite at a location farther away, instead of at a point on the ground. The spot is seen to 'slide' over the ground which is why SLEA is also known as Sliding Spot mode. This means that more area is imaged than in standard Spot mode, but also each pixel in the scene is now no longer illuminated over the same range of angles. This implies a reduced resolution, but we can recover that by starting the spotlight operation earlier and finishing later.</p>
+<p>Within the covered area of 15km x 15km we achieve a 1 m ground resolution for multi-looked amplitude images. In comparison to the Spot mode we trade off a number of looks for extra area covered in SLEA. The Spot mode has 4 looks while SLEA has 1-2 looks instead. Due to the smaller number of looks the speckle noise in the imagery is slightly higher.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The coverage of SLEA is a really nice choice because we can get a nine times greater coverage and the same ground resolution as with standard Spot mode. The SLEA mode can also be seen as big improvement over the Strip mode while still covering a quite large area of interest.</p>
+</div>
+<p></span>.</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>SPOT EXTENDED AREA</th>
+<th>COMMENTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Short Name</td>
+<td>'SLEA'</td>
+<td><a href="#notes-and-explanations">Note 1</a></td>
+</tr>
+<tr>
+<td>Nominal final product ground resolution [m]</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Radar Beams Used</td>
+<td>1</td>
+<td><a href="#notes-and-explanations">Note 2</a></td>
+</tr>
+<tr>
+<td>Nominal swath width [km]</td>
+<td>15</td>
+<td><a href="#notes-and-explanations">Note 3</a></td>
+</tr>
+<tr>
+<td>Nominal product length (Azimuth Direction) [km]</td>
+<td>15</td>
+<td><a href="#notes-and-explanations">Note 4</a></td>
+</tr>
+<tr>
+<td>Nominal collection duration [sec]</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>Maximum collection duration [sec]</td>
+<td>N/A</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Maximum Scene Length [km]</td>
+<td>15</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Noise Equivalent Sigma-Zero [ dBm<sup>2</sup>/m<sup>2</sup> ]</td>
+<td>-18 to -15</td>
+<td><a href="#notes-and-explanations">Note 6</a></td>
+</tr>
+<tr>
+<td>Azimuth Ambiguity Ratio [dB]</td>
+<td>-17</td>
+<td></td>
+</tr>
+<tr>
+<td>Range Ambiguity Ratio [dB]</td>
+<td>&lt;-20</td>
+<td></td>
+</tr>
+<tr>
+<td>Geospatial Accuracy [m RMSE]</td>
+<td>6</td>
+<td><a href="#notes-and-explanations">Note 14</a></td>
+</tr>
+<tr>
+<td>ESA Copernicus Contributing Mission (CCM) Class[<sup>2][</sup>3][<sup>4][</sup>5]</td>
+<td>VHR1</td>
+<td></td>
+</tr>
+<tr>
+<td>Polarization</td>
+<td>VV</td>
+<td></td>
+</tr>
+<tr>
+<td>RNIIRS</td>
+<td>5.5</td>
+<td><a href="#notes-and-explanations">Note 8</a></td>
+</tr>
+<tr>
+<td>RGIQE [bits/<span class="arithmatex">\(m^2\)</span>]</td>
+<td>8.4</td>
+<td><a href="#notes-and-explanations">Note 9</a></td>
+</tr>
+<tr>
+<td>Performant Incidence Range [deg]</td>
+<td>20-35</td>
+<td><a href="#notes-and-explanations">Note 12</a></td>
+</tr>
+<tr>
+<td>Time Dominant Incidence Range [deg]</td>
+<td>11-44</td>
+<td><a href="#notes-and-explanations">Note 13</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption align="center"><em>Table 3 : ICEYE Spot Extended Area Imaging Summary</em></figcaption>
+</figure>
+<h3 id="dwell-imaging">Dwell Imaging</h3>
+<!---
+<span style="color:darkred">[TODO] add dwell imaging graphic here </span>.
+-->
+
+<p>ICEYE's Dwell collection mode is a very long spotlight mode SAR collection. The techinique is not so easy to achieve with larger satllites, but the smaller mass and antenna size of ICEYE satellites allows them to stare at the same point for as long as 25 seconds. Applying conventional image formation techniques to this type of SAR collection would provide a very fine azimuth resolution, which when combined with a standard range resolution would make a SAR image product that is challenging to exploit by human analysts. </p>
+<p>The collection does however contain significantly more information than a standard spotlight mode SAR image and so ICEYE has developed two additional image products, <em>CSI</em> and <em>video</em>, in addition to the standard amplitude and complex image products. These products are discussed more in <a href="../sardataproducts/">'Types of SAR Data Products'</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dwell imaging is a good collection strategy for getting the most information from complex scenes, such as human objects in forested areas or moving objects such as ships.</p>
+</div>
+<figure>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>SPOT EXTENDED DWELL</th>
+<th>COMMENTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Short Name</td>
+<td>'DWELL'</td>
+<td><a href="#notes-and-explanations">Note 1</a></td>
+</tr>
+<tr>
+<td>Nominal final product ground resolution [m]</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Radar Beams Used</td>
+<td>1</td>
+<td><a href="#notes-and-explanations">Note 2</a></td>
+</tr>
+<tr>
+<td>Nominal swath width [km]</td>
+<td>5</td>
+<td><a href="#notes-and-explanations">Note 3</a></td>
+</tr>
+<tr>
+<td>Nominal product length (Azimuth Direction) [km]</td>
+<td>5</td>
+<td><a href="#notes-and-explanations">Note 4</a></td>
+</tr>
+<tr>
+<td>Nominal collection duration [sec]</td>
+<td>25</td>
+<td></td>
+</tr>
+<tr>
+<td>Maximum collection duration [sec]</td>
+<td>30</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Maximum Scene Length [km]</td>
+<td>5</td>
+<td><a href="#notes-and-explanations">Note 5</a></td>
+</tr>
+<tr>
+<td>Noise Equivalent Sigma-Zero [ dBm<sup>2</sup>/m<sup>2</sup> ]</td>
+<td>-18 to -15</td>
+<td><a href="#notes-and-explanations">Note 6</a></td>
+</tr>
+<tr>
+<td>Azimuth Ambiguity Ratio [dB]</td>
+<td>-17</td>
+<td></td>
+</tr>
+<tr>
+<td>Range Ambiguity Ratio [dB]</td>
+<td>&lt;-20</td>
+<td></td>
+</tr>
+<tr>
+<td>Geospatial Accuracy [m RMSE]</td>
+<td>6</td>
+<td><a href="#notes-and-explanations">Note 14</a></td>
+</tr>
+<tr>
+<td>ESA Copernicus Contributing Mission (CCM) Class[<sup>2][</sup>3][<sup>4][</sup>5]</td>
+<td>VHR1</td>
+<td></td>
+</tr>
+<tr>
+<td>Polarization</td>
+<td>VV</td>
+<td></td>
+</tr>
+<tr>
+<td>RNIIRS</td>
+<td>6.5</td>
+<td><a href="#notes-and-explanations">Note 8</a></td>
+</tr>
+<tr>
+<td>RGIQE [bits/<span class="arithmatex">\(m^2\)</span>]</td>
+<td>125</td>
+<td><a href="#notes-and-explanations">Note 9</a></td>
+</tr>
+<tr>
+<td>Performant Incidence Range [deg]</td>
+<td>20-35</td>
+<td><a href="#notes-and-explanations">Note 12</a></td>
+</tr>
+<tr>
+<td>Time Dominant Incidence Range [deg]</td>
+<td>11-44</td>
+<td><a href="#notes-and-explanations">Note 13</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption align="center"><em>Table 4 : ICEYE Dwell Imaging Summary</em></figcaption>
+</figure>
+<hr />
+<h2 id="notes-and-explanations">Notes and Explanations</h2>
+<ol>
+<li><strong>Short Name:</strong> For example, Strip mode has 'SM' : ICEYE_X7_GRD_<strong>SM</strong>_36535_20201020T175609</li>
+<li><strong>Radar Beams:</strong> The current generation of ICEYE satellites use electronically steered elements to control multiple radar beams. Usually this is only one beam but Scan products use multiple beams to image different ranges (at the cost of reduced resolution) </li>
+<li><strong>Nominal Swath Width:</strong> The actual image size will be slightly larger than this to guarantee that the tasked area is covered.</li>
+<li><strong>Nominal Swath Length:</strong> The actual image length may be slightly larger to guarantee that the tasked area is covered. The maximum value can vary from satellite to satellite due to power/data/thermal limitations.</li>
+<li><strong>Maximum Collection Duration/Length:</strong> Spot images do not have a maximum collection duration as they image for the required amount of time to obtain a tasked azimuth resolution. For Strip and Scan modes the maximum collection duration (and therefore the maximum image length) is limited by the amount of on-board memory storage or satellite thermal limitations. As different incidence angles have different slant range resolutions in order to provide the same ground range resolution, then the maximum collection duration is also a function of incidence angle. </li>
+<li><strong>NESZ:</strong> The noise equivalent sigma zero values are taken at scene center for near and far range extents.</li>
+<li><strong>Slant Range Resolution:</strong> For Strip mode the transmitted bandwidth is varied to make sure that the resolution on the ground remains the same. For Spot mode the maximum bandwidth is transmitted at all times. This means that the slant resolution for Spot images is constant and the ground resolution changes with indidence angle.</li>
+<li><strong>RNIIRS:</strong> Radar National Imagery Interpretability Rating Scale is a subjective assessment of Radar Image Quality used primarily by military analysts. The scale is from 0 ("<em>interpretability of the imagery is precluded by obscuration, degradation, or very poor resolution</em>") to the highest quality figure of merit, 10 [^6].</li>
+<li>
+<p><strong>RGIQE:</strong> This is the Radar General Image Quality Equation. It is an adaptation of the concept of a General Image Quality Equation [^7] Developed by NGA . Unlike the RNIIRS scale which is a largely subjective assessment of image quality, the RGIQE uses maximum channel capacity (measured in bits of information) as a figure of merit. From the Shannon-Hartley Theorem [^8] the maximum information that can be carried in a signal (conventionally called a channel due to the origins in communications) is given by :</p>
+<div class="arithmatex">\[ C = B \log_2\left(1+\frac{S}{N}\right) \]</div>
+<p>Where <span class="arithmatex">\(C\)</span> is measured in bits per second, <span class="arithmatex">\(B\)</span> is the bandwidth of the system and <span class="arithmatex">\(\frac{S}{N}\)</span> is the signal to noise ratio.
+Recognising that a resolution cell in a SAR image is ultimately defined in range by the transmitted bandwidth and in azimuth by the Doppler bandwidth, a measure of the maximum information content of a resolution cell in bits/<span class="arithmatex">\(m^2\)</span> can be formulated :</p>
+<div class="arithmatex">\[ I = B_{az} B_{R_{ground}} \log_2\left(1 + \frac{S}{N}\right) \]</div>
+<p>Where <span class="arithmatex">\(I\)</span> is the information content measured in bits/<span class="arithmatex">\(m^2\)</span>, <span class="arithmatex">\(B_{az}\)</span> is the Doppler bandwidth used to form the azimuth extent of a pixel and <span class="arithmatex">\(B_{R_{ground}}\)</span> is the range bandwidth in the ground plane used to form the range extent of a pixel. The noise in this case is made up from all the  noise elements that contribute to reduced image quality in the final image (Thermal noise, quantization noise, sidelobes, ambiguities). In this scale the higher the figure then the more 'information' is available for exploitation within the pixel.</p>
+</li>
+<li>
+<p><strong>Complex Dynamic Range:</strong> A complex number with 16bit I and 16bit Q values. 32 bit float values can be provided by request.</p>
+</li>
+<li><strong>Amplitude Dynamic Range:</strong> Stored as an unsigned 16 bit integer. 32 bit float values can be provided by request.</li>
+<li><strong>Performant Incidence Range:</strong> This is the nominal or standard range of incidence angles that the ICEYE Fleet operates over. The parameters in these tables are correct within this range of angles.</li>
+<li><strong>Time  Dominant  Incidence Range:</strong> Being quite small and agile, and having an electronically steered antenna, ICEYE satellites can collect radar imagery from a wide range of angles. Outside of the <em>Performant Incidence Range</em>, SAR image quality may be degraded. However in some situations it may be more important to obtain a SAR image quickly rather than wait for an opportunity to image the location with the performant range of angles. For this reason ICEYE offers time dominant tasking as either a Tactical or a Custom order.</li>
+<li><strong>Geospatial Accuracy:</strong> Each satellite in the ICEYE fleet is periodically evaluated against ground based calibration targets to obtain the geospatial accuracy of the system. This process involves measuring the location of each target in the SAR imagery after the image has been terrain corrected <a href="../../foundations/geospatialAccuracy/#elevation-models">(see here for why this step is essential)</a> and comparing the location to the known <strong>ground truth</strong>. Each calibration target will have its own slightly different error. The <em>RMSE</em> is the root mean square error of all the measured calibration points from all the satellites.</li>
+</ol>
+<h2 id="references">References</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Claude E Shannon. Communication in the presence of noise. <em>Proceedings of the IEEE</em>, 72(9):1192–1201, 1984.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../fleet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The ICEYE Fleet" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              The ICEYE Fleet
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../sardataproducts/" class="md-footer__link md-footer__link--next" aria-label="Next: Types of SAR Data Products" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Types of SAR Data Products
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2022 - ICEYE
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+          and
+          <a href="https://www.manim.community" target="_blank" rel="noopener">
+            Manim
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/iceyefi" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.youtube.com/ICEYEcom" target="_blank" rel="noopener" title="www.youtube.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/iceye" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/company/iceye" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="http://iceye.com" target="_blank" rel="noopener" title="iceye.com" class="md-footer-social__link">
+        <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1294 518" style="enable-background:new 0 0 1294 518;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g>
+	<path class="st0" d="M162.6,123.1v277.8h-54.1V123.1H162.6z"/>
+	<path class="st0" d="M828.4,274L733,123.2h64.1l59.6,96.6l59.6-96.6h64.1L882.5,274v127h-54.1V274L828.4,274z"/>
+</g>
+<path class="st0" d="M367.3,352.1c-33.4-12.1-60.6-42.4-60.6-89c0-51.2,36.2-97,92-97c6.4,0,21.7,1,38.6,9.3l18.2-46
+	c-21.4-9.5-41.2-12.4-58.1-12.4c-39.6,0-74.1,10.4-102,36.7c-23.7,22.1-44.6,58.3-44.6,108.7c0,40.8,12.5,75.4,44.6,106.2
+	c14.2,13.5,30.9,24.9,52.8,31.8L367.3,352.1z"/>
+<polygon class="st0" points="1185.2,354.4 1107.1,354.4 1107.1,278.5 1163.6,278.5 1182.1,231.9 1107.1,231.9 1107.1,169.8 
+	1167,169.8 1185.5,123.1 1052.9,123.1 1052.9,401 1166.8,401 "/>
+<polygon class="st0" points="666.2,354.4 591.5,354.4 591.5,278.5 644.5,278.5 663,231.9 591.5,231.9 591.5,169.8 647.9,169.8 
+	666.4,123.1 537.4,123.1 537.4,401 647.7,401 "/>
+</svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
