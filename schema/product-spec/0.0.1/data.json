@@ -333,9 +333,10 @@
         },
         "layover_angle": {
           "description": "Layover angle at centre of swath",
-          "$ref": "common.json#/$defs/degrees-acute",
+          "$ref": "common.json#/$defs/degrees-unsigned",
           "examples": [
-            15.528
+            15.528,
+            310.32
           ]
         },
         "shadow_angle": {
