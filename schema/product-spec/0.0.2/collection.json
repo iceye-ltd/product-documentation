@@ -1,0 +1,296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sar.iceye.com/schema/product-spec/0.0.2/collection.json",
+  "title": "collection",
+  "description": "Collection Metadata",
+  "type": "object",
+  "required": [
+    "id",
+    "mode",
+    "start",
+    "end",
+    "look_angle",
+    "look_side",
+    "platform",
+    "prf",
+    "range_sampling_rate",
+    "azimuth_time_interval",
+    "chirp_bandwidth",
+    "chirp_duration",
+    "carrier_frequency",
+    "polarization",
+    "calibration_factor",
+    "orbit",
+    "doppler_parameters"
+  ],
+  "properties": {
+    "id": {
+      "description": "Collection identifier",
+      "type": "number",
+      "examples": [
+        2004096
+      ]
+    },
+    "mode": {
+      "description": "Radar mode used for this collect",
+      "enum": [
+        "spot",
+        "strip",
+        "scan"
+      ],
+      "examples": [
+        "spot"
+      ]
+    },
+    "start": {
+      "description": "Collection start date and time (ISO 8601)",
+      "$ref": "common.json#/$defs/date-time-utc",
+      "examples": [
+        "2023-03-24T02:18:06.996245Z"
+      ]
+    },
+    "end": {
+      "description": "Collection end date and time (ISO 8601)",
+      "allOf": [
+        {
+          "$ref": "common.json#/$defs/date-time-utc"
+        }
+      ],
+      "examples": [
+        "2023-03-24T02:18:06.996245Z"
+      ]
+    },
+    "look_angle": {
+      "description": "Angle between the nadir - platform - target",
+      "$ref": "common.json#/$defs/degrees-straight-signed",
+      "examples": [
+        23.5,
+        -25.5
+      ]
+    },
+    "look_side": {
+      "description": "Look side of the collect",
+      "enum": [
+        "left",
+        "right"
+      ],
+      "examples": [
+        "left"
+      ]
+    },
+    "platform": {
+      "description": "Platform name",
+      "type": "string",
+      "examples": [
+        "ICEYE-X2",
+        "ICEYE-X123"
+      ]
+    },
+    "prf": {
+      "description": "Pulse repetition frequency used for this collect",
+      "$ref": "common.json#/$defs/hertz",
+      "examples": [
+        4823.00343
+      ]
+    },
+    "range_sampling_rate": {
+      "description": "Sampling rate used for digital sampling, defines range sample spacing in time",
+      "$ref": "common.json#/$defs/hertz",
+      "examples": [
+        157500000
+      ]
+    },
+    "azimuth_time_interval": {
+      "description": "Time interval between azimuth samples in the SLC product. (=1/processing_prf)",
+      "$ref": "common.json#/$defs/seconds",
+      "examples": [
+        0.000207
+      ]
+    },
+    "chirp_bandwidth": {
+      "description": "Bandwidth used for radar pulse (defines achievable radar range resolution)",
+      "$ref": "common.json#/$defs/hertz",
+      "examples": [
+        134000000
+      ]
+    },
+    "chirp_duration": {
+      "description": "Duration of chirp",
+      "$ref": "common.json#/$defs/seconds",
+      "examples": [
+        4.1473e-05
+      ]
+    },
+    "carrier_frequency": {
+      "description": "Carrier frequency of the radar system",
+      "$ref": "common.json#/$defs/hertz",
+      "examples": [
+        9650000000
+      ]
+    },
+    "polarization": {
+      "description": "Electromagnetic polarization",
+      "type": "array",
+      "items": {
+        "description": "Transmit and receive polarization",
+        "enum": [
+          "HH",
+          "HV",
+          "VH",
+          "VV"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "examples": [
+        [
+          "VV"
+        ],
+        [
+          "HV",
+          "VH"
+        ],
+        [
+          "HH",
+          "HV",
+          "VH",
+          "VV"
+        ]
+      ]
+    },
+    "calibration_factor": {
+      "description": "Factor to be applied to calibrate detected products to absolute brightness intensity",
+      "$comment": "Shall we put the unti here?",
+      "type": "number",
+      "examples": [
+        1.2341123e-05
+      ]
+    },
+    "orbit": {
+      "description": "Platform's orbit parameters",
+      "type": "object",
+      "required": [
+        "coordinates_system",
+        "heading",
+        "direction",
+        "precision",
+        "states"
+      ],
+      "properties": {
+        "coordinates_system": {
+          "description": "Coordinates system",
+          "enum": [
+            "ecef",
+            "eci"
+          ],
+          "examples": [
+            "ecef"
+          ]
+        },
+        "heading": {
+          "description": "Satellite heading at centre of imaging operation",
+          "$ref": "common.json#/$defs/degrees-unsigned",
+          "example": [
+            64.5
+          ]
+        },
+        "direction": {
+          "description": "Orbital node during collect",
+          "enum": [
+            "ASCENDING",
+            "DESCENDING"
+          ],
+          "examples": [
+            "ASCENDING"
+          ]
+        },
+        "precision": {
+          "description": "PREDICTED (based on orbit propagation model ) RAPID (uses onboard GPS data ) PRECISE (corrections applied after GPS data received in ground using high precision orbit propagator (eg ODTK) SCIENTIFIC (Uses precise ground-based measurements together with all above to post-fix orbit to best possible)",
+          "enum": [
+            "predicted",
+            "rapid",
+            "precise",
+            "scientific"
+          ],
+          "examples": [
+            "precise"
+          ]
+        },
+        "states": {
+          "description": "State vectors Array",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "time",
+              "position",
+              "velocity"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "time": {
+                "description": "State date-time (ISO 8601)",
+                "$ref": "common.json#/$defs/date-time-utc"
+              },
+              "position": {
+                "description": "State's position vector",
+                "type": "array",
+                "items": {
+                  "$ref": "common.json#/$defs/metres"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "velocity": {
+                "description": "State's velocity vector",
+                "type": "array",
+                "items": {
+                  "$ref": "common.json#/$defs/metres-per-seconds"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    "doppler_parameters": {
+      "description": "Doppler parameters",
+      "type": "object",
+      "required": [
+        "centroid_estimates",
+        "rate_coeffs"
+      ],
+      "properties": {
+        "centroid_estimates": {
+          "description": "Doppler centroid estimates",
+          "type": "array",
+          "items": {
+            "description": "Doppler centroid coefficient block",
+            "type": "object",
+            "required": [
+              "time",
+              "coeffs"
+            ],
+            "properties": {
+              "time": {
+                "description": "Datetime for each doppler centroid estimate (ISO 8601)",
+                "$ref": "common.json#/$defs/date-time-utc"
+              },
+              "coeffs": {
+                "description": "Doppler centroid coefficient",
+                "$ref": "common.json#/$defs/poly-coeffs"
+              }
+            }
+          }
+        },
+        "rate_coeffs": {
+          "description": "Coefficients of doppler rate polynomial as a function of range time. Stored as a vector with size corresponding to the order of the doppler rate polynomial",
+          "$ref": "common.json#/$defs/poly-coeffs"
+        }
+      }
+    }
+  }
+}
