@@ -42,10 +42,10 @@
           "$ref": "common.json#/$defs/semver"
         },
         "data": {
-          "$ref": "https://sar.iceye.com/schema/product-spec/0.0.1/data.json"
+          "$ref": "https://sar.iceye.com/schema/product-spec/0.0.2/data.json"
         },
         "collection": {
-          "$ref": "https://sar.iceye.com/schema/product-spec/0.0.1/collection.json"
+          "$ref": "https://sar.iceye.com/schema/product-spec/0.0.2/collection.json"
         }
       }
     }
