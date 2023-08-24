@@ -61,7 +61,8 @@
           "description": "Radial distance from the center of synthetic aperture to scene center (meters)",
           "type": "number",
           "examples": [
-            653123.95480455941
+            653123.9548045,
+            580345.1286726
           ]
         },
         "extent": {
@@ -488,9 +489,9 @@
         },
         "synthetic_aperture_angle": {
           "description": "Synthetic aperture integration angle used in image formation processing (degrees, measured relative to scene center)",
-          "type": "number",
+          "$ref": "common.json#/$defs/degrees-unsigned",
           "examples": [
-            8.05
+            15.528
           ]          
         },
         "bandwidth": {
