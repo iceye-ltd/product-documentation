@@ -23,6 +23,9 @@ nav:
         - Image Products :
             - Single Look Complex Image : productFormats/slc.md
             - Amplitude Image : productFormats/grd.md
+        - Additional Image Products :
+            - Colorized Sub-aperture Image : productFormats/csi.md
+            - SAR Video : productFormats/vid.md
         - Metadata : productFormats/metadata.md
     - Foundations : 
       - What is SAR ? : 
