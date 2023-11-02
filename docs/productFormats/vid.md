@@ -14,10 +14,10 @@
 
 ## Container format and metadata
 
-The formats of the VID product are MPEG4 and GIF. Additionally, a GeoTIFF format is produces where each of the video frames is available as a separate band to facilitate frame by frame analysis in any image exploitation tools. The user can measure and track changes and moving objects between frames by stepping through the different bands of the image. The VID products made from SAR data acquired in a Dwell collection contain 25 frames. Important metadata on each of each of the video frames and how the VID product is formed is avaiable in the GeoTIFF. GeoTIFF metadata can be accessed by multiple methods including:
+The formats of the VID product are MPEG4 and GIF. Additionally, a GeoTIFF format is produced where each of the video frames is available as a separate band to facilitate frame by frame analysis in any image exploitation tools. The user can measure and track changes and moving objects between frames by stepping through the different bands of the image. ICEYE is able to produce SAR Video products (VID) only for certain types of collection characteristics such as Dwell. In the case of Dwell, each video is made of 25 frames ([Note 1](#notes-and-explanations)). Important metadata for each of each of the video frames is available in the GeoTIFF. GeoTIFF metadata can be accessed by multiple methods including:
 
-* Using the library gdal and running the command <code>gdalinfo filename.tif</code> (for example: <code>gdalinfo ICEYE_X2_VID_SLED_1906432_20231020T110813.tif</code>)  
-* In the open source application QGIS by selecting Raster → Miscelaneous → Raster information → Run 
+* Using the gdal library and running the command <code>gdalinfo filename.tif</code> (for example: <code>gdalinfo ICEYE_X2_VID_SLED_1906432_20231020T110813.tif</code>)  
+* Using the the open source application QGIS by selecting Raster → Miscellaneous → Raster information → Run 
 
 
 <figure markdown>
@@ -25,7 +25,7 @@ The formats of the VID product are MPEG4 and GIF. Additionally, a GeoTIFF format
 | Metadata Element&nbsp;&nbsp;&nbsp;&nbsp;| Description| Type| Unit|
 |----|----|----|----|
 |`FRAME_DURATION`|Duration of SAR data collection for each video frame. |List of float64|seconds|
-|`FRAME_MID_TIME`|Timestamp at the center of each video frame. Documented as seconds after beginning of thecollection  |List of float64|seconds|
+|`FRAME_MID_TIME`|Timestamp at the center of each video frame. Number of seconds since the beginning of the SAR collection  |List of float64|seconds|
 |`FRAME_POS`|Satellite position at the center of each video frame|List of float64 triplets|ECEF coordinates|
 |`FRAME_VEL`|Velocity vector of the satellite at the center of each video frame |List of float64 triplets|meters per second|
 </figure>
@@ -36,4 +36,4 @@ The formats of the VID product are MPEG4 and GIF. Additionally, a GeoTIFF format
 </figure> 
 
 ## Notes and Explanations
-1. **Frame duration:** The exact duration and time separation of each video frames varies slightly depending on specific collection characteristics. The actual duration value is avaialable in the [GeoTIFF metadata](#key-vid-geotiff-metadata).
+1. **Frame duration:** The exact duration and temporal separation of each video frame varies slightly depending on specific collection characteristics. The actual values are availalable in the [GeoTIFF metadata](#key-vid-geotiff-metadata).
