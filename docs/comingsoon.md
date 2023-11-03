@@ -11,8 +11,5 @@ You have probably seen the video. Because ICEYE satellites can stare at a point 
 ### Color Multilook Extended Dwell Imaging
 This is related to SAR Video as it uses the satellite's agility to collect an image over a wide range of angles. We noticed that some objects are more visible when observed from certain directions. The color multilook image may present more options to detect subtle objects in SAR imagery like powerlines or moving targets.
 
-### Orthorectified imagery
-This is a tricky one for ICEYE. We hate the way that orthorectified imagery warps and distorts our beautiful imagery and as SAR professionals we prefer to use GIS tools to correct for SAR layover and geometric distortions. But we have come to realise that there are still a lot of people out there that just want to buy a map-like product. So we are going to do our best to provide it.
-
 ### Access to Phase History Data
 At ICEYE we want to demystify SAR and encourage people to learn about signal processing and make their own SAR images from our data. We think that a good way to do this is to provide raw radar pulse data in a standardised way (eg the NGA CPHD format) so that others can use our received RF signal. Its very niche but may be new developments and applications will come from it thereby making SAR more useful and accessible.
