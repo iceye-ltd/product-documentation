@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sar.iceye.com/schema/product-spec/0.0.2/image.json",
+  "title": "SAR Image Metadata",
+  "description": "Synthetic Aperture Radar image metadata",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://geojson.org/schema/Feature.json"
+    }
+  ],
+  "required": [
+    "name",
+    "properties"
+  ],
+  "properties": {
+    "name": {
+      "description": "GeoJSON name",
+      "type": "string"
+    },
+    "properties": {
+      "description": "GeoJSON properties block",
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "data",
+        "collection"
+      ],
+      "properties": {
+        "id": {
+          "description": "Geohash identifier",
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 9,
+          "examples": [
+            "u4pruy"
+          ]
+        },
+        "version": {
+          "description": "Metadata schema version",
+          "$ref": "common.json#/$defs/semver"
+        },
+        "data": {
+          "$ref": "https://sar.iceye.com/schema/product-spec/0.0.2/data.json"
+        },
+        "collection": {
+          "$ref": "https://sar.iceye.com/schema/product-spec/0.0.2/collection.json"
+        }
+      }
+    }
+  }
+}
