@@ -8,3 +8,4 @@
 |:----:|:-------:|:-------|
 | 11th May 2023 | 0.0.1 | First version of metadata spec published. |
 | 24th Aug 2023 | 0.0.2  | Added synthetic_aperture_angle and slant_range_to_scene_center to metadata. |
+| 23rd Nov 2023 | 0.0.3  | Added _mode_to Processing and changed _data.type_ to reflect better product types. |

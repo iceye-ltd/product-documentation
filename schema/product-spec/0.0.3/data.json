@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://sar.iceye.com/schema/product-spec/0.0.2/data.json",
+  "$id": "https://sar.iceye.com/schema/product-spec/0.0.3/data.json",
   "title": "Metadata for SAR data",
   "description": "Auxiliary metadata for Synthetic Aperture Radar data products",
   "type": "object",
@@ -372,11 +372,18 @@
     "type": {
       "description": "Product type",
       "enum": [
-        "complex",
-        "amplitude"
+        "CPX",
+        "AML",
+        "QLK",
+        "THM",
+        "CSI",
+        "VID",
+        "ORT",
+        "QKO",
+        "THO"
       ],
       "examples": [
-        "amplitude"
+        "QLK"
       ]
     },
     "file": {
@@ -456,6 +463,7 @@
       "description": "Image formation related metadata",
       "type": "object",
       "required": [
+        "mode",
         "prf",
         "bandwidth",
         "synthetic_aperture_angle",
@@ -478,6 +486,21 @@
         "product_type": {
           "$comment": "Can be derived from collection mode",
           "deprecated": true
+        },
+        "mode": {
+          "description": "Processing Mode",
+          "enum" : [
+            "Spot",
+            "SpotHigh",
+            "SpotFine",
+            "SpotExtendedArea",
+            "SpotExtendedRange",
+            "Dwell",
+            "DwellFine",
+            "Strip",
+            "StripHigh",
+            "Scan"
+          ]
         },
         "prf": {
           "description": "Pulse Repetition Frequency used for the processing (Hz), defines azimuth sample spacing in time (can be higher than acquisition in cases where the Doppler frequency needs to be unfolded due to high variation of Doppler centroid with range)",
