@@ -26,6 +26,7 @@ nav:
         - Additional Products :
             - Colorized Sub-aperture Image : productFormats/csi.md
             - SAR Video : productFormats/vid.md
+        - Upcoming Formats : productFormats/upcomingformats.md
         - Metadata : productFormats/metadata.md
     - Foundations : 
       - What is SAR ? : 
