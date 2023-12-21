@@ -26,6 +26,7 @@ nav:
         - Additional Products :
             - Colorized Sub-aperture Image : productFormats/csi.md
             - SAR Video : productFormats/vid.md
+        - Upcoming Formats : productFormats/upcomingformats.md
         - Metadata : productFormats/metadata.md
     - Foundations : 
       - What is SAR ? : 
@@ -47,7 +48,6 @@ nav:
     #     - Advanced Tips and Tricks :
     #     - Snippets for Code Ninjas :
     - ICEYE Archives : archive/archive.md
-    - Coming Soon : comingsoon.md
     - About: about.md
 theme:
     name: material
