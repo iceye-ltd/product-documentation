@@ -72,7 +72,7 @@ The included satellite orbit metadata can be used to visualize the exact positio
 
 A JSON schema that can be used for validation purposes is available at the following location:
 
-[https://sar.iceye.com/schema/product-spec/0.0.1/image.json](https://sar.iceye.com/schema/product-spec/0.0.1/image.json) 
+[https://sar.iceye.com/schema/product-spec/0.0.2/image.json](https://sar.iceye.com/schema/product-spec/0.0.2/image.json) 
 
 <figure markdown>
 ![placeholder](img/imaging_geometry.png){width="800"}

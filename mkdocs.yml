@@ -48,7 +48,6 @@ nav:
     #     - Advanced Tips and Tricks :
     #     - Snippets for Code Ninjas :
     - ICEYE Archives : archive/archive.md
-    - Coming Soon : comingsoon.md
     - About: about.md
 theme:
     name: material
