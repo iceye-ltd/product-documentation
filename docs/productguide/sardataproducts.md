@@ -94,7 +94,7 @@ These are the familiar SAR gray-scale images with amplitude-only pixels. They ar
 | PARAMETER                                            | STRIP                    | SPOT/ SPOT EXTENDED AREA / DWELL                     | SPOT FINE               | SCAN                     | COMMENTS                           |
 |------------------------------------------------------|--------------------------|--------------------------|-------------------------|--------------------------|------------------------------------|
 | Nominal Ground Resolution [m]                          | 3                      | 1               | 0.5             | 15                     |  [Note 2](#notes-and-explanations) |
-| Ground Range Resolution [m]                          | < 3                      | 1.5 to 0.9               | 0.73 to 0.43            | < 15                     |  [Note 1](#notes-and-explanations) |
+| Ground Range Resolution [m]                          | < 3                      | 1.46 to 0.78               | 0.73 to 0.39            | < 15                     |  [Note 1](#notes-and-explanations) |
 | Ground Azimuth Resolution [m]                        | < 3                      | < 1                      | < 0.5                   | < 15                     |                                    |
 | Impulse response weighing function (peak side level) | Taylor Weighting (-20dB) | Taylor Weighting (-20dB) | Taylor Weighting (-20dB)| Taylor Weighting (-20dB) |                                    |
 | Ground Range Sample Spacing [m]                      | 2.5                      | 0.5                      | 0.25                    | 6                        |                                    |

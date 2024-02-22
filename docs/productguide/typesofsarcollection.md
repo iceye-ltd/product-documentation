@@ -88,8 +88,8 @@ ICEYE's standard Spot collection  uses a 300 MHz transmit bandwidth and covers a
 | Polarization                        | VV        | VV                  |                                      |
 | RNIIRS                              | 5.5       | 6.3                 | [Note 8](#notes-and-explanations)    |
 | RGIQE [bits/$m^2$]                  | 22        | 83                  | [Note 9](#notes-and-explanations)    |
-| Performant Incidence Range [deg]    | 20-35     | 20-35               | [Note 12](#notes-and-explanations)   |
-| Time Dominant Incidence Range [deg] | 11-44     | 11-44               | [Note 13](#notes-and-explanations)   |
+| Performant Incidence Range [deg]    | 20-40     | 20-40               | [Note 12](#notes-and-explanations)   |
+| Time Dominant Incidence Range [deg] | 5-45     | 5-45               | [Note 13](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 2 : ICEYE Spot and Spot Fine Summary</em></figcaption>
 </figure>
 
@@ -125,8 +125,8 @@ Within the covered area of 15km x 15km we achieve a 1 m ground resolution for mu
 | Polarization                        | VV     |                                      |
 | RNIIRS                              | 5.5    | [Note 8](#notes-and-explanations)    |
 | RGIQE [bits/$m^2$]                  | 8.4   |  [Note 9](#notes-and-explanations)    |
-| Performant Incidence Range [deg]    | 20-35  | [Note 12](#notes-and-explanations)   |
-| Time Dominant Incidence Range [deg] | 11-44  | [Note 13](#notes-and-explanations)   |
+| Performant Incidence Range [deg]    | 20-40  | [Note 12](#notes-and-explanations)   |
+| Time Dominant Incidence Range [deg] | 5-45  | [Note 13](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 3 : ICEYE Spot Extended Area Imaging Summary</em></figcaption>
 </figure>
 
@@ -163,8 +163,8 @@ The collection does however contain significantly more information than a standa
 | Polarization                        | VV                         |                                      |
 | RNIIRS                              | 6.5                        | [Note 8](#notes-and-explanations)    |
 | RGIQE [bits/$m^2$]                  | 125                        | [Note 9](#notes-and-explanations)    |
-| Performant Incidence Range [deg]    | 20-35                      | [Note 12](#notes-and-explanations)   |
-| Time Dominant Incidence Range [deg] | 11-44                      | [Note 13](#notes-and-explanations)   |
+| Performant Incidence Range [deg]    | 20-40                      | [Note 12](#notes-and-explanations)   |
+| Time Dominant Incidence Range [deg] | 5-45                      | [Note 13](#notes-and-explanations)   |
 <figcaption align = "center"><em>Table 4 : ICEYE Dwell Imaging Summary</em></figcaption>
 </figure>
 

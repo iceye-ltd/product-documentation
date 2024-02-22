@@ -6,7 +6,8 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
-| 3rd Nov 2023 | 5.2.2  | Addition of preview documentation for upcoming new formats CPX and AML
+| 20th Jan 2024 | 5.2.3  | Revision of performant and time-dominant incidence angle ranges for multiple imaging modes
+| 17th Dec 2023 | 5.2.2  | Addition of preview documentation for upcoming new formats CPX and AML
 | 3rd Nov 2023 | 5.2.1  | Addition of documentation for Colorized Sub-aperture Image (CSI) and SAR Video (VID) produtcs
 | 13th Jun 2023 | 5.2.0  | Addition of Spot Fine Imaging Characteristics and Data Product Parameters. Fleet summary modified to reflect capabilities of new Generation 3 satellites.
 | 1st Feb 2023 | 5.1.2  | Addition of Spot Extended Dwell Imaging Characteristics
