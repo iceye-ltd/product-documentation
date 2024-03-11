@@ -2,7 +2,7 @@
 
 ICEYE satellites operate in one of three primary imaging modes called Strip Mode, Spot Mode and Scan Mode. These are available in both right and left-looking configurations. The design flexibility of our satellites allows their imaging modes to be continually evolved. We will be adding more modes, and more flexible illumination patterns, in future versions. A recent addition is an augmentation to our spotlight collections that we are calling **Dwell** imaging. 
 
-On this page we provide an overview of each of the imaging modes. How the collection modes are packaged and delivered is covered in the secion on SAR data products. Technical details on the content of the data products and how to exploit them is covered in the Technical information section. An explanation of SAR and how the imaging modes are collected can be found in [An Overview of SAR Imaging](../foundations/OverviewOfSAR/remarkableStory.md#stripmap-and-spotlight-apertures).
+On this page we provide an overview of each of the imaging modes. How the collection modes are packaged and delivered is covered in the section on SAR data products. Technical details on the content of the data products and how to exploit them is covered in the Technical information section. An explanation of SAR and how the imaging modes are collected can be found in [An Overview of SAR Imaging](../foundations/OverviewOfSAR/remarkableStory.md#stripmap-and-spotlight-apertures).
 
 ### Strip Imaging
 
@@ -53,9 +53,9 @@ In conventional scan mode, ground points are illuminated by different parts of t
 ## Spotlight Modes
 ### Spot Imaging
 ![placeholder](../img/imagemode-graphic-spot.png){width="300" align=right}
-In Spot mode the radar beam is steered to illuminate a fixed point. This increases the illumination time and therefore increases the length of the synthetic aperture and improves azimuth resolution. ICEYE satellites have a maximum 600 MHz pulse bandwidth which can achieve a 0.25m slant range resolution ([here](../foundations/OverviewOfSAR/rangeResolution/#slant-range-resolution-examples) is an explanation of where this comes from.). 
+In Spot mode the radar beam is steered to illuminate a fixed point. This increases the illumination time and therefore increases the length of the synthetic aperture and improves azimuth resolution. 
 
-ICEYE's standard Spot collection  uses a 300 MHz transmit bandwidth and covers an area of 5km x 5km. This produces an image with a 1 m ground resolution for multi-looked amplitude images. These are formed from 4 independent looks to suppress speckle and increase image quality.
+ICEYE's Spot collection  uses a 300 MHz transmit bandwidth and covers an area of 5km x 5km. This produces an image with a 1 meter ground resolution for multi-looked amplitude images. These are formed from 4 independent looks to suppress speckle and increase image quality.
 
 !!! note 
     Spot images are useful for more detailed investigation of an area. They are used primarily to **discriminate** between different types of object such as boats or ships, different aircraft, or different types of building or infrastructure. The additional resolution also helps with coherence analysis techniques such as INSAR.
@@ -67,7 +67,7 @@ ICEYE's standard Spot collection  uses a 300 MHz transmit bandwidth and covers a
 -->
 
 
-*Spot Fine* is the constellation's finest resolution imaging mode using a 600 MHz transmit bandwith (0.25 m slant range resolution). It operates the same way as Spot mode, by pointing the RADAR beam at a single location for an extended amount of time. Each Spot Fine collection has 5 indepent azimith looks and takes around 15 seconds to collect. 
+*Spot Fine* is the utilizes the same collection strategy as *Spot* mode, but transmits at a 600 MHz transmit bandwidth to achieve a much higher resolution. It operates the same way as Spot mode, by pointing the RADAR beam at a single location for an extended amount of time. Each Spot Fine collection takes 15 seconds or radar illumination time to collect. Spot Fine amplitude images have a nominal groud resolution of 0.5 meters and are formed out of 5 independent looks.  
 
 <figure markdown>
 | PARAMETER                           |  SPOT     | SPOT FINE           | COMMENTS                             |
@@ -131,41 +131,45 @@ Within the covered area of 15km x 15km we achieve a 1 m ground resolution for mu
 </figure>
 
 
-### Dwell Imaging
+### Dwell Mode
 
 <!---
 <span style="color:darkred">[TODO] add dwell imaging graphic here </span>.
 -->
 
-ICEYE's Dwell collection mode is a very long spotlight mode SAR collection. The techinique is not so easy to achieve with larger satllites, but the smaller mass and antenna size of ICEYE satellites allows them to stare at the same point for as long as 25 seconds. Applying conventional image formation techniques to this type of SAR collection would provide a very fine azimuth resolution, which when combined with a standard range resolution would make a SAR image product that is challenging to exploit by human analysts. 
-
-The collection does however contain significantly more information than a standard spotlight mode SAR image and so ICEYE has developed two additional image products, *CSI* and *video*, in addition to the standard amplitude and complex image products. These products are discussed more in ['Types of SAR Data Products'](sardataproducts.md).
-
+ICEYE's Dwell collection mode is a very long spotlight mode SAR collection. The technique is not so easy to achieve with larger satellites, but the smaller mass and antenna size of ICEYE satellites allows them to stare at the same point for as long as 25 seconds. This results in a very fine azimuth resolution. Dwell mode utilizes a 300 MHz bandwidth which results in a nominal 1m ground resolution. The additional information acquired in the azimuth direction is utilized to form highy multi-looked amplitude products (20 looks) with significantly reduced speckle. Additionally, ['Color Sub-Aperture Image (CSI)'](../productFormats/csi.md) product and ['SAR Video'](../productFormats/vid.md) are produced form Dwell acquisitions.
 !!! note 
     Dwell imaging is a good collection strategy for getting the most information from complex scenes, such as human objects in forested areas or moving objects such as ships.
 
+## Dwell Fine
+<!---
+<span style="color:darkred">[TODO] add spot fine imaging graphic here </span>.
+-->
+
+*Dwell Fine* is the utilizes the same collection strategy as *Dwell* mode, but transmits at a 600 MHz transmit bandwidth to achieve a much higher resolution. It operates the same way as Dwell mode, staring at the same point for 25 seconds. Dwell amplitude images have a nominal ground resolution of 0.5 meters and are formed out of 10 independent looks. Dwell Fine acquisitions also include ['Color Sub-Aperture Image (CSI)'](../productFormats/csi.md) product and ['SAR Video'](../productFormats/vid.md). 
+
 <figure markdown>
-| PARAMETER                           |  SPOT EXTENDED DWELL       | COMMENTS |
-|-------------------------------------|----------------------------|----------|
-| Product Short Name                  | 'DWELL'                    | [Note 1](#notes-and-explanations)    |
-| Nominal final product ground resolution [m]  | 1                 |                                      |
-| Radar Beams Used                    | 1                          | [Note 2](#notes-and-explanations)    |
-| Nominal swath width [km]            | 5                          | [Note 3](#notes-and-explanations)    |
-| Nominal product length (Azimuth Direction) [km] | 5              | [Note 4](#notes-and-explanations)    |
-| Nominal collection duration [sec]   | 25                         |                                      |
-| Maximum collection duration [sec]   | 30                         | [Note 5](#notes-and-explanations)    |
-| Maximum Scene Length [km]           | 5                          | [Note 5](#notes-and-explanations)    |
-| Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ] | -18 to -15         | [Note 6](#notes-and-explanations) |
-| Azimuth Ambiguity Ratio [dB]        | -17                        |                                      |
-| Range Ambiguity Ratio [dB]          | <-20                       |                                      |
-| Geospatial Accuracy [m RMSE]        | 6                          | [Note 14](#notes-and-explanations)   |
-| ESA Copernicus Contributing Mission (CCM) Class[@copernicusClass] | VHR1 |                              |
-| Polarization                        | VV                         |                                      |
-| RNIIRS                              | 6.5                        | [Note 8](#notes-and-explanations)    |
-| RGIQE [bits/$m^2$]                  | 125                        | [Note 9](#notes-and-explanations)    |
-| Performant Incidence Range [deg]    | 20-40                      | [Note 12](#notes-and-explanations)   |
-| Time Dominant Incidence Range [deg] | 5-45                      | [Note 13](#notes-and-explanations)   |
-<figcaption align = "center"><em>Table 4 : ICEYE Dwell Imaging Summary</em></figcaption>
+| PARAMETER                           |  DWELL       | DWELL FINE     |COMMENTS |
+|-------------------------------------|----------------------------|----------------------------|----------|
+| Product Short Name                  | 'DWELL'      | 'DWELL FINE'   |[Note 1](#notes-and-explanations)    |
+| Nominal final product ground resolution [m]  | 1      | 0.5                 |              |
+| Radar Beams Used                    | 1            | 1              |[Note 2](#notes-and-explanations)    |
+| Nominal swath width [km]            | 5            | 5                       | [Note 3](#notes-and-explanations)    |
+| Nominal product length (Azimuth Direction) [km] | 5     |5   | [Note 4](#notes-and-explanations)    |
+| Nominal collection duration [sec]   | 25      | 25           |                                     |
+| Maximum collection duration [sec]   | 30      | 30           |[Note 5](#notes-and-explanations)    |
+| Maximum Scene Length [km]           | 5       | 5            |[Note 5](#notes-and-explanations)    |
+| Noise Equivalent Sigma-Zero [ dBm^2^/m^2^ ] | -18 to -15   | -18 to -15  |[Note 6](#notes-and-explanations) |
+| Azimuth Ambiguity Ratio [dB]        | -17       |  -17      |                                    |
+| Range Ambiguity Ratio [dB]          | <-20      |  <-20     |                                    |
+| Geospatial Accuracy [m RMSE]        | 6         |  6        | [Note 14](#notes-and-explanations)   |
+| ESA Copernicus Contributing Mission (CCM) Class[@copernicusClass] | VHR1 |       VHR1 |           |
+| Polarization                        | VV           |  VV         |                    |
+| RNIIRS                              | 6.4         | 6.7     | [Note 8](#notes-and-explanations)    |
+| RGIQE [bits/$m^2$]                  | 125    | 185      |[Note 9](#notes-and-explanations)    |
+| Performant Incidence Range [deg]    | 20-40    | 20-40    | [Note 12](#notes-and-explanations)   |
+| Time Dominant Incidence Range [deg] | 5-45   | 5-45     |[Note 13](#notes-and-explanations)   |
+<figcaption align = "center"><em>Table 4 : ICEYE Dwell and Dwell Fine Imaging Summary</em></figcaption>
 </figure>
 
 
@@ -178,7 +182,7 @@ The collection does however contain significantly more information than a standa
 4. **Nominal Swath Length:** The actual image length may be slightly larger to guarantee that the tasked area is covered. The maximum value can vary from satellite to satellite due to power/data/thermal limitations.
 5. **Maximum Collection Duration/Length:** Spot images do not have a maximum collection duration as they image for the required amount of time to obtain a tasked azimuth resolution. For Strip and Scan modes the maximum collection duration (and therefore the maximum image length) is limited by the amount of on-board memory storage or satellite thermal limitations. As different incidence angles have different slant range resolutions in order to provide the same ground range resolution, then the maximum collection duration is also a function of incidence angle. 
 6. **NESZ:** The noise equivalent sigma zero values are taken at scene center for near and far range extents.
-7. **Slant Range Resolution:** For Strip mode the transmitted bandwidth is varied to make sure that the resolution on the ground remains the same. For Spot mode the maximum bandwidth is transmitted at all times. This means that the slant resolution for Spot images is constant and the ground resolution changes with indidence angle.
+7. **Slant Range Resolution:** For Strip mode the transmitted bandwidth is varied to make sure that the resolution on the ground remains the same. For Spot mode the maximum bandwidth is transmitted at all times. This means that the slant resolution for Spot images is constant and the ground resolution changes with incidence angle.
 8. **RNIIRS:** Radar National Imagery Interpretability Rating Scale is a subjective assessment of Radar Image Quality used primarily by military analysts. The scale is from 0 ("*interpretability of the imagery is precluded by obscuration, degradation, or very poor resolution*") to the highest quality figure of merit, 10 [@rniirs].
 9. **RGIQE:** This is the Radar General Image Quality Equation. It is an adaptation of the concept of a General Image Quality Equation [@leachtenauer1997general] Developed by NGA . Unlike the RNIIRS scale which is a largely subjective assessment of image quality, the RGIQE uses maximum channel capacity (measured in bits of information) as a figure of merit. From the Shannon-Hartley Theorem [@shannon1984communication] the maximum information that can be carried in a signal (conventionally called a channel due to the origins in communications) is given by :
 
