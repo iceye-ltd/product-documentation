@@ -41,26 +41,23 @@ All ICEYE images are available as Complex Datasets (with the exception of SCAN m
 ### IQ Image Format
 The conventional way of storing complex imagery is know as the *IQ Format*. In this format, each pixel is stored as two values, one called '*I*' (standing for 'In-phase') and one called '*Q*' (standing for 'Quadrature'). Because the format does not directly store the amplitude imformation, then a conversion must be made to view the image. Being a well understood standard however, there are many tools, often open-source, that can be used to help with IQ image operations. (eg SNAP[@snap]).
 
-### CPX Image Format
-In order to make the complex data more accessible to users, ICEYE has developed a new file format called '**CPX**'. Unlike the *IQ* format, which requires specialist tools to view the information, the CPX format uses a regular geoTiff container so the image can be viewed by normal (and geospatial) image viewers. The file contains two bands; the first contains the amplitude data of the scene (so that anyone openining the file will be able to recognise that it is a SAR image). The second band contains the phase information that can be exploited in the usual way.
--->
 
 !!! Warning 
-    Complex images, by their nature, are always *single-look*. This means that they contain the *native* resolution of the collection. ICEYE satellites always collect much finer resolution in the azimuth direction than the range direction. (eg a SPOT image has an azimuth resolution of 25cm whereas the slant range resolution is 50cm.) We also save our complex images in the slant-plane. This means that if you view the image in a picture viewing package (eg GIMP), the image will appear distorted as the square pixels on your screen are actually representing rectangular pixels on the ground. ICEYE CPX images also have a full geotif header and contain RPCs so any GIS viewer (eg QGIS) will render the image correctly on your screen. This is the best way to  view the finest resolution in ICEYE SAR images.
+    Complex images, by their nature, are always *single-look*. This means that they contain the *native* resolution of the collection. ICEYE satellites always collect much finer resolution in the azimuth direction than the range direction. (eg a SPOT image has an azimuth resolution of 25cm whereas the slant range resolution is 50cm.) We also save our complex images in the slant-plane. This means that if you view the image in a picture viewing package (eg GIMP), the image will appear distorted as the square pixels on your screen are actually representing rectangular pixels on the ground. 
 
 ### Complex Image Parameters
 <figure markdown>
-| PARAMETER                                            | STRIP              | SPOT               | SPOT FINE | DWELL | COMMENTS                          |
-|------------------------------------------------------|--------------------|--------------------|-----------|-------|-----------------------------------|
-| Focusing plane                                       |  Slant Plane       | Slant Plane        | Slant Plane | Slant Plane |                           |
-| Slant range resolution [m]                           | 0.5 to 2.5         | 0.5                | 0.25 | 0.5 | [Note 1](#notes-and-explanations) |
-| Slant azimuth resolution [m]                         | 3                  | 0.25               | 0.1 | 0.05 |                           |
-| Impulse response weighing function (peak side level) | Uniform (-13.3dB)  | Uniform (-13.3dB)  | Uniform (-13.3dB) | Uniform (-13.3dB) |                                  |
-| Slant Range Sample Spacing [m]                       | 0.4 to 2.4         | < 0.4              | < 0.2 | < 0.4 | [Note 1](#notes-and-explanations) | 
-| Slant Azimuth Sample Spacing [m]                     | 1.6                | < 0.2              | < 0.09 | < 0.05 |                             |
-| Slant range product format                           | HDF5 + XML         | HDF5 + XML         | HDF5 + XML | HDF5 + XML |                                  |
-| SLC Product Size [GB]                                | 3.4 to 2.9         | 0.6 to 7.2         |  < 15  | < 15 |                                |
-| Dynamic Range (bits per pixel)                       | 16(uint) 32(Float) | 16(uint) 32(Float) | 16(uint) 32(Float)  | 16(uint) 32(Float) | [Note 3](#notes-and-explanations)| 
+| PARAMETER                                            | STRIP | SPOT  | SPOT FINE | DWELL | DWELL FINE | COMMENTS                          |
+|--------------------------|--------|--------|-----------|-------|-------|----|
+| Focusing plane                                       |  Slant Plane       | Slant Plane        | Slant Plane | Slant Plane | Slant Plane |                 |
+| Slant range resolution [m]                           | 0.5 to 2.5         | 0.5                | 0.25 | 0.5 | 0.25 | [Note 1](#notes-and-explanations) |
+| Slant azimuth resolution [m]                         | 3                  | 0.25               | 0.1 | 0.05 |  0.05 |                          |
+| Impulse response weighing function (peak side level) | Uniform (-13.3dB)  | Uniform (-13.3dB)  | Uniform (-13.3dB) | Uniform (-13.3dB) |  Uniform (-13.3dB)   |
+| Slant Range Sample Spacing [m]                       | 0.4 to 2.4         | < 0.4              | < 0.2 | < 0.4 | < 0.2 | [Note 1](#notes-and-explanations) | 
+| Slant Azimuth Sample Spacing [m]                     | 1.6                | < 0.2              | < 0.09 | < 0.05 | < 0.05 |                            |
+| Slant range product format                           | HDF5 + XML         | HDF5 + XML         | HDF5 + XML | HDF5 + XML |   HDF5 + XML |                |
+| SLC Product Size [GB]                                | 3.4 to 2.9         | 0.6 to 7.2         |  < 15  | < 15 |        < 25 |               |
+| Dynamic Range (bits per pixel)                       | 16(uint) 32(Float) | 16(uint) 32(Float) | 16(uint) 32(Float)  | 16(uint) 32(Float) | 16(uint) 32(Float) | [Note 3](#notes-and-explanations)| 
 <figcaption align = "center"><em>Table 1 : Parameters for ICEYE Complex Images</em></figcaption>
 </figure>
 
@@ -91,7 +88,7 @@ These are the familiar SAR gray-scale images with amplitude-only pixels. They ar
 
 ## Amplitude Image Parameters
 <figure markdown>
-| PARAMETER                                            | STRIP                    | SPOT/ SPOT EXTENDED AREA / DWELL                     | SPOT FINE               | SCAN                     | COMMENTS                           |
+| PARAMETER                                            | STRIP                    | SPOT/ SPOT EXTENDED AREA / DWELL                     | SPOT FINE / DWELL FINE              | SCAN                     | COMMENTS                           |
 |------------------------------------------------------|--------------------------|--------------------------|-------------------------|--------------------------|------------------------------------|
 | Nominal Ground Resolution [m]                          | 3                      | 1               | 0.5             | 15                     |  [Note 2](#notes-and-explanations) |
 | Ground Range Resolution [m]                          | < 3                      | 1.46 to 0.78               | 0.73 to 0.39            | < 15                     |  [Note 1](#notes-and-explanations) |
@@ -100,9 +97,9 @@ These are the familiar SAR gray-scale images with amplitude-only pixels. They ar
 | Ground Range Sample Spacing [m]                      | 2.5                      | 0.5                      | 0.25                    | 6                        |                                    |
 | Ground Azimuth Sample Spacing [m]                    | 2.5                      | 0.5                      | 0.25                    | 6                        |                                    |
 | Range Looks                                          | 1                        | 1                        | 1                       | 1                        |                                    |
-| Azimuth Looks                                        | 1 to 2                   | 1 to 20                  | 5                       |  1                        |     [Note 3](#notes-and-explanations)                               |
+| Azimuth Looks                                        | 1 to 2                   | 2 to 20                  | 5 to 10                      |  1                        |     [Note 3](#notes-and-explanations)                               |
 | Product format                                       | Geotiff + XML            | Geotiff + XML            | Geotiff + XML           | Geotiff + XML            |                                    |
-| GRD Product Size [MB]                                | 700                      | 250 to 1500                     | < 2500                  | 800                      |                                    |
+| GRD Product Size [MB]                                | 700                      | 250 to 1500                     | < 3000                  | 800                      |                                    |
 | Dynamic Range (bits per pixel)                       | 16(uint) 32(Float)       | 16(uint) 32(Float)       | 16(uint) 32(Float)      | 16(uint) 32(Float)       | [Note 4](#notes-and-explanations) |
 <figcaption align = "center"><em>Table 2 : Parameters for ICEYE Amplitude Images</em></figcaption>
 </figure>
@@ -112,7 +109,7 @@ These are the familiar SAR gray-scale images with amplitude-only pixels. They ar
 ## Notes and Explanations
 1. **Slant Range Resolution:** For Strip mode the transmitted bandwidth is varied to make sure that the resolution on the ground remains the same. For Spot mode the maximum bandwidth is transmitted at all times. This means that the slant resolution for Spot images is constant and the ground resolution changes with incidence angle.
 2. **Nominal Ground Resolution:**  Nominal ground resolution for all Spotlight modes (Spot, Spot Entended Area, Dwell and Spot fine) is the ground resolution at a 30° incidence angle. 
-3. **Azimuth Looks:** Spot amplitude images are produced using 4 looks, Spot Extended Area 1 to 2 looks, and Dwell 20 looks.
+3. **Azimuth Looks:** Spot amplitude images are produced using 4 looks, Spot Fine using 5 looks, Spot Extended Area using 2 looks, Dwell using 20 looks, and Dwell Fine using 10 looks.
 4. **Complex Dynamic Range:** A complex number with 16bit I and 16bit Q values. 32 bit float values can be provided by request.
 
 
