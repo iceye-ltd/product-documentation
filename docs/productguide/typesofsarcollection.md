@@ -131,7 +131,7 @@ Within the covered area of 15km x 15km we achieve a 1 m ground resolution for mu
 </figure>
 
 
-### Dwell Mode
+### Dwell
 
 <!---
 <span style="color:darkred">[TODO] add dwell imaging graphic here </span>.
