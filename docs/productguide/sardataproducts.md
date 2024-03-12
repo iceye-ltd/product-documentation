@@ -44,6 +44,7 @@ The conventional way of storing complex imagery is know as the *IQ Format*. In t
 
 !!! Warning 
     Complex images, by their nature, are always *single-look*. This means that they contain the *native* resolution of the collection. ICEYE satellites always collect much finer resolution in the azimuth direction than the range direction. (eg a SPOT image has an azimuth resolution of 25cm whereas the slant range resolution is 50cm.) We also save our complex images in the slant-plane. This means that if you view the image in a picture viewing package (eg GIMP), the image will appear distorted as the square pixels on your screen are actually representing rectangular pixels on the ground. 
+-->
 
 ### Complex Image Parameters
 <figure markdown>

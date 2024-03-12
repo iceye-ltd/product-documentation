@@ -141,7 +141,7 @@ ICEYE's Dwell collection mode is a very long spotlight mode SAR collection. The 
 !!! note 
     Dwell imaging is a good collection strategy for getting the most information from complex scenes, such as human objects in forested areas or moving objects such as ships.
 
-## Dwell Fine
+### Dwell Fine
 <!---
 <span style="color:darkred">[TODO] add spot fine imaging graphic here </span>.
 -->
