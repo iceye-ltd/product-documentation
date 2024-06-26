@@ -4,11 +4,11 @@
 
 SAR data can be made into a multitude of different product types. Some are better suited for human exploitation whereas others are better exploited by algorithms and signal-processing tools.
 
-On this page we describe the different SAR data products that ICEYE provides. Technical details about the format of these products, with some tips on how the use them are provided in the section on ['Technical Information'](../../productFormats/introduction).
+On this page we describe the different SAR data products that ICEYE provides. Technical details about the format of these products, with some tips on how the use them are provided in the section on ['Technical Information'](../productFormats/introduction.md).
 
 !!! info
 
-    The section ["What is SAR?"](../../foundations/OverviewOfSAR/overviewOfSAR) provides a review of the technologies mentioned here. 
+    The section ["What is SAR?"](../foundations/OverviewOfSAR/overviewOfSAR.md) provides a review of the technologies mentioned here. 
 
 <!---
 There are three different *levels* of SAR data product:
@@ -32,7 +32,7 @@ There are three different *levels* of SAR data product:
 
 Unlike optical imagery, each pixel in a SAR image is represented as a *complex number*. The complex number represents two critical components of SAR imaging, *amplitude* and *phase*. The amplitude of a pixel is a measure of the amount of RADAR energy reflected back to the satellite and displayed as a grey-scale value when we look at a SAR image. The phase component is a measure of the position of the RADAR wave after it has interacted with all the scatterers within the pixel. After image formation, the phase information is usually discarded which reduces the size of the SAR image. Some advanced SAR capabilities such as interferometric SAR (INSAR) or coherent change detection (CCD) makes use of the phase information and therefore needs the complex image samples.
 
-All ICEYE images are available as Complex Datasets (with the exception of SCAN mode collections). More details about complex image file formats can be found in the ['Technical Information'](../../productFormats/slc) section.
+All ICEYE images are available as Complex Datasets (with the exception of SCAN mode collections). More details about complex image file formats can be found in the ['Technical Information'](../productFormats/slc.md) section.
 
 <!---
 <span style="color:darkred">[TODO] make animation showing the nature of a complex image </span>.

@@ -3,7 +3,7 @@
 
 ## SAR Video (VID)
 
- SAR Video is similar to the [CSI product](../csi) in which the acquired SAR data is divided into multiple sub-apertures. However, in the case of SAR Video, they are not used to create composite images. Instead, each discrete sub-aperture is used as a frame of a video.
+ SAR Video is similar to the [CSI product](./csi.md) in which the acquired SAR data is divided into multiple sub-apertures. However, in the case of SAR Video, they are not used to create composite images. Instead, each discrete sub-aperture is used as a frame of a video.
 
  Video is very useful in applications where moving objects need to be analyzed. By simple inspection and analysis of a video, it is possible to infer the general direction and speed of moving objects such as vessels and vehicles. SAR Video is also effective for detecting objects hidden in the forest area as well as human-made objects as these tend to give bright reflections and show as glint when playing a video.
 

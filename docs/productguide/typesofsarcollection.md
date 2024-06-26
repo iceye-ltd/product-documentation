@@ -6,7 +6,7 @@ On this page we provide an overview of each of the imaging modes. How the collec
 
 ### Strip Imaging
 
-![placeholder](../img/imagemode-graphic-strip.png){width="300" align=right}
+![placeholder](img/imagemode-graphic-strip.png){width="300" align=right}
 In this mode the ground swath is illuminated with a continuous sequence of pulses while the antenna beam is fixed in its orientation. The beam is pointed off to the side of the satellite at an angle broadside to the satellite flight path. This results in a long image strip parallel to the flight direction.
 
 ICEYE standard Strip products have a ground resolution of 3m in range and azimuth and cover an area of 30km (range) by 50km (azimuth). The strip length can be tailored up to a length of 840 km, in increments of 50 km.
@@ -15,7 +15,7 @@ ICEYE standard Strip products have a ground resolution of 3m in range and azimut
     Having a wide area and a moderate resolution, Strip images are useful for 'situational awareness'. They allow a user to quickly asses what is occurring in the region. They are particularly useful for tasks such as deforestation monitoring, or iceberg / glacier monitoring. They are also our 'first responder' product in times of natural disaster to assess the impact of a flood, earthquake or volcano.
 
 ### Scan Imaging
-![placeholder](../img/imagemode-graphic-scan.png){width="300" align=left}
+![placeholder](img/imagemode-graphic-scan.png){width="300" align=left}
 This mode uses each satellite's phased array antenna to create multiple beams in the elevation direction. This beam steering illuminates a wide area via multiple adjacent strips, but it means that points on the ground are not illuminated for as long as conventional Strip Mode. This reduces the resolution of a Scan product.
 
 In conventional scan mode, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. We compensate for this in our scan by also steering the radar beam sideways during each burst of radar pulses. This improves image quality. This technique is called Terrain Observation by Progressive Scans (TOPS or TOPSAR[@TOPSAR]). Our Scan product produces imagery that covers an area of 100km x 100km with a resolution better than 15m. The length of a Scan product can be increased to 840km.
@@ -52,7 +52,7 @@ In conventional scan mode, ground points are illuminated by different parts of t
 
 ## Spotlight Modes
 ### Spot Imaging
-![placeholder](../img/imagemode-graphic-spot.png){width="300" align=right}
+![placeholder](img/imagemode-graphic-spot.png){width="300" align=right}
 In Spot mode the radar beam is steered to illuminate a fixed point. This increases the illumination time and therefore increases the length of the synthetic aperture and improves azimuth resolution. 
 
 ICEYE's Spot collection  uses a 300 MHz transmit bandwidth and covers an area of 5km x 5km. This produces an image with a 1 meter ground resolution for multi-looked amplitude images. These are formed from 4 independent looks to suppress speckle and increase image quality.

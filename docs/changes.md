@@ -6,6 +6,7 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
+| 26th Jun 2024 | 5.2.7   | Removed references to polyfill.io domain.| 
 | 11th March 2024 | 5.2.4  | Addition of Dwell Fine imaging characteristics and data product parameters. Upcoming CPX format renamed GeoTIFF SLC. Upcoming AML format renamed Cloud-optimized GeoTIFF GRD.
 | 20th Jan 2024 | 5.2.3  | Revision of performant and time-dominant incidence angle ranges for multiple imaging modes
 | 17th Dec 2023 | 5.2.2  | Addition of preview documentation for upcoming new formats CPX and AML

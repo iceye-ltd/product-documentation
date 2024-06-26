@@ -7,13 +7,13 @@ We are excited to provide a preview of upcoming new formats for our complex and 
 
 ### The challenge with complex data
 
-SAR complex data has traditionally been packaged in scientific or military-intel formats like [HDF5 SLC](../slc) ([HDF container](../slc#hdf5-container)) or ([SICD](../slc#sensor-independent-complex-data-sicd)) ([NITF container](../slc#sensor-independent-complex-data-sicd)) where each image pixel is stored with in-phase I and quadrature Q components and therefore, contains both amplitude and phase information. These formats require compliant tools and software that is currently difficult to use without specialized skill and experience. For this reason, the user of complex images has been limited to automated processing and advanced exploitation such as interferometric applications, or by users who prefer lower-level processing in order to implement their own processing chains. 
+SAR complex data has traditionally been packaged in scientific or military-intel formats like [HDF5 SLC](./slc.md) ([HDF container](./slc.md#hdf5-container)) or ([SICD](./slc.md#sensor-independent-complex-data-sicd)) ([NITF container](./slc.md#sensor-independent-complex-data-sicd)) where each image pixel is stored with in-phase I and quadrature Q components and therefore, contains both amplitude and phase information. These formats require compliant tools and software that is currently difficult to use without specialized skill and experience. For this reason, the user of complex images has been limited to automated processing and advanced exploitation such as interferometric applications, or by users who prefer lower-level processing in order to implement their own processing chains. 
 
 ### Complex data in a GeoTiff
 
 GeoTIFF SLC images are packaged in the open, international [GeoTiff](https://en.wikipedia.org/wiki/GeoTIFF) format. This enables their easy ingestion and manipulation in most image readers, GIS tools and libraries. The amplitude and phase data is formatted in two GeoTiff bands, similar to how bands are used for multispectral images. Image readers and GIS tools are able to ingest this complex image just like they do any other GeoTiff file. The amplitude band can be immediately presented for viewing, while the phase band is available for further exploitation by more specialized tools. **The key advantage is that the GeoTIFF SLC image is at full resolution, so users have access to the full resolution as well as to reduced-speckle, pixel-ageraged views (equivalent to different levels of multi-looking) that are produced instantly when zooming in and out.** 
 
-While the SAR data inside the GeoTIFF SLC format is stored in the slant plane (the satellite image acquisition geometry), the metadata inside the GeoTIFF contains [RPC values](../../foundations/geospatialAccuracy/#fast-and-simple-geolocation-rapid-positioning-capability) that allows GIS tools to perform automatic ground projection, so they  are ready to be used as part of analysis and exploitation workflows. Please note that Orthorectification using a Digital Elevation Model is still recommended for accurate geospatial comparison and analysis.
+While the SAR data inside the GeoTIFF SLC format is stored in the slant plane (the satellite image acquisition geometry), the metadata inside the GeoTIFF contains [RPC values](../foundations/geospatialAccuracy.md#fast-and-simple-geolocation-rapid-positioning-capability) that allows GIS tools to perform automatic ground projection, so they  are ready to be used as part of analysis and exploitation workflows. Please note that Orthorectification using a Digital Elevation Model is still recommended for accurate geospatial comparison and analysis.
 
 THe GeoTIFF SLC format uses the [Cloud-Optimized GeoTIFF](https://docs.ogc.org/is/21-026/21-026.html) standard that allows fast data visualization and geospatial processing workflows. GIS applications can efficiently stream or download only the parts of the information they need to visualize or process web-based data. Tiles and overviews are included to enable fast image rendering. GeoTIFF SLC files accessed by web applications or stored online can be efficiently streamed and partially downloaded with the use of HTTP range queries. 
 
@@ -29,7 +29,7 @@ THe GeoTIFF SLC format uses the [Cloud-Optimized GeoTIFF](https://docs.ogc.org/i
 The following settings are recommended when using [QGIS](https://qgis.org/) to visualize GeoTIFF SLC images. They ensure that the correct render type and optimal resampling method is used to display the amplitude band. 
 
 <figure markdown>
-![placeholder](img/QGIS-GeoTIFF SLC.png){width="800"}
+![placeholder](img/QGIS-CPX.png){width="800"}
 <figcaption align = "center"><em>Figure 3: Recommended QGIS settings for exploiting the GeoTIFF SLC format.</em></figcaption>
 </figure> 
 
@@ -55,7 +55,7 @@ The following settings are recommended when using [QGIS](https://qgis.org/) to v
 
 ## Cloud-Optimized GeoTIFF GRD (Preview)
 
-Cloud-Optimized GeoTIFF GRD images contain the amplitude part of the backscattering signal. They are a more user friendly implementation of the current [GRD](../grd) format.
+Cloud-Optimized GeoTIFF GRD images contain the amplitude part of the backscattering signal. They are a more user friendly implementation of the current [GRD](./grd.md) format.
 The Cloud-Optimized GeoTIFF GRD format uses the [Cloud-Optimized GeoTIFF standard](https://docs.ogc.org/is/21-026/21-026.html) and offers the following advantages:
 
 * Supported by most image viewing software, GIS applications, data exploitation tools and libraries.
@@ -66,7 +66,7 @@ The Cloud-Optimized GeoTIFF GRD format uses the [Cloud-Optimized GeoTIFF standar
 
 ## Metadata 3.0 (Preview)
 
-The metadata of the new GeoTIFF SLC and Cloud-Optimized GeoTIFF GRD image formats is stored in [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON) format which is more modern than the XML used to store metadata by the current [SLC](../slc) and [GRD](../grd) formats. GeoJSON is a geocoded metadata format supported by many GIS tools.  
+The metadata of the new GeoTIFF SLC and Cloud-Optimized GeoTIFF GRD image formats is stored in [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON) format which is more modern than the XML used to store metadata by the current [SLC](./slc.md) and [GRD](./grd.md) formats. GeoJSON is a geocoded metadata format supported by many GIS tools.  
 
 The included satellite orbit metadata can be used to visualize the exact position of the satellite when the SAR data was collected as well as the imaging geometry. 
 

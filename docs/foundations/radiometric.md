@@ -54,7 +54,7 @@ $$
 |DN_{GRD}|^2 = |DN_{SLC}|^2 \sin(\theta)
 $$
 
-If the processing of $\beta_0$ is required from the amplitude image for further orthorectification to $\sigma_0$ or $\gamma_0$ values using a local DEM, then the conversion to radar brightness can be performed using the incidence angle information annotated in the metadata (see [Ground Range To Incidence Angle Conversion](../slantToGround#ground-range-to-incidence-angle-conversion)). 
+If the processing of $\beta_0$ is required from the amplitude image for further orthorectification to $\sigma_0$ or $\gamma_0$ values using a local DEM, then the conversion to radar brightness can be performed using the incidence angle information annotated in the metadata (see [Ground Range To Incidence Angle Conversion](slantToGround.md#ground-range-to-incidence-angle-conversion)). 
 
 ($\gamma_0$) values can be obtained using the $\beta_0$ values and a local digital elevation model.  
 To assist in viewing analysis and projection, all amplitude products are projected onto the WGS84 Reference Ellipsoid.

@@ -12,7 +12,8 @@ At ICEYE we like to use clear, descriptive English so we prefer to call a GRD im
 Amplitude images represent focused SAR data that has been detected and (usually) multi-look processed and projected to the ground plane using an Earth ellipsoid model. The image coordinates are oriented along the flight direction and ground range (figure 1). The pixel spacing is equidistant in azimuth and in ground range. Ground range coordinates are the slant range coordinates projected onto the ellipsoid of the Earth. For this projection the WGS84 reference ellipsoid (table 1) is used and an averaged fixed value of terrain height is used. This makes the ellipsoid surface closer to the true ground surface. The mean ellipsoid height used is annotated in the `avg_scene_height` metadata element.
 
 !!! Tip
-    For an explanation of why see [Terrain Height](../geospatialAccuracy#terrain-height) in the 'Geospatial Accuracy' section under 'Foundations'.
+    For an explanation of why see [Terrain Height](
+../foundations/geospatialAccuracy.md#terrain-height) in the 'Geospatial Accuracy' section under 'Foundations'.grd
 
 
 <figure markdown>
@@ -23,7 +24,7 @@ Amplitude images represent focused SAR data that has been detected and (usually)
 </figure>
 
 
-Pixel values represent a scaled amplitude. The resulting product has approximately circular spatial resolution and square pixel spacing. Additionally, an incidence angle dependence in range, calculated using the ellipsoidal Earth model has been applied to enable the conversion of radar brightness to backscatter intensity. This is explained in more detail in the section on [Radiometric Considerations](../radiometric#calibration-correction).
+Pixel values represent a scaled amplitude. The resulting product has approximately circular spatial resolution and square pixel spacing. Additionally, an incidence angle dependence in range, calculated using the ellipsoidal Earth model has been applied to enable the conversion of radar brightness to backscatter intensity. This is explained in more detail in the section on [Radiometric Considerations](../foundations/radiometric.md#calibration-correction).
 
 The core advantages of range-azimuth amplitude (GRD) images is that they are laid out in the natural SAR orientation, which is required for rigorous geolocation, and their pixels are free of the interpolation artifacts of map projection images.  This product is the form of a SAR amplitude image that retains its SAR heritage. It’s pixels are presented in the natural range-azimuth form best suited for shadows-down interpretation, that is free of map-projection-induced artifacts, that supports manipulation into orthophotos and other forms, and which supports the SAR image geometry model used to calculate ground locations. 
 
@@ -59,7 +60,7 @@ Ellipsoid parameters and metadata tags can easily be found using the command :
 ```python
 gdalinfo <geotiff_filename.tif>
 ```
-The amplitude image metadata elements can be found in [the metadata section](../metadata). 
+The amplitude image metadata elements can be found in [the metadata section](./metadata.md). 
 
 ## Amplitude Image in Context
 Figure 2 provides a useful summary of Amplitude images in the context of the processing options available with the red line highlighting the decisions made during product production. 
