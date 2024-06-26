@@ -1,5 +1,5 @@
 # Ordering ICEYE Products
-ICEYE offers timely and reliable global SAR imaging. This section describes the tasking process for new ICEYE collections and how to order archived imagery from ICEYE’s catalog. The type of SAR collections available to order are described in [ICEYE Products](../products/#types-of-sar-collection).
+ICEYE offers timely and reliable global SAR imaging. This section describes the tasking process for new ICEYE collections and how to order archived imagery from ICEYE’s catalog. The type of SAR collections available to order are described in ["Types of SAR Collection"](./typesofsarcollection.md).
 
 
 ## ICEYE Tasking
@@ -62,7 +62,7 @@ When placing a Standard Order you will need to specify and/or select from the fo
         * Exact: Each image is acquired within a 2-hour time window from your specified order start time and repeat cycle.  This is our premium service, tailored for time-critical collections that do not require a precise imaging geometry. Note that for Exact time windows, you can optionally include an attachment with your desired exact acquisition times. This attachment can be the result of a feasibility study that you had previously requested or it can be generated directly by you using our published satellite ephemerides. Please see the section Optional Feasibility Studies below. 
     * **Repeat cycle**: This is the time between the start of consecutive acquisition time windows. This information is only required for orders of image stacks (repeat acquisitions).
 
-4. **Imaging Mode**: Refer to Section [Types of SAR Collection](/product-documentation/productguide/products/#types-of-sar-collection) for more information on these imaging modes
+4. **Imaging Mode**: Refer to Section ["Types of SAR Collection"](./typesofsarcollection.md) for more information on these imaging modes
     * Strip
     * Spot
     * Spot Extended Area

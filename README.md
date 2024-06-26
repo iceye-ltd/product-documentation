@@ -12,8 +12,40 @@ change or error). Otherwise, clone the repo, make a branch with your changes and
 * Everyone else, feel free to fork this repo into your own Github account and make the changes there. When you are happy with the changes, make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to merge your work including a short summary about what the changes are and why.
 
 ## Installation
+### Easy way
 
-The ICEYE Product Documentation is built using `python`, `mkdoc`, `material for mkdocs` and `mike`.
+The ICEYE Product Documentation is built using `python`, `mkdocs`, `material for mkdocs` and `mike`. The easiest way to install these is to use `uv` and the `requirements` file.
+
+Install [uv](https://github.com/astral-sh/uv) - the fast python package manager:
+```bash
+# On macOS and Linux.
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# On Windows.
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# For a specific version.
+curl -LsSf https://astral.sh/uv/0.2.15/install.sh | sh
+powershell -c "irm https://astral.sh/uv/0.2.15/install.ps1 | iex"
+
+# With pip.
+pip install uv
+
+# With pipx.
+pipx install uv
+
+# With Homebrew.
+brew install uv
+```
+
+From Linux / OSX terminal:
+```bash
+uv venv --python 3.11 .venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+```
+
+### By hand
 
 1. Make sure you have a github account and clone the repo.
 2. Install python 3.8 or higher
@@ -21,6 +53,8 @@ The ICEYE Product Documentation is built using `python`, `mkdoc`, `material for 
 4. Install [`mkdocs`](https://mkdocs.readthedocs.io/en/stable/#installation)
 5. Install [`Material` for `mkdocs`](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
+
+## Running the documentation locally
 To get the documentation running on your own local computer :
 
 1. `cd product-documentation`
