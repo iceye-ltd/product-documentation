@@ -25,12 +25,21 @@
     color: #FF0000;
     animation: heart 1000ms infinite;
 }
-[data-md-color-scheme="iceye"] {
-    --md-primary-fg-color:        #000046;
-    --md-primary-fg-color--light: #1CB5DF;
-    --md-primary-fg-color--dark:  #471D6F;
-    --md-accent-fg-color:         #1CB5DF;
+
+:root {
+    --md-primary-fg-color:        #011C22;
+    --md-primary-fg-color--light: #D7FFF5;
+    --md-primary-fg-color--dark:  #2E444A;
+    --md-accent-fg-color:         #9EB8B8;
+    --md-code-hl-color:           #D7FFF5;
   }
+
+[data-md-color-scheme="iceye"] {
+    --md-primary-fg-color:        #011C22;
+    --md-primary-fg-color--light: #D7FFF5;
+    --md-primary-fg-color--dark:  #2E444A;
+    --md-accent-fg-color:         #9EB8B8;
+}
 
 .center {
     display: block;
@@ -40,35 +49,49 @@
 }
 
 h1 {
-    font-family: rajdhani;
+    font-family: Instrument Sans;
 }
 
 h2 {
-    font-family: rajdhani;
+    font-family: Instrument Sans;
 }
 
 h3 {
-    font-family: rajdhani;
+    font-family: Instrument Sans;
 }
 h4 {
-    font-family: rajdhani;
+    font-family: Instrument Sans;
 }
 
 .md-header__title {
-    font-family: rajdhani;
+    font-family: Instrument Sans;
 }
 
 .md-nav__title{
-    font-family: rajdhani;
+    font-family: Instrument Sans;
 }
 
 .md-footer{
-    --md-footer-bg-color:  #323132;
+    --md-footer-bg-color:  #011C22;
 }
 
 th {
-    font-family: rajdhani;
+    font-family: Instrument Sans;
     font-weight: bold;
-    background-color:#134E5E; 
+    background-color:#2E444A; 
     color:white;
 }
+
+.md-typeset .admonition,
+.md-typeset details {
+    font-family: Instrument Sans;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+    font-family: Instrument Sans;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-hue: 180; 
+  }
