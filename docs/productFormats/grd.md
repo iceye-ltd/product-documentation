@@ -12,8 +12,7 @@ At ICEYE we like to use clear, descriptive English so we prefer to call a GRD im
 Amplitude images represent focused SAR data that has been detected and (usually) multi-look processed and projected to the ground plane using an Earth ellipsoid model. The image coordinates are oriented along the flight direction and ground range (figure 1). The pixel spacing is equidistant in azimuth and in ground range. Ground range coordinates are the slant range coordinates projected onto the ellipsoid of the Earth. For this projection the WGS84 reference ellipsoid (table 1) is used and an averaged fixed value of terrain height is used. This makes the ellipsoid surface closer to the true ground surface. The mean ellipsoid height used is annotated in the `avg_scene_height` metadata element.
 
 !!! Tip
-    For an explanation of why see [Terrain Height](
-../foundations/geospatialAccuracy.md#terrain-height) in the 'Geospatial Accuracy' section under 'Foundations'.grd
+    For an explanation of why, see [Determining Ground Locations](../foundations/geospatialAccuracy.md#determining-ground-locations) in the 'Geospatial Considerations' section under 'Foundations'
 
 
 <figure markdown>

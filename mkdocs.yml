@@ -66,7 +66,8 @@ theme:
     favicon: assets/favicon.ico
     custom_dir: overrides
     font: 
-        text: Neuton
+        text: Instrument Sans Regular
+        code: Space Mono
     features:
       - navigation.tracking
 
@@ -87,8 +88,8 @@ extra:
     provider: mike
     default: latest
   social:
-    - icon: fontawesome/brands/twitter 
-      link: https://twitter.com/iceyefi
+    - icon: fontawesome/brands/x-twitter 
+      link: https://x.com/iceyefi
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/ICEYEcom
     - icon: fontawesome/brands/facebook
@@ -131,4 +132,4 @@ extra_javascript:
     - javascripts/mathjax.js
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-copyright: Copyright &copy; 2023 - ICEYE
+copyright: Copyright &copy; 2024 - ICEYE
