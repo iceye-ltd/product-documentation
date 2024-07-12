@@ -72,7 +72,7 @@ theme:
       - navigation.tracking
 
 plugins:
-  - material/search
+  - search
   - bibtex:
       bib_file: "refs.bib"
   - mike:
