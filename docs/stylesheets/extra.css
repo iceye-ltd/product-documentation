@@ -49,26 +49,26 @@
 }
 
 h1 {
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 h2 {
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 h3 {
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
 }
 h4 {
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 .md-header__title {
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 .md-nav__title{
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 .md-footer{
@@ -80,11 +80,6 @@ th {
     font-weight: bold;
     background-color:#2E444A; 
     color:white;
-}
-
-.md-typeset .admonition,
-.md-typeset details {
-    font-family: Instrument Sans;
 }
 
 .md-typeset .admonition,
