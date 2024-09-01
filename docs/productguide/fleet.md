@@ -78,7 +78,7 @@ At present, ICEYE satellites are all in sun-synchronous orbits with 15 orbits pe
 Each satellite has the ability to slowly adjust its orbits throughout its operating life. The adjustment is usually performed in the orbital plane by raising or lowering the satellite's altitude. This changes the orbital period, which in turn changes the ground track repeat period. As the fleet grows it will gradually be adjusted into one-day repeating coherent ground tracks. This provides novel opportunities to combine identical data collections of the same area whilst maintaining rapid access times.
 
 <figure markdown>
-![placeholder](img/muldrow.gif){width="600"}
+![placeholder](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/muldrow.gif){width="600"}
 <figcaption align = "center"><em>Figure 2: Daily Coherent Ground Track Repeat (GTR) imagery reveals unprecedented levels of intelligence such as the flow rate of The Muldrow Glacier USA between 16th and 30th April 2021.</em></figcaption>
 </figure> 
 
