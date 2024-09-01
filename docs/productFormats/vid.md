@@ -8,7 +8,7 @@
  Video is very useful in applications where moving objects need to be analyzed. By simple inspection and analysis of a video, it is possible to infer the general direction and speed of moving objects such as vessels and vehicles. SAR Video is also effective for detecting objects hidden in the forest area as well as human-made objects as these tend to give bright reflections and show as glint when playing a video.
 
 <figure markdown>
-![placeholder](img/vid_harbour.gif){width="800"}
+![placeholder](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/vid_harbour.gif){width="800"}
 <figcaption align = "center"><em>Figure 1: Detail of a SAR Video (VID) Product showing multiple vessels in movement. </em></figcaption>
 </figure> 
 
@@ -31,7 +31,7 @@ The formats of the VID product are MPEG4 and GIF. Additionally, a GeoTIFF format
 </figure>
 
 <figure markdown>
-![placeholder](img/video_waves.gif){width="800"}
+![placeholder](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/video_waves.gif){width="800"}
 <figcaption align = "center"><em>Figure 2: Detail of a SAR Video (VID) Product showing waves and human-made objects highlighted by glint. </em></figcaption>
 </figure> 
 

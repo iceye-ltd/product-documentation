@@ -6,7 +6,7 @@ After an imaging operation has taken place, the recorded radar echo data is down
 When producing different forms of exploitable products, several decisions have to be made about the data representation. At ICEYE we realise that not every format is suitable for every customer or use case, so starting in 2022 we will be increasing the range of processing options available. This section includes a discussion of format options so that later we can refer to our current formats in context of the larger landscape.
 
 <figure markdown>
-![placeholder](img/port.gif){width="600"}
+![placeholder](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/port.gif){width="600"}
 <figcaption align = "center"><em>Figure 1: The Port of Rotterdam on three consecutive days.</em></figcaption>
 </figure> 
 

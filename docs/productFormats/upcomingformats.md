@@ -75,7 +75,7 @@ A JSON schema that can be used for validation purposes is available at the follo
 [https://sar.iceye.com/schema/product-spec/0.0.2/image.json](https://sar.iceye.com/schema/product-spec/0.0.2/image.json) 
 
 <figure markdown>
-![placeholder](img/imaging_geometry.png){width="800"}
+![placeholder](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/imaging_geometry.png){width="800"}
 <figcaption align = "center"><em>Figure 6: Imaging geometry and satellite orbit track can be visualized by opening the GRD/SLC GeoJSON metadata files Google Earth Pro</em></figcaption>
 </figure> 
 
