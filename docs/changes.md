@@ -6,6 +6,7 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
+| 15th Sep 2024 | 6.0.0   | Product Guide re-structured as Product Specification| 
 | 12th Jul 2024 | 5.2.8   | Updated fonts and colors to new ICEYE brand. Fixed search.| 
 | 26th Jun 2024 | 5.2.7   | Removed references to polyfill.io domain.| 
 | 11th March 2024 | 5.2.4  | Addition of Dwell Fine imaging characteristics and data product parameters. Upcoming CPX format renamed GeoTIFF SLC. Upcoming AML format renamed Cloud-optimized GeoTIFF GRD.
