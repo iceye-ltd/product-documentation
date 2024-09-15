@@ -9,26 +9,33 @@ site_url: https://iceye-ltd.github.io/product-documentation
 
 nav:
     - Welcome: index.md
-    - Change Log: changes.md
-    - The ICEYE Fleet: productguide/fleet.md
-    - ICEYE SAR Imagery: 
-        - Types of SAR Collection : productguide/typesofsarcollection.md
-        - Types of SAR Data Products : productguide/sardataproducts.md
-    - Ordering SAR imagery :
-        - Ordering data: productguide/ordering.md
-        - Support: productguide/support.md
-    - Data Format Specification : 
-        - SAR Data Formatting Options : productFormats/introduction.md
-        - Packaging : productFormats/packaging.md
-        - Image Products :
-            - Single Look Complex Image : productFormats/slc.md
-            - Amplitude Image : productFormats/grd.md
-        - Additional Products :
-            - Colorized Sub-aperture Image : productFormats/csi.md
-            - SAR Video : productFormats/vid.md
-        - Upcoming Formats : productFormats/upcomingformats.md
-        - Metadata : productFormats/metadata.md
-    - Foundations : 
+    - Data Product Specification:
+       - 1. Introduction : productspecification/introduction.md
+       - 2. Imaging Modes : productspecification/imagingmodes.md
+       - 3. Tasking : productspecification/tasking.md
+       - 4. Catalog : productspecification/catalog.md
+       - 5. Data Products : productspecification/dataproducts.md
+       - Glossary : productspecification/glossary.md
+       - Disclaimer : productspecification/disclaimer.md
+#   - The ICEYE Fleet: productguide/fleet.md
+#   - ICEYE SAR Imagery: 
+#       - Types of SAR Collection : productguide/typesofsarcollection.md
+#       - Types of SAR Data Products : productguide/sardataproducts.md
+#   - Ordering SAR imagery :
+#       - Ordering data: productguide/ordering.md
+#       - Support: productguide/support.md
+#   - Data Format Specification : 
+#       - SAR Data Formatting Options : productFormats/introduction.md
+#       - Packaging : productFormats/packaging.md
+#       - Image Products :
+#           - Single Look Complex Image : productFormats/slc.md 
+#          - Amplitude Image : productFormats/grd.md
+#      - Additional Products :
+#            - Colorized Sub-aperture Image : productFormats/csi.md
+#            - SAR Video : productFormats/vid.md
+#        - Upcoming Formats : productFormats/upcomingformats.md
+    - Metadata Reference: productFormats/metadata.md
+    - SAR 101 : 
       - What is SAR ? : 
           - The Value Of SAR Imaging : foundations/OverviewOfSAR/overviewOfSAR.md
           - A Simple Form Of RADAR Imaging : foundations/OverviewOfSAR/simpleFormOfImaging.md
@@ -43,12 +50,9 @@ nav:
       - Radiometric Considerations : foundations/radiometric.md 
       - Slant to Ground Conversion : foundations/slantToGround.md
       - Validation : foundations/validation/geospatialValidation.md
-    # - Exploiting SAR Products :
-    #     - The Basics : 
-    #     - Advanced Tips and Tricks :
-    #     - Snippets for Code Ninjas :
     - ICEYE Archives : archive/archive.md
-    - About: about.md
+    - Change Log: changes.md
+#    - About: about.md
 theme:
     name: material
     palette:
@@ -109,6 +113,8 @@ extra_css:
 
 markdown_extensions:
   - attr_list
+  - toc:
+      toc_depth: 3
   - md_in_html
   - tables
   - pymdownx.critic
