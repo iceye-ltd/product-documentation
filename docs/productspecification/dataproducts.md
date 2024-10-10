@@ -23,21 +23,22 @@ The primary product within ICEYE's **Amplitude Data Products** offering is the *
 
 ICEYE also offers the **Quicklook** product which is a raster graphic preview of a GRD image. Quicklook images are encoded in the PNG file format with metadata included. They are compatible with most common documentation, presentation and publishing software. As such they are easily exploitable by non-technical staff without specialized GIS software or uncommon expertise. More information on the Quicklook product is available in Section [5.2.1](#521-quicklook-1).
 
-The amplitude data product offering also contains two products that are only possible with the Dwell and Dwell Fine imaging modes. The first of these is the **Colorized Sub-aperture Image (CSI)** product which is a composite SAR image resulting from the coadding of 13 distinctively colored sub-aperture images. These are packaged into the GeoTIFF format with all metadata included. They are excellent for detecting human-made structures and moving objects. More information on the CSI product is available in Section [5.4.1](#541-colorized-sub-aperture-image-csi-2).
+TTwo amplitude data products are only offered with the Dwell, Dwell Fine and Dwell Precise imaging modes. The first of these is the **Colorized Sub-aperture Image (CSI)** product which is a composite SAR image resulting from the coadding of 13 distinctively colored sub-aperture images. These are packaged into the GeoTIFF format with all metadata included. They are excellent for detecting human-made structures and moving objects. More information on the CSI product is available in Section [5.4.1](#541-colorized-sub-aperture-image-csi-2).
 
-The second Dwell and Dwell Fine specific product is the **SAR Video (VID)** product which is a short video with 25 individual frames each representing a discrete sub-aperture SAR image taken during the same collection. VID products are delivered in both MPEG4 and GIF formats; A GeoTIFF file is also provided with each frame as a separate band. The metadata is also stored in the GeoTIFF file. Like the CSI, the VID product is excellent for detecting human-made structures and moving objects. More information on the VID product is available in Section [5.4.2](#542-sar-video-vid-2).
+The second Dwell, Dwell Fine and Dwell Precise specific product is the **SAR Video (VID)** product which is a short video with 25 individual frames each representing a discrete sub-aperture SAR image taken during the same collection. VID products are delivered in both MPEG4 and GIF formats; A GeoTIFF file is also provided with each frame as a separate band. The metadata is also stored in the GeoTIFF file. Like the CSI, the VID product is excellent for detecting human-made structures and moving objects. More information on the VID product is available in Section [5.4.2](#542-sar-video-vid-2).
 
 Table [5-1](#table-5-1-amplitude-data-products-available-for-each-iceye-imaging-mode) provides a summary of the different amplitude data products in terms of their availability and the imaging modes through which they can be obtained. Further descriptions of the different data products are given in the following subsections as referenced above.
 
 
 ##### _Table 5-1: Amplitude Data Products available for each ICEYE Imaging Mode_
 
-| Service level                                                                            |  Product  | Scan | Strip | Spot | Spot Fine | SLEA | Dwell | Dwell Fine |
-| ---------------------------------------------------------------------------------------- | :-------: | :--: | :---: | :--: | :-------: | :--: | :---: | :--------: |
-| **Standard** _Delivery SLAs in Section [3.6.3](tasking.md#373-delivery-time-service-level-6) apply_ | Quicklook |  ☑︎  |   ☑︎  |  ☑︎  |     ☑︎    |  ☑︎  |   ☑︎  |     ☑︎     |
-| **Standard** _Delivery SLAs in Section [3.6.3](tasking.md#373-delivery-time-service-level-6) apply_ |    GRD    |  ☑︎  |   ☑︎  |  ☑︎  |     ☑︎    |  ☑︎  |   ☑︎  |     ☑︎     |
-| **Standard** _Delivery SLAs in Section [3.6.3](tasking.md#373-delivery-time-service-level-6) apply_  |    CSI    |   ☒  |   ☒   |   ☒  |     ☒     |   ☒  |   ☑︎  |     ☑︎     |
-| **Standard** _Delivery SLAs in Section [3.6.3](tasking.md#373-delivery-time-service-level-6) apply_ |    VID    |   ☒  |   ☒   |   ☒  |     ☒     |   ☒  |   ☑︎  |     ☑︎     |
+| Service level    |  Product  | Scan | Strip | Spot<br>Spot Fine<br>Spot Extended Area | Dwell<br>Dwell Fine<br>Dwell Precise |
+| -------------------------- | :-------: | :--: | :---: | :-----------------------------: | :--------------------------: |
+| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_ | Quicklook |  ✅︎  |   ✅︎  |                ✅︎               |              ✅︎              |
+| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    GRD    |  ✅︎  |   ✅︎  |                ✅︎               |              ✅︎              |
+| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    CSI    |   ❌  |   ❌   |                ❌                |              ✅︎              |
+| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    VID    |   ❌  |   ❌   |                ❌                |              ✅              |
+
 
 
 ### 5.1.2 Complex Data Product Offering
@@ -55,11 +56,11 @@ Table [5-2](#table-5-2-complex-data-products-available-for-each-iceye-imaging-mo
 
 ##### _Table 5-2: Complex Data Products available for each ICEYE Imaging Mode_
 
-| Service level                                                                                |  Product  | Scan | Strip | Spot | Spot Fine | SLEA | Dwell | Dwell Fine |
-| -------------------------------------------------------------------------------------------- | :-------: | :--: | :---: | :--: | :-------: | :--: | :---: | :--------: |
-| **Standard** _Delivery SLAs in Section [3.6.3](tasking.md#373-delivery-time-service-level) apply_ |    SLC    |   ☒  |   ☑︎  |  ☑︎  |     ☑︎    |  ☑︎  |   ☑︎  |     ☑︎     |
-| **Custom**                                                                                   | SICD+SIDD |   ☒  |   ☑︎  |  ☑︎  |     ☑︎    |  ☑︎  |   ☑︎  |     ☑︎     |
-|  **Custom**  |    CPHD   |   ☒  |   ☑︎  |  ☑︎  |     ☑︎    |  ☑︎  |   ☑︎  |     ☑︎     |
+| Service level                                                                                                                                                         |  Product  | Scan | Strip | Spot<br>Spot Fine<br>Spot Extended Area | Dwell<br>Dwell Fine<br>Dwell Precise |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------: | :--: | :---: | :-----------------------------: | :--------------------------: |
+| **Standard** <br> _Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_ |    SLC    |   ❌  |   ✅︎  |                ✅︎               |              ✅︎              |
+| **Custom**     | SICD+SIDD |   ❌  |   ✅︎  |                ✅︎               |              ✅︎              |
+| **Custom**        |    CPHD   |   ❌  |   ✅︎  |                ✅︎               |              ✅︎              |
 
 
 ## 5.2 Amplitude Data Products
@@ -124,7 +125,7 @@ ICEYE will be releasing a new Cloud Optimized GeoTIFF SLC format, that is descri
 
 Scenes are stored in the satellite image acquisition geometry (also known as the slant plane). The image coordinate system is centered on the zero-Doppler (time of closest approach) SAR coordinates and data is  arranged in the slant-range-by-azimuth imaging plane. The pixels are spaced equidistant in azimuth (according to the inverse of the pulse repetition frequency) and in slant range (according to the range sampling frequency). 
 
-SLC products are the best source for SAR image analysis, but complex data has traditionally been packaged in scientific or military-intel formats that were difficult to use without specialized software or experience. To address this, ICEYE images are packaged in the open, international ****[Cloud Optimized GeoTIFF (COG)](https://docs.ogc.org/is/21-026/21-026.html) format. This enables easy ingestion and manipulation in most image readers, GIS tools and libraries. The amplitude and phase data is formatted in two separate GeoTIFF bands, similar to how bands are used for multispectral images. Image readers and GIS tools are able to ingest this complex image just like they do any other GeoTIFF file. The amplitude band can be immediately presented for viewing, while the phase band is available for further exploitation by more specialized tools. 
+SLC products are the best source for SAR image analysis, but complex data has traditionally been packaged in scientific or military-intel formats that were difficult to use without specialized software or experience. To address this, ICEYE images are packaged in the open, international **[Cloud Optimized GeoTIFF (COG)](https://docs.ogc.org/is/21-026/21-026.html)** format. This enables easy ingestion and manipulation in most image readers, GIS tools and libraries. The amplitude and phase data is formatted in two separate GeoTIFF bands, similar to how bands are used for multispectral images. Image readers and GIS tools are able to ingest this complex image just like they do any other GeoTIFF file. The amplitude band can be immediately presented for viewing, while the phase band is available for further exploitation by more specialized tools. 
 
 The Cloud Optimized GeoTIFF format also enables  faster data visualization and geospatial processing workflows especially when the image data itself is being stored in the cloud.
 
@@ -155,7 +156,7 @@ Images in the legacy SLC format are stored as binary matrices in an [HDF5](https
 In the fourth quarter 2024, ICEYE will communicate the deprecation plan for the legacy SLC format, with the legacy format persisting through 2025. ICEYE customers are advised to discontinue use of the legacy SLC format and instead adopt the new Cloud Optimized GeoTIFF SLC format in particular to enjoy its benefits. ICEYE welcomes dialogue with customers to assist with this transition.  
 
 
-## 5.4 Dwell and Dwell Fine Exclusive Data Products
+## 5.4 Dwell, Dwell Fine and Dwell Precise Exclusive Data Products
 
 ### 5.4.1 Colorized Sub-Aperture Image (CSI)
 
@@ -171,14 +172,14 @@ The colors denote the geometry that a point in the image predominantly scatters 
 
 ##### _Figure 5-2: An illustration of the 13 different sub-apertures and their individual coloring.._
 
-CSI images are only produced for the Dwell and Dwell Fine imaging modes because of their long total illumination duration of 25 seconds. Dividing the total collection into 13 sub-apertures results in 13 sub-apertures with illumination periods of approximately 1.9 seconds each. 
+CSI images are only produced for the Dwell, Dwell Fine and Dwell Precise imaging modes because of their long total illumination duration of 25 seconds. Dividing the total collection into 13 sub-apertures results in 13 sub-apertures with illumination periods of approximately 1.9 seconds each. 
 
 The CSI format uses a  GeoTIFF container so the image can be viewed by any regular or geospatial image viewer. The exact time, duration, color and satellite location for each sub-aperture is available as metadata in the CSI GeoTIFF product file.
 
 
 ### 5.4.2 SAR Video (VID)
 
-**SAR Video (VID)** is similar to the CSI product described in Section [5.4.1](#541-colorized-sub-aperture-image-csi-3) in which the acquired SAR data is first divided into multiple sub-apertures. However, in the case of SAR Video each discrete sub-aperture image is used as a frame to compile a short video clip. The Dwell and Dwell Fine imaging generate 25-second videos consisting of 25 individual frames.
+**SAR Video (VID)** is similar to the CSI product described in Section [5.4.1](#541-colorized-sub-aperture-image-csi-3) in which the acquired SAR data is first divided into multiple sub-apertures. However, in the case of SAR Video each discrete sub-aperture image is used as a frame to compile a short video clip. The Dwell, Dwell Fine and Dwell Precise imaging modes generate 25-second videos consisting of 25 individual frames.
 
 The VID product is useful in applications for which the motion of moving objects, such as vessels and land vehicles, is to be analyzed. By simple inspection and analysis of a video, it is possible to infer the general direction and speed of the moving object. SAR Video is also effective for detecting objects hidden in forested areas as well as human-made objects as these tend to give bright reflections revealed as glints when playing a video.
 
@@ -255,6 +256,8 @@ The components of the file name are described below:
   - SLED: Dwell
 
   - SLEDF: Dwell Fine
+  
+  - SLEDP: Dwell Precise
 
 - **product**: A string that describes which data product is packaged in the file. The string - data product mapping is as follows:
 

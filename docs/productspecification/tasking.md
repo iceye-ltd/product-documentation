@@ -138,7 +138,7 @@ In other cases orders cannot be canceled and the order must be fully paid and no
 
 ### 3.6.1 Return Policy
 
-In the event that a Customer’s purchase is non-compliant with the Data Product Specification, the Customer must contact ICEYE Customer Operations and Satellite Planning (COSP) team (via the email address received during customer onboarding) providing details of the non-compliance within 30 days of receiving their order.
+In the event that a Customer’s purchase is non-compliant with the Data Product Specification, the Customer must contact ICEYE Customer Operations and Satellite Planning (COSP) team (via the email address received during customer onboarding) providing details of the non-compliance within 14 days of receiving their order.
 
 As customer satisfaction is a priority for us at ICEYE, we will work quickly to ensure our customers receive compliant images.
 
@@ -180,8 +180,8 @@ For all Standard Orders, ICEYE currently offers two **Delivery Time Options** or
 
 | Delivery Time Option | Description                                                         | Supported Data Products                                                                     |
 | -------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 8 h                  | Data files are delivered in 8 hours of less after acquisition time  | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC(See Section [5](dataproducts.md#5-data-products)) |
-| 3 h                  | Data files are delivered in 3 hours of less after acquisition time  |                                                                                             |
+| 8 h                  | Data files are delivered in 8 hours or less after acquisition time  | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC(See Section [5](dataproducts.md#5-data-products)) |
+| 3 h                  | Data files are delivered in 3 hours or less after acquisition time  |                                                                                             |
 
 
 #####

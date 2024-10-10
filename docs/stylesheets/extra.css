@@ -87,6 +87,10 @@ th {
     font-family: Instrument Sans;
 }
 
+.md-grid {
+    max-width: 1580px; 
+  }
+
 [data-md-color-scheme="slate"] {
     --md-hue: 180; 
   }
