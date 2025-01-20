@@ -4,4 +4,4 @@ _This Data Product Specification is provided in its present condition and withou
 
 _This Data Product Specification is provided for the users own internal use and may not be, either in whole or part, sold, reproduced, disclosed to third parties in any form or by any means, whether this is electronic, mechanical, by photocopying, recording, or in any other way, without the prior written permission of ICEYE_.
 
-© ICEYE 2024
+© ICEYE 2025
