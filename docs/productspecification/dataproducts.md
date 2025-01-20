@@ -37,7 +37,7 @@ Table [5-1](#table-5-1-amplitude-data-products-available-for-each-iceye-imaging-
 | **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_ | Quicklook |  ✅︎  |   ✅︎  |                ✅︎               |              ✅︎              |
 | **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    GRD    |  ✅︎  |   ✅︎  |                ✅︎               |              ✅︎              |
 | **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    CSI    |   ❌  |   ❌   |                ❌                |              ✅︎              |
-| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    VID    |   ❌  |   ❌   |                ❌                |              ✅              |
+| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    VID    |   ❌  |   ❌   |                ❌                |              ✅︎              |
 
 
 

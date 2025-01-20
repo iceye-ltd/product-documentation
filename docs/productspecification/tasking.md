@@ -129,9 +129,9 @@ ICEYE understands that customers may have cause to cancel an order before collec
 |                     Cancellation Request Time                    |                       Additional Condition                       |                        Cancellation Charge                       |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
 | More than 72 h prior to the start of the acquisition time window |                                N/A                               |                          Free of charge                          |
-|    72 - 48 h prior to the start of the acquisition time window   | Less than 24 h prior to the start of the acquisition time window | Less than 24 h prior to the start of the acquisition time window |
-|    48 - 24 h prior to the start of the acquisition time window   | Less than 24 h prior to the start of the acquisition time window | Less than 24 h prior to the start of the acquisition time window |
-| Less than 24 h prior to the start of the acquisition time window | Less than 24 h prior to the start of the acquisition time window | Less than 24 h prior to the start of the acquisition time window |
+|    72 - 48 h prior to the start of the acquisition time window   |                                N/A                               |                  10% of the order value         |
+|    48 - 24 h prior to the start of the acquisition time window   |                                N/A                               |  20% of the order value |
+| Less than 24 h prior to the start of the acquisition time window | Order submitted >24h before the start of the acquisition time window |  100% of the order value (i.e. no refund) |
 
 In other cases orders cannot be canceled and the order must be fully paid and no refund can be expected. The order must be fully paid and no refund can be expected despite the cancellation when the cancellation charge is 100% as per above.
 

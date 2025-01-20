@@ -25,24 +25,6 @@ A potentially large source of errors comes from not knowing precisely where the 
 
 Once on the ground, the orbit information is passed to ICEYE's orbit determination servers. These refine the orbit by taking into account the satellite's attitude and motion, the solar radiation pressure and the local gravitational field strength. The refinements are then used to improve the image geospatial accuracy and to provide accurate time/position/velocity estimates for future collections.
 
-In the future we plan on further refining the orbit fidelity using post-collected GNSS corrections combined with retroreflectors attached to the satellite.
-
-The Following table summarises the different levels of orbit fidelity. This information is stored in each image's metadata.
-
-
-<figure markdown>
-| ORBIT FIDELITY | DESCRIPTION | LATENCY |
-|----------------|-------------|---------|
-| Predicted      | Uses the latest orbit solution to predict where the satellite will be at some point in the future. It is used for collection planning and feasibility studies.  It is not typically used for image formation processing because it has the largest errors. | updated 6 hours before collection |
-| Rapid | Uses GNSS stored samples collected during or near to the imaging operation. The spherical error (SE90) of the samples is 3 m. This allows imagery to be downlinked during or soon after collection to provide tactical SAR imagery to users with a modest geospatial error. This level is not yet available on all satellites. | Immediate |
-| Precise | This is the default orbit fidelity used for ICEYE satellites. The satellite position and velocity state vectors are refined after the imaging operation using downlinked telemetry and attitude data. The spherical error of the refined data is 1.5 m | 10-45 minutes after imaging operation |
-| Scientific | This uses GNSS corrections applied to the samples taken during imaging to significantly reduce the position velocity error. This is not yet available across the ICEYE Fleet. | 2 to 4 days after collection | 
-<figcaption align = "center"><em>Table 1 : Different Levels of Orbit Fidelity in ICEYE SAR Images</em></figcaption>
-</figure>
-
-### Orbit Knowledge Metadata
-
-The location of the satellite during any imaging operation is made available by including the satellite and velocity information in the metadata for each image product. The data can be found under the `orbit_state_vector` metadata element. The accuracy of each element is determined by the orbit fidelity used to create the product which can be found in the `orbit_processing_level` metadata element which corresponds so one of the levels in table 1.
 
 ## Determining Ground Locations
 A sensor-orientation SAR amplitude image is a distillation of its richer complex image parent. It is the viewable version of SAR pixels and thus contains only microwave brightness values and no phase data. As with the complex image, its pixels have a range-azimuth structure. The difference is that it is usually projected to a ground surface, not the slant plane.

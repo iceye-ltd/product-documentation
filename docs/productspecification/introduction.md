@@ -139,7 +139,7 @@ ICEYE Data Products can be separated into two groups: **Amplitude Data Products*
 | **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_ | Quicklook |  ✅︎  |   ✅︎  |                ✅︎               |              ✅︎              |
 | **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    GRD    |  ✅︎  |   ✅︎  |                ✅︎               |              ✅︎              |
 | **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    CSI    |   ❌  |   ❌   |                ❌                |              ✅︎              |
-| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    VID    |   ❌  |   ❌   |                ❌                |              ✅              |
+| **Standard** <br>_Delivery SLAs in Section_ [_3.7.3_](tasking.md#373-delivery-time-service-level) _apply_      |    VID    |   ❌  |   ❌   |                ❌                |              ✅︎              |
 
 
 ##### _Table 1-6: Introduction to ICEYE's Complex Data Products_
