@@ -84,6 +84,8 @@ All eight imaging modes are listed in Table [1-2](#table-1-2-overview-of-the-ice
 | Stripmap | Strip                     |             Min 30 x 50<br>Max 30 x 840 |                      3 |               1 | [2.5](imagingmodes.md#25-strip)                |
 | ScanSAR   | Scan                      |          Min 100 x 100<br>Max 100 x 840 |                     15 |               1 | [2.6](imagingmodes.md#26-scan)                 |
 
+ICEYE also offers 1-look and 2-looks variants of the imaging mode Spot Fine. These are intended for applications that require high resolution, but where lower information density is sufficient. Please refer to section [2.2](imagingmodes.md#22-spot-and-spot-fine) for more information.
+
 The **Scene Dimensions** column describes the lengths of the range (the dimension perpendicular to the satellite's orbit path), and the azimuth (the dimension parallel to the orbit path), which together describe the surface area of the scene size (the rectangle on the Earth's ground plane that is imaged), with each imaging mode.
 
 The **Ground Resolution** column describes the achievable resolution measured at the center of the scene of amplitude data products (section [5.2](dataproducts.md#52-amplitude-data-products)) that are projected to the ground.  
