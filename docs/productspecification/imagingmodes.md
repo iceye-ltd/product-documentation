@@ -16,6 +16,8 @@ ICEYE offers several **Imaging Modes** to suit a wide range of applications. Ref
 | Number of  Azimuth Looks             |   4  |    5    |    2    |   20    |     10    |    5     |   1   |                                                          1                                                         |
 | Section Reference                    | [2.2](#22-spot-and-spot-fine) | [2.2](#22-spot-and-spot-fine) | [2.3](#23-spot-extended-area) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.5](#25-strip) | [2.6](#26-scan) |
 
+ICEYE also offers 1-look and 2-looks variants of the imaging mode Spot Fine. These are intended for applications that require high resolution, but where lower information density is sufficient. Please refer to section [2.2](#22-spot-and-spot-fine)  for more information.
+
 **Geospatial Accuracy** refers to the accuracy with which a point in an ICEYE satellite image agrees with a true reference on the ground. Geospatial Accuracy here is evaluated as a statistical value: Each satellite in the ICEYE fleet is periodically evaluated against ground based calibration targets to obtain the geospatial accuracy of the system. This process involves measuring the location of each target in the SAR imagery after the image has been terrain corrected, and comparing each location to their known ground truth. Each calibration target will have its own slightly different error. The numeric value indicating Geospatial Accuracy in Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-2) above is the Root Mean Square Error (RMSE) of all the measured calibration points from all the satellites, as meters. Note that the geospatial accuracy of a SAR image is a function of the accuracy of the terrain model used. Especially in high elevation terrains significant distortion can impact the accuracy. This means the values in this table cannot be guaranteed for every Digital Elevation Model (DEM) available. Moreover, irrespective of the DEM used, accuracy is decreased in high elevation areas due to geometric distortion.
 
 The **Information Density** figures tabulated in Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-3) describe the number of bits of imaging data per scene square meter. In principle, higher information densities offer potential for superior interpretability of an image. Larger scene sizes tend to have lower resolution and therefore lower information density. Also, for fixed scene size, e.g., 5 km x 5 km, higher information density products tend to have larger file sizes (see e.g. SLC Product Size rows in e.g. Table [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products)).
@@ -48,73 +50,75 @@ ICEYE Spot and Spot Fine imaging modes cover an area of 5 km x 5 km for multi-lo
 
 Having very high resolution, Spot and Spot Fine  images are useful for detailed investigation of an area. They are used primarily to discriminate between different types of objects such as vessels, aircraft, buildings and infrastructure.
 
+ICEYE also offers **1-look** and **2-looks variants** of the imagine mode **Spot Fine**. These are intended for applications that require high resolution, but where lower information density is sufficient. The tasking and collection performance parameters as well as the product attributes for **Spot Fine**,  **Spot Fine 1-look** and **Spot Fine 2-looks** are listed as separate columns in the tables below.
+
 ICEYE aims to ensure that the the resulting imagery for tasks collected with the Spot and Spot Fine imaging modes within the tasking parameters listed in Table [2-2](#table-2-2-tasking-parameters-for-standard-iceye-imaging-modes-for-spot-and-spot-fine) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-3](#table-2-3-collection-performance-attributes-for-spot-and-spot-fine-imaging-modes) and product attributes listed in Tables [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products) and [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products), for amplitude and complex data products respectively.
 
 
 ##### _Table 2-2: Tasking parameters for imaging modes for Spot and Spot Fine_
 
-|             Parameter \ Imaging Mode |    Spot    |  Spot Fine |
-| -----------------------------------: | :--------: | :--------: |
-|                Radar Beams Used \[#] |      1     |      1     |
-|            Nominal Scene Width \[km] |      5     |      5     |
-|           Nominal Scene Length \[km] |      5     |      5     |
-|           Maximum Scene Length \[km] |      5     |      5     |
-|   Nominal Collection Duration \[sec] |     10     |     15     |
-|   Maximum Collection Duration \[sec] |     10     |     15     |
-|                         Polarization |     VV     |     VV     |
-|    Performant Incidence Range \[deg] |    20-40   |    20-40   |
-| Time Dominant Incidence Range \[deg] |    5-45    |    5-45    |
-|            Squint Angle Range \[deg] | -45 to +45 | -45 to +45 |
+|             Parameter \ Imaging Mode |    Spot    |  Spot Fine | Spot Fine 1-look | Spot Fine 2-looks |
+| -----------------------------------: | :--------: | :--------: | :--------------: | :---------------: |
+|                Radar Beams Used \[#] |      1     |      1     |         1        |         1         |
+|            Nominal Scene Width \[km] |      5     |      5     |         5        |         5         |
+|           Nominal Scene Length \[km] |      5     |      5     |         5        |         5         |
+|           Maximum Scene Length \[km] |      5     |      5     |         5        |         5         |
+|   Nominal Collection Duration \[sec] |     10     |     15     |         3        |         6         |
+|   Maximum Collection Duration \[sec] |     10     |     15     |         3        |         6         |
+|                         Polarization |     VV     |     VV     |        VV        |         VV        |
+|    Performant Incidence Range \[deg] |    20-40   |    20-40   |       20-40      |       20-40       |
+| Time Dominant Incidence Range \[deg] |    5-45    |    5-45    |       10-45      |       10-45       |
+|            Squint Angle Range \[deg] | -45 to +45 | -45 to +45 |    -45 to +45    |     -45 to +45    |
+
 
 
 ##### _Table 2-3: Collection performance attributes for Spot and Spot Fine imaging modes_
 
-|                  Attribute \ Imaging Mode |    Spot    |  Spot Fine |
-| ----------------------------------------: | :--------: | :--------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -18 to -15 | -18 to -11 |
-|             Azimuth Ambiguity Ratio \[dB] |     -17    |     -17    |
-|               Range Ambiguity Ratio \[dB] |     -20    |     -20    |
-|             Geospatial Accuracy \[m RMSE] |      6     |      6     |
-| ESA Copernicus Contributing Mission Class |    VHR1    |    VHR1    |
-|                                    RNIIRS |     5.5    |     6.3    |
-|                          RGIQE \[bits/m²] |     22     |     83     |
-
+|                  Attribute \ Imaging Mode |    Spot    |  Spot Fine | Spot Fine 1-look | Spot Fine 2-looks |
+| ----------------------------------------: | :--------: | :--------: | :--------------: | :---------------: |
+|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -18 to -15 | -18 to -11 |     -11 to -4    |     -14 to -7     |
+|             Azimuth Ambiguity Ratio \[dB] |     -17    |     -17    |        -17       |        -17        |
+|               Range Ambiguity Ratio \[dB] |     -20    |     -20    |        -20       |        -20        |
+|             Geospatial Accuracy \[m RMSE] |      6     |      6     |         6        |         6         |
+| ESA Copernicus Contributing Mission Class |    VHR1    |    VHR1    |       VHR1       |        VHR1       |
+|                                    RNIIRS |     5.5    |     6.3    |        6.0       |        6.1        |
+|                          RGIQE \[bits/m²] |     22     |     83     |        16        |         33        |
 
 #####
 
 ##### _Table 2-4: Product attributes for Spot and Spot Fine amplitude data products_
 
-|                                                 Product Attribute |                          Spot                         |                       Spot Fine                       |
-| ----------------------------------------------------------------: | :---------------------------------------------------: | :---------------------------------------------------: |
-|                                    Nominal Ground Resolution \[m] |                           1                           |                          0.5                          |
-|                                      Ground Range Resolution \[m] |                      1.46 - 0.78                      |                      0.73 - 0.39                      |
-|                                    Ground Azimuth Resolution \[m] |                           <1                          |                          <0.5                         |
-|                                                  Range Looks \[#] |                           1                           |                           1                           |
-|                                                Azimuth Looks \[#] |                           4                           |                           5                           |
-|              Impulse Response Weighing Function (peak side level) |                Taylor Weighting (-20dB)               |                Taylor Weighting (-20dB)               |
-|                                  Ground Range Sample Spacing \[m] |                          0.5                          |                          0.25                         |
-|                                Ground Azimuth Sample Spacing \[m] |                          0.5                          |                          0.25                         |
-| Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) |
-|                                            GRD Product Size \[MB] |                      250 to 1500                      |                      2000 to 3500                     |
-|                                   Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |
-|                                        Radiometrically Calibrated |                          Yes                          |                          Yes                          |
+|                                                                                                                                          Product Attribute |                          Spot                         |                       Spot Fine                       |                    Spot Fine 1-look                   |                   Spot Fine 2-looks                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------: | :---------------------------------------------------: | :---------------------------------------------------: | :---------------------------------------------------: |
+|                                                                                                                             Nominal Ground Resolution \[m] |                           1                           |                          0.5                          |                          0.5                          |                          0.5                          |
+|                                                                                                                               Ground Range Resolution \[m] |                      1.46 - 0.78                      |                      0.73 - 0.39                      |                      0.73 - 0.39                      |                      0.73 - 0.39                      |
+|                                                                                                                             Ground Azimuth Resolution \[m] |                           <1                          |                          <0.5                         |                          <0.5                         |                          <0.5                         |
+|                                                                                                                                           Range Looks \[#] |                           1                           |                           1                           |                           1                           |                           1                           |
+|                                                                                                                                         Azimuth Looks \[#] |                           4                           |                           5                           |                           1                           |                           2                           |
+|                                                                                                       Impulse Response Weighing Function (peak side level) |                Taylor Weighting (-20dB)               |                Taylor Weighting (-20dB)               |                Taylor Weighting (-20dB)               |                Taylor Weighting (-20dB)               |
+|                                                                                                                           Ground Range Sample Spacing \[m] |                          0.5                          |                          0.25                         |                          0.25                         |                          0.25                         |
+|                                                                                                                         Ground Azimuth Sample Spacing \[m] |                          0.5                          |                          0.25                         |                          0.25                         |                          0.25                         |
+| Product Format(see section [5](https://docs.google.com/document/d/1sE-SQh0Ri3YRHj_7eF3AmLs_FcuXRykS6D2E6Uzi0rk/edit#heading=h.m4oeulyjg5e4) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) |
+|                                                                                                                                     GRD Product Size \[MB] |                      250 to 1500                      |                      2000 to 3500                     |                      2000 to 3500                     |                      2000 to 3500                     |
+|                                                                                                                            Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |
+|                                                                                                                                 Radiometrically Calibrated |                          Yes                          |                          Yes                          |                          Yes                          |                          Yes                          |
 
 
 #####
 
 ##### _Table 2-5: Product attributes for Spot and Spot Fine complex data products_
 
-|                                                             Product Attribute |                        Spot                        |                      Spot Fine                     |
-| ----------------------------------------------------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
-|                                                                Focusing Plane |                     Slant Plane                    |                     Slant Plane                    |
-|                                                  Slant Range Resolution \[m]  |                         0.5                        |                        0.25                        |
-|                                                 Slant Azimuth Resolution \[m] |                        0.25                        |                         0.1                        |
-|                          Impulse Response Weighing Function (peak side level) |                 Uniform (-13.3 dB)                 |                  Uniform (-13.3dB)                 |
-|                                               Slant Range Sample Spacing \[m] |                        < 0.4                       |                        < 0.2                       |
-|                                             Slant Azimuth Sample Spacing \[m] |                        < 0.2                       |                       < 0.09                       |
-| Slant Range Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
-|                                                    Complex Product Size \[GB] |                      0.6 to 4                      |                       5 to 15                      |
-|                                                Dynamic Range (bits per pixel) |                16 (uint) 32 (float)                |                16 (uint) 32 (float)                |
+|                                                                                                                                                      Product Attribute |                        Spot                        |                      Spot Fine                     |   Spot Fine 1-look   |      Spot Fine 2-looks     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------: | :------------------------------------------------: | :------------------: | :------------------------: |
+|                                                                                                                                                         Focusing Plane |                     Slant Plane                    |                     Slant Plane                    |      Slant Plane     |         Slant Plane        |
+|                                                                                                                                           Slant Range Resolution \[m]  |                         0.5                        |                        0.25                        |         0.25         |            0.25            |
+|                                                                                                                                          Slant Azimuth Resolution \[m] |                        0.25                        |                         0.1                        |          0.5         |            0.25            |
+|                                                                                                                   Impulse Response Weighing Function (peak side level) |                 Uniform (-13.3 dB)                 |                  Uniform (-13.3dB)                 |  Uniform (-13.3 dB)  |     Uniform (-13.3 dB)     |
+|                                                                                                                                        Slant Range Sample Spacing \[m] |                        < 0.4                       |                        < 0.2                       |        < 0.25        |           < 0.25           |
+|                                                                                                                                      Slant Azimuth Sample Spacing \[m] |                        < 0.2                       |                       < 0.09                       |         <0.5         |           < 0.25           |
+| Slant Range Product Format(see section [5](https://docs.google.com/document/d/1sE-SQh0Ri3YRHj_7eF3AmLs_FcuXRykS6D2E6Uzi0rk/edit#heading=h.m4oeulyjg5e4) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |   Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |  Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
+|                                                                                                                                             Complex Product Size \[GB] |                      0.6 to 4                      |                       5 to 15                      |        1 to 3        |          1.3 to 5          |
+|                                                                                                                                         Dynamic Range (bits per pixel) |                16 (uint) 32 (float)                |                16 (uint) 32 (float)                | 16 (uint) 32 (float) |    16 (uint) 32 (float)    |
 
 
 ## 2.3 Spot Extended Area

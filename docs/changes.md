@@ -6,7 +6,8 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
-| 11th Oct 2024 | 6.0.2   | Fixed broken table with information on cancellation policy | 
+| 2nd Feb 2025 | 6.0.3   | Addition of Spot Fine 1-look and Spot Fine 2-looks imaging mode variants | 
+| 20th Jan 2025 | 6.0.2   | Fixed broken table with information on cancellation policy | 
 | 11th Oct 2024 | 6.0.1   | Addition of Dwell Precise imaging mode | 
 | 15th Sep 2024 | 6.0.0   | Product Guide re-structured as Product Specification | 
 | 12th Jul 2024 | 5.2.8   | Updated fonts and colors to new ICEYE brand. Fixed search.| 
