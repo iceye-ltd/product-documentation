@@ -50,7 +50,8 @@ nav:
       - Radiometric Considerations : foundations/radiometric.md 
       - Slant to Ground Conversion : foundations/slantToGround.md
       - Validation : foundations/validation/geospatialValidation.md
-    - ICEYE Archives : archive/archive.md
+    - ICEYE Archives : archive/
+    - ICEYE Open Data : opendata/opendata.md
     - Change Log: changes.md
 #    - About: about.md
 theme:
