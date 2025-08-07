@@ -1,4 +1,4 @@
-# Launcing Soon: ICEYE Open Data Program on AWS 🚀
+# ICEYE Open Data Program on AWS 🚀
 
 Welcome to the ICEYE Open Data Program. As part of our commitment to scientific collaboration and advancement, we are making a growing selection of our **Synthetic Aperture Radar (SAR)** datasets available for free under a **Creative Commons Attribution (CC-BY 4.0)** license.
 
@@ -22,7 +22,7 @@ Each SAR scene typically includes:
 The ICEYE Open Data catalog is structured as a [static STAC catalog](https://stacspec.org), hosted as publicly accessible files on Amazon S3. The s3 bucket is organized as follows:
 
 ```text
-s3://iceye-open-data/
+s3://iceye-open-data-catalog/
 ├── catalog.json
 ├── collections/
 │ └── iceye-sar.json
@@ -35,17 +35,45 @@ s3://iceye-open-data/
 │ └── *.json # Metadata
 ```
 
-### 🔍 Finding Data
+## Accessing the ICEYE Open Data Bucket
 
-- **Catalog browsing**: You can use STAC Browser or command-line tools like [`pystac-client`](https://github.com/stac-utils/pystac-client) to crawl and filter the catalog.
-- **Scene organization**: STAC items are grouped by **acquisition date (YYYY/MM)**.
-- **Assets** are linked inside each STAC item, referencing public URLs to their respective COGs and metadata.
+You can access ICEYE’s open data via a public S3 bucket. No AWS credentials or account are required.
 
-For a direct listing of files, visit the [ICEYE Open Data S3 Website](TBD).
+### Resource Details
+
+| **Resource Type**           | **Details**                                                  |
+|----------------------------|--------------------------------------------------------------|
+| **S3 Bucket**              | `iceye-open-data-catalog`                                            |
+| **Amazon Resource Name (ARN)** | `arn:aws:s3:::iceye-open-data-catalog`                      |
+| **AWS Region**             | `us-west-2`                                                  |
+| **AWS CLI Access**         | `aws s3 ls --no-sign-request s3://iceye-open-data-catalog/data/`     |
+
+> **Note**: The `--no-sign-request` flag allows public access without requiring an AWS account.
+
+---
+
+### 🌐 Browse the ICEYE Open Data Catalog
+
+You can explore the contents of the ICEYE Open Data S3 bucket through a web-based file browser:
+
+🔗 [Open the Catalog](http://iceye-open-data-catalog.s3-website-us-west-2.amazonaws.com/?prefix=)
+
+This static website interface allows you to:
+
+- View the available datasets and all the `.tif`, `.json`, and `.png` files included in them
+- Access the image and metadata files directly from your browser
+
+### Browse Data with STAC Browser
+
+You can also explore the dataset using the STAC Browser via the link below:
+
+🔗 [STAC Browser - ICEYE Open Data Catalog](https://radiantearth.github.io/stac-browser/#/external/iceye-open-data-catalog.s3-us-west-2.amazonaws.com/catalog.json?.language=en)
+
+The STAC Browser provides an interactive interface to navigate and preview metadata and available assets.
 
 ## 🧪 Tutorial: Access and Analyze ICEYE SAR Data on AWS
 
-This tutorial walks through how to:
+To get started with the ICEYE open SAR data, you can simply:
 
 1. Discover a scene using STAC tools or by browsing the bucket
 2. Load a COG (Cloud Optimized GeoTIFF) directly from S3
