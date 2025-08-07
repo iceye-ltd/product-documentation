@@ -25,14 +25,15 @@ The ICEYE Open Data catalog is structured as a [static STAC catalog](https://sta
 s3://iceye-open-data-catalog/
 ├── catalog.json
 ├── collections/
-│ └── iceye-sar.json
+│   └── iceye-sar.json
 ├── stac-items/
-│ └── YYYY/MM/scene_timestamp_product.json
+│   └── YYYY/MM/<scene_id>_<timestamp>_<product>.json
 ├── data/
-│ └── <ICEYE_scene_id_timestamp_satellite_mode>/
-│ ├── *.tif # GRD / SLC COGs
-│ ├── *.png # Quicklook
-│ └── *.json # Metadata
+│   └── <mode-folder>/                          # e.g., spot-fine, dwell-fine
+│       └── <ICEYE_scene_id_timestamp_satellite_mode>/
+│           ├── *.tif   # GRD / SLC COGs
+│           ├── *.png   # QLK / THM
+│           └── *.json  # Metadata
 ```
 
 ## Accessing the ICEYE Open Data Bucket
