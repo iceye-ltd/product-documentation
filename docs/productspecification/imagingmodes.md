@@ -7,14 +7,14 @@ ICEYE offers several **Imaging Modes** to suit a wide range of applications. Ref
 
 ##### _Table 2-1: Summary of ICEYE imaging modes_
 
-|                                      |   Spot  |  Spot Fine   |    Spot Extended Area  |  Dwell  |  Dwell Fine  |  Dwell Precise    |  Strip  |    Scan   |
-| ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| Ground Resolution \[m]               |    1 |  0.5  |   1   |   1    |   0.5  |  0.25 |   3   |   15    |
-| Geospatial Accuracy \[m RMSE]        |   6  |  6   |    6   |    6   |  6     |    6  |   6   |   15   |
-| Scene Size \[range x azimuth, in km] |  5 x 5 |  5 x 5 | 15 x 15 | 5 x 5  | 5 x 5   |  5 x 5  |   30 x 50<br>Up to 30 x 840 (custom option)  |  100 x 100<br>Up to 100 x 840 (custom option)    |
-| Information Density \[bits/m2]       |  22  | 83   |     8.4    |    125    |   185  |   326  |    0.8      |   0.1    |
-| Number of  Azimuth Looks             |   4  |    5    |    2    |   20    |     10    |    5     |   1   |                                                          1                                                         |
-| Section Reference                    | [2.2](#22-spot-and-spot-fine) | [2.2](#22-spot-and-spot-fine) | [2.3](#23-spot-extended-area) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.5](#25-strip) | [2.6](#26-scan) |
+|                                      |   Spot  |  Spot Fine  |  Spot Extended Area  |  Dwell  |  Dwell Fine  |  Dwell Precise  |  Strip  |  Scan  |  Scan Wide |
+| ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| Ground Resolution \[m]               |    1 |  0.5  |   1   |   1    |   0.5  |  0.25 |   3   |   15    | 27   |
+| Geospatial Accuracy \[m RMSE]        |   6  |  6   |    6   |    6   |  6     |    6  |   6   |   15   | 27   |
+| Scene Size \[range x azimuth, in km] |  5 x 5 |  5 x 5 | 15 x 15 | 5 x 5  | 5 x 5   |  5 x 5  |  30 x 50<br>Up to 30 x 500 (custom option) | 100 x 100<br>Up to 100 x 500 (custom option) | 200 x 300<br>Up to 200 x 600 (custom option) |
+| Information Density \[bits/m2]       |  22  | 83   |     8.4    |    125    |   185  |   326  |    0.8      |   0.1  |  0.01  |
+| Number of  Azimuth Looks             |   4  |    5    |    2    |   20    |     10    |   5   |  1  |  1  |                                                         1                                                         |
+| Section Reference                    | [2.2](#22-spot-and-spot-fine) | [2.2](#22-spot-and-spot-fine) | [2.3](#23-spot-extended-area) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.5](#25-strip) | [2.6](#26-scan-and-scan-wide) | [2.6](#26-scan-and-scan-wide) |
 
 ICEYE also offers 1-look and 2-looks variants of the imaging mode Spot Fine. These are intended for applications that require high resolution, but where lower information density is sufficient. Please refer to section [2.2](#22-spot-and-spot-fine)  for more information.
 
@@ -30,7 +30,7 @@ Each imaging mode subsection has one of each of the following tables:
 
 - **Collection performance attribute** tables describe the expected features of the resulting imagery when the performant tasking parameters for the imaging mode in question are utilized (see Table [2-3](#table-2-3-collection-performance-attributes-for-spot-and-spot-fine-imaging-modes) for an example). These tables describe technical parameters related mostly to image quality and accuracy. Collection performance attributes will not be achieved for images that are tasked outside of the performant tasking parameters for each imaging mode, for example when images are tasked outside of their performant incidence angle range.
 
-- **Data product attribute** tables describe attributes that are specific to the amplitude and complex data products that are generated with the collected SAR data. The ICEYE imaging modes can be used to generate both amplitude and complex data products and therefore these are described in **product attributes for amplitude data products**, and **product attributes for complex data products** tables, respectively (see Tables [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products) and [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products-1) for examples). No complex data product attribute tables are provided for the Scan imaging mode, which is only offered as an amplitude data product.
+- **Data product attribute** tables describe attributes that are specific to the amplitude and complex data products that are generated with the collected SAR data. The ICEYE imaging modes can be used to generate both amplitude and complex data products and therefore these are described in **product attributes for amplitude data products**, and **product attributes for complex data products** tables, respectively (see Tables [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products) and [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products-1) for examples). No complex data product attribute tables are provided for the Scan and Scan Wide imaging modes, which are only offered as an amplitude data product.
 
 ICEYE endeavors to continuously improve the performance of its SAR products. The values for attributes and parameters in this specification communicate the minimum performance values of our standard products across the current fleet at the time of publication. Note that values are approximate and may vary with image imaging mode, incidence angle, and contents of scene.
 
@@ -103,7 +103,7 @@ ICEYE aims to ensure that the the resulting imagery for tasks collected with the
 |                                                                                                                            Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |
 |                                                                                                                                 Radiometrically Calibrated |                          Yes                          |                          Yes                          |                          Yes                          |                          Yes                          |
 
-
+<small>Note: ICEYE Spotlight collection strategy employs constant bandwidth and illumination times. At higher incidence angles, the geometry of SAR signal projection results in improved ground range resolution that greatly surpasses the nominal value for the imaging mode in question. The trade-off for this increased image detail is a reduced number of azimuth looks, which may slightly affect speckle characteristics.</small>
 #####
 
 ##### _Table 2-5: Product attributes for Spot and Spot Fine complex data products_
@@ -257,7 +257,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 |                                                                                                                            Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |
 |                                                                                                                                 Radiometrically Calibrated |                          Yes                          |                          Yes                          |                          Yes                          |
 
-
+<small>Note: ICEYE Spotlight collection strategy employs constant bandwidth and illumination times. At higher incidence angles, the geometry of SAR signal projection results in improved ground range resolution that greatly surpasses the nominal value for the imaging mode in question. The trade-off for this increased image detail is a reduced number of azimuth looks, which may slightly affect speckle characteristics.</small>
 
 ##### _Table 2-13: Product attributes for Dwell, Dwell Fine and Dwell Precise complex data products_
 
@@ -281,7 +281,7 @@ In the Strip imaging mode the ground swath is illuminated with a continuous sequ
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/strip.png)
 
-ICEYE **Strip** products have a ground resolution of 3 m in range and azimuth and cover an area of 30 km (range) by 50 km (azimuth). The strip length can be extended to as much as 840 km in azimuth if requested as part of a custom order.
+ICEYE **Strip** products have a ground resolution of 3 m in range and azimuth and cover an area of 30 km (range) by 50 km (azimuth). The strip length can be extended to as much as 500 km in azimuth if requested as part of a custom order.
 
 Having large area coverage and a moderate resolution, Strip images are useful for situational awareness applications. They allow a user to quickly assess what is occurring in the region. They are particularly useful for tasks such as deforestation monitoring, or sea ice monitoring. Strip is commonly used as a 'first responder' product in times of natural disaster to assess the impact of a flood, earthquake or volcano.
 
@@ -295,9 +295,9 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Str
 |                Radar Beams Used \[#] |   1   |
 |            Nominal Scene Width \[km] |   30  |
 |           Nominal Scene Length \[km] |   50  |
-|           Maximum Scene Length \[km] |  840  |
+|           Maximum Scene Length \[km] |  500  |
 |   Nominal Collection Duration \[sec] |   10  |
-|   Maximum Collection Duration \[sec] |  120  |
+|   Maximum Collection Duration \[sec] |  70  |
 |                         Polarization |   VV  |
 |    Performant Incidence Range \[deg] | 15-35 |
 | Time Dominant Incidence Range \[deg] |  5-45 |
@@ -352,63 +352,65 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Str
 |                                                 Dynamic Range (bits per pixel) |                16 (uint) 32 (float)                |
 
 
-## 2.6 Scan
+## 2.6 Scan and Scan Wide
 
-ICEYE offers a Scan imaging mode based on the ScanSAR collection strategy. In ScanSAR, each satellite's phased array antenna is used to create multiple beams in the elevation direction. This beam steering illuminates a wide area via multiple adjacent strips, but it means that points on the ground are not illuminated for as long as in the conventional Stripmap collection strategy. This reduces the resolution of the Scan product.
+ICEYE offers Scan and Scan Wide imaging modes based on the ScanSAR collection strategy. In ScanSAR, each satellite's phased array antenna is used to create multiple beams in the elevation direction. This beam steering illuminates a wide area via multiple adjacent strips, but it means that points on the ground are not illuminated for as long as in the conventional Stripmap collection strategy. This reduces the resolution of the Scan and Scan Wide products.
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/scan.png)
 
-In the conventional Scan mode, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. ICEYE employs a refined version of this collection strategy known as Terrain Observation by Progressive Scans (TOPSAR), which additionally electronically steers the beam from backward to forward in the azimuth direction. This ensures consistent image quality across the captured area. **Scan** produces imagery that covers an area of 100 km x 100 km with a resolution better than 15 m. The length of a Scan product can be extended to as much as 840 km in azimuth if requested as part of a custom order.
+In the conventional ScanSAR collection strategy, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. ICEYE employs a refined version of this collection strategy known as Terrain Observation by Progressive Scans (TOPSAR), which additionally electronically steers the beam from backward to forward in the azimuth direction. This ensures consistent image quality across the captured area. **Scan** produces imagery that covers an area of 100 km x 100 km with a resolution better than 15 m. The length of a Scan product can be extended to as much as 500 km in azimuth if requested as part of a custom order. **Scan Wide** produces imagery that covers an area of 200 km x 300 km with a resolution better than 27 m. The length of a Scan Wide product can be extended to as much as 600 km in azimuth if requested as part of a custom order.
 
-Having the largest area coverage and a modest resolution, Scan images are highly suited to wide area surveillance and monitoring projects. Being able to operate in all weather and lighting conditions, they provide an excellent opportunity to image the oceans and to detect vessels and monitor shipping lanes.
+![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/ScanWide404.png)
 
-ICEYE aims to ensure that the resulting imagery for tasks collected with the Scan imaging mode within the tasking parameters listed in Table [2-18](#table-2-18-tasking-parameters-for-the-scan-imaging-mode) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-19](#table-2-19-collection-performance-attributes-for-the-scan-imaging-mode) and amplitude product attributes listed in Table [2-20](#table-2-20-product-attributes-for-scan-amplitude-data-products). Note that no complex data products are available for the Scan imaging mode.
+Having large area coverage and a modest resolution, Scan and Scan Wide images are highly suited to wide area surveillance and monitoring projects. Being able to operate in all weather and lighting conditions, they provide an excellent opportunity to image the oceans and to detect vessels and monitor shipping lanes.
 
-
-##### _Table 2-18: Tasking parameters for the Scan imaging mode_
-
-|             Parameter \ Imaging Mode |  Scan |
-| -----------------------------------: | :---: |
-|                Radar Beams Used \[#] |   4   |
-|            Nominal Scene Width \[km] |  100  |
-|           Nominal Scene Length \[km] |  100  |
-|           Maximum Scene Length \[km] |  840  |
-|   Nominal Collection Duration \[sec] |   15  |
-|   Maximum Collection Duration \[sec] |  120  |
-|                         Polarization |   VV  |
-|    Performant Incidence Range \[deg] | 21-29 |
-| Time Dominant Incidence Range \[deg] |  n/a  |
+ICEYE aims to ensure that the resulting imagery for tasks collected with the Scan and Scan Wide imaging mode within the tasking parameters listed in Table [2-18](#table-2-18-tasking-parameters-for-the-scan-and-scan-wide-imaging-modes) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-19](#table-2-19-collection-performance-attributes-for-the-scan-and-scan-wide-imaging-modes) and amplitude product attributes listed in Table [2-20](#table-2-20-product-attributes-for-scan-and-scan-wide-amplitude-data-products). Note that no complex data products are available for the Scan and Scan Wide imaging modes.
 
 
-#####
+##### _Table 2-18: Tasking parameters for the Scan and Scan Wide imaging modes_
 
-##### _Table 2-19: Collection performance attributes for the Scan imaging mode_
-
-|                  Attribute \ Imaging Mode |      Scan      |
-| ----------------------------------------: | :------------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -22.2 to -21.5 |
-|             Azimuth Ambiguity Ratio \[dB] |       -17      |
-|               Range Ambiguity Ratio \[dB] |       -20      |
-|             Geospatial Accuracy \[m RMSE] |       15       |
-| ESA Copernicus Contributing Mission Class |      VHR2      |
-|                          RGIQE \[bits/m²] |       0.1      |
+|             Parameter \ Imaging Mode |  Scan | Scan Wide|
+| -----------------------------------: | :---: | :---: |
+|                Radar Beams Used \[#] |   4   | 8  |
+|            Nominal Scene Width \[km] |  100  | 200   |
+|           Nominal Scene Length \[km] |  100  | 300   |
+|           Maximum Scene Length \[km] |  500  | 600   |
+|   Nominal Collection Duration \[sec] |   15  | 42   |
+|   Maximum Collection Duration \[sec] |  70  | 84   |
+|                         Polarization |   VV  | VV   |
+|    Performant Incidence Range \[deg] | 21-29 | 21-26 |
+| Time Dominant Incidence Range \[deg] |  n/a  | n/a   |
 
 
 #####
 
-##### _Table 2-20: Product attributes for Scan amplitude data products_
+##### _Table 2-19: Collection performance attributes for the Scan and Scan Wide imaging modes_
 
-|                                                  Product Attribute |                          Scan                         |
-| -----------------------------------------------------------------: | :---------------------------------------------------: |
-|                                     Nominal Ground Resolution \[m] |                           15                          |
-|                                       Ground Range Resolution \[m] |                          <15                          |
-|                                     Ground Azimuth Resolution \[m] |                          <15                          |
-|                                                   Range Looks \[#] |                           1                           |
-|                                                 Azimuth Looks \[#] |                           1                           |
-|                                   Ground Range Sample Spacing \[m] |                           6                           |
-|                                 Ground Azimuth Sample Spacing \[m] |                           6                           |
-| Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) |
-|                                             GRD Product Size \[MB] |                       700 - 1300                      |
-|                                    Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |
-|                                         Radiometrically Calibrated |                           No                          |
+|                  Attribute \ Imaging Mode |      Scan      |  Scan Wide   |
+| ----------------------------------------: | :------------: | :------------: |
+|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -22.2 to -21.5 | < -20   |
+|             Azimuth Ambiguity Ratio \[dB] |       -17      | -14    |
+|               Range Ambiguity Ratio \[dB] |       -20      | -17    |
+|             Geospatial Accuracy \[m RMSE] |       15       | 27    |
+| ESA Copernicus Contributing Mission Class |      VHR2      | VHR2    |
+|                          RGIQE \[bits/m²] |       0.1      | 0.01    |
+
+
+#####
+
+##### _Table 2-20: Product attributes for Scan and Scan Wide amplitude data products_
+
+|                                                  Product Attribute |                          Scan                   |  Scan Wide |
+| -----------------------------------------------------------------: | :---------------------------: | :---------------------------: |
+|                                     Nominal Ground Resolution \[m] |                           15                 | 27 |
+|                                       Ground Range Resolution \[m] |                          <15              | < 27 |
+|                                     Ground Azimuth Resolution \[m] |                          <15               | < 27 |
+|                                                   Range Looks \[#] |                           1                 | 1 |
+|                                                 Azimuth Looks \[#] |                           1                 | 1 |
+|                                   Ground Range Sample Spacing \[m] |                           6                  | 12 |
+|                                 Ground Azimuth Sample Spacing \[m] |                           6               | 12 |
+| Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) | Cloud Optimized GeoTIFF + JSON(legacy: GeoTIFF + XML) |
+|                                             GRD Product Size \[MB] |                       700 - 1300             | 800 - 1600 |
+|                                    Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)          | 16 (uint) 32 (float) |
+|                                         Radiometrically Calibrated |                           No                  | No |
 

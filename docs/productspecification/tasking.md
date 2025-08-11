@@ -40,7 +40,7 @@ ICEYE accepts two types of tasking orders as summarized in Table [3-1](#table-3-
 | Tasking Order Type | Benefits                                                          | Trade-offs                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Constellation      | Provides highest speed and reliability                            | Customer has to specify acquisition time windows and optionally repeat cycles                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Single-Satellite   | Supports the widest selection of tasking requirements and options | Customer has to specify tasking requirements in detail and then review and approve an exact acquisition plan;Each task relies on a single satellite for its execution, thus is inherently less reliable than tasks that can be executed by any satellite in the constellation. Additionally, single-satellite orders placed  more than 14 days before the desired acquisition are more susceptible to replanning because of long term satellite orbit predictability limitations.  |
+| Single-Satellite   | Supports the widest selection of tasking requirements and options | Customer has to specify tasking requirements in detail and then review and approve an exact acquisition plan;Each task relies on a single satellite for its execution, thus is inherently less reliable than tasks that can be executed by any satellite in the constellation. Additionally, single-satellite orders placed  more than 14 days before the desired acquisition (7 days for the Scan Wide imaging mode) are more susceptible to replanning because of long term satellite orbit predictability limitations.  |
 
 
 #####
@@ -58,7 +58,7 @@ Upon placing a constellation tasking order, the customer can specify a list of t
 
 Upon placing a single-satellite tasking order, our tasking experts will study the feasibility of the request and will quote an **acquisition plan** for approval. The acquisition plan will include a list of **acquisition opportunities** including the exact acquisition time, acquisition geometry and coverage of the specified AOI. From the plan, the customer can select their desired exact acquisition opportunities.
 
-While this gives a higher degree of control, single-satellite tasking orders have the disadvantage of not leveraging the entire ICEYE constellation: Each ordered acquisition relies on only one satellite, therefore being more exposed to possible technical anomalies or changes in satellite orbits. Please note that ICEYE can currently only accept Single-Satellite Tasking as standard orders up to 14 days in advance of the desired acquisition date. This is because the reliability of predicted orbits for specific satellites decreases considerably after 14 days. For orders with desired acquisition date more than 14 days in the future, Constellation Tasking Orders (section [3.3.1](#331-constellation-tasking-orders)) are strongly recommended. If Single-Satellite Tasking is nevertheless desired, it will be considered a custom order (section [3.1.2](#312-custom-orders)).
+While Single-Satellite Tasking allows for greater control over acquisition planning, it inherently does not take advantage of the full ICEYE constellation capabilities. Each acquisition is executed by a single, designated satellite, which increases vulnerability to unforeseen technical issues or changes in orbital dynamics.  Please note that ICEYE can currently only accept Single-Satellite Tasking as standard orders up to 14 days in advance of the desired acquisition date, or 7 days for Scan Wide imaging mode. This limitation is due to the decreasing reliability of orbit predictions beyond these timeframes. For acquisitions planned more than 14 days in advance (or more than 7 days for Scan Wide), Constellation Tasking Orders (section [3.3.1](#331-constellation-tasking-orders)) are strongly recommended. If Single-Satellite Tasking is nevertheless desired, it will be considered a custom order (section [3.1.2](#312-custom-orders)).
 
 
 ## 3.4 Tasking Priority Options
@@ -70,18 +70,18 @@ ICEYE's task prioritization is based on the two standard priority options descri
 
 | Tasking Priority Option |                             Purpose                             |                                        ICEYE commits to acquire task                                       | Min time before collection to choose pass | Min time before collection to choose target | Statistical Reliability  |
 | ----------------------- | :-------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :---------------------------------------: | :-----------------------------------------: | :----------------------: |
-| Commercial              |                   Commercial reliable SAR data                  |                    Yes - ICEYE commits to acquire task within the specified constraints                    |                    12 h                   |                     12 h                    |           >90%           |
+| Commercial              |                   Commercial reliable SAR data                  |                    Yes - ICEYE commits to acquire task within the specified constraints                    |                    12 h                   |                     12 h                    |           >90%<br>(>80% for Scan Wide)          |
 | Background              | Price sensitive applications. Collect only with spare capacity. | No - ICEYE makes no hard commitment to acquire.  Images tasked at commercial priority may take precedence. |                    24 h                   |                     24 h                    |     varies by region     |
 
 
 ### 3.4.1 Commercial Tasking Priority
 
-Tasks at **Commercial Tasking Priority** are prioritized as regular commercial acquisition tasks. Satellite constellation capacity for image acquisition is allocated on a first-come-first-served basis (FIFO). Tasks placed at commercial priority have a statistical likelihood of at least 90% of being acquired and delivered successfully.
+Tasks at **Commercial Tasking Priority** are prioritized as regular commercial acquisition tasks. Satellite constellation capacity for image acquisition is allocated on a first-come-first-served basis (FIFO). Tasks placed at commercial priority have a statistical likelihood of at least 90% of being acquired and delivered successfully. Note that tasks for the imaging mode Scan Wide placed at commercial priority have a statistical likelihood of at least 80% of being acquired and delivered successfully. 
 
 
 ### 3.4.2 Background Tasking Priority
 
-Tasks at **Background Tasking Priority** are executed at a lower priority than Commercial Tasking Priority. Consequently, such tasks may be displaced by higher priority tasks, or may not be acquired within the requested time window. Background tasking offers excellent value to customers that do not have precise timing constraints or who can accept flexibility in task fulfillment.
+Tasks at **Background Tasking Priority** are executed at a lower priority than Commercial Tasking Priority. Consequently, such tasks may be displaced by higher priority tasks, or may not be acquired within the requested time window. Background tasking offers excellent value to customers that do not have precise timing constraints or who can accept flexibility in task fulfillment. Background Tasking Priority is  only available with a 24-hour delivery time service level (see Section [3.7.3](#373-delivery-time-service-level))
 
 It is not possible for a user to alter the tasking priority after ICEYE has confirmed a task. To change the priority of an already submitted task, the user must first cancel the task (possibly subject to cancellation penalties, see Section [3.6](#36-order-cancellation)) and then resubmit the tasking request. Note that in case of Commercial priority, canceling and re-submitting an order may result in the loss of priority in the FIFO schema.
 
@@ -171,17 +171,18 @@ ICEYE provides a **Standard Delivery Endpoint** that is intended to meet most cu
 
 A central pillar of the ICEYE tasking product specification is the ICEYE commitment to deliver imagery within a predetermined time following collection. The realized delivery time is calculated as the difference of a) the timestamp of when the data products have been delivered to the agreed delivery endpoint, and b) the timestamp of original SAR data collection in the satellite as stored also in the image metadata.
 
-ICEYE delivery times are fulfilled for over 90 % of the applicable deliveries. This performance statistic applies to all applicable customer deliveries, and is intended to hold regardless of AOI or imaging mode. The statistic is evaluated based on all applicable collections from the previous calendar year and the Data Product Specification is updated annually based on the performance of the previous calendar year. Because this is a global statistic applied to all customers, no single collection is guaranteed to deliver the expected timeline:  a customer’s results may vary even while the Data Product Specification is honored.
+ICEYE delivery times are fulfilled for over 90 % of the applicable deliveries (80% for the Scan Wide imaging mode). This performance statistic applies to all applicable customer deliveries, and is intended to hold regardless of AOI or imaging mode. The statistic is evaluated based on all applicable collections from the previous calendar year and the Data Product Specification is updated annually based on the performance of the previous calendar year. Because this is a global statistic applied to all customers, no single collection is guaranteed to deliver the expected timeline:  a customer’s results may vary even while the Data Product Specification is honored.
 
-For all Standard Orders, ICEYE currently offers two **Delivery Time Options** or delivery tiers: an 8 h delivery tier, and a 3 h delivery tier for applications requiring rapid delivery. These delivery time options and how they map with the offered data product formats are further described in the below subsections, and summarized in Table [3-6](#table-3-6-summary-of-delivery-time-service-levels). Note that the delivery time service levels described in this subsection do not apply to Custom Orders. The delivery time service level must be separately agreed for custom orders and by default are delivered on the basis of best effort.
+For all Standard Orders, ICEYE currently offers three **Delivery Time Options**: 8 or 3  hours delivery options for Commercial Priority Tasking, and a 24-hour delivery option for Background Priority Tasking. These delivery time options and how they map with the offered data product formats are further described in the below subsections, and summarized in Table [3-6](#table-3-6-summary-of-delivery-time-service-levels). Note that the delivery time service levels described in this subsection do not apply to Custom Orders. The delivery time service level must be separately agreed for custom orders and by default are delivered on the basis of best effort.
 
 
 ##### _Table 3-6: Summary of Delivery Time Service Levels_
 
 | Delivery Time Option | Description                                                         | Supported Data Products                                                                     |
 | -------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 8 h                  | Data files are delivered in 8 hours or less after acquisition time  | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC(See Section [5](dataproducts.md#5-data-products)) |
-| 3 h                  | Data files are delivered in 3 hours or less after acquisition time  |                                                                                             |
+| 3 h                  | Data files are delivered in 3 hours or less after acquisition time. Available only for Commercial Priority Tasking.    | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products)) |
+| 8 h                  | Data files are delivered in 8 hours or less after acquisition time. Available only for Commercial Priority Tasking.    | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products))        
+| 24 h                 | Data files are delivered in 24 hours or less after acquisition time. Available only for Background Priority Tasking.    | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products))                                                                                       |
 
 
 #####
@@ -189,15 +190,18 @@ For all Standard Orders, ICEYE currently offers two **Delivery Time Options** or
 ICEYE intends to expand its specified delivery timelines beyond these two tiers. ICEYE also accommodates nonstandard delivery times of otherwise standard orders on a custom order basis. Customers are advised to explore nonstandard delivery time options and the delivery time options for custom orders potentially involving on-demand products (such as the CPHD, SICD + SIDD (NITF), and Orthorectified imagery data products; See Section [5](#5-data-products-17)) or nonstandard products and/or imaging modes together with the ICEYE customer service team, preferably via the email address the customer received during ICEYE’s customer onboarding.
 
 
-#### _3.7.3.1 8-hour Delivery Time_
+#### _3.7.3.1 3-hour Delivery Time_
 
-With the **8-hour Delivery Time** option automatic delivery will be completed in 8 hours or less of the data being acquired. The GRD, Legacy GRD, CSI, VID, Quicklook, SLC, and Legacy SLC data products are supported. See Section [5](dataproducts.md#5-data-products) for more information on the different data products.
+With the **3-hour Delivery Time** option automatic delivery will be completed in 3 hours or less of the data being acquired. This option is intended for applications requiring rapid delivery. The GRD, Legacy GRD, CSI, VID, Quicklook, SLC, and Legacy SLC data products are supported. See Section [5](dataproducts.md#5-data-products) for more information on the different data products. This option is only available for Commercial Priority Tasking. This option is not available for the Dwell Precise imaging mode. 
 
 
-#### _3.7.3.2 3-hour Delivery Time_
+#### _3.7.3.2 8-hour Delivery Time_
 
-With the **3-hour Delivery Time** option automatic delivery will be completed within 3 hours of the data being acquired. This option is intended for applications requiring rapid delivery. The same data products are supported as with the 8-hour Delivery Time option.
+With the **8-hour Delivery Time** option automatic delivery will be completed within 8 hours of the data being acquired.  The same data products are supported as with the 3-hour Delivery Time option. This option is only available for Commercial Priority Tasking.
 
+#### _3.7.3.3 24-hour Delivery Time_
+
+With the **24-hour Delivery Time** option automatic delivery will be completed within 24 hours of the data being acquired.  The same data products are supported as with the 3-hour Delivery Time option. This option is only available for Background Priority Tasking.
 
 ### 3.7.4 Quality Control
 
