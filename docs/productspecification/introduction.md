@@ -83,7 +83,7 @@ All nine imaging modes are listed in Table [1-2](#table-1-2-overview-of-the-icey
 |                                                                                                                                                                                                                                     Spotlight                | Dwell Precise                |                              5 x 5  |                    0.25 |              5 |       [2.4](imagingmodes.md#24-dwell-dwell-fine-and-dwell-precise)                          |
 | Stripmap | Strip                     |             Min 30 x 50<br>Max 30 x 500 |                      3 |               1 | [2.5](imagingmodes.md#25-strip)                |
 | ScanSAR   | Scan                      |          Min 100 x 100<br>Max 100 x 500 |                     15 |               1 | [2.6](imagingmodes.md#26-scan-and-scan-wide)                 |
-| ScanSAR   | Scan  Wde            |          Min 200 x 300<br>Max 200 x 600 |                     27 |               1 | [2.6](imagingmodes.md#26-scan-and-scan-wide)                 |
+| ScanSAR   | Scan Wide            |          Min 200 x 300<br>Max 200 x 600 |                     27 |               1 | [2.6](imagingmodes.md#26-scan-and-scan-wide)                 |
 
 ICEYE also offers 1-look and 2-looks variants of the imaging mode Spot Fine. These are intended for applications that require high resolution, but where lower information density is sufficient. Please refer to section [2.2](imagingmodes.md#22-spot-and-spot-fine) for more information.
 
