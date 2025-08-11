@@ -51,6 +51,7 @@ nav:
       - Slant to Ground Conversion : foundations/slantToGround.md
       - Validation : foundations/validation/geospatialValidation.md
     - ICEYE Archives : archive/archive.md
+    - ICEYE Open Data : opendata/opendata.md
     - Change Log: changes.md
 #    - About: about.md
 theme:
