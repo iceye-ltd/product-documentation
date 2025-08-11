@@ -1,0 +1,17 @@
+====== Column Definition ======
+Image_Name			: full ICEYE image Name
+CR_ID				: corner reflector ID as in the files downloaded from https://uavsar.jpl.nasa.gov/cgi-bin/calibration.pl  
+Latitude			: corner reflector's latitude (degrees) as in the files downloaded from https://uavsar.jpl.nasa.gov/cgi-bin/calibration.pl
+Longitude			: corner reflector's longitude (degrees) as in the files downloaded from https://uavsar.jpl.nasa.gov/cgi-bin/calibration.pl
+Height				: corner reflector's height above ellipsoid (m) as in the files downloaded from https://uavsar.jpl.nasa.gov/cgi-bin/calibration.pl
+Peak_Range			: corner reflector's range index estimated from the image (in pixels)
+Peak_Azimuth		: corner reflector's azimuth index estimated from the image (in pixels)
+Peak_Value			: corner reflector's amplitude value at the peak location
+Expected_Range		: corner reflector's expected range index calculated from its 3D coordinates (in pixels)
+Expected_Azimuth	: corner reflector's expected azimuth index calculated from its 3D coordinates (in pixels)
+LE_Range			: corner reflector's positional error in range direction (in pixels)
+LE_Azimuth			: corner reflector's positional error in azimuth direction (in pixels)
+LE_Range_Meters		: corner reflector's positional error in range direction (in meters)
+LE_Azimuth_Meters	: corner reflector's positional error in azimuth direction (in meters)
+
+NOTE: Multiple corner reflector files were downloaded from https://uavsar.jpl.nasa.gov/cgi-bin/calibration.pl by specifying different dates. Image's acquisition date was used to determine which corner reflector file to use. As such, same corner reflector might have different coordinates for different images.
