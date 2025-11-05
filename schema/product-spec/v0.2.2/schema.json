@@ -1,0 +1,704 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sar.iceye.com/schema/product-spec/v0.2.2/schema.json",
+  "title": "ICEYE Extension",
+  "description": "ICEYE Extension for STAC Items.",
+  "type": "object",
+  "required": [
+    "type",
+    "properties",
+    "assets",
+    "stac_extensions"
+  ],
+  "properties": {
+    "type": {
+      "const": "Feature"
+    },
+    "properties": {
+      "$comment": "Require fields here for Item Properties.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/fields"
+        }
+      ]
+    },
+    "stac_extensions": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "https://sar.iceye.com/schema/product-spec/v0.2.2/schema.json"
+        },
+        {
+          "const": "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+        },
+        {
+          "const": "https://stac-extensions.github.io/sat/v1.0.0/schema.json"
+        },
+        {
+          "const": "https://stac-extensions.github.io/view/v1.0.0/schema.json"
+        },
+        {
+          "const": "https://stac-extensions.github.io/processing/v1.1.0/schema.json"
+        },
+        {
+          "const": "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+        },
+        {
+          "const": "https://stac-extensions.github.io/raster/v1.0.0/schema.json"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "fields": {
+      "type": "object",
+      "required": [
+        "iceye:image_id",
+        "iceye:scene_id",
+        "iceye:run_name",
+        "iceye:frame_number",
+        "iceye:filename"
+      ],
+      "properties": {
+        "iceye:image_id": {
+          "title": "Image ID",
+          "type": "integer",
+          "$comment": "Collection",
+          "exclusiveMinimum": 0,
+          "examples": [
+            38887,
+            3469792
+          ]
+        },
+        "iceye:image_reference": {
+          "title": "Image reference",
+          "description": "Reference UUID of this dataset.",
+          "type": "string",
+          "format": "uuid",
+          "$comment": "Collection",
+          "examples": [
+            "c5b94b1-35ad-49bb-b118-8e8fc24abf80"
+          ]
+        },
+        "iceye:scene_id": {
+          "title": "Scene ID",
+          "description": "Scene center coordinates encoded in a [GeoHash](https://en.wikipedia.org/wiki/Geohash).",
+          "type": "string",
+          "$comment": "Collection",
+          "pattern": "^[A-Z0-9]{6}$",
+          "examples": [
+            "SD6J92",
+            "SPSJQF"
+          ]
+        },
+        "iceye:run_name": {
+          "title": "Run name",
+          "description": "Processing instance name which produced this dataset.",
+          "examples": [
+            "default",
+            "reprocess"
+          ],
+          "type": "string",
+          "$comment": "Processing"
+        },
+        "iceye:frame_number": {
+          "title": "Frame number",
+          "description": "Number given to each frame of a stripmap acquisition.",
+          "type": "integer",
+          "$comment": "Processing",
+          "minimum": 1
+        },
+        "iceye:filename": {
+          "title": "Filename associated to the item",
+          "type": "string",
+          "examples": [
+            "ICEYE_SD6J92_20240509T005002Z_4063777_X13_SLH_GRD.tif"
+          ],
+          "$comment": "Processing"
+        },
+        "iceye:resolution_range_near": {
+          "title": "Resolution in the near range",
+          "description": "Unit: **meters**\nFor ground-projected image products, the resolution in the range direction depends on the incidence angle, it is calculated as follows: `c / (2 * BW) / sin(incidence)`\n",
+          "examples": [
+            "0.25",
+            "15"
+          ],
+          "$comment": "Processing",
+          "type": "number"
+        },
+        "iceye:resolution_range_far": {
+          "title": "Resolution in the far range",
+          "description": "Unit: **meters**\nFor ground-projected image products, the resolution in the range direction depends on the incidence angle, it is calculated as follows: `c / (2 * BW) / sin(incidence)`\n",
+          "examples": [
+            "0.25",
+            "15"
+          ],
+          "$comment": "Processing",
+          "type": "number"
+        },
+        "iceye:looks_range_bandwidth": {
+          "title": "Looks range bandwidth",
+          "description": "Unit: **Hz**\nBandwith utilized for each range look during multilooking.",
+          "type": "number",
+          "$comment": "Processing",
+          "exclusiveMinimum": 0
+        },
+        "iceye:looks_range_overlap": {
+          "title": "Looks range bandwidth overlap",
+          "description": "Percentage of bandwidth overlapping between range looks.",
+          "type": "number",
+          "$comment": "Processing",
+          "minimum": 0,
+          "exclusiveMaximum": 100
+        },
+        "iceye:looks_azimuth_bandwidth": {
+          "title": "Looks azimuth bandwidth",
+          "description": "Unit: **Hz**\nBandwith utilized for each azimuth look during multilooking.",
+          "type": "number",
+          "$comment": "Processing",
+          "exclusiveMinimum": 0
+        },
+        "iceye:looks_azimuth_overlap": {
+          "title": "Looks azimuth bandwidth overlap",
+          "description": "Percentage of bandwidth overlapping between azimuth looks.",
+          "type": "number",
+          "$comment": "Processing",
+          "minimum": 0,
+          "exclusiveMaximum": 100
+        },
+        "iceye:synthetic_aperture_angle": {
+          "title": "Synthetic aperture angle",
+          "description": "Unit: **degrees**\nAngular extent over which the radar collect signals from a target.",
+          "type": "number",
+          "$comment": "Collection",
+          "exclusiveMinimum": 0
+        },
+        "iceye:pulse_bandwidth": {
+          "title": "Pulse bandwidth",
+          "description": "Unit: **Hz**\nRange of frequencies contained in each pulse.",
+          "type": "number",
+          "$comment": "Collection",
+          "minimum": 300000000,
+          "maximum": 1200000000
+        },
+        "iceye:pulse_duration": {
+          "title": "Pulse duration",
+          "description": "Unit: **Seconds**\n",
+          "type": "number",
+          "$comment": "Collection",
+          "exclusiveMinimum": 0
+        },
+        "iceye:acquisition_prf": {
+          "title": "Acquistion PRF",
+          "description": "Unit: **Hz**\nPulse Repetition Frequency (PRF) of the collection.",
+          "type": "number",
+          "$comment": "Collection",
+          "exclusiveMinimum": 0
+        },
+        "iceye:acquisition_range_sampling_rate": {
+          "title": "Range sampling rate",
+          "description": "Unit: **Samples/s**\nSampling rate used for digital sampling, defines range sample spacing.",
+          "type": "number",
+          "$comment": "Collection",
+          "exclusiveMinimum": 0
+        },
+        "iceye:zero_doppler_start_datetime": {
+          "title": "Zero Doppler start date-time",
+          "description": "Unit: **UTC**\nDatetime at which the radial velocity between the satellite and the ground target at the first (or early) azimuth position is zero.",
+          "type": "string",
+          "$comment": "Collection",
+          "format": "date-time"
+        },
+        "iceye:zero_doppler_end_datetime": {
+          "title": "Zero Doppler end date-time",
+          "description": "Unit: **UTC**\nDatetime at which the radial velocity between the satellite and the ground target at the last (or late) azimuth position is zero.",
+          "type": "string",
+          "$comment": "Collection",
+          "format": "date-time"
+        },
+        "iceye:doppler_centroid_coeffs": {
+          "title": "Doppler centroid polynomial coefficients",
+          "description": "2d array of size MxN where M is the number of estimates and N number of coefficients.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 1
+          }
+        },
+        "iceye:doppler_centroid_datetimes": {
+          "title": "Doppler centroids datetimes",
+          "description": "Unit: **UTC**\nTimestamp for each Doppler centroid estimate.",
+          "type": "array",
+          "$comment": "Collection",
+          "items": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "iceye:doppler_rate_coeffs": {
+          "title": "Doppler rate polynomial coefficients",
+          "description": "Coefficients of the Doppler rate polynomial as a function of range time. Stored as a vector with size corresponding to the order of the Doppler rate polynomial",
+          "type": "array",
+          "$comment": "Collection",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1
+        },
+        "iceye:orientation": {
+          "title": "Orientation",
+          "description": "Orientation of the data. By default we use `shadows-down` where the satellite is \"above\" the image.",
+          "$comment": "Processing",
+          "enum": [
+            "shadows-down",
+            "north-up",
+            "native"
+          ]
+        },
+        "iceye:coordinate_frame": {
+          "title": "Coordinate frame",
+          "description": "Coordinate frame used for the orbit positions and velocities.",
+          "$comment": "Collection",
+          "enum": [
+            "ecef",
+            "eci"
+          ]
+        },
+        "iceye:orbit_mean_altitude": {
+          "title": "Orbit mean altitude",
+          "description": "Unit: **meters**\nAverage orbit altitude over the acquisition period.",
+          "type": "number",
+          "$comment": "Collection",
+          "exclusiveMinimum": 0
+        },
+        "iceye:orbit_states": {
+          "title": "Orbit states",
+          "description": "State vector array of the satellite over acquisition period.",
+          "type": "array",
+          "$comment": "Collection",
+          "items": {
+            "title": "Orbit State",
+            "type": "object",
+            "required": [
+              "time",
+              "position",
+              "velocity"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "time": {
+                "title": "Time",
+                "description": "Unit: **UTC**\nState vector timestamp.",
+                "type": "string",
+                "format": "date-time"
+              },
+              "position": {
+                "title": "Position",
+                "description": "Unit: **meters**\nState vector position.",
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "velocity": {
+                "title": "Velocity",
+                "description": "Unit: **meters**\nState vector velocity.",
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              }
+            }
+          }
+        },
+        "iceye:orbit_precision": {
+          "title": "Orbit processing",
+          "description": "Orbit prediction level with which this dataset was produced.",
+          "$comment": "Collection",
+          "enum": [
+            "predicted",
+            "rapid",
+            "precise",
+            "scientific"
+          ]
+        },
+        "iceye:incidence_angle_near": {
+          "title": "Incidence angle near",
+          "description": "Unit: **degrees**\nIncidence angle at near range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:incidence_angle_far": {
+          "title": "Incidence angle far",
+          "description": "Unit: **degrees**\nIncidence angle at far range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:incidence_angle_coeffs": {
+          "title": "Incidence angle coeffs",
+          "description": "Coefficients of the polynomial for calculating the incidence angle dependence in range",
+          "$comment": "Collection",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4,
+          "examples": [
+            [
+              2.67986035e+01,
+              8.66207416e-05,
+              -5.61940883e-11,
+              -1.73946139e-17
+            ]
+          ]
+        },
+        "iceye:grazing_angle_near": {
+          "title": "Grazing angle near",
+          "description": "Unit: **degrees**\nGrazing angle at the near range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:grazing_angle": {
+          "title": "Grazing angle",
+          "description": "Unit: **degrees**\nGrazing angle at the center range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:grazing_angle_far": {
+          "title": "Grazing angle far",
+          "description": "Unit: **degrees**\nGrazing angle at the far range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:squint_angle": {
+          "title": "Squint angle",
+          "description": "Unit: **degrees**\nGround plane squint angle: The angle between the broadside direction and the direction of the line of sight to the scene center at the mid-aperture position, projected to the ground plane.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:layover_angle": {
+          "title": "Layover angle",
+          "description": "Unit: **degrees**\nLayover angle at the center range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:shadow_angle": {
+          "title": "Shadow angle",
+          "description": "Unit: **degrees**\nShadow angle at the center range.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:doppler_cone_angle": {
+          "title": "Doppler cone angle",
+          "description": "Unit: **degrees**\nThe Doppler cone angle (DCA) is the angle between the platform velocity vector and the radar line-of-sight (LOS) to the scene center at the mid aperture position.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:range_near": {
+          "title": "Near range",
+          "description": "Unit: **meters**\n The slant range to the near edge of the scene.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:range": {
+          "title": "Range",
+          "description": "Unit: **meters**\n The slant range to the center of the scene.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:range_far": {
+          "title": "Far range",
+          "description": "Unit: **meters**\n The slant range to the far edge of the scene.",
+          "$comment": "Collection",
+          "type": "number"
+        },
+        "iceye:average_scene_height": {
+          "title": "Average scene height",
+          "description": "Unit: **meters**\nAverage height of the scene from terrain model.",
+          "$comment": "Processing",
+          "type": "number",
+          "minimum": 0
+        },
+        "iceye:rpc": {
+          "title": "Rational polynomial coefficients (RPC)",
+          "description": "In [brief](https://en.wikipedia.org/wiki/Rational_polynomial_coefficient)\nFor more [details](http://geotiff.maptools.org/rpc_prop.html)",
+          "$comment": "Processing",
+          "type": "object",
+          "required": [
+            "line_off",
+            "samp_off",
+            "lat_off",
+            "long_off",
+            "height_off",
+            "line_scale",
+            "samp_scale",
+            "lat_scale",
+            "long_scale",
+            "height_scale",
+            "line_num_coeff",
+            "line_den_coeff",
+            "samp_num_coeff",
+            "samp_den_coeff"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "err_bias": {
+              "title": "Bias error",
+              "description": "The RMS bias error in meters per horizontal axis of all points in the image (-1.0 if unknown)",
+              "type": "number"
+            },
+            "err_rand": {
+              "title": "Random error",
+              "description": "RMS random error in meters per horizontal axis of each point in the image (-1.0 if unknown)",
+              "type": "number"
+            },
+            "line_off": {
+              "title": "Line offset",
+              "description": "Unit: **pixels**",
+              "type": "number"
+            },
+            "samp_off": {
+              "title": "Sample offset",
+              "description": "Unit: **pixels**",
+              "type": "number"
+            },
+            "lat_off": {
+              "title": "Geodetic latitude offset",
+              "description": "Unit: **degrees**",
+              "type": "number"
+            },
+            "long_off": {
+              "title": "Geodetic longitude offset",
+              "description": "Unit: **degrees**",
+              "type": "number"
+            },
+            "height_off": {
+              "title": "Geodetic height offset",
+              "description": "Unit: **meters**",
+              "type": "number"
+            },
+            "line_scale": {
+              "title": "Line scale",
+              "type": "number"
+            },
+            "samp_scale": {
+              "title": "Sample scale",
+              "type": "number"
+            },
+            "lat_scale": {
+              "title": "Latitude scale",
+              "description": "Geodetic Latitude Scale",
+              "type": "number"
+            },
+            "long_scale": {
+              "title": "Longitude scale",
+              "description": "Geodetic Longitude Scale",
+              "type": "number"
+            },
+            "height_scale": {
+              "title": "Height scale",
+              "description": "Geodetic height scale",
+              "type": "number"
+            },
+            "line_num_coeff": {
+              "title": "Line numerator coefficients",
+              "description": "Twenty coefficients for the polynomial in the numerator of the rn equation.",
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 20,
+              "maxItems": 20
+            },
+            "line_den_coeff": {
+              "title": "Line denominator coefficients",
+              "description": "Twenty coefficients for the polynomial in the denominator of the rn equation.",
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 20,
+              "maxItems": 20
+            },
+            "samp_num_coeff": {
+              "title": "Sample numerator coefficients",
+              "description": "Twenty coefficients for the polynomial in the numerator of the cn equation.",
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 20,
+              "maxItems": 20
+            },
+            "samp_den_coeff": {
+              "title": "Sample denominator coefficients",
+              "description": "Twenty coefficients for the polynomial in the denominator of the cn equation.",
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 20,
+              "maxItems": 20
+            }
+          }
+        },
+        "iceye:ground_to_slant_coeff": {
+          "title": "Ground to slant range coefficients",
+          "description": "Ground range to slant range polynomial coefficients",
+          "examples": [
+            [
+              6.467483312430216e+05,
+              0.47388031307797884,
+              6.685331046296479e-07,
+              -4.928145432555108e-13,
+              5.0525558404285224e-20
+            ]
+          ],
+          "type": "array",
+          "$comment": "Processing",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 5,
+          "maxItems": 9
+        },
+        "iceye:focal_plane_normal": {
+          "title": "Normal vector of focal plane",
+          "description": "Unit: **meters**\nUnit normal vector of the image focal plane.",
+          "type": "array",
+          "$comment": "Processing",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "iceye:image_plane_normal": {
+          "title": "Normal vector of image plane",
+          "description": "Unit: **meters**\nUnit normal vector of the image projection plane.",
+          "type": "array",
+          "$comment": "Processing",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "iceye:extent_range": {
+          "title": "Extent range",
+          "description": "Unit: **meters**\nScene extent in the ground range direction.",
+          "examples": [
+            5,
+            30
+          ],
+          "$comment": "Processing",
+          "type": "number",
+          "minimum": 0
+        },
+        "iceye:extent_azimuth": {
+          "title": "Extent Azimuth",
+          "description": "Unit: **meters**\nScene extent in the azimuth direction.",
+          "examples": [
+            5,
+            100
+          ],
+          "$comment": "Processing",
+          "type": "number",
+          "minimum": 0
+        },
+        "iceye:processing_start_datetime": {
+          "title": "Processing start datetime",
+          "description": "Unit: **UTC**\nDatetime at which the image formation started.",
+          "type": "string",
+          "$comment": "Processing",
+          "format": "date-time"
+        },
+        "iceye:processing_end_datetime": {
+          "title": "Processing end datetime",
+          "description": "Unit: **UTC**\nDatetime at which this file was created.",
+          "type": "string",
+          "$comment": "Processing",
+          "format": "date-time"
+        },
+        "iceye:processing_bandwidth_range": {
+          "title": "Processing bandwidth range",
+          "description": "Unit: **Hz**\nBandwidth utilized for the processing in the range direction.",
+          "examples": [
+            300000000
+          ],
+          "type": "number",
+          "$comment": "Processing",
+          "minimum": 300000000,
+          "maximum": 1200000000
+        },
+        "iceye:processing_bandwidth_azimuth": {
+          "title": "Processing bandwidth azimuth",
+          "description": "Unit: **Hz**\nDoppler bandwidth used for azimuth compression (defines achievable azimuth resolution).",
+          "examples": [
+            2893
+          ],
+          "$comment": "Processing",
+          "type": "number"
+        },
+        "iceye:window_function_azimuth": {
+          "title": "Window function azimuth",
+          "description": "Windowing function used over azimuth frequencies",
+          "examples": [
+            "TAYLOR_20_4",
+            "NONE"
+          ],
+          "$comment": "Processing",
+          "type": "string"
+        },
+        "iceye:window_function_range": {
+          "title": "Window function range",
+          "description": "Windowing function used over range frequencies",
+          "examples": [
+            "TAYLOR_20_4",
+            "NONE"
+          ],
+          "$comment": "Processing",
+          "type": "string"
+        },
+        "iceye:processing_prf": {
+          "title": "Processing PRF",
+          "description": "Unit: **Hz**\nPulse Repetition Frequency (PRF) used during azimuth processing, representing the effective sampling frequency of the radar signal in the azimuth (time) domain.",
+          "examples": [
+            9646.00
+          ],
+          "$comment": "Processing",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "iceye:processing_mode": {
+          "title": "Processing mode",
+          "$comment": "Processing",
+          "type": "string"
+        },
+        "iceye:calibration_factor": {
+          "title": "Calibration factor",
+          "description": "Scaling coefficients to be applied in order to calibrate amplitude product to absolute brigthness intensity.",
+          "examples": [
+            1.2341123e-05
+          ],
+          "$comment": "Processing",
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(?!iceye:)": {
+          "$comment": "Do not allow any other prefix."
+        }
+      }
+    }
+  }
+}
