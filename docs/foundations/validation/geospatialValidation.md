@@ -17,17 +17,17 @@ $$
 f_D(t) = - \frac{2}{\lambda s_r(t)} (\mathbf{R_s(t)} - \mathbf{R_o}) \cdot (\mathbf{V_s(t)} - \mathbf{V_o}) \qquad (2)
 $$
 
-Geometrically, the objects position is found by calculating the intersection between a sphere of radius that corresponds to the range of the object (1), a cone defined by the Doppler frequency at a certain time (2) and the reference ellipsoid (see Fig. 1). There are two locations where all three parametric surface meet - one on the left side of the sensor and one on the right, which is why SAR systems only image on one side.
+Geometrically, the object's position is found by calculating the intersection between a sphere of radius that corresponds to the range of the object (1), a cone defined by the Doppler frequency at a certain time (2) and the reference ellipsoid (see Fig. 1). There are two locations where all three parametric surface meet - one on the left side of the sensor and one on the right, which is why SAR systems only image on one side.
 
 <figure markdown>
 ![doppler intersection for a SAR](img/circleIntersection.png){width="600"}
 <figcaption align = "center"><em>Figure 1: The location of an object in a SAR image is defined by the intersection of a range-sphere, a Doppler-cone and a reflecting-surface.</em></figcaption>
 </figure>
 
-To calculate the geolocation accuracy of a SAR image the following steps are performed :
+To calculate the geolocation accuracy of a SAR image, the following steps are performed :
 
-1. The first step is the selection of calibration objects, usually corner reflectors, each with a known geographical location. For this purpose both publicly available corner reflectors and ICEYE's own dedicated corner reflectors are used. The object position $R_o=[x_o, y_o, z_o]$ is used in the following step to calculate the expected target position in range and azimuth $(I_r,I_a)$ in the image.
-2. The second step is to determine the location of the sensor as a function of time by using the orbital state vectors provided in the metadata of each image.  ICEYE orbital state vectors provide position and velocity every second which does not have the fidelity to accurately locate each azimuth location in the image and so the state vectors are interpolated.
+1. The first step is the selection of calibration objects, usually corner reflectors (CRs), each with a known geographical location. For this purpose, both publicly available corner reflectors and ICEYE's own dedicated corner reflectors are used. The object position $R_o=[x_o, y_o, z_o]$ is used in the following step to calculate the expected target position in range and azimuth $(I_r,I_a)$ in the image.
+2. The second step is to determine the location of the sensor as a function of time by using the orbital state vectors provided in the metadata of each image. ICEYE’s orbital state vectors provide position and velocity at one-second intervals, which is not sufficiently precise to determine the exact azimuth position for every image line, so the state vectors are interpolated.
 3. The *expected* range and azimuth position of the corner reflector $(I_r,I_a)$ is then calculated using Eq. (1) and Eq. (2). The azimuth position of the object corresponds to the time of closest approach between the object and the sensor which is the instant that the Doppler frequency shift of the object observed from the sensor is zero. (By convention ICEYE SAR images are processed to the zero Doppler location/time). The expected range position is calculated using the distance $\mathbf{R_s(t)}-\mathbf{R_o}$ when the Doppler shift is zero. ie:
 
 $$ 
@@ -44,14 +44,14 @@ $$
 $$
 
 <figure markdown>
-![measured geolocation error in ICEYE Imagery](img/geolocationError1.png){width="600"}
-<figcaption align = "center"><em>Figure 2: The sensors location accuracy is determined by comparing the measured image location to the actual location of a calibratioin object.</em></figcaption>
+![measured geolocation error in ICEYE Imagery](img/geolocationError2.png){width="600"}
+<figcaption align = "center"><em>Figure 2: The sensor's location accuracy is determined by comparing the measured image location to the actual location of a calibration object.</em></figcaption>
 </figure>
 
-## Rosamond Validation - April 2022: Spotlight & Stripmap
+## 2025 Rosamond Validation: Spotlight & Stripmap Imaging Modes
 ### Test Site
 
-During April 2022, a geolocation validation was performed using the Rosamond Corner Reflector Array (RCRA) area in California, USA[@rosamond]. At this location there are 38 Corner Reflectors, each in one of four dimensions (0.7 m, 2.4 m, 2.8 m and 4.8 m). Fig. 3.
+During December 2025, a geolocation validation was performed using the Rosamond Corner Reflector Array (RCRA) in California, USA[@rosamond]. At this location, there are 38 Corner Reflectors, each in one of four dimensions (0.7 m, 2.4 m, 2.8 m and 4.8 m). Fig. 3.
 
 <figure markdown>
 ![Rosamond corner array in ICEYE Imagery](img/rosamondCRs.png){width="600"}
@@ -60,44 +60,56 @@ During April 2022, a geolocation validation was performed using the Rosamond Cor
 
 ### Datasets
 
-The geolocation accuracy was assessed based on 167 spot images taken between 22 August 2019 and 15 March 2022, and 304 strip images taken between 10 March 2019 and 01 June 2022. Fig. 4. shows a histogram with the number of images and their distribution among the different satellites operating in the ICEYE fleet over that period. Although there are fewer images for the newer satellites (the ones with larger number in the name), this report will continue to be updated to include more images from all satellites.
+As part of a dedicated calibration campaign, 521 SAR images were acquired over the Rosamond reflector site during June–November 2025, using both Stripmap and Spotlight imaging modes in non-squinted imaging geometry. Fig. 4. shows the image distribution across satellite generations and imaging modes. 
 
 <figure markdown>
-![ICEYE Imagery calibration histogram](img/imageCount1.png){width="600"}
-<figcaption align = "center"><em>Figure 4: Number of images used in this analysis across the ICEYE fleet.</em></figcaption>
+![ICEYE Imagery calibration histogram](img/imageCount2.png){width="600"}
+<figcaption align = "center"><em>Figure 4: Number of images used in this analysis across satellite generations and imaging modes.</em></figcaption>
 </figure>
 
 ### Results
-An overview of the validation results is provided in Table 1. The overall geolocation accuracy in both the range direction and azimuth direction is better than 4m RMSE and is consistent between the two imaging modes. The results also show a ~3.0m systematic bias in the range direction, and about ~0.8m bias in the azimuth direction. The cause of these biases are currently under investigation and will be addressed in the following months. The detailed results can be found [here](img/resultsSL1.csv) for Spotlight images and [here](img/resultsSM1.csv) for Stripmap images (see also [this](img/resultsSM1.csv_Readme.txt) this description of the columns in the results).
+All collected scenes were processed and analyzed to evaluate geolocation accuracy for the full ICEYE constellation and for individual satellite generations, as summarized in Table 1. The fleet-wide mean error in the slant range direction and that in the azimuth direction are both under 0.4 m, with a standard deviation value of less than 2.1 m. The Root Mean Square Error (RMSE) for each generation group is less than 2.6 m in the slant range direction and the differences among generations are smaller than 1.3 m. In the azimuth direction, the RMSE for each generation are each less than 3.2 m, and the latest generations perform progressively better than the previous ones. This is a result of consistent improvements in onboard timing accuracy / precision in each newer satellite generation.
+
+<figure markdown>
+|Satellite	| #Images	| #CR Observations	| Range Error: μ±σ (m)	| Range Error: RMSE (m)	| Azimuth Error: μ±σ (m) |	Azimuth Error: RMSE (m) |
+|:--------------|:---------:|:-----------------:|:---------------------:|:---------------------:|:----------------------:|:------------------------:|
+| GEN-2	    | 100	    | 1918	            | -0.65±1.14              | 1.31                   | 0.12±2.34 	             | 2.35                      |
+| GEN-3	    | 83	    | 1571	            | 0.66±1.30	            | 1.46	                | 1.84±2.52	             | 3.12                      |
+| GEN-3.5	    | 274	    | 5434	            | 0.66±2.27              | 2.36                   | 0.27±1.61 	             | 1.63                      |
+| GEN-4	    | 52	    | 1200	            | -1.25±2.28	            | 2.60	                | -0.43±1.52	             | 1.58                      |
+| All	    | 521	    | 10398	            | 0.19±2.09	            | 2.10	                | 0.36±2.04	             | 2.07                      |
+<figcaption align = "center"><em>Table 1: ICEYE fleet geolocation accuracy assessment results June 2025 to November 2025: Generations.</em></figcaption>
+</figure>
+
+The geolocation accuracy per imaging mode is summarized in Table 2.
 
 <figure markdown>
 |Imaging Mode	| #Images	| #CR Observations	| Range Error: μ±σ (m)	| Range Error: RMSE (m)	| Azimuth Error: μ±σ (m) |	Azimuth Error: RMSE (m) |
 |:--------------|:---------:|:-----------------:|:---------------------:|:---------------------:|:----------------------:|:------------------------:|
-| Spotlight	    | 167	    | 2354	            | -2.8±1.7              | 3.2                   | -0.9±3.2 	             | 3.3                      |
-| Stripmap	    | 304	    | 3388	            | -3.2±1.8	            | 3.6	                | -0.7±3.1	             | 3.1                      |
-<figcaption align = "center"><em>Table 1: ICEYE fleet geolocation accuracy assessment results March 2019 to June 2022.</em></figcaption>
+| Spotlight	    | 448	    | 9048	            | 0.23±2.13              | 2.14                   | 0.43±2.06 	             | 2.10                      |
+| Stripmap	    | 61	    | 1075	            | -0.22±1.78	            | 1.81	                | 0.20±1.69	             | 1.71                      |
+<figcaption align = "center"><em>Table 2: ICEYE fleet geolocation accuracy assessment results June 2025 to November 2025: Imaging Modes.</em></figcaption>
 </figure>
 
-The measured geolocation accuracy for each satellite for Spot images is shown in Fig. 5, and from Strip images is shown in Fig. 6.
+The error distribution for all the assessed points is shown in Figure 5, where the estimated Circular Error 90-percentile (CE90) value is 4.6m at the slant plane.
 
 <figure markdown>
-![ICEYE Imagery Spot geolocation accuracy](img/RMSESpotlight1.png){width="600"}
-<figcaption align = "center"><em>Figure 5: Geolocation error: Spot images August 2019 to March 2022.</em></figcaption>
+![Error distribution of the assessed points](img/2dError.png){width="400"}
+<figcaption align = "center"><em>Figure 5: 2D Error distribution of the assessed points: the estimated CE90 is 4.6m.</em></figcaption>
 </figure>
 
+The geolocation accuracy for each month during the campaign can be seen in Figure 6. The RMSE values for both directions exhibit a downward trend from June to September and stay consistent afterwards.
+
 <figure markdown>
-![ICEYE Imagery Strip geolocation accuracy](img/RMSEStripmap1.png){width="600"}
-<figcaption align = "center"><em>Figure 6: Geolocation error: Strip images March 2019 to June 2022.</em></figcaption>
+![Geolocation Accuracy by Months](img/metricsMonths.png){width="600"}
+<figcaption align = "center"><em>Figure 6: Geolocation Accuracy by Months.</em></figcaption>
 </figure>
 
 ## Conclusions
-The measurement of geospatial accuracy of SAR images is subject to multiple error sources, including uncertainties in terrain height, orbit knowledge, atmospheric propagation model, and sensor related uncertainties such as position along track, lever arms between GPS and antenna phase center, timing across track, and thermal variations. In some cases, orbit positional errors may introduce gross geospatial errors (larger than 50m in this analysis). Such errors are identified by ICEYE's QC procedures and are reprocessed before customer delivery. As such those images are currently not included in this analysis.
-
-ICEYE’s satellite capabilities are constantly evolving, with older satellites being more prone to on-board timing errors. Newer satellites have improved on this and thus have better geospatial accuracy.
+The measurement of geospatial accuracy of SAR images is subject to multiple error sources, including uncertainties in terrain height, orbit knowledge, atmospheric propagation model, and sensor related uncertainties such as position along track, lever arms between GPS and antenna phase center, timing across track, and thermal variations.
 
 The geolocation accuracy from stripmap images are very similar to that from spotlight images in both range and azimuth directions.
 
-The results also show a clear systematic bias in both range and azimuth directions that will be addressed in the following months to improve these values further.
 
 ## References
 \bibliography
