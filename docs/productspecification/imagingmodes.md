@@ -13,7 +13,7 @@ ICEYE offers several **Imaging Modes** to suit a wide range of applications. Ref
 | Geospatial Accuracy \[m RMSE]        |   6  |  6   |    6   |    6   |  6     |    6  |   6   |   15   | 27   |
 | Scene Size \[range x azimuth, in km] |  5 x 5 |  5 x 5 | 15 x 15 | 5 x 5  | 5 x 5   |  5 x 5  |  30 x 50<br>Up to 30 x 500 (custom option) | 100 x 100<br>Up to 100 x 500 (custom option) | 200 x 300<br>Up to 200 x 600 (custom option) |
 | Information Density \[bits/m2]       |  22  | 83   |     8.4    |    125    |   185  |   326  |    0.8      |   0.1  |  0.01  |
-| Number of  Azimuth Looks             |   4  |    5    |    2    |   20    |     10    |   5   |  1  |  1  |                                                         1                                                         |
+| Number of  Azimuth Looks             |   4  |    5    |    2    |   12    |     6    |   3   |  1  |  1  |                                                         1                                                         |
 | Section Reference                    | [2.2](#22-spot-and-spot-fine) | [2.2](#22-spot-and-spot-fine) | [2.3](#23-spot-extended-area) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.5](#25-strip) | [2.6](#26-scan-and-scan-wide) | [2.6](#26-scan-and-scan-wide) |
 
 ICEYE also offers 1-look and 2-looks variants of the imaging mode Spot Fine. These are intended for applications that require high resolution, but where lower information density is sufficient. Please refer to section [2.2](#22-spot-and-spot-fine)  for more information.
@@ -44,7 +44,7 @@ In the Spotlight collection strategy, the radar beam is steered to illuminate a 
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/spot.png)
 
-ICEYE **Spot** and **Spot Fine** imaging modes employ the Spotlight collection strategy. Spot collections are performed with a 300 MHz pulse bandwidth to achieve a 0.5 m slant range resolution. ICEYE Gen2 and Gen3 satellites are both capable of Spot collections. Spot Fine collections are performed with a 600 MHz (see Section [1.4](introduction.md#14-satellites-and-sensors)) pulse bandwidth to achieve a 0.25m slant range resolution. Currently, only Gen3 satellites are capable of Spot Fine collections. In both cases, the “ground range detected” resolution degrades the resolution by a geometric factor as explained in Section [1.4](introduction.md#14-satellites-and-sensors) and thus the ground range detected resolutions of Spot and Spot Fine are 1 m and 50 cm, respectively (see “Ground Range Resolution” in Table [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products)).
+ICEYE **Spot** and **Spot Fine** imaging modes employ the Spotlight collection strategy. Spot collections are performed with a 300 MHz pulse bandwidth to achieve a 0.5 m slant range resolution. All ICEYE satellites are capable of Spot collections. Spot Fine collections are performed with a 600 MHz (see Section [1.4](introduction.md#14-satellites-and-sensors)) pulse bandwidth to achieve a 0.25m slant range resolution. All ICEYE satellites, except Gen2 satellites, are capable of Spot Fine collections. In both cases, the “ground range detected” resolution degrades the resolution by a geometric factor as explained in Section [1.4](introduction.md#14-satellites-and-sensors) and thus the ground range detected resolutions of Spot and Spot Fine are 1 m and 50 cm, respectively (see “Ground Range Resolution” in Table [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products)).
 
 ICEYE Spot and Spot Fine imaging modes cover an area of 5 km x 5 km for multi-looked amplitude images. These are formed from multiple independent looks to suppress speckle noise and to increase image quality and interpretability (4 looks  in case of Spot, and 5 in case of Spot Fine).
 
@@ -63,8 +63,7 @@ ICEYE aims to ensure that the the resulting imagery for tasks collected with the
 |            Nominal Scene Width \[km] |      5     |      5     |         5        |         5         |
 |           Nominal Scene Length \[km] |      5     |      5     |         5        |         5         |
 |           Maximum Scene Length \[km] |      5     |      5     |         5        |         5         |
-|   Nominal Collection Duration \[sec] |     10     |     15     |         3        |         6         |
-|   Maximum Collection Duration \[sec] |     10     |     15     |         3        |         6         |
+|   Typical Collection Duration \[sec] |     10     |     15     |         3        |         6         |
 |                         Polarization |     VV     |     VV     |        VV        |         VV        |
 |    Performant Incidence Range \[deg] |    20-40   |    20-40   |       20-40      |       20-40       |
 | Time Dominant Incidence Range \[deg] |    5-45    |    5-45    |       10-45      |       10-45       |
@@ -103,7 +102,7 @@ ICEYE aims to ensure that the the resulting imagery for tasks collected with the
 |                                                                                                                            Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |
 |                                                                                                                                 Radiometrically Calibrated |                          Yes                          |                          Yes                          |                          Yes                          |                          Yes                          |
 
-<small>Note: ICEYE Spotlight collection strategy employs constant bandwidth and illumination times. At higher incidence angles, the geometry of SAR signal projection results in improved ground range resolution that greatly surpasses the nominal value for the imaging mode in question. The trade-off for this increased image detail is a reduced number of azimuth looks, which may slightly affect speckle characteristics.</small>
+<small>Note: ICEYE Spotlight collection strategy employs constant bandwidth. At higher incidence angles, the geometry of SAR signal projection results in improved ground range resolution that greatly surpasses the nominal value for the imaging mode in question. The trade-off for this increased image detail is a reduced number of azimuth looks, which may slightly affect speckle characteristics.</small>
 #####
 
 ##### _Table 2-5: Product attributes for Spot and Spot Fine complex data products_
@@ -138,8 +137,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the SLE
 |            Nominal Scene Width \[km] |   15  |
 |           Nominal Scene Length \[km] |   15  |
 |           Maximum Scene Length \[km] |   15  |
-|   Nominal Collection Duration \[sec] |   10  |
-|   Maximum Collection Duration \[sec] |  10   |
+|   Typical Collection Duration \[sec] |   10  |
 |                         Polarization |   VV  |
 |    Performant Incidence Range \[deg] | 20-40 |
 | Time Dominant Incidence Range \[deg] |  5-45 |
@@ -197,7 +195,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the SLE
 
 ## 2.4 Dwell, Dwell Fine and Dwell Precise
 
-ICEYE **Dwell**, **Dwell Fine** and **Dwell Precise** imaging modes are based on a Spotlight collection strategy that utilizes a very long illumination period of 25 seconds; as opposed to a 10 seconds illumination period for Spot. This long illumination period results in very fine azimuth resolution and highly reduced speckle because of multi-looking. With its small, agile satellite bus baseline, ICEYE is uniquely equipped to achieve such extended illumination periods.
+ICEYE **Dwell**, **Dwell Fine** and **Dwell Precise** imaging modes are based on a Spotlight collection strategy that utilizes a very long illumination period to achieve a very fine azimuth resolution and highly reduced speckle because of multi-looking. With its small, agile satellite bus baseline, ICEYE is uniquely equipped to achieve such extended illumination periods.
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/dwell.png)
 
@@ -214,8 +212,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 |            Nominal Scene Width \[km] |      5     |      5     |       5       |
 |           Nominal Scene Length \[km] |      5     |      5     |       5       |
 |           Maximum Scene Length \[km] |      5     |      5     |       5       |
-|   Nominal Collection Duration \[sec] |     25     |     25     |       25      |
-|   Maximum Collection Duration \[sec] |     25     |     25     |       25      |
+|   Typical Collection Duration \[sec] |     25     |     25     |       25      |
 |                         Polarization |     VV     |     VV     |       VV      |
 |    Performant Incidence Range \[deg] |    20-40   |    20-40   |     20-33     |
 | Time Dominant Incidence Range \[deg] |    5-45    |    5-45    |      5-45     |
@@ -248,7 +245,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 |                                                                                                                               Ground Range Resolution \[m] |                       1.5 - 0.9                       |                      0.73 - 0.43                      |                      0.36 - 0.23                      |
 |                                                                                                                             Ground Azimuth Resolution \[m] |                           <1                          |                          <0.5                         |                         <0.25                         |
 |                                                                                                                                           Range Looks \[#] |                           1                           |                           1                           |                           1                           |
-|                                                                                                                                         Azimuth Looks \[#] |                           20                          |                           10                          |                           5                           |
+|                                                                                                                                         Azimuth Looks \[#] |                           12                          |                           6                          |                           3                           |
 |                                                                                                       Impulse Response Weighing Function (peak side level) |                Taylor Weighting (-20dB)               |                Taylor Weighting (-20dB)               |                Taylor Weighting (-20dB)               |
 |                                                                                                                           Ground Range Sample Spacing \[m] |                          0.5                          |                          0.25                         |                         0.125                         |
 |                                                                                                                         Ground Azimuth Sample Spacing \[m] |                          0.5                          |                          0.25                         |                         0.125                         |
@@ -257,7 +254,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 |                                                                                                                            Dynamic Range \[bits per pixel] |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |                  16 (uint) 32 (float)                 |
 |                                                                                                                                 Radiometrically Calibrated |                          Yes                          |                          Yes                          |                          Yes                          |
 
-<small>Note: ICEYE Spotlight collection strategy employs constant bandwidth and illumination times. At higher incidence angles, the geometry of SAR signal projection results in improved ground range resolution that greatly surpasses the nominal value for the imaging mode in question. The trade-off for this increased image detail is a reduced number of azimuth looks, which may slightly affect speckle characteristics.</small>
+<small>Note: ICEYE Spotlight collection strategy employs constant bandwidth. At higher incidence angles, the geometry of SAR signal projection results in improved ground range resolution that greatly surpasses the nominal value for the imaging mode in question. The trade-off for this increased image detail is a reduced number of azimuth looks, which may slightly affect speckle characteristics.</small>
 
 ##### _Table 2-13: Product attributes for Dwell, Dwell Fine and Dwell Precise complex data products_
 
@@ -265,10 +262,10 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
 |                                                                                                                                                         Focusing Plane |                     Slant Plane                    |                     Slant Plane                    |                     Slant Plane                    |
 |                                                                                                                                           Slant Range Resolution \[m]  |                         0.5                        |                        0.25                        |                        0.125                       |
-|                                                                                                                                          Slant Azimuth Resolution \[m] |                        0.05                        |                        0.05                        |                        0.05                        |
+|                                                                                                                                          Slant Azimuth Resolution \[m] |                        0.08                        |                        0.08                        |                        0.08                        |
 |                                                                                                                   Impulse Response Weighing Function (peak side level) |                  Uniform (-13.3dB)                 |                  Uniform (-13.3dB)                 |                  Uniform (-13.3dB)                 |
 |                                                                                                                                        Slant Range Sample Spacing \[m] |                        < 0.4                       |                        < 0.2                       |                        < 0.1                       |
-|                                                                                                                                      Slant Azimuth Sample Spacing \[m] |                       < 0.05                       |                       < 0.05                       |                       < 0.05                       |
+|                                                                                                                                      Slant Azimuth Sample Spacing \[m] |                       < 0.08                       |                       < 0.08                       |                       < 0.08                       |
 | Slant Range Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
 |                                                                                                                                             Complex Product Size \[GB] |                       8 to 15                      |                      10 to 24                      |                      15 to 30                      |
 |                                                                                                                                         Dynamic Range (bits per pixel) |                16 (uint) 32 (float)                |                16 (uint) 32 (float)                |                16 (uint) 32 (float)                |

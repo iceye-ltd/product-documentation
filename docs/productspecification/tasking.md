@@ -180,9 +180,9 @@ For all Standard Orders, ICEYE currently offers three **Delivery Time Options**:
 
 | Delivery Time Option | Description                                                         | Supported Data Products                                                                     |
 | -------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 3 h                  | Data files are delivered in 3 hours or less after acquisition time. Available only for Commercial Priority Tasking.    | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products)) |
-| 8 h                  | Data files are delivered in 8 hours or less after acquisition time. Available only for Commercial Priority Tasking.    | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products))        
-| 24 h                 | Data files are delivered in 24 hours or less after acquisition time. Available only for Background Priority Tasking.    | GRD, Legacy GRD, CSI, VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products))                                                                                       |
+| 3 h                  | Data files are delivered in 3 hours or less after acquisition time. Available only for Commercial Priority Tasking.  Not currently available for Dwell Precise imaging mode. | GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products)) |
+| 8 h                  | Data files are delivered in 8 hours or less after acquisition time. Available only for Commercial Priority Tasking.    | GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, Legacy SLC  (See Section [5](dataproducts.md#5-data-products))        
+| 24 h                 | Data files are delivered in 24 hours or less after acquisition time. Available only for Background Priority Tasking.    | GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, Legacy SLC  (See Section [5](dataproducts.md#5-data-products))                                                                                       |
 
 
 #####
@@ -192,7 +192,7 @@ ICEYE intends to expand its specified delivery timelines beyond these two tiers.
 
 #### _3.7.3.1 3-hour Delivery Time_
 
-With the **3-hour Delivery Time** option automatic delivery will be completed in 3 hours or less of the data being acquired. This option is intended for applications requiring rapid delivery. The GRD, Legacy GRD, CSI, VID, Quicklook, SLC, and Legacy SLC data products are supported. See Section [5](dataproducts.md#5-data-products) for more information on the different data products. This option is only available for Commercial Priority Tasking. This option is not available for the Dwell Precise imaging mode. 
+With the **3-hour Delivery Time** option automatic delivery will be completed in 3 hours or less of the data being acquired. This option is intended for applications requiring rapid delivery. The GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, and Legacy SLC data products are supported. See Section [5](dataproducts.md#5-data-products) for more information on the different data products. This option is only available for Commercial Priority Tasking. This option is not available for the Dwell Precise imaging mode. 
 
 
 #### _3.7.3.2 8-hour Delivery Time_
@@ -205,5 +205,5 @@ With the **24-hour Delivery Time** option automatic delivery will be completed w
 
 ### 3.7.4 Quality Control
 
-ICEYE performs an automated and rapid **quality control** in which we ensure the image meets basic image quality attributes. Because this quality control is automated, it does not detect all image defects. Customers with concerns about a defective image are invited to contact ICEYE COSP organization  in accordance with Section [3.6.1](#361-return-policy) (Return Policy) above for consultation and potential remedy.
+To optimize delivery timelines, ICEYE does not perform per-image quality control. Instead, ICEYE conducts regular test campaigns to verify that data acquired by its satellite fleet continues to meet the product specifications.  Customers with concerns about a defective image are invited to contact ICEYE COSP organization  in accordance with Section [3.6.1](#361-return-policy) (Return Policy) above for consultation and potential remedy.
 
