@@ -5,7 +5,7 @@
 
 | TERM | DEFINITION |
 |------|------------|
-|**Azimuth**            |	Direction aligned with the relative spaceborne platform velocity vector. |
+|**Azimuth**            |	Vector that is 1) orthogonal to the radar line-of-sight (or "range" vector) from the mid-aperture position, projected to the ground and 2) the ground surface normal at the scene center" |
 |**Detection**	        |Processing step in which the phase information is removed and only the signal amplitude is preserved. Normally the detection uses a magnitude squared method and has units of voltage square per pixel. |
 |**Focusing**        |Data processing finalized to focus the SAR image in range and azimuth through bidimensional signal compression.|
 |**Geocoded**           |The data contains geographic information or coordinates corresponding to the location of the data. |

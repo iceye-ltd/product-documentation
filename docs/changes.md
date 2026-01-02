@@ -6,6 +6,7 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
+| 2nd Jan 2025 | 6.0.5   | Variable imaging time replaces fixed imaging times for all Spot and Dwell modes. Revised azimuth resolution and number of azimuth looks for all Dwell modes. Legacy formats deprecation timeline.  |
 | 11th Aug 2025 | 6.0.4   | Addition of Scan Wide imaging mode | 
 | 2nd Feb 2025 | 6.0.3   | Addition of Spot Fine 1-look and Spot Fine 2-looks imaging mode variants | 
 | 20th Jan 2025 | 6.0.2   | Fixed broken table with information on cancellation policy | 

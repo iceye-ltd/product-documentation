@@ -19,13 +19,13 @@ While all of these distinctions could be used to group and present the data prod
 
 The following four products make up ICEYE’s Amplitude Data Product offering:
 
-The primary product within ICEYE's **Amplitude Data Products** offering is the **Ground Range Detected (GRD)** amplitude image data product. During the production process, the image data is oriented in the natural range-azimuth sensor orientation, projected to the ground surface using an Earth ellipsoid model, and may be multi-looked to reduce speckle. The products are packaged into the GeoTIFF file format with metadata included. Overall, GRD is excellent for most common SAR image analysis use cases. ICEYE will release a new Cloud Optimized GeoTIFF GRD format, that is described in section [5.2.2](#522-ground-range-detected-grd-image-3), within the third quarter of 2025. A legacy GRD format described in Section [5.2.3](#523-legacy-grd-format) will continue to be offered for compatibility reasons. 
+The primary product within ICEYE's **Amplitude Data Products** offering is the **Ground Range Detected (GRD)** amplitude image data product. During the production process, the image data is oriented in the natural range-azimuth sensor orientation, projected to the ground surface using an Earth ellipsoid model, and may be multi-looked to reduce speckle. The products are packaged into the Cloud Optimized GeoTIFF file format with metadata included. Overall, GRD is excellent for most common SAR image analysis use cases. The Cloud Optimized GeoTIFF GRD format is described in detail in section [5.2.2](#522-ground-range-detected-grd-image-3). A legacy GRD format described in Section [5.2.3](#523-legacy-grd-format) will continue to be offered for compatibility reasons until 31 December, 2026. 
 
-ICEYE also offers the **Quicklook** product which is a raster graphic preview of a GRD image. Quicklook images are encoded in the PNG file format with metadata included. They are compatible with most common documentation, presentation and publishing software. As such they are easily exploitable by non-technical staff without specialized GIS software or uncommon expertise. More information on the Quicklook product is available in Section [5.2.1](#521-quicklook-1).
+ICEYE also offers the **Quicklook** product which is a raster graphic preview of a GRD image. Quicklook images are encoded in the PNG file format with metadata included. They are compatible with most common documentation, presentation and publishing software. As such they are easily exploitable by non-technical staff without specialized GIS software or uncommon expertise. More information on the Quicklook product is available in Section [5.2.1](#521-quicklook).
 
-Two amplitude data products are only offered with the Dwell, Dwell Fine and Dwell Precise imaging modes. The first of these is the **Colorized Sub-aperture Image (CSI)** product which is a composite SAR image resulting from the coadding of 13 distinctively colored sub-aperture images. These are packaged into the GeoTIFF format with all metadata included. They are excellent for detecting human-made structures and moving objects. More information on the CSI product is available in Section [5.4.1](#541-colorized-sub-aperture-image-csi-2).
+Two amplitude data products are only offered with the Dwell, Dwell Fine and Dwell Precise imaging modes. The first of these is the **Colorized Sub-aperture Image (CSI)** product which is a composite SAR image resulting from the coadding of 13 distinctively colored sub-aperture images. These are packaged into the Cloud Optimized GeoTIFF format with all metadata included. They are excellent for detecting human-made structures and moving objects. More information on the CSI product is available in Section [5.4.1](#541-colorized-sub-aperture-image-csi). A legacy CSI format described in Section [5.4.2](#542-legacy-colorized-sub-aperture-image-csi) will continue to be offered for compatibility reasons until 31 December, 2026. 
 
-The second Dwell, Dwell Fine and Dwell Precise specific product is the **SAR Video (VID)** product which is a short video with 25 individual frames each representing a discrete sub-aperture SAR image taken during the same collection. VID products are delivered in both MPEG4 and GIF formats; A GeoTIFF file is also provided with each frame as a separate band. The metadata is also stored in the GeoTIFF file. Like the CSI, the VID product is excellent for detecting human-made structures and moving objects. More information on the VID product is available in Section [5.4.2](#542-sar-video-vid-2).
+The second Dwell, Dwell Fine and Dwell Precise specific product is the **SAR Video (VID)** product which is a short video with 25 individual frames each representing a discrete sub-aperture SAR image taken during the same collection. VID products are delivered in both MPEG4 and GIF formats; a Cloud Optimized GeoTIFF file is also provided with each video frame as a separate band. The metadata is also stored in the GeoTIFF file. Like the CSI, the VID product is excellent for detecting human-made structures and moving objects. More information on the VID product is available in Section [5.4.3](#543-sar-video-vid). A legacy SAR Video format described in Section [5.4.4](#544-legacy-sar-video-vid) will continue to be offered for compatibility reasons until 31 December, 2026. 
 
 Table [5-1](#table-5-1-amplitude-data-products-available-for-each-iceye-imaging-mode) provides a summary of the different amplitude data products in terms of their availability and the imaging modes through which they can be obtained. Further descriptions of the different data products are given in the following subsections as referenced above.
 
@@ -45,7 +45,7 @@ Table [5-1](#table-5-1-amplitude-data-products-available-for-each-iceye-imaging-
 
 The following three products constitute ICEYE’s Complex Data Product offering:
 
-The primary product within ICEYE's **Complex Data Products** offering is the **Single Look Complex (SLC)** which is a SAR image with all the original sensor data retained. It offers the highest fidelity and the full resolution in azimuth and range. It is also free from interpolation artifacts or projection issues. SLC products are packaged into the GeoTIFF file format with metadata included. They are excellent as input for automated algorithmic processing workflows and advanced exploitation use cases where phase data is leveraged, such as coherent change detection (CCD). ICEYE will release a new Cloud Optimized GeoTIFF SLC format, that is described in section [5.3.1](#531-single-look-complex-slc-image-2), within the third quarter of 2025. A legacy SLC format described in Section[ 5.3.2](#532-legacy-slc-image-format-2) will continue to be offered for compatibility reasons. 
+The primary product within ICEYE's **Complex Data Products** offering is the **Single Look Complex (SLC)** which is a SAR image with all the original sensor data retained. It offers the highest fidelity and the full resolution in azimuth and range. It is also free from interpolation artifacts or projection issues. SLC products are packaged into the Cloud Optimized GeoTIFF file format with metadata included. They are excellent as input for automated algorithmic processing workflows and advanced exploitation use cases where phase data is leveraged, such as coherent change detection (CCD). The Cloud Optimized GeoTIFF SLC format is described in detail in section [5.3.1](#531-single-look-complex-slc-image). A legacy SLC format described in Section[ 5.3.2](#532-legacy-slc-image-format) will continue to be offered for compatibility reasons until 31 December 2026. 
 
 The ICEYE complex product offering also includes the **Sensor Independent Complex Data (SICD)** and **Sensor Independent Derived Data (SIDD)** which are industry standard SAR image data products designed to be used in conjunction with each other, and thus come as a bundle. This product is sensor, collection strategy and processing algorithm agnostic and is stored in the NITF file format with metadata in XML. The SICD + SIDD product design and packaging has been optimized to facilitate SAR data exploitation together with other products in the same format from other vendors. It is thus excellent for vendor-agnostic automated data processing. More information about the SICD and SIDD products is available in Section [5.5.1](#551-sensor-independent-complex-data-sicd-and-sensor-independent-derived-data-sidd-1).
 
@@ -67,14 +67,12 @@ Table [5-2](#table-5-2-complex-data-products-available-for-each-iceye-imaging-mo
 
 ### 5.2.1 Quicklook
 
-The **Quicklook** product is an image preview of a higher resolution GRD image ([5.2.2](#522-ground-range-detected-grd-image-4)). It is available for all imaging modes and is provided in PNG format. These are very easily leveraged by non-technical users, as they can be opened by basic image viewing software, document editing tools and raster graphics editing software. Quicklook can also be used to perform basic rapid image analysis and/or to determine if the more detailed data products below should be further exploited and analyzed. 
+The **Quicklook** product is an image preview of a higher resolution GRD image ([5.2.2](#522-ground-range-detected-grd-image)). It is available for all imaging modes and is provided in PNG format. These are very easily leveraged by non-technical users, as they can be opened by basic image viewing software, document editing tools and raster graphics editing software. Quicklook can also be used to perform basic rapid image analysis and/or to determine if the more detailed data products below should be further exploited and analyzed. 
 
 
 ### 5.2.2 Ground Range Detected (GRD) Image
 
-ICEYE will be releasing a new Cloud Optimized GeoTIFF GRD format that is described in this section, within the third quarter of 2025. A legacy GRD format described in Section [5.2.3](#523-legacy-grd-format-1) will continue to be offered for compatibility reasons.
-
-As outlined in Section [5.1.1](#511-amplitude-data-product-offering-1), the primary product within ICEYE's Amplitude Data Products offering is the **Ground Range Detected (GRD)** amplitude image data product.  Amplitude images represent focused SAR data that has been detected and projected to the ground plane using an Earth ellipsoid model. The pixels of SAR amplitude images only contain amplitude values. With many imaging modes, **Ground Range Detected (GRD)** data products are also multi-looked to reduce the effect of speckle. Ground range coordinates are the slant range coordinates projected onto the ellipsoid of the Earth. For this projection the WGS84 reference ellipsoid (see Table [5-3](#table-5-3-parameters-of-the-earth-ellipsoid-model-used-in-ground-surface-projection)) is used and an averaged fixed value of terrain height is used. This makes the ellipsoid surface closer to the true ground surface. The mean ellipsoid height used is annotated in the avg\_scene\_height metadata element.
+As outlined in Section [5.1.1](#511-amplitude-data-product-offering), the primary product within ICEYE Amplitude Data Products offering is the **Ground Range Detected (GRD)** amplitude image data product.  Amplitude images represent focused SAR data that has been detected and projected to the ground plane using an Earth ellipsoid model. The pixels of SAR amplitude images only contain amplitude values. With many imaging modes, **Ground Range Detected (GRD)** data products are also multi-looked to reduce the effect of speckle. Ground range coordinates are the slant range coordinates projected onto the ellipsoid of the Earth. For this projection the WGS84 reference ellipsoid (see Table [5-3](#table-5-3-parameters-of-the-earth-ellipsoid-model-used-in-ground-surface-projection)) is used and an averaged fixed value of terrain height is used. This makes the ellipsoid surface closer to the true ground surface. The mean ellipsoid height used is annotated in the avg\_scene\_height metadata element.
 
 
 ##### _Table 5-3: Parameters of the Earth ellipsoid model used in ground surface projection_
@@ -96,7 +94,7 @@ Associated image metadata is stored in the GeoJSON format. 
 
 ### 5.2.3 Legacy GRD Format
 
-ICEYE will be releasing a new Cloud Optimized GeoTIFF GRD format described in Section [5.2.2](#522-ground-range-detected-grd-image-5), within the third quarter of 2025.  A legacy GRD format will continue to be offered for compatibility reasons. This version differs from the newer version described in this section mainly as summarized in Table [5-4](#table-5-4-simplified-comparison-of-the-new-grd-and-the-old-legacy-grd-version).
+A legacy GRD format can be provided for backward compatibility until **31 December 2026**. This legacy format differs from the current GRD product primarily as summarized in Table [5-4](#table-5-4-simplified-comparison-of-the-new-grd-and-the-old-legacy-grd-version). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF GRD product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
 
 
 ##### _Table 5-4: Simplified comparison of the new GRD and the old Legacy GRD version_
@@ -107,19 +105,16 @@ ICEYE will be releasing a new Cloud Optimized GeoTIFF GRD format described in Se
 | Support for very high dynamic range products | Yes                                            | No                                                   |
 | Metadata format                              | GeoJSON                                        | XML                                                  |
 | File naming convention                       | Regular ([5.6.1](#561-file-naming-convention)) | Legacy ([5.6.2](#562-legacy-file-naming-convention)) |
+| Availability                      | Now | Now; to be deprecated in 2026 with final availability on December 31, 2026. |
 
 The format of the legacy GRD is the non-cloud optimized GeoTIFF. It is compatible with many GIS software and tools. Software tools might not be able to optimally utilize  legacy GRD products stored in the cloud, or use will require a full download of the files before any part of the images can be utilized.
 
-The legacy GRD format supports lower data precision and is thus less suitable for data products with high dynamic range. The metadata is stored in the XML format rather than GeoJSON, and the file names follow the legacy naming convention described in Section [5.6.2](#562-legacy-file-naming-convention-1).
-
-In the third quarter 2025, ICEYE will communicate the deprecation plan for the legacy GRD format, with the legacy format persisting through 2025. ICEYE customers are advised to discontinue use of the legacy GRD format and instead adopt the new cloud optimized GeoTIFF version in particular to enjoy its benefits. ICEYE welcomes dialogue with customers to assist with this transition.  
+The legacy GRD format supports lower data precision and is thus less suitable for data products with high dynamic range. The metadata is stored in the XML format rather than GeoJSON, and the file names follow the legacy naming convention described in Section [5.6.2](#562-legacy-file-naming-convention). 
 
 
 ## 5.3 Complex Data Products
 
 ### 5.3.1 Single Look Complex (SLC) Image
-
-ICEYE will be releasing a new Cloud Optimized GeoTIFF SLC format, that is described in this section, within the third quarter of 2025. A legacy SLC format described in Section [5.3.2](#532-legacy-slc-image-format-3) will continue to be offered for compatibility reasons. 
 
 **Single Look Complex (SLC)** images have the highest fidelity of all SAR image products because they are only one step removed from the original RADAR collected data. They retain all the original sensor measurements and are free from interpolation artifacts or projection issues. As the name suggests, SLC images have only a single look. This means they retain full resolution in azimuth and range. In most cases the impulse response function (the shape of a single, isolated radar-bright object in the radar image) is asymmetrical with azimuth resolution being smaller (finer) than range resolution.
 
@@ -135,10 +130,9 @@ The complex data is stored as a matrix in a separate band in the GeoTIFF contain
 
 Metadata is stored with the GeoJSON format. GeoJSON is a geocoded metadata format supported by many GIS tools.
 
-
 ### 5.3.2 Legacy SLC Image Format
 
-ICEYE will be releasing a new Cloud Optimized GeoTIFF SLC format described in Section [5.3.1](#531-single-look-complex-slc-image-3), within the third quarter of 2025.  A legacy SLC format will continue to be offered for compatibility reasons. This version differs from the newer version described in this section mainly as summarized in Table [5-5](#table-5-5-simplified-comparison-of-the-new-slc-and-the-old-legacy-slc-version).
+A legacy legacy format can be provided for backward compatibility until **31 December 2026**. This legacy format differs from the current SLC product primarily as summarized in Table [5-5](#table-5-5-simplified-comparison-of-the-new-slc-and-the-old-legacy-slc-version). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF SLC product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
 
 
 ##### _Table 5-5: Simplified comparison of the new SLC and the old Legacy SLC version_
@@ -150,15 +144,16 @@ ICEYE will be releasing a new Cloud Optimized GeoTIFF SLC format described in Se
 | Full resolution in range and azimuth                | Yes                                              | Yes                                                    |
 | Metadata format                                     | GeoJSON                                          | XML                                                    |
 | File naming convention                              | Regular ([5.6.1](#561-file-naming-convention-1)) | Legacy ([5.6.2](#562-legacy-file-naming-convention-2)) |
+| Availability                      | Now | Now; to be deprecated in 2026 with final availability on December 31, 2026. |
 
 Images in the legacy SLC format are stored as binary matrices in an [HDF5](https://www.hdfgroup.org/solutions/hdf5/) file container. Each image pixel is stored with in-phase (I) and quadrature (Q) components and therefore, contains both amplitude and phase information. The legacy SLC metadata is stored in XML format. The file names follow a legacy naming convention .
-
-In the third quarter 2025, ICEYE will communicate the deprecation plan for the legacy SLC format, with the legacy format persisting through 2025. ICEYE customers are advised to discontinue use of the legacy SLC format and instead adopt the new Cloud Optimized GeoTIFF SLC format in particular to enjoy its benefits. ICEYE welcomes dialogue with customers to assist with this transition.  
 
 
 ## 5.4 Dwell, Dwell Fine and Dwell Precise Exclusive Data Products
 
 ### 5.4.1 Colorized Sub-Aperture Image (CSI)
+
+ICEYE will release a new Cloud Optimized GeoTIFF CSI format that is described in this section, within the first quarter of 2026. A legacy CSI format described in [Section 5.4.2](#542-legacy-colorized-sub-aperture-image-csi) will continue to be offered for compatibility reasons until December 31, 2026.
 
 **Colorized Sub-aperture Images (CSI)** are made by assigning distinct colors to backscatter signals received from various sub-apertures, which are then integrated into a composite color image. Human-made objects with flat surfaces or sharp angles typically produce preferential scattering orientations (anisotropic scatterers) that appear highlighted as a dominant color in the CSI image.  In contrast, natural objects that scatter uniformly in all directions (isotropic scatterers) do not show preferential scattering geometries and tend to appear as gray tones in the CSI image. Additionally, objects partially obscured by vegetation or tree canopies may also be highlighted in dominant colors, as only a subset of sub-apertures captures strong backscatter returns. This feature enhances the CSI image’s effectiveness in identifying objects that might otherwise be concealed. This distinctive capability is particularly valuable in search, monitoring and surveillance operations.  Figure [5-1](#) shows an example of a CSI image, demonstrating how the CSI image can preferentially reveal human-made objects relative to a background of natural foliage.
 
@@ -167,28 +162,58 @@ In the third quarter 2025, ICEYE will communicate the deprecation plan for the l
 
 ##### _Figure 5-1: An example of a CSI image, demonstrating how the CSI image can preferentially reveal human-made objects relative to a background of natural foliage._
 
-The colors denote the geometry that a point in the image predominantly scatters in. The collection time is split into 13 individual sub-apertures. Each sub-aperture is individually colored from red at the start of the collection to blue at the end of the collection. A composite image is made by coadding all the sub-apertures.![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/csisubapertures.png)
-
+The colors denote the geometry that a point in the image predominantly scatters in. The collection time is split into 13 individual sub-apertures. Each sub-aperture is individually colored from red at the start of the collection to blue at the end of the collection. A composite image is made by coadding all the sub-apertures.
+<img src="https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/csisubapertures_2.png" alt="subapertures" width="500"/>
 
 ##### _Figure 5-2: An illustration of the 13 different sub-apertures and their individual coloring.._
 
-CSI images are only produced for the Dwell, Dwell Fine and Dwell Precise imaging modes because of their long total illumination duration of 25 seconds. Dividing the total collection into 13 sub-apertures results in 13 sub-apertures with illumination periods of approximately 1.9 seconds each. 
+CSI products are generated exclusively for the Dwell, Dwell Fine, and Dwell Precise imaging modes, as these modes provide an extended total illumination time and thus a sufficiently long synthetic aperture. The aperture is partitioned into 13 sub-apertures, each acquired under slightly different illumination geometry, with each sub-aperture contributing distinct radar backscatter information to the final composite color image.  
 
-The CSI format uses a  GeoTIFF container so the image can be viewed by any regular or geospatial image viewer. The exact time, duration, color and satellite location for each sub-aperture is available as metadata in the CSI GeoTIFF product file.
+The CSI product is provided in a Cloud Optimized GeoTIFF container, enabling direct visualization with standard image viewers as well as geospatial software. For each sub-aperture, the CSI includes metadata describing the acquisition time, integration duration, color encoding, and satellite position. The ground resolution of the CSI product in Cloud Optimized GeoTIFF format is identical to the ground resolution of the amplitude GRD product.
+
+### 5.4.2 Legacy Colorized Sub-Aperture Image (CSI)
+
+A legacy CSI format can be provided for backward compatibility until *31 December 2026*. This legacy format differs from the current CSI product primarily as summarized in Table [5-6](#table-5-6-simplified-comparison-of-the-new-csi-and-the-old-legacy-csi-formats). Note that in this legacy format the CSI product has a lower ground resolution than the new Cloud Optimized GeoTIFF CSI. Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF CSI product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
+
+##### Table 5-6: Simplified comparison of the new CSI and the old Legacy CSI formats
+
+|                                                     | CSI                                              | Legacy CSI                                             |
+| --------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------ |
+| Container                                           | Cloud Optimized GeoTIFF                          | GeoTIFF                                                |
+| Full ground resolution (same as GRD)                | Yes                                              | Yes                                                    |
+| Metadata format                                     | GeoJSON                                          | XML                                                    |
+| File naming convention                              | Regular ([5.6.1](#561-file-naming-convention-1)) | Legacy ([5.6.2](#562-legacy-file-naming-convention-2)) |
+| Availability                      | 1Q 2026 | Now; to be deprecated in 2026 with final availability on December 31, 2026. |
 
 
-### 5.4.2 SAR Video (VID)
 
-**SAR Video (VID)** is similar to the CSI product described in Section [5.4.1](#541-colorized-sub-aperture-image-csi-3) in which the acquired SAR data is first divided into multiple sub-apertures. However, in the case of SAR Video each discrete sub-aperture image is used as a frame to compile a short video clip. The Dwell, Dwell Fine and Dwell Precise imaging modes generate 25-second videos consisting of 25 individual frames.
+### 5.4.3 SAR Video (VID)
+
+ICEYE will release a new Cloud Optimized GeoTIFF SAR Video (VID) format that is described in this section, within the first quarter of 2026. A legacy SAR Video (VID) format described in [Section 5.4.4](#544-legacy-sar-video-vid) will continue to be offered for compatibility reasons until December 31, 2026.
+
+**SAR Video (VID)** is similar to the CSI product described in Section [5.4.1](#541-colorized-sub-aperture-image-csi) in which the acquired SAR data is first divided into multiple sub-apertures. However, in the case of SAR Video each discrete sub-aperture image is used as a frame to compile a short video clip. The Dwell, Dwell Fine and Dwell Precise imaging modes generate videos consisting of 25 individual frames.
 
 The VID product is useful in applications for which the motion of moving objects, such as vessels and land vehicles, is to be analyzed. By simple inspection and analysis of a video, it is possible to infer the general direction and speed of the moving object. SAR Video is also effective for detecting objects hidden in forested areas as well as human-made objects as these tend to give bright reflections revealed as glints when playing a video.
 
-The formats for the VID data products are MPEG4 and GIF. Additionally, a file in GeoTIFF format is produced where each of the video frames is available as a separate band to facilitate frame by frame analysis in a GIS image exploitation tool. The user can measure and track changes and moving objects between frames by stepping through the different bands of the image. Metadata for each of the video frames is available in the GeoTIFF.
+The formats for the VID data products are MPEG4 and GIF. Additionally, a file in Cloud Optimized GeoTIFF format is produced where each of the video frames is available as a separate band to facilitate frame by frame analysis in a GIS image exploitation tool. The user can measure and track changes and moving objects between frames by stepping through the different bands of the image. Metadata for each of the video frames, including exact time, duration, and satellite location, is available in the Cloud Optimized GeoTIFF.
+
+### 5.4.4 Legacy SAR Video (VID)
+
+A legacy SAR Video (VID) format can be provided for backward compatibility until *31 December 2026*. This legacy format differs from the current VID product primarily as summarized in Table [5-7](#table-5-7-simplified-comparison-of-the-new-sar-video-vid-and-the-old-legacy-sar-video-vid-formats). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF VID product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
+
+##### Table 5-7: Simplified comparison of the new SAR Video (VID) and the old Legacy SAR Video (VID) formats
+
+|                                                     | SAR Video (VID)                                  | Legacy SAR Video (VID)                                 |
+| --------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------ |
+| Container                                           | Cloud Optimized GeoTIFF, MPEG4, GIF              | GeoTIFF,MPEG4, GIF                                     |
+| Metadata format                                     | GeoJSON                                          | XML                                                    |
+| File naming convention                              | Regular ([5.6.1](#561-file-naming-convention-1)) | Legacy ([5.6.2](#562-legacy-file-naming-convention-2)) |
+| Availability                      | 1Q 2026 | Now; to be deprecated in 2026 with final availability on December 31, 2026. |
 
 
 ## 5.5 On Demand Only Data Products
 
-ICEYE is also able to provide a range of complementary data products that are generated only when specifically requested by a customer. Delivery times for these data products fall outside of the Standard Delivery Time Service Level described in Section [3.6.3](#373-delivery-time-service-level-8). Contact ICEYE via [the ICEYE website](https://www.iceye.com/contact) (or via email if you are already a customer of ICEYE) for more information regarding on demand only Data Products.
+ICEYE is also able to provide a range of complementary data products that are generated only when specifically requested by a customer. Delivery times for these data products fall outside of the Standard Delivery Time Service Level described in Section [3.7.3](tasking.md#373-delivery-time-service-level). Contact ICEYE via [the ICEYE website](https://www.iceye.com/contact) (or via email if you are already a customer of ICEYE) for more information regarding on demand only Data Products.
 
 
 ### 5.5.1 Sensor Independent Complex Data (SICD) and Sensor Independent Derived Data (SIDD)
