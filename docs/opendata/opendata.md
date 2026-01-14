@@ -1,4 +1,4 @@
-# ICEYE Open Data Program on AWS 🚀
+# ICEYE Open Data Program on AWS
 
 Welcome to the ICEYE Open Data Program. As part of our commitment to scientific collaboration and advancement, we are making a growing selection of our **Synthetic Aperture Radar (SAR)** datasets available for free under a **Creative Commons Attribution (CC-BY 4.0)** license.
 
@@ -12,33 +12,19 @@ All products are delivered as **Cloud-Optimized GeoTIFFs (COGs)** and are aligne
 
 Each SAR scene typically includes:
 
-- **GRD COG**: Ground Range Detected image
 - **SLC COG**: Single Look Complex image
-- **QLK PNG**: Compressed preview image, including a .kml file for visualization in Google Earth
-- **Metadata JSON**: Original metadata used to generate STAC
+- **GRD COG**: Ground Range Detected image
+- **QLK COG**: Quicklook preview image
+- **Metadata JSON**: STAC compliant image product metadata
+
+Additionally, for spotlight dwell collections, the catalog includes:
+
+- **CSI COG**: Colorized Subaperture image
+- **VID COG**: SAR Video in COG, GIF, and MP4 formats
   
 ## 📚 Data Organization
 
-The ICEYE Open Data catalog is structured as a [static STAC catalog](https://stacspec.org), hosted as publicly accessible files on Amazon S3. The s3 bucket is organized as follows:
-
-```text
-s3://iceye-open-data-catalog/
-├── catalog.json
-├── collections/
-│   └── iceye-sar.json
-├── stac-items/
-│   └── YYYY/MM/<scene_id>_<timestamp>_<product>.json
-├── data/
-│   └── <mode-folder>/                          # e.g., spot-fine, dwell-fine
-│       └── <ICEYE_scene_id_timestamp_satellite_mode>/
-│           ├── *.tif   # GRD / SLC COGs
-│           ├── *.png   # QLK / THM
-│           └── *.json  # Metadata
-```
-
-## Accessing the ICEYE Open Data Bucket
-
-You can access ICEYE’s open data via a public S3 bucket. No AWS credentials or account are required.
+The ICEYE Open Data catalog is a [static STAC catalog](https://stacspec.org) hosted as publicly accessible files on Amazon S3. The data can be accessed directly from a public S3 bucket without requiring an AWS account or credentials.
 
 ### Resource Details
 
@@ -84,9 +70,9 @@ To get started with the ICEYE open SAR data, you can simply:
 
 All `.tif` files in this dataset are **Cloud-Optimized GeoTIFFs (COGs)**, which can be opened directly over the network in common GIS tools like:
 
-- **QGIS**: Use the “Raster > Add Layer > Add Raster Layer” menu and paste in the HTTPS S3 URL.
-- **ArcGIS Pro**: Use “Add Data from Path” and specify the public COG URL.
-- **GDAL-based tools**: COGs can be read directly with `gdal_translate`, `gdalinfo`, or used in server workflows like GeoServer or MapServer.
+- **QGIS**: Use the “Raster > Add Layer > Add Raster Layer” menu and select the tif file.
+- **ArcGIS Pro**: Use “Add Data from Path” and specify the file path or public COG URL.
+- **GDAL-based tools**: COGs can be read directly in GDAL-based applications and libraries that support raster access.
 
 ---
 
