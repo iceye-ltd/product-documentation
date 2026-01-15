@@ -6,7 +6,7 @@ This documentation explains how the data is organized, how to access it via AWS,
 
 ## 📁 Dataset Overview
 
-All products are delivered as **Cloud-Optimized GeoTIFFs (COGs)** and, where applicable, adhere to the specifications defined in the ICEYE product documentation. Please note, however, that this open catalog contains example datasets and imaging products that may be experimental and/or may not fully comply with the latest data product specifications. For the most up-to-date documentation on commercially available products, please refer to the latest data product specifications available at [static STAC catalog](sar.iceye.com)
+All products are delivered as **Cloud-Optimized GeoTIFFs (COGs)** and, where applicable, adhere to the specifications defined in the ICEYE product documentation. Please note, however, that this open catalog contains example datasets and imaging products that may be experimental and/or may not fully comply with the latest data product specifications. For the most up-to-date documentation on commercially available products, please refer to the latest data product specifications available at [All products are delivered as **Cloud-Optimized GeoTIFFs (COGs)** and, where applicable, adhere to the specifications defined in the ICEYE product documentation. Please note, however, that this open catalog contains example datasets and imaging products that may be experimental and/or may not fully comply with the latest data product specifications. For the most up-to-date documentation on commercially available products, please refer to the latest data product specifications available at [sar.iceye.com](https://sar.iceye.com).
 
 Each SAR scene typically includes:
 
