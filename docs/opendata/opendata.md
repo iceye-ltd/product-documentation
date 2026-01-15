@@ -6,9 +6,7 @@ This documentation explains how the data is organized, how to access it via AWS,
 
 ## 📁 Dataset Overview
 
-The ICEYE open data catalog contains high-resolution SAR scenes acquired in different imaging modes.
-
-All products are delivered as **Cloud-Optimized GeoTIFFs (COGs)** and are aligned with the specifications documented in ICEYE’s product documentation.
+All products are delivered as **Cloud-Optimized GeoTIFFs (COGs)** and, where applicable, adhere to the specifications defined in the ICEYE product documentation. Please note, however, that this open catalog contains example datasets and imaging products that may be experimental and/or may not fully comply with the latest data product specifications. For the most up-to-date documentation on commercially available products, please refer to the latest data product specifications available at [static STAC catalog](sar.iceye.com)
 
 Each SAR scene typically includes:
 
@@ -17,7 +15,7 @@ Each SAR scene typically includes:
 - **QLK COG**: Quicklook preview image
 - **Metadata JSON**: STAC compliant image product metadata
 
-Additionally, for spotlight dwell collections, the catalog includes:
+Additionally, collections acquired in Dwell imaging modes, the catalog includes:
 
 - **CSI COG**: Colorized Subaperture image
 - **VID COG**: SAR Video in COG, GIF, and MP4 formats
