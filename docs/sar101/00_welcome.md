@@ -61,7 +61,7 @@ The chapters comprising **Part 2** focus on building understanding of SAR image 
 
   - **Chapter [<span class="underline">8</span>](08_sar_imagery_and_interpretation_considerations.md) SAR Imagery & Interpretation Considerations** explains the meaning of detection in SAR, and how SAR data actually consists of amplitude and phase value pairs. Backscatter, polarization and different scattering mechanisms and geometric distortions are discussed. The phenomena of speckle is illustrated and two notable image quality metrics are described.
 
-### Part 3: How is SAR Data Packaged and Used?
+### Part 3: How SAR Data is Packaged and Used?
 
 **Part 3** focuses on data processing and analysis as well as data products. While the earlier chapters provide a great foundation for understanding SAR and related terminology, these final chapters are most relevant for the application oriented readers who want to understand how SAR can be practically utilized:
 
