@@ -30,7 +30,7 @@ The SAR101: Foundations material describes why and how all these remarkable capa
 
 <figure id="figure-1-paris">
 <img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image1-paris.jpeg">
-<figcaption><strong>Figure 1: Paris.</strong> This SAR image over Paris, France features the Arc de Triomphe on the left, the Eiffel Tower on the center, and the Seine river flowing between them. Flat surfaces appear dark and smooth while the metallic Eiffel Tower and other buildings are pronounced. As with all SAR images, it is difficult to tell if this image was acquired day or night, under clear skies or a storm - this is due to the remarkable all-weather collection capabilities of SAR. </figcaption>
+<figcaption><strong>Figure 1: Paris.</strong> This SAR image over Paris, France, features the Arc de Triomphe on the left, the Eiffel Tower on the center, and the Seine river flowing between them. Flat surfaces appear dark and smooth while the metallic Eiffel Tower and other buildings are pronounced. As with all SAR images, it is difficult to tell if this image was acquired day or night, under clear skies or a storm - this is due to the remarkable all-weather collection capabilities of SAR. </figcaption>
 </figure>
 
 ## Document Structure
