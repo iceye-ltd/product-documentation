@@ -65,7 +65,7 @@ The chapters comprising **Part 2** focus on building understanding of SAR image 
 
 **Part 3** focuses on data processing and analysis as well as data products. While the earlier chapters provide a great foundation for understanding SAR and related terminology, these final chapters are most relevant for the application oriented readers who want to understand how SAR can be practically utilized:
 
-  - **Chapter [<span class="underline">9</span>](09_data_processing_and_analysis.md) Data Processing and Metadata** describes the process of converting SAR data into different data product levels, and defines several related terms. It explains processing choices relating to sampling and sample arrangement, axis alignment, multi-looking, and projection surfaces. It also lists some common SAR data analysis and utilization techniques.
+  - **Chapter [<span class="underline">9</span>](09_data_processing_and_analysis.md) Data Processing and Analysis** describes the process of converting SAR data into different data product levels, and defines several related terms. It explains processing choices relating to sampling and sample arrangement, axis alignment, multi-looking, and projection surfaces. It also lists some common SAR data analysis and utilization techniques.
 
   - **Chapter [<span class="underline">10</span>](10_data_products.md) Data Products** presents the most established data products on the market, from the early compensated phase history data products to newer colorized sub-aperture stack images and SAR Video.
 
