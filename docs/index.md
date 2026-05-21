@@ -13,8 +13,8 @@ The primary purpose of this website is to provide access to the **ICEYE Data Pro
 <figure markdown>
 | | DOCUMENT  | FORMAT | VERSION | DATE |
 |-|-----------------------|------|------------|------|
-| [![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/productspecification60cover.png){ width="50" }](https://github.com/iceye-ltd/product-documentation/releases/download/additional-documents/ICEYEDataProductSpecification606.pdf)| [ICEYE Data Product Specification](https://github.com/iceye-ltd/product-documentation/releases/download/additional-documents/ICEYEDataProductSpecification606.pdf) | PDF | 6.0.6 | 5 Feb 2026 |
-| [![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/productspecification60web.png){ width="50" }](./productspecification/introduction.md)| [ICEYE Data Product Specification](./productspecification/introduction.md) | WEB | 6.0.6 | 5 Feb 2026 |
+| [![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/productspecification60cover.png){ width="50" }](https://github.com/iceye-ltd/product-documentation/releases/download/additional-documents/ICEYEDataProductSpecification607.pdf)| [ICEYE Data Product Specification](https://github.com/iceye-ltd/product-documentation/releases/download/additional-documents/ICEYEDataProductSpecification607.pdf) | PDF | 6.0.7 | 21 May 2026 |
+| [![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/productspecification60web.png){ width="50" }](./productspecification/introduction.md)| [ICEYE Data Product Specification](./productspecification/introduction.md) | WEB | 6.0.7 | 21 May 2026 |
 
 <!--<figcaption align = "center"><em>Table 1: ICEYE Documents</em></figcaption> -->
 </figure>

@@ -115,7 +115,7 @@ ICEYE aims to ensure that the the resulting imagery for tasks collected with the
 |                                                                                                                   Impulse Response Weighing Function (peak side level) |                 Uniform (-13.3 dB)                 |                  Uniform (-13.3dB)                 |  Uniform (-13.3 dB)  |     Uniform (-13.3 dB)     |
 |                                                                                                                                        Slant Range Sample Spacing \[m] |                        < 0.4                       |                        < 0.2                       |        < 0.25        |           < 0.25           |
 |                                                                                                                                      Azimuth Sample Spacing \[m] |                        < 0.2                       |                       < 0.09                       |         <0.5         |           < 0.25           |
-| Slant Range Product Format(see section [5](https://docs.google.com/document/d/1sE-SQh0Ri3YRHj_7eF3AmLs_FcuXRykS6D2E6Uzi0rk/edit#heading=h.m4oeulyjg5e4) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |   Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |  Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
+| Product Format (see section [5](https://docs.google.com/document/d/1sE-SQh0Ri3YRHj_7eF3AmLs_FcuXRykS6D2E6Uzi0rk/edit#heading=h.m4oeulyjg5e4) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |   Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |  Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
 |                                                                                                                                             Complex Product Size \[GB] |                      0.6 to 2.2                      |                       4 to 15                      |        0.7 to 3        |          1.3 to 5          |
 |                                                                                                                                         Dynamic Range (bits per pixel) |                16 (uint)                |                16 (uint)                | 16 (uint) |    16 (uint)    |
 
@@ -187,7 +187,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the SLE
 |                          Impulse Response Weighing Function (peak side level) |                  Uniform (-13.3dB)                 |
 |                                               Slant Range Sample Spacing \[m] |                        < 0.4                       |
 |                                             Azimuth Sample Spacing \[m] |                        <0.5                        |
-| Slant Range Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON (legacy: HDF5 + XML) |
+| Product Format (see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON (legacy: HDF5 + XML) |
 |                                                    Complex Product Size \[GB] |                       4 to 7                      |
 |                                                Dynamic Range (bits per pixel) |                16 (uint)                |
 
@@ -266,7 +266,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 |                                                                                                                   Impulse Response Weighing Function (peak side level) |                  Uniform (-13.3dB)                 |                  Uniform (-13.3dB)                 |                  Uniform (-13.3dB)                 |
 |                                                                                                                                        Slant Range Sample Spacing \[m] |                        < 0.4                       |                        < 0.2                       |                        < 0.1                       |
 |                                                                                                                                      Azimuth Sample Spacing \[m] |                       < 0.08                       |                       < 0.08                       |                       < 0.08                       |
-| Slant Range Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
+| Product Format (see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
 |                                                                                                                                             Complex Product Size \[GB] |                       1.5 to 15                      |                      4 to 24                      |                      9 to 30                      |
 |                                                                                                                                         Dynamic Range (bits per pixel) |                16 (uint)                |                16 (uint)               |                16 (uint)                |
 
@@ -344,7 +344,7 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Str
 |                           Impulse Response Weighing Function (peak side level) |                  Uniform (-13.3dB)                 |
 |                                                Slant Range Sample Spacing \[m] |                     0.4 to 2.4                     |
 |                                              Azimuth Sample Spacing \[m] |                         1.6                        |
-| Slant Range Product Format(see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
+| Product Format (see section [5](dataproducts.md#5-data-products) for more info) | Cloud Optimized GeoTIFF + JSON(legacy: HDF5 + XML) |
 |                                                     Complex Product Size \[GB] |                      2.9 to 6                      |
 |                                                 Dynamic Range (bits per pixel) |                16 (uint)                |
 
