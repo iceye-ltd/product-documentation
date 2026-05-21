@@ -171,15 +171,16 @@ ICEYE provides a **Standard Delivery Endpoint** that is intended to meet most cu
 
 A central pillar of the ICEYE tasking product specification is the ICEYE commitment to deliver imagery within a predetermined time following collection. The realized delivery time is calculated as the difference of a) the timestamp of when the data products have been delivered to the agreed delivery endpoint, and b) the timestamp of original SAR data collection in the satellite as stored also in the image metadata.
 
-ICEYE delivery times are fulfilled for over 90 % of the applicable deliveries. This performance statistic applies to all applicable customer deliveries, and is intended to hold regardless of AOI or imaging mode. The statistic is evaluated based on all applicable collections from the previous calendar year and the Data Product Specification is updated annually based on the performance of the previous calendar year. Because this is a global statistic applied to all customers, no single collection is guaranteed to deliver the expected timeline:  a customer’s results may vary even while the Data Product Specification is honored.
+ICEYE delivery times are fulfilled for over 90 % of the applicable deliveries (80% for the 1-h service level). This performance statistic applies to all applicable customer deliveries, and is intended to hold regardless of AOI or imaging mode. The statistic is evaluated based on all applicable collections from the previous calendar year and the Data Product Specification is updated annually based on the performance of the previous calendar year. Because this is a global statistic applied to all customers, no single collection is guaranteed to deliver the expected timeline:  a customer’s results may vary even while the Data Product Specification is honored.
 
-For all Standard Orders, ICEYE currently offers three **Delivery Time Options**: 8 or 3  hours delivery options for Commercial Priority Tasking, and a 24-hour delivery option for Background Priority Tasking. These delivery time options and how they map with the offered data product formats are further described in the below subsections, and summarized in Table [3-6](#table-3-6-summary-of-delivery-time-service-levels). Note that the delivery time service levels described in this subsection do not apply to Custom Orders. The delivery time service level must be separately agreed for custom orders and by default are delivered on the basis of best effort.
+For all Standard Orders, ICEYE currently offers four **Delivery Time Options**: 8, 3, or 1 hours delivery options for Commercial Priority Tasking, and a 24-hour delivery option for Background Priority Tasking. These delivery time options and how they map with the offered data product formats are further described in the below subsections, and summarized in Table [3-6](#table-3-6-summary-of-delivery-time-service-levels). Note that the delivery time service levels described in this subsection do not apply to Custom Orders. The delivery time service level must be separately agreed for custom orders and by default are delivered on the basis of best effort.
 
 
 ##### _Table 3-6: Summary of Delivery Time Service Levels_
 
 | Delivery Time Option | Description                                                         | Supported Data Products                                                                     |
 | -------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 1 h                  | Data files are delivered in 1 hour or less after acquisition time. Available only for Commercial Priority Tasking. Not currently available for Dwell, Dwell Fine, and Dwell Precise imaging mode. Only available for selected regions. Guaranteed Reliability for over 80% of feasible tasks. | GRD, Quicklook, SLC (See Section [5](dataproducts.md#5-data-products)) |
 | 3 h                  | Data files are delivered in 3 hours or less after acquisition time. Available only for Commercial Priority Tasking.  Not currently available for Dwell Precise imaging mode. | GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, Legacy SLC (See Section [5](dataproducts.md#5-data-products)) |
 | 8 h                  | Data files are delivered in 8 hours or less after acquisition time. Available only for Commercial Priority Tasking.    | GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, Legacy SLC  (See Section [5](dataproducts.md#5-data-products))        
 | 24 h                 | Data files are delivered in 24 hours or less after acquisition time. Available only for Background Priority Tasking.    | GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, Legacy SLC  (See Section [5](dataproducts.md#5-data-products))                                                                                       |
@@ -187,19 +188,23 @@ For all Standard Orders, ICEYE currently offers three **Delivery Time Options**:
 
 #####
 
-ICEYE intends to expand its specified delivery timelines beyond these two tiers. ICEYE also accommodates nonstandard delivery times of otherwise standard orders on a custom order basis. Customers are advised to explore nonstandard delivery time options and the delivery time options for custom orders potentially involving on-demand products (such as the CPHD, SICD + SIDD (NITF), and Orthorectified imagery data products; See Section [5](#5-data-products-17)) or nonstandard products and/or imaging modes together with the ICEYE customer service team, preferably via the email address the customer received during ICEYE’s customer onboarding.
+ ICEYE also accommodates nonstandard delivery times of otherwise standard orders on a custom order basis. Customers are advised to explore nonstandard delivery time options and the delivery time options for custom orders potentially involving on-demand products (such as the CPHD, SICD + SIDD (NITF), and Orthorectified imagery data products; See Section [5](dataproducts.md#5-data-products) or nonstandard products and/or imaging modes together with the ICEYE customer service team, preferably via the email address the customer received during ICEYE’s customer onboarding.
+
+#### _3.7.3.1 1-hour Delivery Time_
+
+With the **1-hour Delivery Time** option automatic delivery will be completed in 1 hour or less of the data being acquired. This option is intended for applications requiring rapid delivery. The GRD, Quicklook, and SLC data products are supported.  See Section [5](dataproducts.md#5-data-products) for more information on the different data products. This option is only available for Commercial Priority Tasking, and  conditional upon a successful feasibility check. This option is not available for the Dwell, Dwell Fine, and Dwell Precise imaging mode. This option is not available for legacy products.
 
 
-#### _3.7.3.1 3-hour Delivery Time_
+#### _3.7.3.2 3-hour Delivery Time_
 
-With the **3-hour Delivery Time** option automatic delivery will be completed in 3 hours or less of the data being acquired. This option is intended for applications requiring rapid delivery. The GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, and Legacy SLC data products are supported. See Section [5](dataproducts.md#5-data-products) for more information on the different data products. This option is only available for Commercial Priority Tasking. This option is not available for the Dwell Precise imaging mode. 
+With the **3-hour Delivery Time** option automatic delivery will be completed in 3 hours or less of the data being acquired. This option is intended for applications requiring rapid delivery. The GRD, Legacy GRD, CSI, Legacy CSI, VID, Legacy VID, Quicklook, SLC, and Legacy SLC data products are supported. See Section [5](dataproducts.md#5-data-products) for more information on the different data products. This option is only available for Commercial Priority Tasking, and conditional upon a successful feasibility check. This option is not available for the Dwell Precise imaging mode. 
 
 
-#### _3.7.3.2 8-hour Delivery Time_
+#### _3.7.3.3 8-hour Delivery Time_
 
 With the **8-hour Delivery Time** option automatic delivery will be completed within 8 hours of the data being acquired.  The same data products are supported as with the 3-hour Delivery Time option. This option is only available for Commercial Priority Tasking.
 
-#### _3.7.3.3 24-hour Delivery Time_
+#### _3.7.3.4 24-hour Delivery Time_
 
 With the **24-hour Delivery Time** option automatic delivery will be completed within 24 hours of the data being acquired.  The same data products are supported as with the 3-hour Delivery Time option. This option is only available for Background Priority Tasking.
 
