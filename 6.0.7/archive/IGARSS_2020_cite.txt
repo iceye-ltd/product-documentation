@@ -1,0 +1,8 @@
+@inproceedings{ignatenko2020iceye,
+  title={ICEYE Microsatellite SAR Constellation Status Update: Evaluation of first commercial imaging modes},
+  author={Ignatenko, Vladimir and Laurila, Pekka and Radius, Andrea and Lamentowski, Leszek and Antropov, Oleg and Muff, Darren},
+  booktitle={IGARSS 2020-2020 IEEE International Geoscience and Remote Sensing Symposium},
+  pages={3581--3584},
+  year={2020},
+  organization={IEEE}
+}

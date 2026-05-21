@@ -1,0 +1,144 @@
+.medium {
+    color: #00AB6C;
+  }
+.twitter {
+    color: #1DA1F2;
+}
+.facebook {
+    color: #4267B2;
+}
+.youtube {
+    color: #FF0000;
+}
+.slack {
+    color: #3c0404;
+}
+@keyframes heart {
+    0%, 40%, 80%, 100% {
+    transform: scale(1);
+    }
+    20%, 60% {
+    transform: scale(1.15);
+    }
+}
+.heart {
+    color: #FF0000;
+    animation: heart 1000ms infinite;
+}
+
+:root {
+    --md-primary-fg-color:        #011C22;
+    --md-primary-fg-color--light: #D7FFF5;
+    --md-primary-fg-color--dark:  #2E444A;
+    --md-accent-fg-color:         #9EB8B8;
+    --md-code-hl-color:           #D7FFF5;
+  }
+
+[data-md-color-scheme="iceye"] {
+    --md-primary-fg-color:        #011C22;
+    --md-primary-fg-color--light: #D7FFF5;
+    --md-primary-fg-color--dark:  #2E444A;
+    --md-accent-fg-color:         #9EB8B8;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Instrument Sans', sans-serif;
+}
+h4 {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.md-header__title {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.md-nav__title{
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.md-footer{
+    --md-footer-bg-color:  #011C22;
+}
+
+th {
+    font-family: Instrument Sans;
+    font-weight: bold;
+    background-color:#2E444A; 
+    color:white;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+    font-family: Instrument Sans;
+}
+
+.md-grid {
+    max-width: 1580px; 
+}
+
+[data-md-color-scheme="slate"] {
+    --md-hue: 180; 
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+mjx-assistive-mml mjx-container {
+    /*  MathJax creates mjx-assistive-mml elements to contain invisible
+    MathML representations for screen reader tools for the visually
+    impaired. However, the top/bottom margin makes this invisible
+    element take space which often results in an unnecessary vertical
+    scrollbar to appear on the right side of the math, which is why here
+    we eliminate the vertical margins. */
+    margin: 0 !important;
+}
+
+/* Customizations for the "summary" admonition used in SAR101 and Tech Docs */
+
+@media screen and (min-width: 960px) {
+    .md-typeset .admonition.summary.inline.end,
+    .md-typeset details.summary.inline.end {
+      width: 42%;
+      margin-left: 1rem;
+
+    }
+}
+
+.md-typeset .admonition.summary > .admonition-title {
+    background-color: var(--md-primary-fg-color--dark);
+    color: white;
+}
+
+.md-typeset .admonition.summary,
+.md-typeset details.summary {
+    border-left-color: var(--md-primary-fg-color--dark);
+}
+
+/* Customizations to enable the rendering of two images in a row */
+
+.md-typeset .figure-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.md-typeset .figure-row img {
+    width: 38%; /* Override the width in the HTML if this is not ideal (e.g. more than two images) */
+    height: auto;
+}
