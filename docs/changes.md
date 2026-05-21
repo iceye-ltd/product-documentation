@@ -6,7 +6,7 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
-| 21st May 2026 | 6.0.7   | Addition of 3-hour delivery time option to the service levels. 
+| 21st May 2026 | 6.0.7   | Addition of 1-hour delivery time option to the service levels. 
 | 5th Feb 2026 | 6.0.6   | Availability of Cloud Optimized GeoTIFF CSI and VID products. Scan Wide imaging mode reliability updated to 90%. Updated product file sizes and dynamic range bit depth from legacy to Cloud Optimized GeoTIFF format values. 
 | 2nd Jan 2026 | 6.0.5   | Variable imaging time replaces fixed imaging times for all Spot and Dwell modes. Revised azimuth resolution and number of azimuth looks for all Dwell modes. Legacy formats deprecation timeline.  |
 | 11th Aug 2025 | 6.0.4   | Addition of Scan Wide imaging mode | 
