@@ -8,7 +8,7 @@ Verification and validation of geospatial measurements on SAR imagery is an inte
 The purpose of geolocation is to calculate the difference between an observed objects's location measured from SAR imagery and its actual, ground-truth, location. The true '*ground truth*' location of an object can be specified in a geocentric rotating coordinate system such as ECEF (Earth-centred, Earth-fixed) as having the coordinate $R_o=[x_o,y_o,z_o]$. The satellite's location in this same reference system changes with time and is given by $R_s(t)=[x_s(t),y_s(t),z_s(t)]$ and has a velocity given by $V_s(t)=[v_{sx}(t),v_{sy}(t),v_{sz}(t)]$. From these, the *slant range* from the satellite to the object as a function of time $s_r(t)$ is given by (1):
 
 $$
-s_r(t) = (x_s(t) - x_o)^2 + (y_s(t)-y_o)^2 + (z_s(t)-z_o)^2 \qquad (1)
+s_r(t) = \sqrt{(x_s(t) - x_o)^2 + (y_s(t)-y_o)^2 + (z_s(t)-z_o)^2} \qquad (1)
 $$
 
 As the satellite transits past the object, the phase of its radar response varies providing the object's signature with a characteristic spatial Doppler frequency shift given by (2):
