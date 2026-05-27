@@ -81,7 +81,7 @@ $$
 
 $$
 c_n = \frac{\sum_{i=1}^{20} SAMP\_NUM\_COEF_i ⋅ \rho_i(P,L,H) }
-           {\sum_{i=1}^{20} LINE\_DEN\_COEF_i ⋅ \rho_i(P,L,H) }
+           {\sum_{i=1}^{20} SAMP\_DEN\_COEF_i ⋅ \rho_i(P,L,H) }
 $$
 
 Where the rational polynomial numerators and denominators are each a 20-point cubic polynomial function of the form:
