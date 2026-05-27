@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://didactic-broccoli-kq4jp65.pages.github.io/v0.4.0/schema.json#",
+  "$id": "https://sar.iceye.com/schema/product-spec/v0.4.0/schema.json",
   "title": "ICEYE Extension",
   "description": "ICEYE Extension for STAC Items.",
   "type": "object",
@@ -26,7 +26,7 @@
       "type": "array",
       "prefixItems": [
         {
-          "const": "https://didactic-broccoli-kq4jp65.pages.github.io/v0.4.0/schema.json"
+          "const": "https://sar.iceye.com/schema/product-spec/v0.4.0/schema.json"
         },
         {
           "const": "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
