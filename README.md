@@ -1,4 +1,6 @@
 # ICEYE Product Documentation
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ficeye-ltd%2Fproduct-documentation.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ficeye-ltd%2Fproduct-documentation?ref=badge_shield)
+
 
 If you are reading this then you are probably interested to look 'under the hood' of the [ICEYE Product Documentation](https://iceye-ltd.github.io/product-documentation/). This doc will tell you how it works and how to add to it or make ammendments. There are two types of contributors :
 
@@ -71,3 +73,7 @@ To get the documentation running on your own local computer :
     `mike deploy <version> latest -u`
 
 This command deploys the latest changes on the master branch to the gh-pages under the version 5.0 and updates the 'latest' tag to be this one.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ficeye-ltd%2Fproduct-documentation.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ficeye-ltd%2Fproduct-documentation?ref=badge_large)
