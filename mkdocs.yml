@@ -46,6 +46,7 @@ nav:
       - 7) Separating Signals from Noise : sar101/07_separating_signals_from_noise.md
       - 8) SAR Imagery and Interpretation Considerations : sar101/08_sar_imagery_and_interpretation_considerations.md
       - 9) Data Processing and Analysis : sar101/09_data_processing_and_analysis.md
+      - 10) Data Products : sar101/10_data_products.md
     - SAR 101 : 
       - What is SAR ? : 
           - The Value Of SAR Imaging : foundations/OverviewOfSAR/overviewOfSAR.md
