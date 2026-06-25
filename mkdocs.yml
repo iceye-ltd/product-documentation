@@ -44,6 +44,7 @@ nav:
       - 5) Collection Strategies : sar101/05_collection_strategies.md
       - 6) Spatial Resolution and Geospatial Accuracy : sar101/06_spatial_resolution_and_geospatial_accuracy.md
       - 7) Separating Signals from Noise : sar101/07_separating_signals_from_noise.md
+      - 8) SAR Imagery and Interpretation Considerations : sar101/08_sar_imagery_and_interpretation_considerations.md
     - SAR 101 : 
       - What is SAR ? : 
           - The Value Of SAR Imaging : foundations/OverviewOfSAR/overviewOfSAR.md
