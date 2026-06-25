@@ -35,9 +35,18 @@ nav:
 #            - SAR Video : productFormats/vid.md
 #        - Upcoming Formats : productFormats/upcomingformats.md
     - Metadata Reference: productFormats/metadata.md
-#    - SAR 101 NEW :
-#      - Welcome : sar101/00_welcome.md
-#      - 1) Introduction to SAR : sar101/01_introduction.md
+    - SAR 101 NEW :
+      - Welcome : sar101/00_welcome.md
+      - 1) Introduction to SAR : sar101/01_introduction.md
+      - 2) Satellite Orbits and Constellations : sar101/02_satellite_orbits_and_constellations.md
+      - 3) Radar Frequency Bands : sar101/03_radar_frequency_bands.md
+      - 4) Antennas and SAR Geometry : sar101/04_antennas_and_sar_geometry.md
+      - 5) Collection Strategies : sar101/05_collection_strategies.md
+      - 6) Spatial Resolution and Geospatial Accuracy : sar101/06_spatial_resolution_and_geospatial_accuracy.md
+      - 7) Separating Signals from Noise : sar101/07_separating_signals_from_noise.md
+      - 8) SAR Imagery and Interpretation Considerations : sar101/08_sar_imagery_and_interpretation_considerations.md
+      - 9) Data Processing and Analysis : sar101/09_data_processing_and_analysis.md
+      - 10) Data Products : sar101/10_data_products.md
     - SAR 101 : 
       - What is SAR ? : 
           - The Value Of SAR Imaging : foundations/OverviewOfSAR/overviewOfSAR.md
