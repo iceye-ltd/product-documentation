@@ -38,6 +38,7 @@ nav:
     - SAR 101 NEW :
       - Welcome : sar101/00_welcome.md
       - 1) Introduction to SAR : sar101/01_introduction.md
+      - 2) Satellite Orbits and Constellations : sar101/02_satellite_orbits_and_constellations.md
     - SAR 101 : 
       - What is SAR ? : 
           - The Value Of SAR Imaging : foundations/OverviewOfSAR/overviewOfSAR.md
