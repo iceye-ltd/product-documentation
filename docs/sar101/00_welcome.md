@@ -30,7 +30,7 @@ The SAR101: Foundations material describes why and how all these remarkable capa
 
 <figure id="figure-1-paris">
 <img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image1-paris.jpeg">
-<figcaption><strong>Figure 1: Paris.</strong> This SAR image over Paris, France, features the Arc de Triomphe on the left, the Eiffel Tower on the center, and the Seine river flowing between them. Flat surfaces appear dark and smooth while the metallic Eiffel Tower and other buildings are pronounced. As with all SAR images, it is difficult to tell if this image was acquired day or night, under clear skies or a storm - this is due to the remarkable all-weather collection capabilities of SAR. </figcaption>
+<figcaption><strong>Figure 1: Paris.</strong> This SAR image over Paris, France, features the Arc de Triomphe on the left, the Eiffel Tower in the center, and the Seine river flowing between them. Flat surfaces appear dark and smooth while the metallic Eiffel Tower and other buildings are pronounced. As with all SAR images, it is difficult to tell if this image was acquired day or night, under clear skies or a storm - this is due to the remarkable all-weather collection capabilities of SAR. </figcaption>
 </figure>
 
 ## Document Structure
@@ -39,7 +39,7 @@ SAR101: Foundations is structured into three parts that build on each other.
 
 ### Part 1: What SAR is All About?
 
-**Part 1** consists of the first five chapters which describe the big picture of what SAR imaging is and how it works. While the information offered in these chapters can be considered basic background information, it must be understood to truly grasp topics in subsequent chapters.
+**Part 1** consists of the first five chapters which describe the big picture of what SAR imaging is and how it works. While some information offered in these chapters can be considered basic background information, it must be understood to truly grasp topics in subsequent chapters.
 
   - **Chapter [<span class="underline">1</span>](01_introduction.md) Introduction to SAR** outlines the basic idea of SAR imaging by explaining core concepts and terms such as RADAR, real aperture radar, near and far range, range and azimuth resolution, ultimately describing the innovation of synthetic aperture radar.
 
@@ -57,11 +57,11 @@ The chapters comprising **Part 2** focus on building understanding of SAR image 
 
   - **Chapter [<span class="underline">6</span>](06_spatial_resolution_and_geospatial_accuracy.md) Spatial Resolution and Geospatial Accuracy** covers the physical determinants of spatial resolution and geospatial accuracy of SAR images. We discuss how waveform modulation, pulse repetition frequency, pulse bandwidth, and incidence angle all impact slant, azimuth, range and ground resolutions. The impulse response function, nominal resolution, geolocation accuracy, and orthorectification are also discussed in this chapter.
 
-  - **Chapter [<span class="underline">7</span>](07_separating_signals_from_noise.md) Separating Signals from Noise** introduces the Radar Range Equation and Signal-to-Noise Ratio (SNR), explains how signal power fades with range and system losses and how processing gains from pulse compression and coherent integration counter high noise floors. The chapter also defines many related concepts and terms
+  - **Chapter [<span class="underline">7</span>](07_separating_signals_from_noise.md) Separating Signals from Noise** introduces the Radar Range Equation and Signal-to-Noise Ratio (SNR), explains how signal power fades with range and system losses and how processing gains from pulse compression and coherent integration counter high noise floors. The chapter also defines many related concepts and terms.
 
   - **Chapter [<span class="underline">8</span>](08_sar_imagery_and_interpretation_considerations.md) SAR Imagery & Interpretation Considerations** explains the meaning of detection in SAR, and how SAR data actually consists of amplitude and phase value pairs. Backscatter, polarization and different scattering mechanisms and geometric distortions are discussed. The phenomena of speckle is illustrated and two notable image quality metrics are described.
 
-### Part 3: How SAR Data is Packaged and Used?
+### Part 3: How is SAR Data Packaged and Used?
 
 **Part 3** focuses on data processing and analysis as well as data products. While the earlier chapters provide a great foundation for understanding SAR and related terminology, these final chapters are most relevant for the application oriented readers who want to understand how SAR can be practically utilized:
 
@@ -80,7 +80,7 @@ The SAR101: Foundations material is offered together with other complementary in
 
   - The [<span class="underline">Data Product Specification</span>](../productspecification/introduction.md) provides a business and application oriented overview and specification of the actual SAR data products that ICEYE offers. Compared to the SAR101, the specification documentation is more directly useful when starting to leverage SAR in partnership with ICEYE. However, to fully understand everything in it, studying SAR101 may be required.
 
-  - The [<span class="underline">Technical Documentation</span>](../techdocs/00_welcome.md) is tailored to more advanced users of SAR, and provides information which is often more technical and generally more specific to ICEYE offerings. While SAR101 is curated to be read sequentially from top to bottom, the Technical Documentation is a collection of mostly independent chapters that can be consumed in any order. They are intended for experienced users and SAR experts, who often are only interested in very specific portions of the documentation, and are sometimes already familiar with the other resources.
+  - The [<span class="underline">Technical Documentation</span>](../techdocs/00_welcome.md) is tailored to more advanced users of SAR, and provides information which is often more technical and generally more specific to ICEYE offerings. While SAR101 is curated to be read sequentially from top to bottom, the Technical Documentation is a collection of mostly independent articles that can be consumed in any order. They are intended for experienced users and SAR experts, who often are only interested in very specific portions of the documentation, and are sometimes already familiar with the other resources.
 
   - The [<span class="underline">Archives</span>](../archive/archive.md) provides documentation that is deemed deprecated but is nonetheless offered in case of interest.
 
