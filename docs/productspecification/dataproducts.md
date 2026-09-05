@@ -10,7 +10,7 @@ A multitude of different products can be generated from SAR data. Some product t
 
 **Availability and Service Level**: Most standard products are available on **Standard Service Levels** but some are only available **On** (special) **Demand** via **Custom Orders** at separately agreed (and thus custom) service levels despite being standard products. Refer to Sections [3.7.3](tasking.md#373-delivery-time-service-level) and [5.5](#55-on-demand-only-data-products) for more information. Additionally, customers with specific timeline requirements should consult ICEYE to discuss special needs. New customers are advised to reach out via [the ICEYE website](https://www.iceye.com/contact/).
 
-**Imaging Mode Support**: Many data products can be generated from SAR collections acquired with any **Imaging Mode** (see Section [2](imagingmodes.md#2-iamaspaceimaging-modes)). However, some imaging modes can be used to generate only a limited set of different data products and vice versa.
+**Imaging Mode Support**: Many data products can be generated from SAR collections acquired with any **Imaging Mode** (see Section [2](imagingmodes.md#2-imaging-modes)). However, some imaging modes can be used to generate only a limited set of different data products and vice versa.
 
 While all of these distinctions could be used to group and present the data product offering, this Section [5.1](#51-introduction) prioritizes the complex vs amplitude data products grouping in structuring an overview onto ICEYE’s data product offering in Sections [5.1.1](#511-amplitude-data-product-offering) and [5.1.2](#512-complex-data-product-offering) but the availability and service level as well as imaging mode support differences are also clearly highlighted.
 
