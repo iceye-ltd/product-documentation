@@ -11,7 +11,7 @@ ICEYE groups orders into two different groups, Standard Orders and Custom Orders
 
 1. leverage only tasking options described in this Section [3](#3-tasking) (other than those explicitly designated as “custom”), without customizations, and
 
-2. only order data products listed in Section [5](dataproducts.md#5-data-products-14) (other than those described in Section [5.5](dataproducts.md#55-on-demand-only-data-products) and/or explicitly designated as “custom” or  “on-demand (only)”) with the imaging modes listed in Section [2](imagingmodes.md#2-iamaspaceimaging-modes-5), without customizations.
+2. only order data products listed in Section [5](dataproducts.md#5-data-products-14) (other than those described in Section [5.5](dataproducts.md#55-on-demand-only-data-products) and/or explicitly designated as “custom” or  “on-demand (only)”) with the imaging modes listed in Section [2](imagingmodes.md#2-imaging-modes), without customizations.
 
 The intent of this Product Specification is to thoroughly describe any product that may be ordered as a Standard Order.
 

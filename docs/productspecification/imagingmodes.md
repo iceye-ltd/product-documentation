@@ -2,7 +2,7 @@
 
 ## 2.1 Introduction
 
-ICEYE offers several **Imaging Modes** to suit a wide range of applications. Refer to Table [2-1](#table-2-1-summary-of-iceye-imaging-modes) for a high-level summary of these imaging modes.  Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-1) tabulates the ground resolution, geospatial accuracy, scene size, information density, and number of azimuth looks for each imaging mode.
+ICEYE offers several **Imaging Modes** to suit a wide range of applications. Refer to Table [2-1](#table-2-1-summary-of-iceye-imaging-modes) for a high-level summary of these imaging modes.  Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-1) tabulates the ground resolution, geospatial accuracy, scene size, SAR Information Density (SID), and number of azimuth looks for each imaging mode.
 
 
 ##### _Table 2-1: Summary of ICEYE imaging modes_
@@ -12,7 +12,7 @@ ICEYE offers several **Imaging Modes** to suit a wide range of applications. Ref
 | Ground Resolution \[m]               |    1 |  0.5  |   1   |   1    |   0.5  |  0.25 |   3   |   15    | 27   |
 | Geospatial Accuracy \[m RMSE]        |   6  |  6   |    6   |    6   |  6     |    6  |   6   |   15   | 27   |
 | Scene Size \[range x azimuth, in km] |  5 x 5 |  5 x 5 | 15 x 15 | 5 x 5  | 5 x 5   |  5 x 5  |  30 x 50<br>Up to 30 x 500 (custom option) | 100 x 100<br>Up to 100 x 500 (custom option) | 200 x 300<br>Up to 200 x 600 (custom option) |
-| Information Density \[bits/m2]       |  22  | 83   |     8.4    |    125    |   185  |   326  |    0.8      |   0.1  |  0.01  |
+| SAR Information Density (SID), scene centre \[bits/m²] | 19 to 37 | 81 to 159 | 9.4 to 18 | 59 to 116 | 101 to 199 | 168 to 315 | 0.82 to 1.1 | 0.03 | 0.01 |
 | Number of  Azimuth Looks             |   4  |    5    |    2    |   12    |     6    |   3   |  1  |  1  |                                                         1                                                         |
 | Section Reference                    | [2.2](#22-spot-and-spot-fine) | [2.2](#22-spot-and-spot-fine) | [2.3](#23-spot-extended-area) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.4](#24-dwell-dwell-fine-and-dwell-precise) | [2.5](#25-strip) | [2.6](#26-scan-and-scan-wide) | [2.6](#26-scan-and-scan-wide) |
 
@@ -20,7 +20,7 @@ ICEYE also offers 1-look and 2-looks variants of the imaging mode Spot Fine. The
 
 **Geospatial Accuracy** refers to the accuracy with which a point in an ICEYE satellite image agrees with a true reference on the ground. Geospatial Accuracy here is evaluated as a statistical value: Each satellite in the ICEYE fleet is periodically evaluated against ground based calibration targets to obtain the geospatial accuracy of the system. This process involves measuring the location of each target in the SAR imagery after the image has been terrain corrected, and comparing each location to their known ground truth. Each calibration target will have its own slightly different error. The numeric value indicating Geospatial Accuracy in Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-2) above is the Root Mean Square Error (RMSE) of all the measured calibration points from all the satellites, as meters. Note that the geospatial accuracy of a SAR image is a function of the accuracy of the terrain model used. Especially in high elevation terrains significant distortion can impact the accuracy. This means the values in this table cannot be guaranteed for every Digital Elevation Model (DEM) available. Moreover, irrespective of the DEM used, accuracy is decreased in high elevation areas due to geometric distortion.
 
-The **Information Density** figures tabulated in Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-3) describe the number of bits of imaging data per scene square meter. In principle, higher information densities offer potential for superior interpretability of an image. Larger scene sizes tend to have lower resolution and therefore lower information density. Also, for fixed scene size, e.g., 5 km x 5 km, higher information density products tend to have larger file sizes (see e.g. SLC Product Size rows in e.g. Table [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products)).
+The **SAR Information Density (SID)** figures in Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-3) are scene-centre values in bits per square metre (see [Glossary](glossary.md#glossary)). SID is the Shannon-Hartley information density of the radar collection, not of a multilooked amplitude product. Earlier ICEYE documents called this quantity RGIQE. Multilooking averages independent looks to reduce speckle; it does not create information, so looks do not appear inside the Shannon-Hartley term. Where a range is given, it is the lowest and the highest scene-centre result across the satellites that can produce that product and across the performant incidence-angle range. Scan and Scan Wide SID are single figures because those NESZ values are the published fleet floors, not a generation sweep. Larger scene sizes tend to have coarser resolution and therefore lower SID. Also, for fixed scene size, e.g., 5 km x 5 km, higher SID products tend to have larger file sizes (see e.g. SLC Product Size rows in e.g. Table [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products)).
 
 For more information about each mode presented in Table [2-1](#table-2-1-summary-of-iceye-imaging-modes-4), please follow the subsection references tabulated onto the last row.
 
@@ -28,11 +28,11 @@ Each imaging mode subsection has one of each of the following tables:
 
 - **Tasking parameter** tables provide the standard collection parameters applied to create the desired mode. These parameters are an _input_ governing how the collection is performed (see Table [2-2](#table-2-2-tasking-parameters-for-standard-iceye-imaging-modes-for-spot-and-spot-fine) for an example). These tables describe parameters relating to the number of radar beams used, scene sizes, collection durations, and incidence angle ranges. Collections satisfying these criteria should result in products that satisfy the product specification.
 
-- **Collection performance attribute** tables describe the expected features of the resulting imagery when the performant tasking parameters for the imaging mode in question are utilized (see Table [2-3](#table-2-3-collection-performance-attributes-for-spot-and-spot-fine-imaging-modes) for an example). These tables describe technical parameters related mostly to image quality and accuracy. Collection performance attributes will not be achieved for images that are tasked outside of the performant tasking parameters for each imaging mode, for example when images are tasked outside of their performant incidence angle range.
+- **Collection performance attribute** tables describe the expected features of the resulting imagery when the performant tasking parameters for the imaging mode in question are utilized (see Table [2-3](#table-2-3-collection-performance-attributes-for-spot-and-spot-fine-imaging-modes) for an example). These tables describe technical parameters related mostly to image quality and accuracy. Collection performance attributes will not be achieved for images that are tasked outside of the performant tasking parameters for each imaging mode, for example when images are tasked outside of their performant incidence angle range. NESZ, SID and RNIIRS in those tables are **scene-centre** values. NESZ ranges are written from the best (more negative) value to the worst. SID and RNIIRS ranges are written from the lowest value to the highest value. Each range covers the satellites that can produce the product and the performant incidence-angle range. In-scene NESZ variation is not specified: Spotlight scenes are small, and that variation is smaller than typical transmit-power variation. Scan and Scan Wide NESZ remain the published fleet figures; the design-bench electronic-steering estimate is not used for those modes.
 
 - **Data product attribute** tables describe attributes that are specific to the amplitude and complex data products that are generated with the collected SAR data. The ICEYE imaging modes can be used to generate both amplitude and complex data products and therefore these are described in **product attributes for amplitude data products**, and **product attributes for complex data products** tables, respectively (see Tables [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products) and [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products-1) for examples). No complex data product attribute tables are provided for the Scan and Scan Wide imaging modes, which are only offered as an amplitude data product.
 
-ICEYE endeavors to continuously improve the performance of its SAR products. The values for attributes and parameters in this specification communicate the minimum performance values of our standard products across the current fleet at the time of publication. Note that values are approximate and may vary with image imaging mode, incidence angle, and contents of scene.
+ICEYE endeavors to continuously improve the performance of its SAR products. Most attributes in this specification communicate the minimum performance of our standard products across the current fleet at the time of publication. NESZ, SID and RNIIRS are an exception: those rows give a scene-centre range from the worst producer to the best producer over the performant incidence-angle range. Note that values are approximate and may vary with imaging mode, incidence angle, and contents of scene.
 
 Finally, many parameters, and performance and product attributes in this section deserve a detailed explanation in order to ensure they are properly understood. The [Glossary](#glossary) at the end of this document provides many of the most important definitions. More information is available in [ICEYE SAR 101 pages](https://sar.iceye.com/latest/foundations/OverviewOfSAR/overviewOfSAR/).
 
@@ -50,9 +50,9 @@ ICEYE Spot and Spot Fine imaging modes cover an area of 5 km x 5 km for multi-lo
 
 Having very high resolution, Spot and Spot Fine  images are useful for detailed investigation of an area. They are used primarily to discriminate between different types of objects such as vessels, aircraft, buildings and infrastructure.
 
-ICEYE also offers **1-look** and **2-looks variants** of the imagine mode **Spot Fine**. These are intended for applications that require high resolution, but where lower information density is sufficient. The tasking and collection performance parameters as well as the product attributes for **Spot Fine**,  **Spot Fine 1-look** and **Spot Fine 2-looks** are listed as separate columns in the tables below.
+ICEYE also offers **1-look** and **2-looks variants** of the imaging mode **Spot Fine**. These are intended for applications that require high resolution, but where lower information density is sufficient. The tasking and collection performance parameters as well as the product attributes for **Spot Fine**,  **Spot Fine 1-look** and **Spot Fine 2-looks** are listed as separate columns in the tables below.
 
-ICEYE aims to ensure that the the resulting imagery for tasks collected with the Spot and Spot Fine imaging modes within the tasking parameters listed in Table [2-2](#table-2-2-tasking-parameters-for-standard-iceye-imaging-modes-for-spot-and-spot-fine) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-3](#table-2-3-collection-performance-attributes-for-spot-and-spot-fine-imaging-modes) and product attributes listed in Tables [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products) and [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products), for amplitude and complex data products respectively.
+ICEYE aims to ensure that the resulting imagery for tasks collected with the Spot and Spot Fine imaging modes within the tasking parameters listed in Table [2-2](#table-2-2-tasking-parameters-for-standard-iceye-imaging-modes-for-spot-and-spot-fine) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-3](#table-2-3-collection-performance-attributes-for-spot-and-spot-fine-imaging-modes) and product attributes listed in Tables [2-4](#table-2-4-product-attributes-for-spot-and-spot-fine-amplitude-data-products) and [2-5](#table-2-5-product-attributes-for-spot-and-spot-fine-complex-data-products), for amplitude and complex data products respectively.
 
 
 ##### _Table 2-2: Tasking parameters for imaging modes for Spot and Spot Fine_
@@ -75,13 +75,13 @@ ICEYE aims to ensure that the the resulting imagery for tasks collected with the
 
 |                  Attribute \ Imaging Mode |    Spot    |  Spot Fine | Spot Fine 1-look | Spot Fine 2-looks |
 | ----------------------------------------: | :--------: | :--------: | :--------------: | :---------------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -18 to -15 | -18 to -11 |     -11 to -4    |     -14 to -7     |
+|    Noise Equivalent Sigma-Zero, scene centre \[dBm2/m2] | -26.7 to -15.6 | -23.7 to -12.6 | -23.7 to -12.6 | -23.7 to -12.6 |
 |             Azimuth Ambiguity Ratio \[dB] |     -17    |     -17    |        -17       |        -17        |
 |               Range Ambiguity Ratio \[dB] |     -20    |     -20    |        -20       |        -20        |
 |             Geospatial Accuracy \[m RMSE] |      6     |      6     |         6        |         6         |
 | ESA Copernicus Contributing Mission Class |    VHR1    |    VHR1    |       VHR1       |        VHR1       |
-|                                    RNIIRS |     5.5    |     6.3    |        6.0       |        6.1        |
-|                          RGIQE \[bits/m²] |     22     |     83     |        16        |         33        |
+|                    RNIIRS, scene centre | 5.4 to 5.8 | 6.3 to 6.7 | 5.3 to 5.7 | 5.7 to 6.1 |
+| SID, scene centre \[bits/m²] | 19 to 37 | 81 to 159 | 16 to 32 | 32 to 64 |
 
 #####
 
@@ -149,12 +149,13 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the SLE
 
 |                  Attribute \ Imaging Mode |    SLEA    |
 | ----------------------------------------: | :--------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -18 to -15 |
+|    Noise Equivalent Sigma-Zero, scene centre \[dBm2/m2] | -26.7 to -15.6 |
 |             Azimuth Ambiguity Ratio \[dB] |     -17    |
 |               Range Ambiguity Ratio \[dB] |     -20    |
 |             Geospatial Accuracy \[m RMSE] |      6     |
 | ESA Copernicus Contributing Mission Class |    VHR1    |
-|                          RGIQE \[bits/m²] |     8.4    |
+|                    RNIIRS, scene centre | 5.0 to 5.4 |
+| SID, scene centre \[bits/m²] | 9.4 to 18 |
 
 
 #####
@@ -199,12 +200,12 @@ ICEYE **Dwell**, **Dwell Fine** and **Dwell Precise** imaging modes are based on
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/dwell.png)
 
-Applying conventional image formation techniques to this type of SAR collection results in a very fine azimuth resolution and significantly more information density than Spot images. To facilitate the exploitation of this imaging mode, ICEYE offers not only the full resolution [Single Look Complex (SLC)](dataproducts.md#531-single-look-complex-slc-image) and ground projected [Ground Range Detected](dataproducts.md#522-ground-range-detected-grd-image-2) data products but also the novel [Colorized Sub-Aperture Image (CSI)](#541-colorized-sub-aperture-image-csi) and [SAR Video (VID)](#542-sar-video-vid) amplitude data products, all of which are described in Section [5](dataproducts.md#5-data-products). The CSI images and VID products are especially useful for detecting human-made structures and objects such as vehicles and equipment (even if partially obscured by vegetation) as well as to analyze movement.
+Applying conventional image formation techniques to this type of SAR collection results in a very fine azimuth resolution and significantly more information density than Spot images. To facilitate the exploitation of this imaging mode, ICEYE offers not only the full resolution [Single Look Complex (SLC)](dataproducts.md#531-single-look-complex-slc-image) and ground projected [Ground Range Detected](dataproducts.md#522-ground-range-detected-grd-image-2) data products but also the novel [Colorized Sub-Aperture Image (CSI)](dataproducts.md#541-colorized-sub-aperture-image-csi) and [SAR Video (VID)](dataproducts.md#543-sar-video-vid) amplitude data products, all of which are described in Section [5](dataproducts.md#5-data-products). The CSI images and VID products are especially useful for detecting human-made structures and objects such as vehicles and equipment (even if partially obscured by vegetation) as well as to analyze movement.
 
-ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwell, Dwell Fine and Dwell Precise imaging modes within the tasking parameters listed in Table [2-10](#table-2-10-tasking-parameters-for-standard-iceye-imaging-modes-for-dwell-and-dwell-fine) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-11](#table-2-11-collection-performance-attributes-for-dwell-and-dwell-fine-imaging-modes) and product attributes listed in Tables [2-12](#table-2-12-product-attributes-for-dwell-and-dwell-fine-amplitude-data-products) and [2-13](#table-2-13-product-attributes-for-dwell-and-dwell-fine-complex-data-products), for amplitude and complex data products respectively.
+ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwell, Dwell Fine and Dwell Precise imaging modes within the tasking parameters listed in Table [2-10](#table-2-10-tasking-parameters-for-dwell-dwell-fine-and-dwell-precise) (excluding Time Dominant Incidence Range) will have the collection performance tabulated in Table [2-11](#table-2-11-collection-performance-attributes-for-dwell-dwell-fine-and-dwell-precise-imaging-modes) and product attributes listed in Tables [2-12](#table-2-12-product-attributes-for-dwell-dwell-fine-and-dwell-precise-amplitude-data-products) and [2-13](#table-2-13-product-attributes-for-dwell-dwell-fine-and-dwell-precise-complex-data-products), for amplitude and complex data products respectively.
 
 
-##### _Table 2-10: Tasking parameters for imaging modes for Dwell, Dwell Fine and Dwell Precise_
+##### _Table 2-10: Tasking parameters for Dwell, Dwell Fine and Dwell Precise_
 
 |         Parameter \ Acquisition Mode |    Dwell   | Dwell Fine | Dwell Precise |
 | -----------------------------------: | :--------: | :--------: | :-----------: |
@@ -226,13 +227,13 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Dwe
 
 |              Attribute \ Acquisition Mode |    Dwell   | Dwell Fine | Dwell Precise |
 | ----------------------------------------: | :--------: | :--------: | :-----------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -18 to -15 | -18 to -15 |  -15  to -12  |
+|    Noise Equivalent Sigma-Zero, scene centre \[dBm2/m2] | -26.7 to -15.6 | -23.7 to -12.6 | -20.7 to -11.3 |
 |             Azimuth Ambiguity Ratio \[dB] |     -17    |     -17    |      -17      |
 |               Range Ambiguity Ratio \[dB] |     -20    |     -20    |      -20      |
 |             Geospatial Accuracy \[m RMSE] |      6     |      6     |       6       |
 | ESA Copernicus Contributing Mission Class |    VHR1    |    VHR1    |      VHR1     |
-|                                    RNIIRS |     6.4    |     6.7    |      7.2      |
-|                          RGIQE \[bits/m²] |     125    |     185    |      326      |
+|                    RNIIRS, scene centre | 6.1 to 6.5 | 6.4 to 6.8 | 6.7 to 7.0 |
+| SID, scene centre \[bits/m²] | 59 to 116 | 101 to 199 | 168 to 315 |
 
 
 #####
@@ -306,12 +307,13 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Str
 
 |                  Attribute \ Imaging Mode |     Strip    |
 | ----------------------------------------: | :----------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -21.5 to -20 |
+|    Noise Equivalent Sigma-Zero, scene centre \[dBm2/m2] | -30.2 to -22.2 |
 |             Azimuth Ambiguity Ratio \[dB] |      -17     |
 |               Range Ambiguity Ratio \[dB] |      -20     |
 |             Geospatial Accuracy \[m RMSE] |       6      |
 | ESA Copernicus Contributing Mission Class |     VHR2     |
-|                          RGIQE \[bits/m²] |      0.8     |
+|                    RNIIRS, scene centre | 3.6 to 3.8 |
+| SID, scene centre \[bits/m²] | 0.82 to 1.1 |
 
 
 #####
@@ -355,7 +357,7 @@ ICEYE offers Scan and Scan Wide imaging modes based on the ScanSAR collection st
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/scan.png)
 
-In the conventional ScanSAR collection strategy, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. ICEYE employs a refined version of this collection strategy known as Terrain Observation by Progressive Scans (TOPSAR), which additionally electronically steers the beam from backward to forward in the azimuth direction. This ensures consistent image quality across the captured area. **Scan** produces imagery that covers an area of 100 km x 100 km with a resolution better than 15 m. The length of a Scan product can be extended to as much as 500 km in azimuth if requested as part of a custom order. **Scan Wide** produces imagery that covers an area of 200 km x 300 km with a resolution better than 27 m. The length of a Scan Wide product can be extended to as much as 600 km in azimuth if requested as part of a custom order.
+In the conventional ScanSAR collection strategy, ground points are illuminated by different parts of the radar beam resulting in brighter and darker regions in the image. ICEYE employs a refined version of this collection strategy known as Terrain Observation by Progressive Scans (TOPSAR), which additionally electronically steers the beam from backward to forward in the azimuth direction. This ensures consistent image quality across the captured area. **Scan** produces imagery that covers an area of 100 km x 100 km with a resolution of approximately 15 m. The length of a Scan product can be extended to as much as 500 km in azimuth if requested as part of a custom order. **Scan Wide** produces imagery that covers an area of 200 km x 300 km with a resolution of approximately 27 m. The length of a Scan Wide product can be extended to as much as 600 km in azimuth if requested as part of a custom order. A maximum-length Scan Wide collect is 200 km × 600 km (120,000 km²).
 
 ![](https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/ScanWide404.png)
 
@@ -385,12 +387,13 @@ ICEYE aims to ensure that the resulting imagery for tasks collected with the Sca
 
 |                  Attribute \ Imaging Mode |      Scan      |  Scan Wide   |
 | ----------------------------------------: | :------------: | :------------: |
-|    Noise Equivalent Sigma-Zero \[dBm2/m2] | -22.2 to -21.5 | < -20   |
+|    Noise Equivalent Sigma-Zero, scene centre \[dBm2/m2] | -22.2 to -21.5 | < -20   |
 |             Azimuth Ambiguity Ratio \[dB] |       -17      | -14    |
 |               Range Ambiguity Ratio \[dB] |       -20      | -17    |
 |             Geospatial Accuracy \[m RMSE] |       15       | 27    |
 | ESA Copernicus Contributing Mission Class |      VHR2      | VHR2    |
-|                          RGIQE \[bits/m²] |       0.1      | 0.01    |
+|                    RNIIRS, scene centre | 1.7 | 1.1 |
+| SID, scene centre \[bits/m²] | 0.03 | 0.01 |
 
 
 #####

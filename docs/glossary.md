@@ -36,7 +36,10 @@
 |KML|	Keyhole Markup Language|
 |PNG|	Portal Network Graphics|
 |PRF|	Pulse Repetition Frequency|
+|NESZ|  Noise Equivalent Sigma Zero|
 |RMSE|  Root Mean Square Error|
+|SID|   SAR Information Density (not SIDD)|
+|SIDD|  Sensor Independent Derived Data|
 |RPC|	Rapid Positioning Capability (or Rational Polynomial Coefficient)|
 |SR|	Slant Range|
 |SAR|	Synthetic Aperture Radar|

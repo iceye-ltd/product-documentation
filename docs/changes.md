@@ -6,6 +6,7 @@
 
 | Date | Version  | Comment |
 |:----:|:-------:|:-------|
+| 5th Sep 2026 | 6.0.8 (draft) | Renamed RGIQE to SAR Information Density (SID). Imaging-mode NESZ, SID and RNIIRS are now scene-centre ranges (best–worst producer and performant incidence), not a single figure. In-scene NESZ is not specified. SID scores the radar collection; the look term is not inside the Shannon-Hartley SNR. Added Generation 4 to Table 1-1; Dwell Precise is listed from Generation 3.5. Scan Wide wording set to approximately 27 m and 200 km × 600 km maximum. Section 1.2 mode count set to nine. |
 | 21st May 2026 | 6.0.7   | Addition of 1-hour delivery time option to the service levels. 
 | 5th Feb 2026 | 6.0.6   | Availability of Cloud Optimized GeoTIFF CSI and VID products. Scan Wide imaging mode reliability updated to 90%. Updated product file sizes and dynamic range bit depth from legacy to Cloud Optimized GeoTIFF format values. 
 | 2nd Jan 2026 | 6.0.5   | Variable imaging time replaces fixed imaging times for all Spot and Dwell modes. Revised azimuth resolution and number of azimuth looks for all Dwell modes. Legacy formats deprecation timeline.  |
