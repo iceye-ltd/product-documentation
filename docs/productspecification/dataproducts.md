@@ -67,7 +67,7 @@ Table [5-2](#table-5-2-complex-data-products-available-for-each-iceye-imaging-mo
 
 ### 5.2.1 Quicklook
 
-The **Quicklook** product is an image preview of a higher resolution GRD image ([5.2.2](#522-ground-range-detected-grd-image)). It is available for all imaging modes and is provided in PNG and Cloud Optimizsed GeoTIFF formats. These are very easily leveraged by non-technical users, as they can be opened by basic image viewing software, document editing tools and raster graphics editing software. Quicklook can also be used to perform basic rapid image analysis and/or to determine if the more detailed data products below should be further exploited and analyzed. 
+The **Quicklook** product is an image preview of a higher resolution GRD image ([5.2.2](#522-ground-range-detected-grd-image)). It is available for all imaging modes and is provided in PNG and Cloud Optimized GeoTIFF formats. These are very easily leveraged by non-technical users, as they can be opened by basic image viewing software, document editing tools and raster graphics editing software. Quicklook can also be used to perform basic rapid image analysis and/or to determine if the more detailed data products below should be further exploited and analyzed. 
 
 **Files included in the Quicklook (QLK) product**
 
@@ -118,7 +118,7 @@ As outlined in Section [5.1.1](#511-amplitude-data-product-offering), the primar
 
 | Ellipsoid Reference | Semi Major Axis | Semi Minor Axis | Inverse Flattening |
 | ------------------- | --------------- | --------------- | ------------------ |
-| WGS84               | 6378137.0 m     | 356752.314245 m | 298.257 223 563    |
+| WGS84               | 6378137.0 m     | 6356752.314245 m | 298.257 223 563    |
 
 ICEYE packages GRD amplitude images onto the [Cloud Optimized GeoTIFF (COG)](https://docs.ogc.org/is/21-026/21-026.html) format which is supported by most image viewing software, GIS applications, and data exploitation tools and libraries. The format also allows for faster data visualization and geospatial processing workflows especially when the image data itself is  stored in the cloud. This format allows for increased data precision (up to u32/f32) to support the very high dynamic range of the latest ICEYE data products.
 
@@ -266,12 +266,12 @@ The CSI product is provided in a Cloud Optimized GeoTIFF container, enabling dir
 
 A legacy CSI format can be provided for backward compatibility until *31 December 2026*. This legacy format differs from the current CSI product primarily as summarized in Table [5-6](#table-5-6-simplified-comparison-of-the-new-csi-and-the-old-legacy-csi-formats). Note that in this legacy format the CSI product has a lower ground resolution than the new Cloud Optimized GeoTIFF CSI. Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF CSI product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
 
-##### Table 5-6: Simplified comparison of the new CSI and the old Legacy CSI formats
+##### _Table 5-6: Simplified comparison of the new CSI and the old Legacy CSI formats_
 
 |                                                     | CSI                                              | Legacy CSI                                             |
 | --------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------ |
 | Container                                           | Cloud Optimized GeoTIFF                          | GeoTIFF                                                |
-| Full ground resolution (same as GRD)                | Yes                                              | Yes                                                    |
+| Full ground resolution (same as GRD)                | Yes                                              | No                                                     |
 | Metadata format                                     | GeoJSON                                          | XML                                                    |
 | File naming convention                              | Regular ([5.6.1](#561-file-naming-convention-1)) | Legacy ([5.6.2](#562-legacy-file-naming-convention-2)) |
 | Availability                      | Now | Now; to be deprecated in 2026 with final availability on December 31, 2026. |
@@ -279,8 +279,6 @@ A legacy CSI format can be provided for backward compatibility until *31 Decembe
 
 
 ### 5.4.3 SAR Video (VID)
-
-ICEYE will release a new Cloud Optimized GeoTIFF SAR Video (VID) format that is described in this section, within the first quarter of 2026. A legacy SAR Video (VID) format described in [Section 5.4.4](#544-legacy-sar-video-vid) will continue to be offered for compatibility reasons until December 31, 2026.
 
 **SAR Video (VID)** is similar to the CSI product described in Section [5.4.1](#541-colorized-sub-aperture-image-csi) in which the acquired SAR data is first divided into multiple sub-apertures. However, in the case of SAR Video each discrete sub-aperture image is used as a frame to compile a short video clip. The Dwell, Dwell Fine and Dwell Precise imaging modes generate videos consisting of 25 individual frames.
 
@@ -322,7 +320,7 @@ The formats for the VID data products are MPEG4 and GIF. Additionally, a file in
 
 A legacy SAR Video (VID) format can be provided for backward compatibility until *31 December 2026*. This legacy format differs from the current VID product primarily as summarized in Table [5-7](#table-5-7-simplified-comparison-of-the-new-sar-video-vid-and-the-old-legacy-sar-video-vid-formats). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF VID product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
 
-##### Table 5-7: Simplified comparison of the new SAR Video (VID) and the old Legacy SAR Video (VID) formats
+##### _Table 5-7: Simplified comparison of the new SAR Video (VID) and the old Legacy SAR Video (VID) formats_
 
 |                                                     | SAR Video (VID)                                  | Legacy SAR Video (VID)                                 |
 | --------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------ |
@@ -394,7 +392,7 @@ ICEYE does not provide **orthorectified imagery** as part of its standard delive
 
 All ICEYE data products are delivered packaged into one or more files each with informative file names and metadata.
 
-**Metadata** is the term used to describe all the ancillary information about an image that might be important to the user. All the metadata items that are present in ICEYE imagery are described at <https://sar.iceye.com/latest/productFormats/metadata/>
+**Metadata** is the term used to describe all the ancillary information about an image that might be important to the user. Up to date documentation on the metadata fields that are present in ICEYE data products is available at <https://sar.iceye.com/latest/productFormats/metadata/>
 
 The ICEYE data product **file naming** convention describes the product processing level so that a user does not have to analyze product metadata to understand key properties of the enclosed product. This is intended to facilitate file management. The current file naming convention is described in Section [5.6.1](#561-file-naming-convention-2). A legacy file naming convention continues to be supported in some data products for compatibility, and this is described in Section [5.6.2](#562-legacy-file-naming-convention-3).
 
@@ -480,3 +478,23 @@ The components of the legacy file names are described below:
 
 - **extension**: A string that describes the file format. Examples include json and  tif.
 
+## 5.7 Data orientation 
+
+All ICEYE products in Cloud Optimized GeoTIFF format are  delivered in shadows-down orientation. The metadata property **iceye:orientation** carries the value shadows-down, and the look side is carried by **sar:observation\_direction** with the value **left** or **right**.
+
+Shadows-down ties the raster axes to the acquisition geometry, not to a map projection:
+* Rows are the range axis. Row 0 holds the near-range line and row N-1 holds the far-range line, for both look sides. Radar shadow therefore always falls toward increasing row, which is what the name states. The range axis is slant range for SLC-COG and ground range for GRD-COG and QLK.
+* Columns are the azimuth axis. The direction of this axis depends on the look side. 
+
+##### _Table 5-8: Data orientation_
+
+| sar:observation\_direction | Rows (N total)     | Columns (M total)      | First azimuth position | Flight direction in the raster |
+| -------------------------- | ------------------ | ---------------------- | ---------------------- | ------------------------------ |
+| right                      | range, near to far | azimuth, early to late | column 0               | toward increasing column       |
+| left                       | range, near to far | azimuth, late to early | column M-1             | toward decreasing column       |
+
+<img src="https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/shadows-down.png" alt="shaddows down" width="800"/>
+
+##### _Figure 5-3: Shadows-down data orientation_
+
+Shadows-down fixes the row axis to point away from the sensor, and the look side decides which side of the ground track that is. The azimuth axis must therefore reverse with the look side to keep the raster a plain rotation of the ground scene. Without that reversal, one of the two look sides would give a mirrored image. A right-looking raster is the ground scene turned 90 degrees clockwise, and a left-looking raster is the ground scene turned 90 degrees counter-clockwise.
