@@ -40,11 +40,11 @@ So how much can we vary pulse frequency? Well, bandwidths can be made really lar
 
 $$ \delta_{sr} = \frac{3\times10^8\ m/sec}{2\times300MHz} $$
 
-$$ \delta_{sr} = \frac{3\times10^8\ m/sec}{2\times300\times10^8Hz} $$
+$$ \delta_{sr} = \frac{3\times10^8\ m/sec}{2\times300\times10^6\ Hz} $$
 
 $$ \delta_{sr} = 0.5 metres $$
 
-Plans for the next generation of ICEYE satellites include pulse bandwidths of 600 MHz and 1200 MHz. These will yield a slant range resolution cell of 0.25 meters and better from a satellite that is perhaps 750,000 meters away from the imaged area.
+Generation 3 satellites use a pulse bandwidth of 600 MHz. Generation 3.5 and Generation 4 satellites use 1200 MHz. These yield a slant range resolution cell of 0.25 metres and 0.125 metres from a satellite that is perhaps 750,000 metres away from the imaged area.
 
 ## Ground Range Resolution
 The slant range is the distance between the antenna and the target, and that is the direction where range resolution is measured. To produce images along the ground surface, the pixels have to be projected to the “ground range” from their original slant range orientation (Figure 14). This has the effect of elongating the pixels in range.
