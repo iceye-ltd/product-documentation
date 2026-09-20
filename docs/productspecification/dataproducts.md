@@ -493,7 +493,7 @@ Shadows-down ties the raster axes to the acquisition geometry, not to a map proj
 | right                      | range, near to far | azimuth, early to late | column 0               | toward increasing column       |
 | left                       | range, near to far | azimuth, late to early | column M-1             | toward decreasing column       |
 
-<img src="https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/shadows-down.png" alt="shaddows down" width="800"/>
+<img src="https://github.com/iceye-ltd/product-documentation/releases/download/additional-assets/shadows-down.png" alt="shadows down" width="800"/>
 
 ##### _Figure 5-3: Shadows-down data orientation_
 
