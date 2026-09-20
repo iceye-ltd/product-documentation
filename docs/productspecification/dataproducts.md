@@ -67,8 +67,47 @@ Table [5-2](#table-5-2-complex-data-products-available-for-each-iceye-imaging-mo
 
 ### 5.2.1 Quicklook
 
-The **Quicklook** product is an image preview of a higher resolution GRD image ([5.2.2](#522-ground-range-detected-grd-image)). It is available for all imaging modes and is provided in PNG format. These are very easily leveraged by non-technical users, as they can be opened by basic image viewing software, document editing tools and raster graphics editing software. Quicklook can also be used to perform basic rapid image analysis and/or to determine if the more detailed data products below should be further exploited and analyzed. 
+The **Quicklook** product is an image preview of a higher resolution GRD image ([5.2.2](#522-ground-range-detected-grd-image)). It is available for all imaging modes and is provided in PNG and Cloud Optimizsed GeoTIFF formats. These are very easily leveraged by non-technical users, as they can be opened by basic image viewing software, document editing tools and raster graphics editing software. Quicklook can also be used to perform basic rapid image analysis and/or to determine if the more detailed data products below should be further exploited and analyzed. 
 
+**Files included in the Quicklook (QLK) product**
+
+* Image file
+    * Extension: .tif
+    * Format: Cloud Optimized GeoTIFF
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_QLK.tif`
+    * Number of GeoTIFF bands: 1
+    * Asset name: qlk-tif
+* PNG file
+    * Extension: .png
+    * Format: Portable Network Graphics (PNG)
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_QLK.png`
+    * Asset name: qlk-png
+* KML file
+    * Extension: .kml
+    * Format: Keyhole Markup Language (KML)
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_QLK.kml`
+    * Asset name: qlk-kml
+* Metadata file
+    * Extension: json
+    * Format: GeoJSON, follows STAC conventions whenever possible
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_QLK.json`
+    * Asset name: qlk-json
+* Thumbnail PNG
+    * Extension: .png
+    * Format: Portable Network Graphics (PNG)
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_THM.png`
+    * Asset name: thm-png
+* Thumbnail KML file
+    * Extension: .kml
+    * Format: Keyhole Markup Language (KML)
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_THM.kml`
+    * Asset name: thm-kml
 
 ### 5.2.2 Ground Range Detected (GRD) Image
 
@@ -90,6 +129,22 @@ The core advantages of GRD images is that they are laid out in the natural SAR o
 To assist users that require geocoded imagery with minimal interpolation artifacts, ICEYE amplitude image products are tagged with ground control points (GCP) and rapid positioning capability polynomial coefficients (RPC’s). These allow precise geospatial exploitation using freely available tools such as QGIS or GDAL.
 
 Associated image metadata is stored in the GeoJSON format. 
+
+**Files included in the Ground Range Detected (GRD)image product**
+
+* Image file
+    * Extension: .tif
+    * Format: Cloud Optimized GeoTIFF
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_GRD.tif`
+    * Number of GeoTIFF bands: 1
+    * Asset name: grd-cog-tif
+* Metadata file
+    * Extension: json
+    * Format: GeoJSON, follows STAC conventions whenever possible
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_GRD.json`
+    * Asset name: grd-cog-json
 
 
 ### 5.2.3 Legacy GRD Format
@@ -130,9 +185,25 @@ The complex data is stored as a matrix in a separate band in the GeoTIFF contain
 
 Metadata is stored with the GeoJSON format. GeoJSON is a geocoded metadata format supported by many GIS tools.
 
+**Files included in the Single Look Complex (SLC) image product**
+
+* Image file
+    * Extension: .tif
+    * Format: Cloud Optimized GeoTIFF
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_SLC.tif`
+    * Number of GeoTIFF bands: 2 (Band 1: Amplitude, Band 2: Phase)
+    * Asset name: slc-cog-tif
+* Metadata file
+    * Extension: json
+    * Format: GeoJSON, follows STAC conventions whenever possible
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLF_SLC.json`
+    * Asset name: slc-cog-json
+
 ### 5.3.2 Legacy SLC Image Format
 
-A legacy legacy format can be provided for backward compatibility until **31 December 2026**. This legacy format differs from the current SLC product primarily as summarized in Table [5-5](#table-5-5-simplified-comparison-of-the-new-slc-and-the-old-legacy-slc-version). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF SLC product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
+A legacy SLC format can be provided for backward compatibility until **31 December 2026**. This legacy format differs from the current SLC product primarily as summarized in Table [5-5](#table-5-5-simplified-comparison-of-the-new-slc-and-the-old-legacy-slc-version). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF SLC product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
 
 
 ##### _Table 5-5: Simplified comparison of the new SLC and the old Legacy SLC version_
@@ -169,6 +240,28 @@ CSI products are generated exclusively for the Dwell, Dwell Fine, and Dwell Prec
 
 The CSI product is provided in a Cloud Optimized GeoTIFF container, enabling direct visualization with standard image viewers as well as geospatial software. For each sub-aperture, the CSI includes metadata describing the acquisition time, integration duration, color encoding, and satellite position. The ground resolution of the CSI product in Cloud Optimized GeoTIFF format is identical to the ground resolution of the amplitude GRD product.
 
+**Files included in the Colorized Sub-aperture Image (CSI) product**
+
+* Image file
+    * Extension: .tif
+    * Format: Cloud Optimized GeoTIFF
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_CSI.tif`
+    * Number of GeoTIFF bands: 3 (Red, Green, Blue)
+    * Asset name: csi-cog-tif
+* PNG file
+    * Extension: .png
+    * Format: Portable Network Graphics (PNG)
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_CSI.png`
+    * Asset name: csi-cog-png
+* Metadata file
+    * Extension: json
+    * Format: GeoJSON, follows STAC conventions whenever possible
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_CSI.json`
+    * Asset name: csi-cog-json
+
 ### 5.4.2 Legacy Colorized Sub-Aperture Image (CSI)
 
 A legacy CSI format can be provided for backward compatibility until *31 December 2026*. This legacy format differs from the current CSI product primarily as summarized in Table [5-6](#table-5-6-simplified-comparison-of-the-new-csi-and-the-old-legacy-csi-formats). Note that in this legacy format the CSI product has a lower ground resolution than the new Cloud Optimized GeoTIFF CSI. Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF CSI product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
@@ -195,6 +288,36 @@ The VID product is useful in applications for which the motion of moving objects
 
 The formats for the VID data products are MPEG4 and GIF. Additionally, a file in Cloud Optimized GeoTIFF format is produced where each of the video frames is available as a separate band to facilitate frame by frame analysis in a GIS image exploitation tool. The user can measure and track changes and moving objects between frames by stepping through the different bands of the image. Metadata for each of the video frames, including exact time, duration, and satellite location, is available in the Cloud Optimized GeoTIFF.
 
+**Files included in the SAR Video (VID) product**
+
+* Image file
+    * Extension: .tif
+    * Format: Cloud Optimized GeoTIFF
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_VID.tif`
+    * Number of GeoTIFF bands: 25 (one for each video frame)
+    * Asset name: vid-cog-tif
+* MP4 file
+    * Extension: .mp4
+    * Format: Video in a MP4 container
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_VID.mp4`
+    * Number of video frames: 25
+    * Asset name: vid-cog-mp4
+* GIF file
+    * Extension: .gif
+    * Format: Graphics Interchange Format (GIF)
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_VID.gif`
+    * Number of video frames: 25
+    * Asset name: vid-cog-gif
+* Metadata file
+    * Extension: json
+    * Format: GeoJSON, follows STAC conventions whenever possible
+    * [Standard naming convention](#561-file-naming-convention), example filename:
+        * `ICEYE_75CMBF_20240612T174339Z_4119892_X11_SLED_VID.json`
+    * Asset name: vid-cog-json
+
 ### 5.4.4 Legacy SAR Video (VID)
 
 A legacy SAR Video (VID) format can be provided for backward compatibility until *31 December 2026*. This legacy format differs from the current VID product primarily as summarized in Table [5-7](#table-5-7-simplified-comparison-of-the-new-sar-video-vid-and-the-old-legacy-sar-video-vid-formats). Customers are strongly encouraged to migrate to the new Cloud Optimized GeoTIFF VID product to benefit from its enhanced features and performance. ICEYE is available to support customers during this transition. Capacity to deliver images within specific delivery timelines may be reduced when legacy data formats are requested.
@@ -205,7 +328,7 @@ A legacy SAR Video (VID) format can be provided for backward compatibility until
 | --------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------ |
 | Container                                           | Cloud Optimized GeoTIFF, MPEG4, GIF              | GeoTIFF,MPEG4, GIF                                     |
 | Metadata format                                     | GeoJSON                                          | XML                                                    |
-| File naming convention                              | Regular ([5.6.1](#561-file-naming-convention-1)) | Legacy ([5.6.2](#562-legacy-file-naming-convention-2)) |
+| File naming convention                              | Regular ([5.6.1](#561-file-naming-convention)) | Legacy ([5.6.2](#562-legacy-file-naming-convention)) |
 | Availability                      | Now | Now; to be deprecated in 2026 with final availability on December 31, 2026. |
 
 
@@ -223,6 +346,38 @@ The **Sensor Independent Derived Data (SIDD)** format is designed to store Synth
 NGA has released a range of libraries in common environments (e.g. [MATLAB SAR](https://github.com/ngageoint/MATLAB_SAR) for MATLAB and [SarPy](https://github.com/ngageoint/sarpy) for Python; see also the sensor independent XML library [SIX](https://github.com/ngageoint/six-library)) so that tools and algorithms can convert a wide range of SLC formats into SICD and can use SICD files for SAR sensor-independent analysis and visualization.
 
 The SICD and SIDD products are currently only available from ICEYE by request as a custom order. Interested customers are advised to reach out via [the ICEYE website](https://www.iceye.com/contact) (or via email if you are already an ICEYE customer).
+
+**Files included in the Sensor Independent Complex Data (SICD) product**
+
+* Image file
+    * Extension: .nitf
+    * Format: SICD 1.3.0, container: NITF 2.1
+    * Legacy naming convention, example filename:
+        * `ICEYE_X49_SICD_SLEDF_9307864_20260317T141841.nitf`
+    * Image segments: 1, uncompressed
+    * Asset name: sicd-nitf
+* Metadata file
+    * Extension: xml
+    * Format: xml
+    * [Legacy naming convention](#562-legacy-file-naming-convention), example filename:
+        * `ICEYE_X49_SICD_SLEDF_9307864_20260317T141841.xml`
+    * Asset name: sicd-xml
+
+**Files included in the Sensor Independent Derived Data (SIDD) product**
+
+* Image file
+    * Extension: .nitf
+    * Format: SIDD 3.0.0, container: NITF 2.1
+    * Legacy naming convention, example filename:
+        * `ICEYE_X49_SIDD_SLEDF_9307864_20260317T141841.nitf`
+    * Image segments: 1, uncompressed
+    * Asset name: sidd-nitf
+* Metadata file
+    * Extension: xml
+    * Format: xml
+    * [Legacy naming convention](#562-legacy-file-naming-convention), example filename:
+        * `ICEYE_X49_SIDD_SLEDF_9307864_20260317T141841.xml`
+    * Asset name: sidd-xml
 
 
 ### 5.5.2 Compensated Phase History Data (CPHD)
@@ -286,7 +441,7 @@ The components of the file name are described below:
 
 - **product**: A string that describes which data product is packaged in the file. The string - data product mapping is as follows:
 
-  - QL: Quicklook
+  - QLK: Quicklook
 
   - GRD: Ground Range Detected
 
