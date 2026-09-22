@@ -34,6 +34,11 @@ This page captures all the metadata items that are present in ICEYE SLC and GRD 
 | proj:transform                        | Affine transform from pixel to CRS coordinates.                                                                                                                           | array<number>        |           | [-4.460495636346755, -2.2017657442157062e-07, -4.7798640613900575e-06, 48.40120537476053, -7.688449427876072e-07, 6.059… | Yes     | Yes     | Yes         | Yes         |
 | raster:bands[].bits_per_sample        | Bits per sample for the band.                                                                                                                                             | integer              | bits      | 16                                                                                                                       | Yes     | Yes     | Yes         | Yes         |
 | raster:bands[].data_type              | Band sample data type.                                                                                                                                                    | string               |           | "ui16"                                                                                                                   | Yes     | Yes     | Yes         | Yes         |
+| raster:bands[].datetime               | Nominal acquisition time for this band. See [Band metadata](#band-metadata).                                                                                              | string               | UTC       | "2025-05-23T01:46:21.445Z"                                                                                               | Yes     | Yes     | Yes         | Yes         |
+| raster:bands[].iceye:position         | Satellite position at band acquisition. Uses item-level \`iceye:coordinate_frame\`.                                                                                       | array<number>        | meters    | [3110183.05, 1354067.28, 5851069.89]                                                                                     | Yes     | Yes     | Yes         | Yes         |
+| raster:bands[].iceye:velocity         | Satellite velocity at band acquisition. Uses item-level \`iceye:coordinate_frame\`.                                                                                       | array<number>        | m/s       | [-4958.451, -4653.785, 3712.28]                                                                                          | Yes     | Yes     | Yes         | Yes         |
+| raster:bands[].iceye:frame_number     | Frame number for this band within a multi-frame acquisition. Distinct from item-level \`iceye:frame_number\`.                                                             | integer              |           | 1                                                                                                                        | Yes     | Yes     | Yes         | Yes         |
+| raster:bands[].iceye:frame_duration   | Duration of this band's frame.                                                                                                                                            | number               | seconds   | 0.188                                                                                                                    | Yes     | Yes     | Yes         | Yes         |
 | processing:software.forge             | Forge software version.                                                                                                                                                   | string               |           | "v0.12.1"                                                                                                                | Yes     | Yes     | Yes         | Yes         |
 | processing:software.processor         | Processor identifier or version.                                                                                                                                          | string               |           | "ICEYE_I_1.1.1"                                                                                                          | Yes     | Yes     | Yes         | Yes         |
 | iceye:acquisition_prf                 | Pulse Repetition Frequency (PRF) of the collection.                                                                                                                       | number               | Hz        | 6832.87                                                                                                                  | Yes     | Yes     | Yes         | Yes         |
@@ -137,6 +142,18 @@ The metadata field `iceye:scan_beams` is present for scan-mode acquisitions. It 
 | index | 1-based index of the burst. | integer | | Yes |
 | start_azimuth_pixel | First azimuth pixel index for this burst (1-based). | integer | pixels | No |
 | stop_azimuth_pixel | Last azimuth pixel index for this burst (1-based). | integer | pixels | No |
+
+## Band metadata
+
+Optional fields on band objects in `raster:bands` (or `bands` in STAC 1.1). They are used on multi-frame products such as VID. `iceye:position` and `iceye:velocity` use the item-level `iceye:coordinate_frame`. Band-level `iceye:frame_number` identifies the frame within a multi-frame acquisition and is distinct from the item-level `iceye:frame_number` (standardized ground tile).
+
+| Field | Description | Data type | Units | Required |
+| ----- | ----------- | --------- | ----- | -------- |
+| datetime | Nominal acquisition time for this band, in UTC (RFC 3339). | string | UTC | No |
+| iceye:position | Satellite position at band acquisition. | array<number> | meters | No |
+| iceye:velocity | Satellite velocity at band acquisition. | array<number> | meters/second | No |
+| iceye:frame_number | Frame number for this band within a multi-frame acquisition. | integer | | No |
+| iceye:frame_duration | Duration of this band's frame. Must be greater than zero if present. | number | seconds | No |
 
 ## Amplitude mapping
 
