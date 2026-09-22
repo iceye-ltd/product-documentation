@@ -15,7 +15,7 @@
 <span class="underline">Synthetic Aperture Radar (SAR)</span> is a remote sensing method unique in its ability to image day and night, and in all weather conditions. While optical imagery uses light from the sun to illuminate the surface, SAR and other radar systems are <span class="underline">active sensors</span>: they emit their own energy in the form of electromagnetic radiation (in the microwave region) to illuminate a scene and then measure the returned echo. See Figure [<span class="underline">1.1</span>](#figure-1.1-passive-and-active-remote-sensing) for an illustrative comparison of passive and active remote sensing.
 
 <figure id="figure-1.1-passive-and-active-remote-sensing">
-<img src="../img/media/image3.png">
+<img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image3.png">
 <figcaption><strong>Figure 1.1: Passive and Active Remote Sensing.</strong> Passive sensing systems leverage the sun’s powerful illumination while active systems benefit from independence, allowing all-weather, day-night imaging and coherent measurements.</figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ This chapter explains this principle further, introduces several foundational te
 
 The fundamental capabilities of radar stem from its ability to measure the distance and direction of electromagnetic echoes, allowing it to map its surroundings.
 
-Radar is an acronym meaning <span class="underline">RAdio Detection And Ranging (RADAR)</span>. A radar transmitter emits electromagnetic radiation—typically in the form of radio or microwave signals—toward a target, and the reflected echoes are captured by a receiver. This is the *detection* part of radar. The time delay between emission and receipt of each signal is precisely measured and used to calculate distances to each target in the scene. Because electromagnetic waves travel at the speed of light, we can determine how far away an object is by multiplying the time it takes for the signal to return by the speed of light—then dividing by two, since the signal travels to the target and back. Determining the distance to a target is called *ranging. *
+Radar is an acronym meaning <span class="underline">RAdio Detection And Ranging (RADAR)</span>. A radar transmitter emits electromagnetic radiation—typically in the form of radio or microwave signals—toward a target, and the reflected echoes are captured by a receiver. This is the *detection* part of radar. The time delay between emission and receipt of each signal is precisely measured and used to calculate distances to each target in the scene. Because electromagnetic waves travel at the speed of light, we can determine how far away an object is by multiplying the time it takes for the signal to return by the speed of light—then dividing by two, since the signal travels to the target and back. Determining the distance to a target is called *ranging.*
 
 While measuring the distance from a sensor to a target is valuable, distance alone does not provide enough information for locating objects. To more precisely locate the source of a radar echo, we need additional information. In radar systems, this can be achieved using a directive <span class="underline">antenna</span>. A directive antenna focuses transmitted (and received) energy more in some directions than others, forming what is known as a <span class="underline">beam pattern</span>. This allows the radar to illuminate and receive signals from specific directions, enabling angular discrimination. Using this property, we can determine the angle of arrival of incoming echoes. When range and angle measurements are combined, they form a two-dimensional representation of the reflected microwave energy—what we refer to as a <span class="underline">radar image</span>.
 
@@ -53,7 +53,7 @@ Just as a larger optical aperture can lead to finer spatial detail, a larger rad
 Figure [<span class="underline">1.2</span>](#figure-1.2-basic-radar-imaging-terms) illustrates basic concepts relating to monostatic radar: <span class="underline">Antenna aperture</span> refers to the physical dimensions of the antenna, which for rectangular antennas are defined as width and length. <span class="underline">Beamwidth</span> defines the angular spread of an antenna's radiated and received signal power. The beamwidth of an antenna is inversely proportional to its aperture size.
 
 <figure id="figure-1.2-basic-radar-imaging-terms">
-<img src="../img/media/image4.png">
+<img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image4.png">
 <figcaption><strong>Figure 1.2: Basic Radar Imaging Terms.</strong></figcaption>
 </figure>
 
@@ -63,19 +63,19 @@ Before delving further into the principles of radar imaging, it is helpful to fi
 
 Radar imaging systems illuminate the ground from the side rather than directly beneath the sensor. This technique, known as <span class="underline">Side-Looking Illumination (SLI)</span> or <span class="underline">Side-Looking Radar (SLR)</span>, is essential because radar determines the position of targets based on the *time delay* of returned signals—i.e., by measuring range.
 
-!!! note inline end
-    The Line-Of-Sight (LOS) refers to the path travelled by the medium of sight – typically electromagnetic waves – from the target to the observer, or sensor. In simple cases, the LOS is a straight line, but it may be curved or segmented due to refraction, reflection, or obstructions in the environment, in which case the observer might incorrectly estimate the target’s location.
-
 If the radar were to look straight down (nadir), then for targets lying on a flat ground surface, the differences in range between nearby points would be extremely small. This would make it nearly impossible to distinguish between them based on signal travel time, resulting in poor or no resolution on the ground plane. By contrast, a side-looking geometry introduces greater variation in the slant range to different points on the ground, even if the surface is flat. These differences in distance translate into measurable time delays in the returned signal, allowing the radar to reliably separate targets in the range direction. In other words, side-looking geometry ensures that variations in target distance translate into measurable time delays, enabling reliable range discrimination.
 
 For example, the two purple diamonds in the vertical illumination illustration in Figure [<span class="underline">1.3</span>](#figure-1.3-vertical-vs-side-looking-illumination) would be represented as a single pixel in the image despite occupying unique ground positions. Radar imaging must therefore be side-looking so that all ground points from the <span class="underline">near range</span> – the edge of the scene closest to the radar – all the way to the <span class="underline">far range</span> – the edge of the scene farthest from the radar – have different range values (assuming flat terrain). Pixels in a radar image are placed on the image based partly on their range, or distance, from the sensor along the radar line of sight.
 
 This constraint has important geometric consequences for radar images, which we’ll explore in more detail later. Unlike optical systems—which passively capture images in a plane perpendicular to the direction of incoming light—radar systems actively form images using ranging. One dimension of the radar image, the *range direction*, lies along the direction of illumination itself. This results in a unique and sometimes counterintuitive image geometry that distinguishes radar from traditional optical imaging systems.
 
+!!! note
+    The Line-Of-Sight (LOS) refers to the path travelled by the medium of sight – typically electromagnetic waves – from the target to the observer, or sensor. In simple cases, the LOS is a straight line, but it may be curved or segmented due to refraction, reflection, or obstructions in the environment, in which case the observer might incorrectly estimate the target’s location.
+
 <figure id="figure-1.3-vertical-vs-side-looking-illumination">
 <div class="figure-row">
-  <img src="../img/media/image5.png" alt="Vertical looking illumination">
-  <img src="../img/media/image6.png" alt="Side-looking illumination">
+  <img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image5.png" alt="Vertical looking illumination">
+  <img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image6.png" alt="Side-looking illumination">
 </div>
 <figcaption><strong>Figure 1.3: Vertical vs Side-Looking Illumination.</strong> Radar imaging must be side-looking so that ground points from the near to far range have mostly different range values. The illumination is typically broadside, or perpendicular, to the flight direction.</figcaption>
 </figure>
@@ -94,23 +94,23 @@ In this section we will discuss the basics of Real Aperture Radar (RAR), as well
 
 Even with a very large stationary antenna, azimuth resolution of RAR is still limited. A larger antenna produces a narrower beam which helps focus energy, but the beam still widens with distance. This results in range-dependent resolution: high resolution near the radar, and poorer resolution farther away. While this can be useful for identifying large objects, RAR is not able to generate high resolution images.
 
-!!! note inline end
-    The terms azimuth, along-track, azimuthal, and cross-range are often used interchangeably in radar literature. They all refer to the same direction—parallel to the motion of the radar platform.
-
 The first widely used ground imaging real aperture radars were side-looking and mounted on aircraft, and were consequently referred to as <span class="underline">Side-Looking Airborne Radar (SLAR)</span>. Not only did the aircraft provide the RAR a larger view of the surface, but its steady movement made it possible to build a two-dimensional image one straight line at a time (see Figure [<span class="underline">1.3</span>](#figure-1.3-side-looking-airborne-radar-slar)). Azimuth resolution was relatively consistent between the near and far range due to the high altitude of the platform relative to the size of the scene in range.
 
 In SLAR, the azimuth resolution—the ability to distinguish targets along the flight path—is determined by the angular width of the radar beam on the ground in the azimuth direction (i.e., the direction of flight). This angular width depends on the beamwidth of the antenna in that direction, which in turn is governed by the physical size of the antenna: a larger antenna produces a narrower beam and thus better azimuth resolution.
 
+!!! note inline end
+    The terms azimuth, along-track, azimuthal, and cross-range are often used interchangeably in radar literature. They all refer to the same direction—parallel to the motion of the radar platform.
+
 <figure id="figure-1.3-side-looking-airborne-radar-slar">
-<img src="../img/media/image7.png">
+<img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image7.png">
 <figcaption><strong>Figure 1.3: Side-Looking Airborne Radar (SLAR).</strong> As the platform advances along the azimuth direction, each pulse emitted in the slant plane results in the collection of another range profile, spanning echoes from each point between the near and the far range.</figcaption>
 </figure>
 
-Again, azimuth resolution in SLAR is based on the angular width of the pulse in the azimuth direction (represented by ꞵ in Figure 1[<span class="underline">.</span>](#_jupbwsyrzbec)3). Antennas that are long in the azimuth direction create narrow beams, which focus the signal and enable the detection of individual objects. However, even a narrow beam spreads out as it propagates from the antenna to the distant ground surface (See Figure [<span class="underline">1.4</span>](#figure-1.4-slar-pulse-dimensions)). In a RAR system, azimuth resolution is much better in the <span class="underline">near range</span> than the <span class="underline">far range</span>, illustrated by the following equation:
+Again, azimuth resolution in SLAR is based on the angular width of the pulse in the azimuth direction (represented by ꞵ in Figure [<span class="underline">1.3</span>](#figure-1.3-side-looking-airborne-radar-slar)). Antennas that are long in the azimuth direction create narrow beams, which focus the signal and enable the detection of individual objects. However, even a narrow beam spreads out as it propagates from the antenna to the distant ground surface (See Figure [<span class="underline">1.4</span>](#figure-1.4-slar-pulse-dimensions)). In a RAR system, azimuth resolution is much better in the <span class="underline">near range</span> than the <span class="underline">far range</span>, illustrated by the following equation:
 
 \[\delta_{\text{az}} = \frac{R\lambda}{L} = \frac{H\lambda}{L\sin\gamma}\]
 
-Here, \(R\) is the slant range, \(\lambda\) is the wavelength used by the radar, and \(L\) is the physical length of the antenna in the azimuth direction. In the second representation slant range is replaced with \(H\), the altitude of the airplane or the height of the imaging platform, and we introduce \(\gamma\), the slant or *depression angle* (the angle between the dotted vertical line and the beam in Figure [<span class="underline">1.3</span>](#real-aperture-and-side-looking-airborne-radar)), to make the equation reflect the SLAR use case.
+Here, \(R\) is the slant range, \(\lambda\) is the wavelength used by the radar, and \(L\) is the physical length of the antenna in the azimuth direction. In the second representation slant range is replaced with \(H\), the altitude of the airplane or the height of the imaging platform, and we introduce \(\gamma\), the slant or *depression angle* (the angle between the dotted vertical line and the beam in Figure [<span class="underline">1.3</span>](#figure-1.3-side-looking-airborne-radar-slar)), to make the equation reflect the SLAR use case.
 
 Ground range resolution in SLAR is independent from azimuth resolution, and is based on pulse length (see Figure [<span class="underline">1.4</span>](#figure-1.4-slar-pulse-dimensions)). The equation is as follows:
 
@@ -119,7 +119,7 @@ Ground range resolution in SLAR is independent from azimuth resolution, and is b
 Here, \(\tau\) is the radar pulse duration and \(c\) is the speed of light.
 
 <figure id="figure-1.4-slar-pulse-dimensions">
-<img src="../img/media/image8.png">
+<img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image8.png">
 <figcaption><strong>Figure 1.4: SLAR Pulse Dimensions.</strong></figcaption>
 </figure>
 
@@ -147,7 +147,7 @@ The long extent of the synthetic aperture allows for the combination of many wav
 Figure [<span class="underline">1.5</span>](#figure-1.5-linear-extent-of-recording-locations) shows a radar antenna sequentially emitting a series of pulses and recording the echoes from a series of sequential receive positions. In the resulting image, these echoes are integrated to form a representation of the scatterers on the surface.
 
 <figure id="figure-1.5-linear-extent-of-recording-locations">
-<img src="../img/media/image9.png">
+<img src="https://github.com/sjjsy/product-documentation/releases/download/additional-assets-test/image9.png">
 <figcaption><strong>Figure 1.5: Linear Extent of Recording Locations.</strong></figcaption>
 </figure>
 
