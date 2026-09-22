@@ -16,7 +16,6 @@
 |**Range**	            |Direction orthogonal to the satellite velocity. |
 |**Slant range vector**	|Line-Of-Sight distance between the antenna and the target on ground.|
 |**Slant range plane**	|Plane containing the relative sensor velocity vector and the slant range vector for a given target.|
-
 |**Orthorectification** |A subtopic of georeferencing— The process of converting images into a form suitable for maps by removing sensor motion and terrain-related geometric distortions from raw imagery. |
 
 ## List of Acronyms
