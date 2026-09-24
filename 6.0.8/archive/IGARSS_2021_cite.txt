@@ -1,0 +1,8 @@
+@inproceedings{ignatenko2021iceye,
+  title={ICEYE Microsatellite SAR Constellation Status Update: Long Dwell Spotlight and Wide Swath Imaging Modes},
+  author={Ignatenko, Vladimir and Nottingham, Matthew and Radius, Andrea and Lamentowski, Leszek and Muff, Darren},
+  booktitle={2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS},
+  pages={1493--1496},
+  year={2021},
+  organization={IEEE}
+}
