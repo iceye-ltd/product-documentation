@@ -81,7 +81,7 @@ Tasks at **Commercial Tasking Priority** are prioritized as regular commercial a
 
 ### 3.4.2 Background Tasking Priority
 
-Tasks at **Background Tasking Priority** are executed at a lower priority than Commercial Tasking Priority. Consequently, such tasks may be displaced by higher priority tasks, or may not be acquired within the requested time window. Background tasking offers excellent value to customers that do not have precise timing constraints or who can accept flexibility in task fulfillment. Background Tasking Priority is  only available with a 24-hour delivery time service level (see Section [3.7.3](#373-delivery-time-service-level))
+Tasks at **Background Tasking Priority** are executed at a lower priority than Commercial Tasking Priority. Consequently, such tasks may be displaced by higher priority tasks, or may not be acquired within the requested time window. Background tasking offers excellent value to customers that do not have precise timing constraints or who can accept flexibility in task fulfillment. Background Tasking Priority is  only available with a 24-hour delivery time service level (see Section [3.7.3](#373-delivery-time-service-level)).
 
 It is not possible for a user to alter the tasking priority after ICEYE has confirmed a task. To change the priority of an already submitted task, the user must first cancel the task (possibly subject to cancellation penalties, see Section [3.6](#36-order-cancellation)) and then resubmit the tasking request. Note that in case of Commercial priority, canceling and re-submitting an order may result in the loss of priority in the FIFO schema.
 
