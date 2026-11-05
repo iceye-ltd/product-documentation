@@ -1,0 +1,58 @@
+name: Publish product-spec schema
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Schema version directory (e.g. v0.6.0)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+          persist-credentials: false
+
+      - name: Validate schema exists on main
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          schema="main/schema/product-spec/${VERSION}/schema.json"
+          if [ ! -f "$schema" ]; then
+            echo "Missing $schema on main"
+            exit 1
+          fi
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Copy schema and push to gh-pages
+        working-directory: gh-pages
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          DEST="schema/product-spec/${VERSION}/schema.json"
+          mkdir -p "schema/product-spec/${VERSION}"
+          cp "../main/schema/product-spec/${VERSION}/schema.json" "$DEST"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$DEST"
+          if git diff --staged --quiet; then
+            echo "No changes to publish for ${VERSION}"
+            exit 0
+          fi
+          git commit -m "Publish product spec schema ${VERSION}"
+          git push origin HEAD:gh-pages

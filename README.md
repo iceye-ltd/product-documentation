@@ -71,3 +71,7 @@ To get the documentation running on your own local computer :
     `mike deploy <version> latest -u`
 
 This command deploys the latest changes on the master branch to the gh-pages under the version 5.0 and updates the 'latest' tag to be this one.
+
+## Publish a product-spec JSON schema
+
+Schemas live under `schema/product-spec/<version>/schema.json` on `main`. After a schema version is merged, publish it to production (`https://sar.iceye.com/schema/product-spec/...`) by running the **Publish product-spec schema** GitHub Action (`workflow_dispatch`) with the version directory name (for example `v0.6.0`). The workflow copies that file onto the `gh-pages` branch at the same path.
