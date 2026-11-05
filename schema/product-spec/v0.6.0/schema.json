@@ -24,29 +24,9 @@
     },
     "stac_extensions": {
       "type": "array",
-      "prefixItems": [
-        {
-          "const": "https://sar.iceye.com/schema/product-spec/v0.6.0/schema.json"
-        },
-        {
-          "const": "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
-        },
-        {
-          "const": "https://stac-extensions.github.io/sat/v1.0.0/schema.json"
-        },
-        {
-          "const": "https://stac-extensions.github.io/view/v1.0.0/schema.json"
-        },
-        {
-          "const": "https://stac-extensions.github.io/processing/v1.1.0/schema.json"
-        },
-        {
-          "const": "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
-        },
-        {
-          "const": "https://stac-extensions.github.io/raster/v1.0.0/schema.json"
-        }
-      ]
+      "contains": {
+        "const": "https://sar.iceye.com/schema/product-spec/v0.6.0/schema.json"
+      }
     }
   },
   "definitions": {
@@ -339,7 +319,7 @@
           "maxItems": 4,
           "examples": [
             [
-              2.67986035e+01,
+              26.7986035,
               8.66207416e-05,
               -5.61940883e-11,
               -1.73946139e-17
@@ -541,7 +521,7 @@
           "description": "Ground range to slant range polynomial coefficients",
           "examples": [
             [
-              6.467483312430216e+05,
+              646748.3312430216,
               0.47388031307797884,
               6.685331046296479e-07,
               -4.928145432555108e-13,
@@ -658,7 +638,7 @@
           "title": "Processing PRF",
           "description": "Unit: **Hz**\nPulse Repetition Frequency (PRF) used during azimuth processing, representing the effective sampling frequency of the radar signal in the azimuth (time) domain.",
           "examples": [
-            9646.00
+            9646.0
           ],
           "$comment": "Processing",
           "type": "number",
@@ -683,7 +663,9 @@
           "description": "The mapping applied to the amplitude bands of the image. Represented as a function with optional parameters (e.g., function(scale*amplitude)). See the ICEYE Product Documentation: Metadata Reference (https://sar.iceye.com/latest/productFormats/metadata/) for the exact formulas.",
           "$comment": "Processing",
           "type": "object",
-          "required": ["function"],
+          "required": [
+            "function"
+          ],
           "additionalProperties": false,
           "properties": {
             "function": {
@@ -720,11 +702,15 @@
           "examples": [
             {
               "function": "power",
-              "parameters": { "exponent": 0.25 }
+              "parameters": {
+                "exponent": 0.25
+              }
             },
             {
               "function": "arctan",
-              "parameters": { "scale": 400.0 }
+              "parameters": {
+                "scale": 400.0
+              }
             }
           ]
         },
@@ -830,6 +816,18 @@
               }
             }
           }
+        },
+        "raster:bands": {
+          "title": "Raster bands",
+          "description": "Band objects may include optional ICEYE band metadata; see band_fields.",
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/band_fields"
+              }
+            ]
+          }
         }
       },
       "additionalProperties": false,
@@ -863,7 +861,6 @@
       "title": "Band metadata",
       "description": "Optional metadata fields for band objects in raster:bands (or bands in STAC 1.1).",
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "datetime": {
           "title": "Datetime",

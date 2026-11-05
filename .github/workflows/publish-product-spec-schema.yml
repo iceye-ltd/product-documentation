@@ -20,10 +20,13 @@ jobs:
         with:
           ref: main
           path: main
+          persist-credentials: false
 
       - name: Validate schema exists on main
+        env:
+          VERSION: ${{ inputs.version }}
         run: |
-          schema="main/schema/product-spec/${{ inputs.version }}/schema.json"
+          schema="main/schema/product-spec/${VERSION}/schema.json"
           if [ ! -f "$schema" ]; then
             echo "Missing $schema on main"
             exit 1
@@ -37,8 +40,9 @@ jobs:
 
       - name: Copy schema and push to gh-pages
         working-directory: gh-pages
+        env:
+          VERSION: ${{ inputs.version }}
         run: |
-          VERSION="${{ inputs.version }}"
           DEST="schema/product-spec/${VERSION}/schema.json"
           mkdir -p "schema/product-spec/${VERSION}"
           cp "../main/schema/product-spec/${VERSION}/schema.json" "$DEST"
