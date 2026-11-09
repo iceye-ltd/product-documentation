@@ -74,4 +74,6 @@ This command deploys the latest changes on the master branch to the gh-pages und
 
 ## Publish a product-spec JSON schema
 
-Schemas live under `schema/product-spec/<version>/schema.json` on `main`. After a schema version is merged, publish it to production (`https://sar.iceye.com/schema/product-spec/...`) by running the **Publish product-spec schema** GitHub Action (`workflow_dispatch`) with the version directory name (for example `v0.6.0`). The workflow copies that file onto the `gh-pages` branch at the same path.
+Schemas live under `schema/product-spec/<version>/schema.json` on `main`. When a change to those files is merged to `main`, the **Publish product-spec schema** GitHub Action publishes them automatically to production (`https://sar.iceye.com/schema/product-spec/...`) by copying each file onto the `gh-pages` branch at the same path.
+
+To republish or backfill a version manually, run the same Action (`workflow_dispatch`) with the version directory name (for example `v0.6.0`).

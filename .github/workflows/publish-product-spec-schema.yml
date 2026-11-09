@@ -1,12 +1,21 @@
 name: Publish product-spec schema
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - schema/product-spec/*/schema.json
   workflow_dispatch:
     inputs:
       version:
         description: Schema version directory (e.g. v0.6.0)
         required: true
         type: string
+
+concurrency:
+  group: publish-schema-gh-pages
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -20,39 +29,87 @@ jobs:
         with:
           ref: main
           path: main
+          fetch-depth: 0
           persist-credentials: false
 
-      - name: Validate schema exists on main
+      - name: Discover versions to publish
+        id: versions
         env:
-          VERSION: ${{ inputs.version }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_VERSION: ${{ inputs.version }}
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
         run: |
-          schema="main/schema/product-spec/${VERSION}/schema.json"
-          if [ ! -f "$schema" ]; then
-            echo "Missing $schema on main"
-            exit 1
+          set -euo pipefail
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            versions="$INPUT_VERSION"
+          else
+            zero="0000000000000000000000000000000000000000"
+            if [ "$BEFORE" = "$zero" ]; then
+              files=$(git -C main diff-tree --no-commit-id --name-only -r "$SHA" -- 'schema/product-spec/*/schema.json')
+            else
+              files=$(git -C main diff --name-only "$BEFORE" "$SHA" -- 'schema/product-spec/*/schema.json')
+            fi
+            versions=$(printf '%s\n' "$files" \
+              | sed -n 's|^schema/product-spec/\([^/]*\)/schema.json$|\1|p' \
+              | sort -u \
+              | tr '\n' ' ' \
+              | sed 's/[[:space:]]*$//')
           fi
 
+          if [ -z "$versions" ]; then
+            echo "No schema versions to publish"
+            echo "versions=" >> "$GITHUB_OUTPUT"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Publishing: $versions"
+            echo "versions=$versions" >> "$GITHUB_OUTPUT"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate schemas exist on main
+        if: steps.versions.outputs.skip != 'true'
+        env:
+          VERSIONS: ${{ steps.versions.outputs.versions }}
+        run: |
+          set -euo pipefail
+          for VERSION in $VERSIONS; do
+            schema="main/schema/product-spec/${VERSION}/schema.json"
+            if [ ! -f "$schema" ]; then
+              echo "Missing $schema on main"
+              exit 1
+            fi
+          done
+
       - name: Checkout gh-pages
+        if: steps.versions.outputs.skip != 'true'
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy schema and push to gh-pages
+      - name: Copy schemas and push to gh-pages
+        if: steps.versions.outputs.skip != 'true'
         working-directory: gh-pages
         env:
-          VERSION: ${{ inputs.version }}
+          VERSIONS: ${{ steps.versions.outputs.versions }}
         run: |
-          DEST="schema/product-spec/${VERSION}/schema.json"
-          mkdir -p "schema/product-spec/${VERSION}"
-          cp "../main/schema/product-spec/${VERSION}/schema.json" "$DEST"
+          set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$DEST"
+
+          for VERSION in $VERSIONS; do
+            DEST="schema/product-spec/${VERSION}/schema.json"
+            mkdir -p "schema/product-spec/${VERSION}"
+            cp "../main/schema/product-spec/${VERSION}/schema.json" "$DEST"
+            git add "$DEST"
+          done
+
           if git diff --staged --quiet; then
-            echo "No changes to publish for ${VERSION}"
+            echo "No changes to publish for ${VERSIONS}"
             exit 0
           fi
-          git commit -m "Publish product spec schema ${VERSION}"
+          git commit -m "Publish product spec schema ${VERSIONS}"
           git push origin HEAD:gh-pages
