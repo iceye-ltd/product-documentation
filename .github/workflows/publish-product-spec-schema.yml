@@ -29,33 +29,34 @@ jobs:
         with:
           ref: main
           path: main
-          fetch-depth: 0
           persist-credentials: false
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          ref: gh-pages
+          path: gh-pages
 
       - name: Discover versions to publish
         id: versions
         env:
           EVENT_NAME: ${{ github.event_name }}
           INPUT_VERSION: ${{ inputs.version }}
-          BEFORE: ${{ github.event.before }}
-          SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
 
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             versions="$INPUT_VERSION"
           else
-            zero="0000000000000000000000000000000000000000"
-            if [ "$BEFORE" = "$zero" ]; then
-              files=$(git -C main diff-tree --no-commit-id --name-only --diff-filter=d -r "$SHA" -- 'schema/product-spec/*/schema.json')
-            else
-              files=$(git -C main diff --name-only --diff-filter=d "$BEFORE" "$SHA" -- 'schema/product-spec/*/schema.json')
-            fi
-            versions=$(printf '%s\n' "$files" \
-              | sed -n 's|^schema/product-spec/\([^/]*\)/schema.json$|\1|p' \
-              | sort -u \
-              | tr '\n' ' ' \
-              | sed 's/[[:space:]]*$//')
+            # Reconcile against gh-pages so versions from cancelled or failed runs are still published.
+            versions=""
+            for src in main/schema/product-spec/*/schema.json; do
+              [ -f "$src" ] || continue
+              version=$(basename "$(dirname "$src")")
+              if ! cmp -s "$src" "gh-pages/schema/product-spec/${version}/schema.json"; then
+                versions="${versions:+$versions }$version"
+              fi
+            done
           fi
 
           if [ -z "$versions" ]; then
@@ -81,13 +82,6 @@ jobs:
               exit 1
             fi
           done
-
-      - name: Checkout gh-pages
-        if: steps.versions.outputs.skip != 'true'
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
-        with:
-          ref: gh-pages
-          path: gh-pages
 
       - name: Copy schemas and push to gh-pages
         if: steps.versions.outputs.skip != 'true'
