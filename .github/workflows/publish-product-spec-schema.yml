@@ -47,9 +47,9 @@ jobs:
           else
             zero="0000000000000000000000000000000000000000"
             if [ "$BEFORE" = "$zero" ]; then
-              files=$(git -C main diff-tree --no-commit-id --name-only -r "$SHA" -- 'schema/product-spec/*/schema.json')
+              files=$(git -C main diff-tree --no-commit-id --name-only --diff-filter=d -r "$SHA" -- 'schema/product-spec/*/schema.json')
             else
-              files=$(git -C main diff --name-only "$BEFORE" "$SHA" -- 'schema/product-spec/*/schema.json')
+              files=$(git -C main diff --name-only --diff-filter=d "$BEFORE" "$SHA" -- 'schema/product-spec/*/schema.json')
             fi
             versions=$(printf '%s\n' "$files" \
               | sed -n 's|^schema/product-spec/\([^/]*\)/schema.json$|\1|p' \
